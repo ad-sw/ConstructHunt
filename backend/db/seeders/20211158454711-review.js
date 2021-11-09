@@ -9,6 +9,16 @@ module.exports = {
           userId: 1,
           productId: 1,
           review: commerce.productDescription(),
+        },
+        {
+          userId: 1,
+          productId: 1,
+          review: commerce.productDescription(),
+        },
+        {
+          userId: 1,
+          productId: 2,
+          review: commerce.productDescription(),
         }
       ], {});
   },

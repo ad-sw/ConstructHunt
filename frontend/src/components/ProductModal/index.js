@@ -4,6 +4,7 @@ import {useEffect} from 'react';
 import ProductModalUpdate from '../../components/ProductModal_Update';
 import ProductModalDelete from '../../components/ProductModal_Delete';
 import ReviewModal from '../../components/ReviewModal';
+import ReviewModalCreate from '../../components/ReviewModal_Create';
 import "./ProductModal.css";
 
 function ProductModal() {
@@ -18,7 +19,6 @@ function ProductModal() {
     return (
         <div className="products">
             {products?.map(product => {
-                console.log(product)
             return (
                 <div key={product.id}>
                     <h2>{product.title}</h2>
@@ -26,8 +26,9 @@ function ProductModal() {
                     {<a href={product.link}><img alt="display" src={product.imageUrl}></img></a>}
                     <p>{product.description}</p>
                     <ProductModalUpdate product={product}/>
-                    {/* <ProductModalDelete product={product}/> */}
+                    <ProductModalDelete product={product}/>
                     <ReviewModal product={product}/>
+                    <ReviewModalCreate productId={product.id}/>
                 </div>
             )
             })}

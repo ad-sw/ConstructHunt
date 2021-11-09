@@ -1,7 +1,11 @@
 const { Review } = require("./models");
 
-async function getReviews() {
-    return await Review.findAll();
+async function getReviews(productId) {
+    return await Review.findAll({
+        where: {
+            productId
+        }}
+    );
 }
 
 async function addReview(payload) {
@@ -19,7 +23,7 @@ async function deleteReview(reviewId) {
     const review = await Review.findByPk(reviewId);
     if (!review) throw new Error('Cannot find item');
 
-    await Review.destroy();
+    await review.destroy();
     return reviewId;
 }
 
