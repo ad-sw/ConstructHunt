@@ -45,7 +45,7 @@ export const createReview = (payload) => async (dispatch) => {
 
     if (response.ok) {
         const review = await response.json();
-        dispatch(add(review.review));
+        dispatch(add([review.review]));
     }
 }
 
@@ -62,14 +62,14 @@ export const updateReview = (payload) => async (dispatch) => {
     }
 }
 
-export const deleteReview = (reviewId) => async (dispatch) => {
-    const response = await fetch(`/api/reviews/${reviewId}`, {
+export const deleteReview = (id) => async (dispatch) => {
+    const response = await csrfFetch(`/api/reviews/${id}`, {
       method: "DELETE"
     });
 
     if (response.ok) {
-      const review = await response.json();
-      dispatch(remove(review.review));
+      const reviewId = await response.json();
+      dispatch(remove(reviewId.reviewId));
     }
   };
 

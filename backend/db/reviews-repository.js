@@ -19,7 +19,7 @@ async function deleteReview(reviewId) {
     const review = await Review.findByPk(reviewId);
     if (!review) throw new Error('Cannot find item');
 
-    await Review.destroy();
+    await review.destroy();
     return reviewId;
 }
 

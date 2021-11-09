@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
-import ProductFormUpdate from './ProductFormUpdate';
+import ProductFormUpdate from './ProductForm_Update';
 import "./ProductUpdate.css";
 
 function ProductModalUpdate({product}) {

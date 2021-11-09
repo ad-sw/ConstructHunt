@@ -1,8 +1,8 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {getReviews} from '../../store/review';
 import {useEffect} from 'react';
-import ReviewModalCreate from '../../components/ReviewModal_Create';
-import ReviewModalUpdate from '../../components/ReviewModal_Update';
+import ReviewModalCreate from '../../components/ProductModal_Create';
+import ReviewModalUpdate from '../../components/ProductModal_Update';
 import ReviewDelete from '../../components/ReviewModal_Delete';
 
 function ReviewModal({product}) {

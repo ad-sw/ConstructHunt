@@ -2,8 +2,9 @@ import {useSelector, useDispatch} from 'react-redux';
 import {getProducts} from '../../store/product';
 import {useEffect} from 'react';
 import ProductModalUpdate from '../../components/ProductModal_Update';
-import ProductModalDelete from '../../components/ProductModal_Delete';
+// import ProductModalDelete from '../../components/ProductModal_Delete';
 import ReviewModal from '../../components/ReviewModal';
+import ReviewModalCreate from '../../components/ReviewModal_Create';
 import "./ProductModal.css";
 
 function ProductModal() {
@@ -28,6 +29,7 @@ function ProductModal() {
                     <ProductModalUpdate product={product}/>
                     {/* <ProductModalDelete product={product}/> */}
                     <ReviewModal product={product}/>
+                    <ReviewModalCreate productId={product.id}/>
                 </div>
             )
             })}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
-import ProductFormCreate from './ProductFormCreate';
+import ProductFormCreate from './ProductForm_Create';
 import "./ProductCreate.css";
 
 function ProductModalCreate() {
