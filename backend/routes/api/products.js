@@ -22,9 +22,9 @@ router.put("/:productId", asyncHandler(async function (req, res) {
       return res.json({product});
 }));
 
-router.delete("/:productId", asyncHandler(async function (req, res) {
-    const productId = await ProductRepository.deleteProduct(req.params.productId);
-    return res.json({productId});
-}));
+// router.delete("/:productId", asyncHandler(async function (req, res) {
+//     const productId = await ProductRepository.deleteProduct(req.params.productId);
+//     return res.json({productId});
+// }));
 
 module.exports = router;

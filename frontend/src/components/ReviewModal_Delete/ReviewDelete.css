@@ -1,4 +1,8 @@
-.products {
+.deleteReview {
+    border: none;
+    background-color: #49297a;
+    color: #fff;
+    /* margin-top: 19px; */
     padding: 6px 12.5px;
     border-radius: 13px;
     font-weight: 700;
@@ -8,8 +12,10 @@
     margin: 3px 5px;
     text-align: center;
     display: block;
-    padding-right: 400px;
-    padding-left: 400px;
     margin-left: auto;
     margin-right: auto;
+}
+.deleteReview:hover {
+    background-color: #703387;
+    letter-spacing: 1px;
 }

@@ -30,7 +30,7 @@ function ProductFormUpdate({product, setShowModal}) {
     }
 
     return (
-        <div className='new-form-holder centered middled'>
+        <div>
           <form className="formUpdate" onSubmit={handleSubmit}>
           <input
               type='text'

@@ -11,20 +11,19 @@ const load = (products) => ({
     products
   });
 
+const add = (product) => ({
+    type: ADD_PRODUCTS,
+    product
+})
 
 const update = (product) => ({
     type: UPDATE_PRODUCTS,
     product
 })
 
-const add = (product) => ({
-    type: ADD_PRODUCTS,
-    product
-})
-
-const remove = (id) => ({
+const remove = (productId) => ({
     type: DELETE_PRODUCTS,
-    id
+    productId
 })
 
 //thunk
@@ -69,8 +68,8 @@ export const deleteProduct = (productId) => async (dispatch) => {
     });
 
     if (response.ok) {
-        const productId = await response.json();
-        dispatch(remove(productId.productId))
+        const product = await response.json();
+        dispatch(remove(product.product))
     }
 }
 
