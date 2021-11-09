@@ -1,5 +1,5 @@
 'use strict';
-const faker = require("faker");
+const { commerce } = require("faker");
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -8,7 +8,7 @@ module.exports = {
         {
           userId: 1,
           productId: 1,
-          review: faker.commerce.productDescription(),
+          review: commerce.productDescription(),
         }
       ], {});
   },
