@@ -1,0 +1,38 @@
+.createReview {
+    border: none;
+    background-color: #49297a;
+    color: #fff;
+    /* margin-top: 19px; */
+    padding: 6px 12.5px;
+    border-radius: 13px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 3px 5px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.createReview:hover {
+    background-color: #703387;
+    letter-spacing: 1px;
+}
+.formCreateReview {
+    border: none;
+    background-color: #49297a;
+    color: #fff;
+    /* margin-top: 19px; */
+    padding: 6px 12.5px;
+    /* border-radius: 13px; */
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 3px 5px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

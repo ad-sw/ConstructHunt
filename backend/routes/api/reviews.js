@@ -6,12 +6,12 @@ const ReviewRepository = require('../../db/reviews-repository');
 
 const router = express.Router();
 
-router.get('/', asyncHandler(async function(req, res) {
-    const reviews = await ReviewRepository.getReviews();
+router.get('/:productId', asyncHandler(async function(req, res) {
+    const reviews = await ReviewRepository.getReviews(req.params.productId);
     return res.json({reviews});
 }));
 
-router.post('/', asyncHandler(async function(req, res) {
+router.post('/:productId', asyncHandler(async function(req, res) {
     const review = await ReviewRepository.addReview(req.body);
     return res.json({review});
 }));
@@ -22,7 +22,7 @@ router.put("/:reviewId", asyncHandler(async function (req, res) {
 }));
 
 router.delete("/:reviewId", asyncHandler(async function (req, res) {
-    const reviewId = await ReviewRepository.deleteReview(req.params.id);
+    const reviewId = await ReviewRepository.deleteReview(req.params.reviewId);
     return res.json({reviewId});
 }));
 
