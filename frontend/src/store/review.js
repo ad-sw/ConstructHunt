@@ -68,8 +68,8 @@ export const deleteReview = (id) => async (dispatch) => {
     });
 
     if (response.ok) {
-      const reviewId = await response.json();
-      dispatch(remove(reviewId.reviewId));
+      const review = await response.json();
+      dispatch(remove(review.id));
     }
   };
 
@@ -85,8 +85,8 @@ const reviewReducer = (state = {}, action) => {
 
         case ADD_REVIEW:
             const addState = {...state};
-            action.reviews.forEach(review => {
-                addState[review.id] = review;
+            action.review.forEach(reviewed => {
+                addState[reviewed.id] = reviewed;
               });
             return addState;
 

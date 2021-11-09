@@ -19,12 +19,15 @@ function App() {
   return (
     <>
       <Navigation isLoaded={isLoaded} />
-      {sessionUser && <><ProductModal/>
-      <ProductFormCreate/></>}
+
       {isLoaded && (
         <Switch>
           <Route path="/signup">
             <SignupFormPage />
+          </Route>
+          <Route path="/products">
+            {sessionUser && <ProductModal/>}
+            {sessionUser && <ProductFormCreate/>}
           </Route>
         </Switch>
       )}

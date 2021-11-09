@@ -1,7 +1,11 @@
 const { Review } = require("./models");
 
-async function getReviews() {
-    return await Review.findAll();
+async function getReviews(productId) {
+    return await Review.findAll({
+        where: {
+            productId
+        }}
+    );
 }
 
 async function addReview(payload) {

@@ -1,8 +1,8 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {getReviews} from '../../store/review';
 import {useEffect} from 'react';
-import ReviewModalCreate from '../../components/ProductModal_Create';
-import ReviewModalUpdate from '../../components/ProductModal_Update';
+import ReviewModalCreate from '../../components/ReviewModal_Create';
+import ReviewModalUpdate from '../../components/ReviewModal_Update';
 import ReviewDelete from '../../components/ReviewModal_Delete';
 
 function ReviewModal({product}) {
@@ -10,18 +10,18 @@ function ReviewModal({product}) {
 
     useEffect(() => dispatch(getReviews(product.id)), [dispatch, product.id]);
     const reviews = useSelector(state => Object.values(state.reviews))
-    const reviewsFilter = reviews?.filter(review => review.productId === product.id)
+    // const reviewsFilter = reviews?.filter(review => review.productId === product.id)
 
     return (
         <div>
             {
-            reviewsFilter.map(reviews => {
+            reviews.map(review => {
             return (
-            <div key={reviews.id}>
-            <h3>{reviews.title}{reviews.review}</h3>
-            <ReviewModalCreate review={reviews}/>
-            <ReviewModalUpdate review={reviews}/>
-            <ReviewDelete review={reviews}/>
+            <div key={review.id}>
+            <h3>{review.title}{review.review}</h3>
+            {/* <ReviewModalCreate review={review}/> */}
+            <ReviewModalUpdate review={review}/>
+            <ReviewDelete review={review}/>
             </div>
             )
         })}
