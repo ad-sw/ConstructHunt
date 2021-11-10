@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
+import { useHistory } from 'react-router-dom';
 
 function SignupForm() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,11 +16,12 @@ function SignupForm() {
     e.preventDefault();
     if (password === confirmPassword) {
       setErrors([]);
-      return dispatch(sessionActions.signup({ email, username, password }))
+      dispatch(sessionActions.signup({ email, username, password }))
         .catch(async (res) => {
           const data = await res.json();
           if (data && data.errors) setErrors(data.errors);
         });
+        history.push('/');
     }
     return setErrors(['Confirm Password field must be the same as the Password field']);
   };

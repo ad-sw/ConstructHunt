@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 import './Navigation.css';
 
 function Navigation({ isLoaded }){
@@ -16,7 +16,6 @@ function Navigation({ isLoaded }){
     sessionLinks = (
       <>
       <ProfileButton user={sessionUser} />
-      <Redirect exact to="/" />
       </>
     );
   } else {
@@ -24,7 +23,7 @@ function Navigation({ isLoaded }){
       <>
         <LoginFormModal />
         <SignupFormModal />
-        <Redirect exact to="/" />
+        {/* <Redirect exact to="/" /> */}
       </>
     );
   }
