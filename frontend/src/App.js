@@ -8,6 +8,8 @@ import {searchProducts} from '../src/store/product';
 import ProductModal from "./components/ProductModal";
 import AboutMe from "./components/AboutMeFooter/AboutMe";
 import ProductFormCreate from "./components/ProductModal_Create";
+import LoginFormModal from "./components/LoginFormModal";
+import SignupFormModal from "./components/SignupFormModal";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,7 +31,7 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path="/products">
+          <Route exact path="/products">
             {<form className="search" onSubmit={(e) => {
               if (search) {
               e.preventDefault();
@@ -42,7 +44,7 @@ function App() {
             ></input>
             <button className='searchBtn' type="submit">Search Products</button>
             </form>}
-            {<ProductModal/>}
+            <ProductModal/>
             {sessionUser && <ProductFormCreate/>}
           </Route>
         </Switch>
