@@ -19,11 +19,12 @@ function ProductModal() {
         <div className="products">
             {products?.map(product => {
             return (
+                // <div key={product.id}>
+                //     <h2>{product.title}</h2>
+                //     <p>{product.upvotes}</p>
+                //     {<a href={product.link}><img alt="display" src={product.imageUrl}></img></a>}
+                //     <p>{product.description}</p>
                 <div key={product.id}>
-                    <h2>{product.title}</h2>
-                    <p>{product.upvotes}</p>
-                    {<a href={product.link}><img alt="display" src={product.imageUrl}></img></a>}
-                    <p>{product.description}</p>
                     <ProductModalUpdate product={product}/>
                     <ProductModalDelete product={product}/>
                     <ReviewModal product={product}/>

@@ -14,6 +14,8 @@ function App() {
   const sessionUser = useSelector(state => state.session.user);
   const [search, setSearch] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
+  const products = useSelector(state => Object.values(state.products))
+
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
@@ -40,7 +42,22 @@ function App() {
             ></input>
             <button className='searchBtn' type="submit">Search Products</button>
             </form>}
-            {sessionUser && <ProductModal/>}
+            {
+            <div className="products">
+              {products?.map(product => {
+              return (
+                <div key={product.id}>
+                      <h2>{product.title}</h2>
+                      <p>{product.upvotes}</p>
+                      {<a href={product.link}><img alt="display" src={product.imageUrl}></img></a>}
+                      <p>{product.description}</p>
+                </div>
+                )
+                })}
+              </div>
+            }
+            <><ProductModal/></>
+            {/* {sessionUser && <ProductModal/>} */}
             {sessionUser && <ProductFormCreate/>}
           </Route>
         </Switch>
