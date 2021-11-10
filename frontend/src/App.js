@@ -12,6 +12,8 @@ import ProductFormCreate from "./components/ProductModal_Create";
 function App() {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
+  // const products = useSelector(state => state.session.products);
+  // console.log(useSelector(state => state.session))
   const [search, setSearch] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -28,10 +30,10 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path="/products">
-            {sessionUser && <form className="search" onSubmit={(e) => {
+            {<form className="search" onSubmit={(e) => {
               if (search) {
               e.preventDefault();
-              dispatch(searchProducts(sessionUser.id, search));
+              dispatch(searchProducts(search));
               }}
             }>
             <input
@@ -40,7 +42,7 @@ function App() {
             ></input>
             <button className='searchBtn' type="submit">Search Products</button>
             </form>}
-            {sessionUser && <ProductModal/>}
+            {<ProductModal/>}
             {sessionUser && <ProductFormCreate/>}
           </Route>
         </Switch>

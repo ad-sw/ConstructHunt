@@ -7,6 +7,7 @@ import ReviewDelete from '../../components/ReviewModal_Delete';
 
 function ReviewModal({product}) {
     const dispatch = useDispatch();
+    const sessionUser = useSelector(state => state.session.user);
 
     useEffect(() => dispatch(getReviews(product.id)), [dispatch, product.id]);
     const reviews = useSelector(state => Object.values(state.reviews))
@@ -20,8 +21,8 @@ function ReviewModal({product}) {
             <div key={review.id}>
             <h3>{review.review}</h3>
             {/* <ReviewModalCreate review={review}/> */}
-            <ReviewModalUpdate review={review}/>
-            <ReviewDelete review={review}/>
+            {sessionUser && <ReviewModalUpdate review={review}/>}
+            {sessionUser && <ReviewDelete review={review}/>}
             </div>
             )
         })}

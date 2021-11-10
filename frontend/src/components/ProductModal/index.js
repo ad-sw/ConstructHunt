@@ -8,7 +8,7 @@ import ReviewModalCreate from '../../components/ReviewModal_Create';
 import "./ProductModal.css";
 
 function ProductModal() {
-    // const sessionUser = useSelector(state => state.session.user);
+    const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
 
     // useEffect(() => dispatch(getProducts(sessionUser?.id)), [dispatch, sessionUser?.id]);
@@ -24,10 +24,10 @@ function ProductModal() {
                     <p>{product.upvotes}</p>
                     {<a href={product.link}><img alt="display" src={product.imageUrl}></img></a>}
                     <p>{product.description}</p>
-                    <ProductModalUpdate product={product}/>
-                    <ProductModalDelete product={product}/>
+                    {sessionUser && <ProductModalUpdate product={product}/>}
+                    {sessionUser && <ProductModalDelete product={product}/>}
                     <ReviewModal product={product}/>
-                    <ReviewModalCreate productId={product.id}/>
+                    {sessionUser && <ReviewModalCreate productId={product.id}/>}
                 </div>
             )
             })}
