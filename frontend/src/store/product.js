@@ -36,8 +36,8 @@ export const getProducts = () => async (dispatch) => {
     }
 };
 
-export const searchProducts = (userId, searchTerm) => async (dispatch) => {
-    const response = await csrfFetch(`/api/products/${userId}/${searchTerm}`);
+export const searchProducts = (searchTerm) => async (dispatch) => {
+    const response = await csrfFetch(`/api/products/search/${searchTerm}`);
 
     if (response.ok) {
         const products = await response.json();

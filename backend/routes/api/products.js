@@ -14,13 +14,12 @@ router.get('/', asyncHandler(async function(req, res) {
 }));
 
 router.get(
-    "/:userId/:searchTerm",
+    "/search/:searchTerm",
     asyncHandler(async (req, res) => {
       const input = req.params.searchTerm;
 
       const results = await Product.findAll({
         where: {
-          userId: req.params.userId,
           title: {
             [Op.iLike]: `%${input}%`,
           },

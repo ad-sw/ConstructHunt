@@ -8,7 +8,7 @@ import ReviewModalCreate from '../../components/ReviewModal_Create';
 import "./ProductModal.css";
 
 function ProductModal() {
-    // const sessionUser = useSelector(state => state.session.user);
+    const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
 
     // useEffect(() => dispatch(getProducts(sessionUser?.id)), [dispatch, sessionUser?.id]);
@@ -19,16 +19,15 @@ function ProductModal() {
         <div className="products">
             {products?.map(product => {
             return (
-                // <div key={product.id}>
-                //     <h2>{product.title}</h2>
-                //     <p>{product.upvotes}</p>
-                //     {<a href={product.link}><img alt="display" src={product.imageUrl}></img></a>}
-                //     <p>{product.description}</p>
                 <div key={product.id}>
-                    <ProductModalUpdate product={product}/>
-                    <ProductModalDelete product={product}/>
+                    <h2>{product.title}</h2>
+                    <p>{product.upvotes}</p>
+                    {<a href={product.link}><img alt="display" src={product.imageUrl}></img></a>}
+                    <p>{product.description}</p>
+                    {sessionUser && <ProductModalUpdate product={product}/>}
+                    {sessionUser && <ProductModalDelete product={product}/>}
                     <ReviewModal product={product}/>
-                    <ReviewModalCreate productId={product.id}/>
+                    {sessionUser && <ReviewModalCreate productId={product.id}/>}
                 </div>
             )
             })}

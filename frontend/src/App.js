@@ -12,10 +12,10 @@ import ProductFormCreate from "./components/ProductModal_Create";
 function App() {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
+  // const products = useSelector(state => state.session.products);
+  // console.log(useSelector(state => state.session))
   const [search, setSearch] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
-  const products = useSelector(state => Object.values(state.products))
-
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
@@ -30,10 +30,10 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path="/products">
-            {sessionUser && <form className="search" onSubmit={(e) => {
+            {<form className="search" onSubmit={(e) => {
               if (search) {
               e.preventDefault();
-              dispatch(searchProducts(sessionUser.id, search));
+              dispatch(searchProducts(search));
               }}
             }>
             <input
@@ -42,22 +42,7 @@ function App() {
             ></input>
             <button className='searchBtn' type="submit">Search Products</button>
             </form>}
-            {
-            <div className="products">
-              {products?.map(product => {
-              return (
-                <div key={product.id}>
-                      <h2>{product.title}</h2>
-                      <p>{product.upvotes}</p>
-                      {<a href={product.link}><img alt="display" src={product.imageUrl}></img></a>}
-                      <p>{product.description}</p>
-                </div>
-                )
-                })}
-              </div>
-            }
-            <><ProductModal/></>
-            {/* {sessionUser && <ProductModal/>} */}
+            {<ProductModal/>}
             {sessionUser && <ProductFormCreate/>}
           </Route>
         </Switch>
