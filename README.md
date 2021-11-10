@@ -10,12 +10,15 @@
 * JavaScript (front-to-back)
 ---
 ### Features:
-* Visitors View on Home Page
+* Visitors View
   + Navigation Bar
     - [X] Sign up
     - [X] Log in & log out (registered user or demo)
+    - [X] View all existing products and reviews
+    - [X] Search all existing products
+    - [X] Select a product to view its profile page for detailed information
 
-* Logged-in View on Home Page
+* Logged-in View
   + Products
     - [X] Create product (C)
     - [X] View product (R)
@@ -27,9 +30,8 @@
     - [X] Update review    (U)
     - [X] Delete review  (D)
   + Search Users or Products
-    - [X] NavBar to search for users or products
+    - [X] NavBar to search for products
+  + Product Profile Page
+    - [X] Visitors may select products to view their profile pages for detailed information
   + Upvotes
     - [X] Users may upvote a product
-
-* Logged-in View on Product Profile Page
-  + Registered or demo users may select a product to view its profile page for detailed information
