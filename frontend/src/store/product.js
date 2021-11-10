@@ -68,8 +68,8 @@ export const deleteProduct = (productId) => async (dispatch) => {
     });
 
     if (response.ok) {
-        const product = await response.json();
-        dispatch(remove(product.product))
+        const productId = await response.json();
+        dispatch(remove(productId.productId))
     }
 }
 
@@ -95,7 +95,7 @@ const productReducer = (state = {}, action) => {
 
         case DELETE_PRODUCTS:
             const delState = {...state};
-            delete delState[action.id];
+            delete delState[action.productId];
             return delState;
 
         default:

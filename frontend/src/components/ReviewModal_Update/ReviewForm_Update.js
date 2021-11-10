@@ -11,7 +11,7 @@ function ReviewFormUpdate({review, setShowModal}) {
         e.preventDefault();
 
         const payload = {
-          reviews,
+          review: reviews,
           reviewId: review.id
         };
 
