@@ -14,7 +14,6 @@ function ProductModal() {
     // useEffect(() => dispatch(getProducts(sessionUser?.id)), [dispatch, sessionUser?.id]);
     useEffect(() => dispatch(getProducts()), [dispatch]);
     const products = useSelector(state => Object.values(state.products))
-    console.log(products)
 
     return (
         <div className="products">

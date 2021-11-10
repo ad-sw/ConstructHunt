@@ -1,9 +1,14 @@
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {deleteProduct} from '../../store/product';
 import "./ProductDelete.css";
 
 function ProductDelete({product}) {
   const dispatch = useDispatch();
+  const sessionUser = useSelector(state => state.session.user);
+
+  if (sessionUser.id !== product.userId) {
+    return null;
+  }
 
   return (
     <>

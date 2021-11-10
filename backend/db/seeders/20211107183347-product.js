@@ -4,7 +4,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
       return queryInterface.bulkInsert('Products', [
         {
-          userId: 1,
+          userId: 2,
           title: "Community Park",
           imageUrl: "https://images.adsttc.com/media/images/5909/381c/e58e/cea7/2500/01e1/slideshow/385-UCB_0029.jpg?1493776401",
           upvotes: 3,
@@ -14,7 +14,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 2,
+          userId: 3,
           title: "Community Park",
           imageUrl: "https://images.adsttc.com/media/images/5909/381c/e58e/cea7/2500/01e1/slideshow/385-UCB_0029.jpg?1493776401",
           upvotes: 3,
