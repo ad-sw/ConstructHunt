@@ -1,7 +1,8 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
-const { check, validationResult } = require('express-validator');
-// const {Product} = require('../../db/models');
+const {check, validationResult} = require('express-validator');
+const {Product} = require('../../db/models');
+const {Op} = require('sequelize');
 
 const ProductRepository = require('../../db/products-repository');
 
@@ -11,6 +12,26 @@ router.get('/', asyncHandler(async function(req, res) {
     const products = await ProductRepository.getProducts();
     return res.json({products});
 }));
+
+router.get(
+    "/:userId/:searchTerm",
+    asyncHandler(async (req, res) => {
+      const input = req.params.searchTerm;
+
+      const results = await Product.findAll({
+        where: {
+          userId: req.params.userId,
+          title: {
+            [Op.iLike]: `%${input}%`,
+          },
+        },
+        limit: 10,
+      });
+      res.json({
+        results
+      });
+    })
+  );
 
 router.post('/', asyncHandler(async function(req, res) {
     const product = await ProductRepository.addProduct(req.body);
