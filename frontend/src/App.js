@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import {searchProducts} from '../src/store/product';
 import ProductModal from "./components/ProductModal";
 import AboutMe from "./components/AboutMeFooter/AboutMe";
 import ProductFormCreate from "./components/ProductModal_Create";
@@ -11,6 +12,7 @@ import ProductFormCreate from "./components/ProductModal_Create";
 function App() {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
+  const [search, setSearch] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
@@ -26,6 +28,18 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path="/products">
+            {sessionUser && <form className="search" onSubmit={(e) => {
+              if (search) {
+              e.preventDefault();
+              dispatch(searchProducts(sessionUser.id, search));
+              }}
+            }>
+            <input
+            className="searchArea" type="text" name="search" value={search}
+            onChange={e => setSearch(e.target.value)}
+            ></input>
+            <button className='searchBtn' type="submit">Search Products</button>
+            </form>}
             {sessionUser && <ProductModal/>}
             {sessionUser && <ProductFormCreate/>}
           </Route>
