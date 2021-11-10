@@ -68,8 +68,8 @@ export const deleteReview = (id) => async (dispatch) => {
     });
 
     if (response.ok) {
-      const review = await response.json();
-      dispatch(remove(review.id));
+      const reviewId = await response.json();
+      dispatch(remove(reviewId.reviewId));
     }
   };
 
@@ -97,7 +97,7 @@ const reviewReducer = (state = {}, action) => {
 
         case DELETE_REVIEW:
               const delState = {...state};
-              delete delState[action.id];
+              delete delState[action.reviewId];
               return delState;
 
         default:
