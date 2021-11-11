@@ -23,7 +23,7 @@ function Slideshow() {
         <Slide>
          {slideImages.map((slideImage, index)=> (
             <div className="each-slide" key={index}>
-                  <center><img src={slideImage.url} alt="test" height="700px" width="1600px"></img>
+                  <center><img src={slideImage.url} alt="test" height="500px" width="1400px"></img>
                 <p>{slideImage.caption}</p></center>
             </div>
           ))}
