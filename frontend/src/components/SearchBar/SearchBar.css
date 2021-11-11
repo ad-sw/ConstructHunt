@@ -1,39 +1,42 @@
+.searchWrap {
+    display: flex;
+}
 .searchBtn {
     border: none;
     background-color: #49297a;
     color: #fff;
     /* margin-top: 19px; */
-    padding: 6px 12.5px;
-    border-radius: 13px;
+    padding: 4px 2px;
+    border-radius: 6px;
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 12px;
+    left: 30px;
+    position: relative;
     cursor: pointer;
-    margin: 3px 5px;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin: 3px 5px; */
+    /* text-align: center; */
+    /* display: block; */
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 .searchBtn:hover {
     background-color: #703387;
     letter-spacing: 1px;
 }
-/* .searchArea {
-    align-items: center;
-    justify-content: center;
-    display: block;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
+.searchArea {
+    left: 30px;
+    position: relative;
+    /* text-align: center; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
 .search {
-    align-items: center;
-    justify-content: center;
-    display: block;
-    text-align: center;
-    display: block;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* display: block; */
     margin-left: auto;
     margin-right: auto;
+    margin-top: -35px;
 }

@@ -12,7 +12,7 @@ function SearchBar(){
     // const [test, setTest] = useState('');
 
     return (
-        <>
+        <div className="searchWrap">
         <form className="search" onSubmit={(e) => {
             if (search) {
             e.preventDefault();
@@ -28,10 +28,10 @@ function SearchBar(){
             onChange={e => setSearch(e.target.value)}>
         </input>
 
-        <button className='searchBtn' type="submit">Search Products</button>
+        <button className='searchBtn' type="submit">Search</button>
 
         </form>
-        </>
+        </div>
     );
   }
 

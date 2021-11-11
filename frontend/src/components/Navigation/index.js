@@ -23,7 +23,6 @@ function Navigation({ isLoaded }){
       <>
         <LoginFormModal />
         <SignupFormModal />
-        {/* <Redirect exact to="/" /> */}
       </>
     );
   }
@@ -35,11 +34,13 @@ function Navigation({ isLoaded }){
     //     {isLoaded && sessionLinks}
     //   </li>
     // </ul>
-    <div>
-        {isLoaded && sessionLinks}
-        <><NavLink exact to="/">Home</NavLink></>
-        <><NavLink exact to="/products">Products</NavLink></>
-    </div>
+
+      <header className="header">
+        <div id="homeLink"><NavLink exact to="/">Home</NavLink></div>
+        <div id="productLink"><NavLink exact to="/products">Products</NavLink></div>
+        <div id="logBtns">{isLoaded && sessionLinks}</div>
+      </header>
+
   );
 }
 
