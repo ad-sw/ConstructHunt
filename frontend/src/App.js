@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import AboutUs from "./components/AboutUsPg"
 import ProductModal from "./components/ProductModal";
 import AboutMe from "./components/AboutMeFooter/AboutMe";
 import Slideshow from "./components/HomeImages";
@@ -37,6 +38,9 @@ function App() {
             <SearchBar/>
             <ProductModal/>
             {sessionUser && <ProductFormCreate/>}
+          </Route>
+          <Route exact path="/about">
+            <AboutUs />
           </Route>
         </Switch>
       )}

@@ -39,6 +39,7 @@ function Navigation({ isLoaded }){
         <div id='linking'>
           <div id="homeLink"><NavLink exact to="/">Home</NavLink></div>
           <div id="productLink"><NavLink exact to="/products">Products</NavLink></div>
+          <div id="aboutLink"><NavLink exact to="/about">About</NavLink></div>
         </div>
 
         {/* <h2 id="title">Construct(ion) Hunt</h2> */}

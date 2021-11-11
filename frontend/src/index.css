@@ -39,10 +39,10 @@ body {
 
   }
   #linking {
-    margin-right: 50px;
+    /* margin-right: 50px; */
     display:flex;
     justify-content: space-between;
-    width: 110px;
+    width: 165px;
   }
   /* #productLink {
     margin-right: 100px;
