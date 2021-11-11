@@ -27,6 +27,7 @@ function App() {
       {isLoaded && (
         <Switch>
           <Route exact path="/">
+            <h3 id="title1">Construct Hunt</h3>
             <Slideshow />
           </Route>
           <Route exact path="/signup">
