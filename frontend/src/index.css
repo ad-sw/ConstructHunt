@@ -7,6 +7,7 @@ body {
   }
   a {
     cursor: pointer;
+    /* width: 250px; */
   }
   a:hover, a:visited, a:link, a:active {
     text-decoration: none;
@@ -24,6 +25,7 @@ body {
   #logBtns {
     display: flex;
     margin-right: 40px;
+    padding-left: 120px;
     /* margin-left: auto; */
 
   }
@@ -31,6 +33,7 @@ body {
     margin-right: 50px;
     display:flex;
     justify-content: space-between;
+    width: 110px;
   }
   /* #productLink {
     margin-right: 100px;

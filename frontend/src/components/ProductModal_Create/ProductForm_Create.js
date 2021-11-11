@@ -57,7 +57,7 @@ function ProductFormCreate({setShowModal}) {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             />
-            <button type='submit' onClick={e => handleClick(e)}>Create New Product</button>
+            <button id="CreateProductBtn" type='submit' onClick={e => handleClick(e)}>Create New Product</button>
           </form>
         </div>
       );
