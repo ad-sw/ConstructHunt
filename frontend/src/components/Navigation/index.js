@@ -36,7 +36,7 @@ function Navigation({ isLoaded }){
     // </ul>
 
       <header className="header">
-        <div id='links'>
+        <div id='linking'>
           <div id="homeLink"><NavLink exact to="/">Home</NavLink></div>
           <div id="productLink"><NavLink exact to="/products">Products</NavLink></div>
         </div>
