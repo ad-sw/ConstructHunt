@@ -3,6 +3,7 @@
 }
 .searchBtn {
     border: none;
+    z-index: 1000;
     background-color: #49297a;
     color: #fff;
     /* margin-top: 19px; */
@@ -11,7 +12,7 @@
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 12px;
-    left: 30px;
+    left: 15px;
     position: relative;
     cursor: pointer;
     /* margin: 3px 5px; */
@@ -25,7 +26,8 @@
     letter-spacing: 1px;
 }
 .searchArea {
-    left: 30px;
+    z-index: 1000;
+    left: 15px;
     position: relative;
     /* text-align: center; */
     /* justify-content: center; */
@@ -36,7 +38,15 @@
     /* justify-content: center; */
     /* text-align: center; */
     /* display: block; */
+    /* z-index: 1000; */
     margin-left: auto;
     margin-right: auto;
     margin-top: -35px;
+}
+#blueBox{
+    position: absolute;
+    top: -10px;
+    height: 60px;
+    width: 190px;
+    background-color: cadetblue;
 }

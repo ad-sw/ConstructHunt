@@ -38,6 +38,7 @@ function Navigation({ isLoaded }){
       <header className="header">
         <div id="homeLink"><NavLink exact to="/">Home</NavLink></div>
         <div id="productLink"><NavLink exact to="/products">Products</NavLink></div>
+        <h2 id="title">Construct(ion) Hunt</h2>
         <div id="logBtns">{isLoaded && sessionLinks}</div>
       </header>
 

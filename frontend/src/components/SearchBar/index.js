@@ -29,7 +29,7 @@ function SearchBar(){
         </input>
 
         <button className='searchBtn' type="submit">Search</button>
-
+        <div id="blueBox"></div>
         </form>
         </div>
     );

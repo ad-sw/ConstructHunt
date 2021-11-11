@@ -13,6 +13,7 @@ a:hover, a:visited, a:link, a:active {
 }
 .header {
     padding: 15px;
+    height: 25px;
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
@@ -45,4 +46,11 @@ a:hover, a:visited, a:link, a:active {
     margin: 10px;
     border: 1px rgba(0, 0, 0, 0.36) solid;
     /* flex-direction: column; */
+}
+#title {
+    position: relative;
+    margin-left: 590px;
+    /* margin-right: auto; */
+    text-align: center;
+    align-items: center;
 }
