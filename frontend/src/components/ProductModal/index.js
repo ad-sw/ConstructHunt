@@ -23,7 +23,7 @@ function ProductModal() {
                 <div key={product.id}>
                     <h2>{product.title}</h2>
                     {/* <p>{product.upvotes}</p> */}
-                    {<NavLink exact to="/products/:id"><img alt="display" src={product.imageUrl}></img></NavLink>}
+                    {/*<NavLink exact to="/products/:id">*/<img alt="display" src={product.imageUrl} height="25%" width="50%"></img>/*</NavLink>*/}
                     <p>{product.description}</p>
                     {sessionUser && <ProductModalUpdate product={product}/>}
                     {sessionUser && <ProductModalDelete product={product}/>}
