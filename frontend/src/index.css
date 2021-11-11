@@ -52,12 +52,10 @@ body {
     border: 1px rgba(0, 0, 0, 0.36) solid;
     /* flex-direction: column; */
   }
-  #title {
+  /* #title {
     position: relative;
     align-self: center;
-    /* margin-left: 590px; */
-    /* margin-right: auto; */
     text-align: center;
     justify-content: space-between;
     align-items: center;
-  }
+  } */
