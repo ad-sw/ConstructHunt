@@ -40,6 +40,7 @@ function App() {
             {sessionUser && <ProductFormCreate/>}
           </Route>
           <Route exact path="/about">
+            <h3 id="title1">Construct Hunt</h3>
             <AboutUs />
           </Route>
         </Switch>
