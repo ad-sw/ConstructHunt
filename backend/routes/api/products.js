@@ -32,6 +32,7 @@ router.get(
     })
   );
 
+
 router.post('/', asyncHandler(async function(req, res) {
     const product = await ProductRepository.addProduct(req.body);
     return res.json({product});

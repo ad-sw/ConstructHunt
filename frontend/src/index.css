@@ -4,36 +4,38 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-}
-a {
+  }
+  a {
     cursor: pointer;
-}
-a:hover, a:visited, a:link, a:active {
+  }
+  a:hover, a:visited, a:link, a:active {
     text-decoration: none;
-}
-.header {
+  }
+  .header {
     padding: 15px;
     height: 25px;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     width: 100%;
     background-color: transparent;
     background-color: cadetblue;
-}
-#logBtns {
+  }
+  #logBtns {
     display: flex;
     margin-right: 40px;
-    margin-left: auto;
+    /* margin-left: auto; */
 
-}
-#homeLink {
+  }
+  #links {
     margin-right: 50px;
-}
-#productLink {
+    display:flex;
+    justify-content: space-between;
+  }
+  /* #productLink {
     margin-right: 100px;
-}
-#style {
+  } */
+  #style {
     position: absolute;
     top: 30px;
     right: 16px;
@@ -46,11 +48,13 @@ a:hover, a:visited, a:link, a:active {
     margin: 10px;
     border: 1px rgba(0, 0, 0, 0.36) solid;
     /* flex-direction: column; */
-}
-#title {
+  }
+  #title {
     position: relative;
-    margin-left: 590px;
+    align-self: center;
+    /* margin-left: 590px; */
     /* margin-right: auto; */
     text-align: center;
+    justify-content: space-between;
     align-items: center;
-}
+  }

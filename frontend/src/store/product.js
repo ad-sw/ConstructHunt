@@ -1,6 +1,7 @@
 import {csrfFetch} from './csrf';
 
 const LOAD_PRODUCTS = 'product/LOAD';
+const LOAD_ONE_PRODUCT = 'product/LOAD_ONE'
 const UPDATE_PRODUCTS = 'product/UPDATE';
 const ADD_PRODUCTS = 'product/ADD';
 const DELETE_PRODUCTS = 'product/DELETE';
@@ -10,6 +11,11 @@ const load = (products) => ({
     type: LOAD_PRODUCTS,
     products
   });
+
+const loadOne = (product) => ({
+    type: LOAD_ONE_PRODUCT,
+    product
+})
 
 const add = (product) => ({
     type: ADD_PRODUCTS,
@@ -35,6 +41,15 @@ export const getProducts = () => async (dispatch) => {
         dispatch(load(products.products));
     }
 };
+
+// export const getOneProduct = (id) => async (dispatch) => {
+//     const response = await fetch(`/api/gundam/${id}`);
+
+//     if (response.ok) {
+//         const data = await response.json();
+//         dispatch(getOneGundam(data));
+//     }
+//   };
 
 export const searchProducts = (searchTerm) => async (dispatch) => {
     const response = await csrfFetch(`/api/products/search/${searchTerm}`);

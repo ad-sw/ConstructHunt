@@ -10,7 +10,7 @@ function ProductModalCreate() {
     <>
       <button onClick={() => setShowModal(true)} className="createProduct">Create Product</button>
       {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
+        <Modal className="modalProduct" onClose={() => setShowModal(false)}>
           <ProductFormCreate setShowModal={setShowModal}/>
         </Modal>
       )}

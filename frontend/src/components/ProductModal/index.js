@@ -1,6 +1,7 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {getProducts} from '../../store/product';
 import {useEffect} from 'react';
+import { NavLink } from 'react-router-dom';
 import ProductModalUpdate from '../../components/ProductModal_Update';
 import ProductModalDelete from '../../components/ProductModal_Delete';
 import ReviewModal from '../../components/ReviewModal';
@@ -21,8 +22,8 @@ function ProductModal() {
             return (
                 <div key={product.id}>
                     <h2>{product.title}</h2>
-                    <p>{product.upvotes}</p>
-                    {<a href={product.link}><img alt="display" src={product.imageUrl}></img></a>}
+                    {/* <p>{product.upvotes}</p> */}
+                    {<NavLink exact to="/products/:id"><img alt="display" src={product.imageUrl}></img></NavLink>}
                     <p>{product.description}</p>
                     {sessionUser && <ProductModalUpdate product={product}/>}
                     {sessionUser && <ProductModalDelete product={product}/>}
