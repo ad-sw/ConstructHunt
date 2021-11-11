@@ -6,6 +6,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import ProductModal from "./components/ProductModal";
 import AboutMe from "./components/AboutMeFooter/AboutMe";
+import Slideshow from "./components/HomeImages";
 import SearchBar from "./components/SearchBar";
 import ProductFormCreate from "./components/ProductModal_Create";
 
@@ -25,7 +26,10 @@ function App() {
 
       {isLoaded && (
         <Switch>
-          <Route path="/signup">
+          <Route exact path="/">
+            <Slideshow />
+          </Route>
+          <Route exact path="/signup">
             <SignupFormPage />
           </Route>
           <Route exact path="/products">

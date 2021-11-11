@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/ad-sw/another-auth/issues"
   },
-  "homepage": "https://github.com/ad-sw/another-auth#readme"
+  "homepage": "https://github.com/ad-sw/another-auth#readme",
+  "dependencies": {
+    "react-slideshow-image": "^3.6.0"
+  }
 }
