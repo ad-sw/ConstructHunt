@@ -42,14 +42,14 @@ export const getProducts = () => async (dispatch) => {
     }
 };
 
-// export const getOneProduct = (id) => async (dispatch) => {
-//     const response = await fetch(`/api/gundam/${id}`);
+export const getOneProduct = (productId) => async (dispatch) => {
+    const response = await fetch(`/api/products/${productId}`);
 
-//     if (response.ok) {
-//         const data = await response.json();
-//         dispatch(getOneGundam(data));
-//     }
-//   };
+    if (response.ok) {
+        const productId = await response.json();
+        dispatch(loadOne(productId.productId));
+    }
+  };
 
 export const searchProducts = (searchTerm) => async (dispatch) => {
     const response = await csrfFetch(`/api/products/search/${searchTerm}`);
@@ -106,6 +106,11 @@ const productReducer = (state = {}, action) => {
                 newState[product.id] = product;
               })
             return newState;
+
+        case LOAD_ONE_PRODUCT:
+            const oneState = {...state};
+            oneState[action.product.id] = action.product;
+            return oneState;
 
         case ADD_PRODUCTS:
             const addState = {...state};

@@ -14,8 +14,6 @@ import ProductFormCreate from "./components/ProductModal_Create";
 function App() {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
-  // const products = useSelector(state => state.session.products);
-  // console.log(useSelector(state => state.session))
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
@@ -31,17 +29,26 @@ function App() {
             <h3 id="title1">Construct Hunt</h3>
             <Slideshow />
           </Route>
-          <Route exact path="/signup">
-            <SignupFormPage />
+          <Route exact path="/about">
+            <h3 id="title1">Construct Hunt</h3>
+            <AboutUs />
           </Route>
           <Route exact path="/products">
             <SearchBar/>
             <ProductModal/>
             {sessionUser && <ProductFormCreate/>}
           </Route>
-          <Route exact path="/about">
-            <h3 id="title1">Construct Hunt</h3>
-            <AboutUs />
+          <Route exact path="/products/:id">
+            <SearchBar/>
+            <ProductModal/>
+            {sessionUser && <ProductFormCreate/>}
+          </Route>
+          <Route>
+            <center>
+            <h1>404:</h1>
+            <h4>Page Not Found</h4>
+            <img alt="test" style={{filter: "grayscale(100%)", border: "20px solid transparent"}} height="450" width="650" src="https://ultimate-survival-training.com/wp-content/uploads/2018/02/tourist-2.jpg"></img>
+            </center>
           </Route>
         </Switch>
       )}
