@@ -14,9 +14,9 @@
   + Navigation Bar
     - [X] Sign up
     - [X] Log in & log out (registered user or demo)
-    - [X] View all existing products and reviews
+    - [X] View all existing products
     - [X] Search all existing products
-    - [X] Select a product to view its profile page for detailed information
+      - [X] Select a product to view its profile page for detailed information and reviews
 
 * Logged-in View
   + Products
@@ -32,6 +32,4 @@
   + Search Users or Products
     - [X] NavBar to search for products
   + Product Profile Page
-    - [X] Visitors may select products to view their profile pages for detailed information
-  + Upvotes
-    - [X] Users may upvote a product
+    - [X] Visitors may select products to view their pages for more information and leaving reviews
