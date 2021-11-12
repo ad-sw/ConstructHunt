@@ -1,6 +1,6 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {getReviews} from '../../store/review';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 // import ReviewModalCreate from '../../components/ReviewModal_Create';
 import ReviewModalUpdate from '../../components/ReviewModal_Update';
 import ReviewDelete from '../../components/ReviewModal_Delete';
@@ -8,12 +8,13 @@ import ReviewDelete from '../../components/ReviewModal_Delete';
 function ReviewModal({product}) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
+    const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => dispatch(getReviews(product.id)), [dispatch, product.id]);
+    useEffect(() => dispatch(getReviews(product.id)).then(() => setIsLoaded(true)), [dispatch, product.id]);
     const reviews = useSelector(state => Object.values(state.reviews))
     const reviewsFilter = reviews?.filter(review => review.productId === product.id)
 
-    return (
+    return isLoaded && (
         <div>
             {
             reviewsFilter.map(review => {

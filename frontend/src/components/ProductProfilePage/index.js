@@ -1,6 +1,6 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {getOneProduct} from '../../store/product';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 // import { NavLink } from 'react-router-dom';
 import {useParams } from 'react-router';
 import ProductModalUpdate from '../../components/ProductModal_Update';
@@ -10,32 +10,31 @@ import ReviewModalCreate from '../../components/ReviewModal_Create';
 
 function ProductProfilePgModal() {
     const sessionUser = useSelector(state => state.session.user);
-    const { productId } = useParams();
+    const { id } = useParams();
     const dispatch = useDispatch();
-  
-    useEffect(() => dispatch(getOneProduct()), [dispatch]);
-    const products = useSelector(state => Object.values(state.products))
+    const [isLoaded, setIsLoaded] = useState(false);
+    const product = useSelector(state => state.products[id])
+
+    useEffect(() => dispatch(getOneProduct(id)).then(() => setIsLoaded(true)), [dispatch]);
+    // console.log(product)
 
     return (
+        isLoaded && (
         <div className="products">
-          {
-            products?.map(product => {
-            return (
-                <div key={product.id}>
-                    <h2>{product.title}</h2>
-                    {<img alt="display" src={product.imageUrl} height="25%" width="50%"></img>}
-                    <p>{product.description}</p>
-                    {sessionUser && <ProductModalUpdate product={product}/>}
-                    {sessionUser && <ProductModalDelete product={product}/>}
-                    <ReviewModal product={product}/>
-                    {sessionUser && <ReviewModalCreate productId={product.id}/>}
+                <div key={product?.id}>
+                    <h2>{product?.title}</h2>
+                    {<img alt="display" src={product?.imageUrl} height="25%" width="50%"></img>}
+                    <p>{product?.description}</p>
+                    {sessionUser?.id === product?.userId &&
+                    <><ProductModalUpdate product={product}/>
+                    <ProductModalDelete product={product}/>
+                    </>
+                    }
+                    {<><ReviewModalCreate productId={product?.id}/>
+                    <ReviewModal product={product}/></>}
                 </div>
-                  )
-                }
-              )
-            }
-        </div>
-    );
+        </div>)
+   );
 }
 
 export default ProductProfilePgModal;

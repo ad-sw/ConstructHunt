@@ -1,9 +1,11 @@
 import {useDispatch, useSelector} from 'react-redux';
 import {deleteProduct} from '../../store/product';
 import "./ProductDelete.css";
+import {useHistory} from 'react-router-dom';
 
 function ProductDelete({product}) {
   const dispatch = useDispatch();
+  const history = useHistory();
   const sessionUser = useSelector(state => state.session.user);
 
   if (sessionUser.id !== product.userId) {
@@ -15,6 +17,7 @@ function ProductDelete({product}) {
       <button className="deleteProduct" onClick={(e) => {
         e.preventDefault();
         dispatch(deleteProduct(product.id));
+        history.push('/products');
         }}>
           Delete Product
       </button>
