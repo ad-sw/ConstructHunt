@@ -77,7 +77,7 @@ export const deleteReview = (id) => async (dispatch) => {
 const reviewReducer = (state = {}, action) => {
     switch (action.type) {
         case LOAD_REVIEWS:
-            const newState = {};
+            const newState = {...state};
             action.reviews.forEach(review => {
                 newState[review.id] = review;
               });
