@@ -1,5 +1,6 @@
 # Construct(ion) Hunt
->To be edited. Give it a try by [clicking here](https://constructhunt.herokuapp.com/)
+>To be edited. Give it a try by [clicking here](https://constructhunt.herokuapp.com/).
+In memory of [Michael Swires](https://www.tributearchive.com/obituaries/23057254/michael-howard-swires).
 ---
 ### Fullstack used:
 * CSS & HTML (front-end)
