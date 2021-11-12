@@ -1,8 +1,8 @@
 import {useSelector, useDispatch} from 'react-redux';
-import {getProducts} from '../../store/product';
+import {getOneProduct} from '../../store/product';
 import {useEffect} from 'react';
 // import { NavLink } from 'react-router-dom';
-// import {useParams } from 'react-router';
+import {useParams } from 'react-router';
 import ProductModalUpdate from '../../components/ProductModal_Update';
 import ProductModalDelete from '../../components/ProductModal_Delete';
 import ReviewModal from '../../components/ReviewModal';
@@ -10,11 +10,10 @@ import ReviewModalCreate from '../../components/ReviewModal_Create';
 
 function ProductProfilePgModal() {
     const sessionUser = useSelector(state => state.session.user);
-    // const { productId } = useParams();
+    const { productId } = useParams();
     const dispatch = useDispatch();
-
-    // useEffect(() => dispatch(getProducts(sessionUser?.id)), [dispatch, sessionUser?.id]);
-    useEffect(() => dispatch(getProducts()), [dispatch]);
+  
+    useEffect(() => dispatch(getOneProduct()), [dispatch]);
     const products = useSelector(state => Object.values(state.products))
 
     return (
@@ -24,8 +23,7 @@ function ProductProfilePgModal() {
             return (
                 <div key={product.id}>
                     <h2>{product.title}</h2>
-                    {/* <p>{product.upvotes}</p> */}
-                    {/*<NavLink exact to="/products/:id">*/<img alt="display" src={product.imageUrl} height="25%" width="50%"></img>/*</NavLink>*/}
+                    {<img alt="display" src={product.imageUrl} height="25%" width="50%"></img>}
                     <p>{product.description}</p>
                     {sessionUser && <ProductModalUpdate product={product}/>}
                     {sessionUser && <ProductModalDelete product={product}/>}

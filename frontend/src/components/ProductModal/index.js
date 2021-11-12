@@ -12,6 +12,7 @@ function ProductModal() {
     // const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
 
+
     // useEffect(() => dispatch(getProducts(sessionUser?.id)), [dispatch, sessionUser?.id]);
     useEffect(() => dispatch(getProducts()), [dispatch]);
     const products = useSelector(state => Object.values(state.products))
