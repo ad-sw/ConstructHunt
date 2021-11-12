@@ -51,7 +51,7 @@ body {
     position: absolute;
     top: 22px;
     right: 15px;
-    z-index: 1000; /*why is this needed to get button clickable*/
+    z-index: 1000;
     background-color: rgb(240, 240, 240);
     list-style-type: none;
     /* width: 30px;
