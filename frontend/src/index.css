@@ -49,16 +49,16 @@ body {
   } */
   #style {
     position: absolute;
-    top: 30px;
-    right: 16px;
+    top: 22px;
+    right: 15px;
     z-index: 1000; /*why is this needed to get button clickable*/
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(240, 240, 240);
     list-style-type: none;
     /* width: 30px;
     height: 50px; */
     padding: 10px;
     margin: 10px;
-    border: 1px rgba(0, 0, 0, 0.36) solid;
+    border: 1px rgba(0, 0, 0, 0.5) solid;
     /* flex-direction: column; */
   }
   /* #title {

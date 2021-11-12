@@ -1,0 +1,13 @@
+.descriptionAbout {
+    margin: auto;
+    padding-top: 20px;
+    max-width: 600px;
+    /* transform: skew(8deg, 0deg); */
+    /* font-style: italic; */
+    font-size: 30px;
+    color: rgb(57, 57, 57);
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
