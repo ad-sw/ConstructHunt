@@ -61,10 +61,12 @@ body {
     border: 1px rgba(0, 0, 0, 0.5) solid;
     /* flex-direction: column; */
   }
-  /* #title {
-    position: relative;
-    align-self: center;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-  } */
+#text404 {
+  margin-top: 0;
+  padding-top: 0;
+}
+#h1404 {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  font-size: 50px;
+}

@@ -13,6 +13,11 @@ router.get('/', asyncHandler(async function(req, res) {
     return res.json({products});
 }));
 
+router.get('/:productId', asyncHandler(async function(req, res) {
+  const productId = await ProductRepository.getOneProduct(req.params.productId);
+  return res.json({productId});
+}));
+
 router.get(
     "/search/:searchTerm",
     asyncHandler(async (req, res) => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-import SignupFormPage from "./components/SignupFormPage";
+// import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import AboutUs from "./components/AboutUsPg"
@@ -9,6 +9,7 @@ import ProductModal from "./components/ProductModal";
 import AboutMe from "./components/AboutMeFooter/AboutMe";
 import Slideshow from "./components/HomeImages";
 import SearchBar from "./components/SearchBar";
+import ProductProfilePgModal from "./components/ProductProfilePage"
 import ProductFormCreate from "./components/ProductModal_Create";
 
 function App() {
@@ -40,14 +41,14 @@ function App() {
           </Route>
           <Route exact path="/products/:id">
             <SearchBar/>
-            <ProductModal/>
-            {sessionUser && <ProductFormCreate/>}
+            <ProductProfilePgModal/>
           </Route>
           <Route>
             <center>
-            <h1>404:</h1>
-            <h4>Page Not Found</h4>
-            <img alt="test" style={{filter: "grayscale(100%)", border: "20px solid transparent"}} height="450" width="650" src="https://ultimate-survival-training.com/wp-content/uploads/2018/02/tourist-2.jpg"></img>
+            <h3 id="title1">Construct Hunt</h3>
+            <h1 id="h1404">404:</h1>
+            <h4 id="text404">Page Not Found</h4>
+            <img alt="test" style={{filter: "grayscale(100%)", border: "10px solid transparent"}} height="450" width="650" src="https://ultimate-survival-training.com/wp-content/uploads/2018/02/tourist-2.jpg"></img>
             </center>
           </Route>
         </Switch>
