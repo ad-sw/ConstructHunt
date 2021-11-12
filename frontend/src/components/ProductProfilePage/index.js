@@ -28,9 +28,9 @@ function ProductProfilePgModal() {
                     {sessionUser?.id === product?.userId &&
                     <><ProductModalUpdate product={product}/>
                     <ProductModalDelete product={product}/>
-                    <ReviewModalCreate productId={product?.id}/>
                     </>
                     }
+                    {sessionUser && <ReviewModalCreate productId={product?.id}/>}
                     {<>
                     <ReviewModal product={product}/></>}
                 </div>
