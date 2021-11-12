@@ -1,5 +1,6 @@
 'use strict';
-const { commerce } = require("faker");
+// const { commerce } = require("faker");
+const loremIpsum = require("lorem-ipsum").loremIpsum;
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -8,17 +9,12 @@ module.exports = {
         {
           userId: 1,
           productId: 1,
-          review: commerce.productDescription(),
+          review: /*commerce.productDescription()*/ loremIpsum(),
         },
         {
-          userId: 1,
-          productId: 1,
-          review: commerce.productDescription(),
-        },
-        {
-          userId: 1,
+          userId: 2,
           productId: 2,
-          review: commerce.productDescription(),
+          review: /*commerce.productDescription()*/ loremIpsum(),
         }
       ], {});
   },
