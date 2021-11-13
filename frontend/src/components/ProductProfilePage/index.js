@@ -30,9 +30,8 @@ function ProductProfilePgModal() {
                     <ProductModalDelete product={product}/>
                     </>
                     }
+                    {<ReviewModal product={product}/>}
                     {sessionUser && <ReviewModalCreate productId={product?.id}/>}
-                    {<>
-                    <ReviewModal product={product}/></>}
                 </div>
         </div>)
    );
