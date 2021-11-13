@@ -20,9 +20,9 @@ function ProductProfilePgModal() {
 
     return (
         isLoaded && (
-        <div className="products">
-                <div key={product?.id}>
-                    <h2>{product?.title}</h2>
+        // <div>
+                <div key={product?.id}  className="products">
+                    <h2 id="productTitle">{product?.title}</h2>
                     {<img alt="display" src={product?.imageUrl} height="25%" width="50%"></img>}
                     <p>{product?.description}</p>
                     {sessionUser?.id === product?.userId &&
@@ -33,7 +33,8 @@ function ProductProfilePgModal() {
                     {<ReviewModal product={product}/>}
                     {sessionUser && <ReviewModalCreate productId={product?.id}/>}
                 </div>
-        </div>)
+        // </div>
+        )
    );
 }
 

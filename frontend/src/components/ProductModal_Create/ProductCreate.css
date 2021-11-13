@@ -1,6 +1,6 @@
 .createProduct {
     border: none;
-    background-color: #49297a;
+    background-color: #404040;
     color: #fff;
     /* margin-top: 19px; */
     padding: 6px 12.5px;
@@ -14,31 +14,32 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    top: 270px;
 }
 .createProduct:hover {
-    background-color: #703387;
+    background-color: #585858;
     letter-spacing: 1px;
 }
 .formCreate {
     border: none;
     position: relative;
-    background-color: #49297a;
+    background-color: #939393;
     letter-spacing: .5px;
     font-size: 12px;
     text-align: center;
-    padding: 20px 30px 5px 30px;
+    padding: 10px 10px 5px 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: auto;
-    margin-bottom: 20px;
+    width: 200px;
 }
 #CreateProductBtn {
     cursor: pointer;
     border: none;
-    background-color: #1c102f;
+    background-color: #404040;
     color: #fff;
     /* margin-top: 19px; */
     padding: 6px 12.5px;
@@ -46,11 +47,13 @@
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 12px;
+    width: 50%;
     /* margin: 3px 5px; */
-    text-align: center;
+    /* text-align: center;
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
+    /* position: fixed; */
 }
 input {
     margin-bottom: 3px;

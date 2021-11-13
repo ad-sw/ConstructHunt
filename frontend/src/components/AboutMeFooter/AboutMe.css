@@ -1,26 +1,17 @@
-.footer {
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    padding-top: 3px;
-    font-size: 15px;
-    position: fixed;
-    cursor: pointer;
-    display: block;
-    height: 45px;
-    background-color: rgb(231, 230, 230);
-}
 #author {
-    margin: 2px;
+    margin: .1px;
     top: -500px;
-    color: rgb(57, 57, 57);
+    color: #a6a6a6;
 }
 .links {
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    opacity: .7;
+    opacity: .12;
+}
+.links:hover {
+    opacity: .25;
 }
 .AboutMe {
     text-align: center;

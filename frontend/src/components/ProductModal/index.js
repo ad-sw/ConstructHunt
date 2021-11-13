@@ -19,14 +19,14 @@ function ProductModal() {
     const products = useSelector(state => Object.values(state.products))
 
     return (
-        <div className="products">
+        <><div className="products">
             {products?.map(product => {
             return (
                 <div key={product.id}>
-                    <h2>{product.title}</h2>
+                    <h2 id="productTitle">{product.title}</h2>
                     {/* <p>{product.upvotes}</p> */}
                     {<NavLink to={`/products/${product.id}`}>
-                    <img alt="display" src={product.imageUrl} height="25%" width="50%"></img>
+                    <img className="productImg" src={product.imageUrl} height="25%" width="50%" alt="display"></img>
                     </NavLink>}
                     {/* <p>{product.description}</p>
                     {sessionUser && <ProductModalUpdate product={product}/>}
@@ -36,8 +36,10 @@ function ProductModal() {
                 </div>
             )
             })}
-            {sessionUser && <ProductFormCreate/>}
         </div>
+        <div>
+            {sessionUser && <ProductFormCreate/>}
+        </div></>
     );
 }
 
