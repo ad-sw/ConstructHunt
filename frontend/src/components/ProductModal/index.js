@@ -6,12 +6,13 @@ import { NavLink } from 'react-router-dom';
 // import ProductModalDelete from '../../components/ProductModal_Delete';
 // import ReviewModal from '../../components/ReviewModal';
 // import ReviewModalCreate from '../../components/ReviewModal_Create';
+import ProductFormCreate from "../../components/ProductModal_Create";
 import "./ProductModal.css";
 
 function ProductModal() {
     // const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
-
+    const sessionUser = useSelector(state => state.session.user);
 
     // useEffect(() => dispatch(getProducts(sessionUser?.id)), [dispatch, sessionUser?.id]);
     useEffect(() => dispatch(getProducts()), [dispatch]);
@@ -35,6 +36,7 @@ function ProductModal() {
                 </div>
             )
             })}
+            {sessionUser && <ProductFormCreate/>}
         </div>
     );
 }

@@ -1,5 +1,5 @@
 .products {
-    padding: 6px 12.5px;
+    padding-top: 6px;
     border-radius: 13px;
     font-weight: 700;
     letter-spacing: .5px;
@@ -13,10 +13,8 @@
     margin-right: auto;
     text-align: center;
     align-items: center;
+    padding-bottom: 45px;
 }
 .a {
     cursor: pointer;
 }
-.test12 {
-    padding-bottom: 40px;
-  }

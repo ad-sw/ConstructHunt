@@ -37,7 +37,6 @@ function App() {
           <Route exact path="/products">
             <SearchBar/>
             <ProductModal/>
-            {sessionUser && <ProductFormCreate/>}
           </Route>
           <Route exact path="/products/:id">
             <SearchBar/>
