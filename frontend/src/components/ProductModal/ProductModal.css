@@ -5,25 +5,23 @@
     height: 100%;
     justify-content: center;
     text-align: center;
-    /* padding: 3rem; */
-    /* overflow: auto; */
     padding-bottom: 50px;
 }
 .a {
     cursor: pointer;
 }
 .productImg {
-  height: 15rem;
-  width: 25rem;
+  height: 240px;
+  width: 390px;
   margin: 3px 10px;
-  border-radius: 20px;
+  border-radius: 15px;
   border: .3px solid #d8d8d8;
 }
 .productImg:hover {
   transition: all 0.05s ease;
   transform: scale(1.004);
   box-shadow: 0 0 6px rgb(198, 198, 198);
-  filter: sepia(200%) hue-rotate(180deg) brightness(88%) saturate(160%);
+  filter: sepia(200%) hue-rotate(180deg) brightness(88%) saturate(140%);
 }
 #productTitle {
   color: #515460;
