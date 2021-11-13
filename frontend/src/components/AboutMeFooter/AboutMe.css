@@ -4,13 +4,11 @@
     width: 100%;
     padding-top: 3px;
     font-size: 15px;
-    position: relative;
+    position: fixed;
     cursor: pointer;
     display: block;
-    opacity: 0.5;
-}
-.footer:hover {
-    opacity: .73;
+    height: 25px;
+    background-color: rgb(218, 218, 218);
 }
 #author {
     margin: 10px;
@@ -20,7 +18,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -7px;
+    /* margin-top: -7px; */
     /* padding-top: -10px; */
 }
 .AboutMe {

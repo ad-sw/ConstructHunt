@@ -32,8 +32,8 @@ function ProductFormCreate({setShowModal}) {
     }
 
     return (
-        <div>
-          <form className="formCreate" onSubmit={handleSubmit}>
+        <div className="formCreate" >
+          <form onSubmit={handleSubmit}>
             <input
               type='text'
               placeholder='Title'
