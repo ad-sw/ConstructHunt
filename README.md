@@ -1,6 +1,12 @@
 # Construct(ion) Hunt
->To be edited. Give it a try by [clicking here](https://constructhunt.herokuapp.com/).
+>To be edited.
 ---
+## [Live Site](https://constructhunt.herokuapp.com/) 
+
+## [Database Schema](https://github.com/ad-sw/ConstructHunt/wiki/Database-Schema)
+
+## [Full Features List](https://github.com/ad-sw/ConstructHunt/wiki/MVP-Features-List)
+
 ### Fullstack used:
 * CSS & HTML (front-end)
 * React (front-end)
@@ -9,7 +15,8 @@
 * Sequelize (back-end)
 * JavaScript (front-to-back)
 ---
-### Features:
+
+### Features Overview:
 * Visitors View
   + Navigation Bar
     - [X] Sign up
@@ -33,3 +40,7 @@
     - [X] NavBar to search for products
   + Product Profile Page
     - [X] Visitors may select products to view their pages for more information and leaving reviews
+
+---
+## Local Use Set Up
+  * to be edited
