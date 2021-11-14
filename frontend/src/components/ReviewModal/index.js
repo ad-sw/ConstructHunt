@@ -21,7 +21,7 @@ function ReviewModal({product}) {
             return (
             <div className="reviewSection" key={review?.id}>
                 <h3>{review?.review}</h3>
-                <div className="reviewBtns">
+                <div className="reviewUpdateDeleteBtns">
                     {sessionUser && <><ReviewModalUpdate review={review}/><ReviewDelete review={review}/></>}
                 </div>
             </div>

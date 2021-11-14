@@ -56,18 +56,20 @@
   border-bottom: 1px solid black;
   background-color: #ececec;
 }
-.reviewBtns {
+.reviewUpdateDeleteBtns {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
   float: right;
   padding: 0;
+  /* width: 550px; */
 }
 .CreateUpdateDeleteBtns {
   display: inline-block;
   flex-direction: row;
   flex-wrap: wrap;
   margin: auto;
+  max-width: 550px;
 }
 #prodProfileTitle {
   color: #515460;

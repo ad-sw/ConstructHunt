@@ -14,7 +14,7 @@ function ProductDelete({product}) {
 
   return (
     <>
-      <button className="deleteProduct" onClick={(e) => {
+      <button className="deleteProductBtn" onClick={(e) => {
         e.preventDefault();
         dispatch(deleteProduct(product.id));
         history.push('/products');

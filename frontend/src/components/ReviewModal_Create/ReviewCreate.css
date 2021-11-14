@@ -3,11 +3,12 @@
     border: none;
     background-color: #404040;
     color: #fff;
-    border-radius: 13px;
+    border-radius: 5px;
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 12px;
-    margin-left: 10px;
+    margin-left: 230px;
+    /* float: right; */
 }
 .createReview:hover {
     background-color: #585858;
