@@ -1,21 +1,21 @@
 .productProfile {
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-    padding-bottom: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 50px;
 }
 .profileImg {
-    height: 370px;
-    width: 550px;
-    margin: 3px 10px 0 10px;
-    border-radius: 5px;
-    border: .3px solid #d8d8d8;
+  height: 350px;
+  width: 550px;
+  margin: 3px 10px 0 10px;
+  border-radius: 5px;
+  border: .3px solid #d8d8d8;
 }
 .profileImg:hover {
-    transition: all 0.01s ease;
-    filter: saturate(115%);
+  transition: all 0.01s ease;
+  filter: brightness(105%) saturate(125%);
 }
 .reviewsTable {
   overflow-x: hidden;
@@ -23,28 +23,58 @@
   height: 200px;
   width: 550px;
   align-items: left;
+  padding-top: 0;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   align-self: center;
   font-size: 12px;
   display: block;
   text-align: left;
+  font-size: 10px;
+}
+.productDiscussionWrapper {
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.discussionTitle {
+  color: #515460;
+  font-size: 15px;
+  display: block;
+  margin: 0;
+  padding-bottom: -500;
+  float: left;
+  position: absolute;
+}
+.reviewSection {
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #ececec;
 }
 .reviewBtns {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
   float: right;
-  /* margin: auto; */
-  justify-content: center;
   padding: 0;
 }
+.CreateUpdateDeleteBtns {
+  display: inline-block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
 #prodProfileTitle {
-    color: #515460;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    display: block;
+  color: #515460;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 #productDescription {
   margin: 0;

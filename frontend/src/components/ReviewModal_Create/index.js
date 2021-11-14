@@ -7,14 +7,14 @@ function ReviewModalCreate({productId}) {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div>
+    <>
       <button onClick={() => setShowModal(true)} className="createReviewBtn">Create Review</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <ReviewFormCreate productId={productId} setShowModal={setShowModal}/>
         </Modal>
       )}
-    </div>
+    </>
   );
 }
 

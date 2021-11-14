@@ -14,13 +14,13 @@ a:hover, a:visited, a:link, a:active {
   text-decoration: none;
 }
 #productLink:hover {
-  filter: brightness(115%);
+  filter: brightness(130%);
 }
 #homeLink:hover {
-  filter: brightness(115%);
+  filter: brightness(130%);
 }
 #aboutLink:hover {
-  filter: brightness(115%);
+  filter: brightness(130%);
 }
 .header {
   padding: 15px;

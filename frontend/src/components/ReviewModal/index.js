@@ -15,18 +15,19 @@ function ReviewModal({product}) {
     const reviewsFilter = reviews?.filter(review => review.productId === product.id)
 
     return isLoaded && (
-        <div>
+        <>
             {
             reviewsFilter.map(review => {
             return (
-            <div key={review?.id}>
-            <h3>{review?.review}</h3>
-            {/* <ReviewModalCreate review={review}/> */}
-            {sessionUser && <div className="reviewBtns"><ReviewModalUpdate review={review}/><ReviewDelete review={review}/></div>}
+            <div className="reviewSection" key={review?.id}>
+                <h3>{review?.review}</h3>
+                <div className="reviewBtns">
+                    {sessionUser && <><ReviewModalUpdate review={review}/><ReviewDelete review={review}/></>}
+                </div>
             </div>
             )
         })}
-        </div>
+        </>
     );
 }
 
