@@ -32,8 +32,7 @@ function ProductProfilePgModal() {
                     <div className="productDiscussionWrapper">
                     <h4 className="discussionTitle">Product Discussion:</h4>
                         <div className="reviewsTable">
-                            {sessionUser?.id === product?.userId &&
-                            <ReviewModal product={product}/>}
+                            {<ReviewModal product={product}/>}
                         </div>
                     </div>
 
