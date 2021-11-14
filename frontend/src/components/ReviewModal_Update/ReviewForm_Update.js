@@ -16,12 +16,8 @@ function ReviewFormUpdate({review, setShowModal}) {
         };
 
         await dispatch(updateReview(payload));
+        setShowModal(false);
       };
-
-    const handleClick = (e) => {
-      handleSubmit(e);
-      setShowModal(false);
-    }
 
     return (
       <div>
@@ -29,9 +25,10 @@ function ReviewFormUpdate({review, setShowModal}) {
           <textarea
           placeholder="Review"
           value={reviews}
+          required
           onChange={e => setReviews(e.target.value)}
           />
-          <button type='submit' onClick={e => handleClick(e)}>Update Review</button>
+          <button type='submit'>Update Review</button>
         </form>
       </div>
       );

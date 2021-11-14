@@ -22,12 +22,8 @@ function ProductFormUpdate({product, setShowModal}) {
         };
 
         await dispatch(updateProduct(payload));
+        setShowModal(false);
       };
-
-    const handleClick = (e) => {
-      handleSubmit(e);
-      setShowModal(false);
-    }
 
     return (
         <div>
@@ -36,26 +32,30 @@ function ProductFormUpdate({product, setShowModal}) {
               type='text'
               placeholder='Title'
               value={title}
+              required
               onChange={e => setTitle(e.target.value)}
             />
             <input
             type="url"
             placeholder="Image"
             value={imageUrl}
+            required
             onChange={(e) => setImageUrl(e.target.value)}
             />
             <input
             type="url"
             placeholder="Link"
             value={link}
+            required
             onChange={(e) => setLink(e.target.value)}
             />
             <textarea
             placeholder="Description"
             value={description}
+            required
             onChange={(e) => setDescription(e.target.value)}
             />
-            <button type='submit' onClick={e => handleClick(e)}>Update Product</button>
+            <button type='submit'>Update Product</button>
           </form>
         </div>
       );
