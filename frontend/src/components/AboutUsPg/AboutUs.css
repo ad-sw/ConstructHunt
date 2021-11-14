@@ -42,6 +42,9 @@
     opacity: .6;
     border-radius: 200px;
 }
+.cropPicsAbout:hover {
+    filter: sepia(220%) hue-rotate(180deg) brightness(91%) saturate(320%);
+}
 /* #imagesSize {
     margin: -10px 0px 0px -180px;
 } */
