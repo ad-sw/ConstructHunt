@@ -33,7 +33,7 @@ function ReviewFormCreate({productId, setShowModal}) {
           value={review}
           onChange={e => setReview(e.target.value)}
           />
-          <button type='submit' onClick={e => handleClick(e)}>Create New Review</button>
+          <button type='submit' onClick={e => handleClick(e)}>Create Review</button>
         </form>
       </div>
       );
