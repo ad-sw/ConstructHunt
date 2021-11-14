@@ -12,10 +12,10 @@ const load = (products) => ({
     products
   });
 
-const loadOne = (product) => ({
-    type: LOAD_ONE_PRODUCT,
-    product
-})
+// const loadOne = (product) => ({
+//     type: LOAD_ONE_PRODUCT,
+//     product
+// })
 
 const add = (product) => ({
     type: ADD_PRODUCTS,
@@ -42,14 +42,14 @@ export const getProducts = () => async (dispatch) => {
     }
 };
 
-export const getOneProduct = (productId) => async (dispatch) => {
-    const response = await fetch(`/api/products/${productId}`);
+// export const getOneProduct = (productId) => async (dispatch) => {
+//     const response = await fetch(`/api/products/${productId}`);
 
-    if (response.ok) {
-        const productId = await response.json();
-        dispatch(loadOne(productId.productId));
-    }
-  };
+//     if (response.ok) {
+//         const productId = await response.json();
+//         dispatch(loadOne(productId.productId));
+//     }
+//   };
 
 export const searchProducts = (searchTerm) => async (dispatch) => {
     const response = await csrfFetch(`/api/products/search/${searchTerm}`);
@@ -107,10 +107,10 @@ const productReducer = (state = {}, action) => {
               })
             return newState;
 
-        case LOAD_ONE_PRODUCT:
-            const oneState = {...state};
-            oneState[action.product.id] = action.product;
-            return oneState;
+        // case LOAD_ONE_PRODUCT:
+        //     const oneState = {...state};
+        //     oneState[action.product.id] = action.product;
+        //     return oneState;
 
         case ADD_PRODUCTS:
             const addState = {...state};

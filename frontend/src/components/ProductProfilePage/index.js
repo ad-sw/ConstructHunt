@@ -18,7 +18,7 @@ function ProductProfilePgModal() {
     const [isLoaded, setIsLoaded] = useState(false);
     const product = useSelector(state => state.products[id])
 
-    useEffect(() => dispatch(getProducts(id)).then(() => setIsLoaded(true)), [id, dispatch]);
+    useEffect(() => dispatch(getProducts()).then(() => setIsLoaded(true)), [dispatch]);
 
     return (
         isLoaded && (
