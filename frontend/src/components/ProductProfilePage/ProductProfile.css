@@ -1,5 +1,4 @@
-.productsProfile {
-    display: flex;
+.productProfile {
     flex-direction: row;
     flex-wrap: wrap;
     height: 100%;
@@ -8,15 +7,47 @@
     padding-bottom: 50px;
 }
 .profileImg {
-    height: 240px;
-    width: 390px;
-    margin: 3px 10px;
-    border-radius: 15px;
+    height: 370px;
+    width: 550px;
+    margin: 3px 10px 0 10px;
+    border-radius: 5px;
     border: .3px solid #d8d8d8;
+}
+.profileImg:hover {
+    transition: all 0.01s ease;
+    filter: saturate(115%);
+}
+.reviewsTable {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 200px;
+  width: 550px;
+  align-items: left;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  font-size: 12px;
+  display: block;
+  text-align: left;
+}
+.reviewBtns {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  float: right;
+  /* margin: auto; */
+  justify-content: center;
+  padding: 0;
 }
 #prodProfileTitle {
     color: #515460;
     font-size: 20px;
     margin: 0;
     padding: 0;
-  }
+    display: block;
+}
+#productDescription {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}

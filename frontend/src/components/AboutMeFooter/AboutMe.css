@@ -10,9 +10,6 @@
     margin-right: auto;
     opacity: .12;
 }
-.links:hover {
-    opacity: .25;
-}
 .AboutMe {
     text-align: center;
     display: block;

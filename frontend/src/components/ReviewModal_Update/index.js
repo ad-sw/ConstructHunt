@@ -11,10 +11,10 @@ function ReviewModalUpdate({review}) {
   if (sessionUser.id !== review.userId) {
     return null;
   }
-  
+
   return (
     <>
-      <button onClick={() => setShowModal(true)} className="updateReview">Update Review</button>
+      <button onClick={() => setShowModal(true)} className="updateReviewBtn">Update</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <ReviewFormUpdate review={review} setShowModal={setShowModal}/>

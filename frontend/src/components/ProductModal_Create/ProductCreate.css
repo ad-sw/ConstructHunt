@@ -1,4 +1,4 @@
-.createProduct {
+.createProductBtn {
     border: none;
     background-color: #404040;
     color: #fff;
@@ -16,9 +16,8 @@
     position: relative;
     top: 270px;
 }
-.createProduct:hover {
+.createProductBtn:hover {
     background-color: #585858;
-    letter-spacing: 1px;
 }
 .formCreate {
     border: none;

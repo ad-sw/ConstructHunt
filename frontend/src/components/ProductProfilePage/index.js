@@ -8,6 +8,7 @@ import ProductModalDelete from '../../components/ProductModal_Delete';
 import ReviewModal from '../../components/ReviewModal';
 import ReviewModalCreate from '../../components/ReviewModal_Create';
 import "./ProductProfile.css";
+import "../../components/ReviewModal/ReviewModal.css"
 
 function ProductProfilePgModal() {
     const sessionUser = useSelector(state => state.session.user);
@@ -16,25 +17,22 @@ function ProductProfilePgModal() {
     const [isLoaded, setIsLoaded] = useState(false);
     const product = useSelector(state => state.products[id])
 
-    useEffect(() => dispatch(getOneProduct(id)).then(() => setIsLoaded(true)), [dispatch]);
-    // console.log(product)
+    useEffect(() => dispatch(getOneProduct(id)).then(() => setIsLoaded(true)), [id, dispatch]);
 
     return (
         isLoaded && (
         <>
-                <div key={product?.id}  className="productsProfile">
+                <div key={product?.id}  className="productProfile">
                     <h2 id="prodProfileTitle">{product?.title}</h2>
-                    {<img className="profileImg" src={product?.imageUrl} height="25%" width="50%" alt="display"></img>}
-                    <p>{product?.description}</p>
-                </div>
-                <div>
+                    {<a href={product?.link}><img className="profileImg" src={product?.imageUrl} height="25%" width="50%" alt="display"></img></a>}
+                    <p id="productDescription">{product?.description}</p>
+                    {sessionUser?.id === product?.userId &&
+                    <div className="reviewsTable"><ReviewModal product={product}/></div>
+                    }
+                    {sessionUser && <ReviewModalCreate productId={product?.id}/>}
                     {sessionUser?.id === product?.userId &&
                     <><ProductModalUpdate product={product}/>
-                    <ProductModalDelete product={product}/>
-                    </>
-                    }
-                    {<ReviewModal product={product}/>}
-                    {sessionUser && <ReviewModalCreate productId={product?.id}/>}
+                    <ProductModalDelete product={product}/></>}
                 </div>
         </>
         )

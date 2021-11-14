@@ -14,7 +14,7 @@ function ProductModalUpdate({product}) {
 
   return (
     <>
-      <button onClick={() => setShowModal(true)} className="updateProduct">Update Product</button>
+      <button onClick={() => setShowModal(true)} className="updateProductBtn">Update Product</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <ProductFormUpdate product={product} setShowModal={setShowModal}/>

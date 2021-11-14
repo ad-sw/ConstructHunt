@@ -8,7 +8,7 @@ function ProductModalCreate() {
 
   return (
     <div className="test12">
-      <button onClick={() => setShowModal(true)} className="createProduct">Create Product</button>
+      <button onClick={() => setShowModal(true)} className="createProductBtn">Create Product</button>
       {showModal && (
         <Modal className="modalProduct" onClose={() => setShowModal(false)}>
           <ProductFormCreate setShowModal={setShowModal}/>

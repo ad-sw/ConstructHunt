@@ -39,7 +39,6 @@ function App() {
             <ProductModal/>
           </Route>
           <Route exact path="/products/:id">
-            <SearchBar/>
             <ProductProfilePgModal/>
           </Route>
           <Route>

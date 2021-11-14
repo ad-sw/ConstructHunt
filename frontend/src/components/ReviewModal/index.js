@@ -10,8 +10,8 @@ function ReviewModal({product}) {
     const sessionUser = useSelector(state => state.session.user);
     const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => dispatch(getReviews(product.id)).then(() => setIsLoaded(true)), [dispatch, product.id]);
-    const reviews = useSelector(state => Object.values(state.reviews))
+    useEffect(() => dispatch(getReviews(product?.id)).then(() => setIsLoaded(true)), [dispatch, product?.id]);
+    const reviews = useSelector(state => Object.values(state?.reviews))
     const reviewsFilter = reviews?.filter(review => review.productId === product.id)
 
     return isLoaded && (
@@ -19,11 +19,10 @@ function ReviewModal({product}) {
             {
             reviewsFilter.map(review => {
             return (
-            <div key={review.id}>
-            <h3>{review.review}</h3>
+            <div key={review?.id}>
+            <h3>{review?.review}</h3>
             {/* <ReviewModalCreate review={review}/> */}
-            {sessionUser && <ReviewModalUpdate review={review}/>}
-            {sessionUser && <ReviewDelete review={review}/>}
+            {sessionUser && <div className="reviewBtns"><ReviewModalUpdate review={review}/><ReviewDelete review={review}/></div>}
             </div>
             )
         })}

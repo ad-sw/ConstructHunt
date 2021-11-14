@@ -4,7 +4,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   padding: 0;
-  margin: 0 /*0 40px*/;
+  margin: 0;
 }
 a {
   cursor: pointer;
@@ -12,6 +12,15 @@ a {
 }
 a:hover, a:visited, a:link, a:active {
   text-decoration: none;
+}
+#productLink:hover {
+  filter: brightness(115%);
+}
+#homeLink:hover {
+  filter: brightness(115%);
+}
+#aboutLink:hover {
+  filter: brightness(115%);
 }
 .header {
   padding: 15px;
@@ -26,7 +35,7 @@ a:hover, a:visited, a:link, a:active {
   text-align: center;
   align-items: center;
   align-self: center;
-  top: -18px;
+  top: -19px;
   color: #c2c2c2;
   letter-spacing: 1px;
   font-size: 25px;

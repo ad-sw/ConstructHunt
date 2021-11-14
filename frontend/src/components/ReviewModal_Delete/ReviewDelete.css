@@ -1,21 +1,15 @@
-.deleteReview {
+.deleteReviewBtn {
+    cursor: pointer;
     border: none;
-    background-color: #49297a;
+    background-color: #404040;
     color: #fff;
-    /* margin-top: 19px; */
-    padding: 6px 12.5px;
+    /* padding: 6px 12.5px; */
     border-radius: 13px;
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 12px;
-    cursor: pointer;
-    margin: 3px 5px;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .deleteReview:hover {
-    background-color: #703387;
+    background-color: #585858;
     letter-spacing: 1px;
 }
