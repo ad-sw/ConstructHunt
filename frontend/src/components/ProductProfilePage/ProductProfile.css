@@ -15,7 +15,7 @@
 }
 .profileImg:hover {
   transition: all 0.01s ease;
-  filter: brightness(105%) saturate(125%);
+  filter: brightness(101%) saturate(125%);
 }
 .reviewsTable {
   overflow-x: hidden;
