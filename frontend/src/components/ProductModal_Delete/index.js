@@ -8,7 +8,7 @@ function ProductDelete({product}) {
   const history = useHistory();
   const sessionUser = useSelector(state => state.session.user);
 
-  if (sessionUser.id !== product.userId) {
+  if (sessionUser?.id !== product?.userId) {
     return null;
   }
 

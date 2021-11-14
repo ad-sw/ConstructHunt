@@ -8,7 +8,7 @@ function ProductModalUpdate({product}) {
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector(state => state.session.user);
 
-  if (sessionUser.id !== product.userId) {
+  if (sessionUser?.id !== product?.userId) {
     return null;
   }
 

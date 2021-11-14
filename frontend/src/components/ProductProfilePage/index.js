@@ -1,5 +1,6 @@
 import {useSelector, useDispatch} from 'react-redux';
-import {getOneProduct} from '../../store/product';
+// import {getOneProduct} from '../../store/product';
+import {getProducts} from '../../store/product';
 import {useEffect, useState} from 'react';
 // import { NavLink } from 'react-router-dom';
 import {useParams } from 'react-router';
@@ -17,7 +18,7 @@ function ProductProfilePgModal() {
     const [isLoaded, setIsLoaded] = useState(false);
     const product = useSelector(state => state.products[id])
 
-    useEffect(() => dispatch(getOneProduct(id)).then(() => setIsLoaded(true)), [id, dispatch]);
+    useEffect(() => dispatch(getProducts(id)).then(() => setIsLoaded(true)), [id, dispatch]);
 
     return (
         isLoaded && (

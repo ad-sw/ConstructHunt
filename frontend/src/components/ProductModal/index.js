@@ -1,7 +1,7 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {getProducts} from '../../store/product';
 import {useEffect} from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink /*, useHistory*/ } from 'react-router-dom';
 // import ProductModalUpdate from '../../components/ProductModal_Update';
 // import ProductModalDelete from '../../components/ProductModal_Delete';
 // import ReviewModal from '../../components/ReviewModal';

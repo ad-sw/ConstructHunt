@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch /*, useSelector*/ } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 // import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
@@ -10,11 +10,11 @@ import AboutMe from "./components/AboutMeFooter/AboutMe";
 import Slideshow from "./components/HomeImages";
 import SearchBar from "./components/SearchBar";
 import ProductProfilePgModal from "./components/ProductProfilePage"
-import ProductFormCreate from "./components/ProductModal_Create";
+// import ProductFormCreate from "./components/ProductModal_Create";
 
 function App() {
   const dispatch = useDispatch();
-  const sessionUser = useSelector(state => state.session.user);
+  // const sessionUser = useSelector(state => state.session.user);
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
