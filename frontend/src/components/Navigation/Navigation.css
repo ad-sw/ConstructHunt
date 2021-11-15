@@ -35,38 +35,3 @@
     margin-left: auto;
     margin-right: auto;
 }
-/* .signUpBtn {
-    border: none;
-    /* margin-top: 19px; */
-    /* padding: 6px 12.5px;
-    border-radius: 13px;
-    font-weight: 700;
-    letter-spacing: .5px;
-    font-size: 40px;
-    cursor: pointer;
-    margin: 3px 5px;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}*/
-/* .signUpBtn:hover {
-    color: red;
-} */
-
-  .signUpForm {
-    border: none;
-    position: relative;
-    background-color: #939393;
-    letter-spacing: .5px;
-    font-size: 12px;
-    text-align: center;
-    padding: 10px 10px 5px 10px;
-    display: flex;
-    text-align: left;
-    /* align-items: center; */
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 200px;
-  }

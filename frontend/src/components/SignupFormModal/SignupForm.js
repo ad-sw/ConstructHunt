@@ -33,7 +33,7 @@ function SignupForm() {
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>
       <label>
-        Email
+        Email<br></br>
         <input
           type="text"
           value={email}
