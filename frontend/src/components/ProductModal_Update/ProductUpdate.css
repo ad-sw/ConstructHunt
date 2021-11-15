@@ -27,3 +27,14 @@
     flex-wrap: wrap;
     width: 200px;
 }
+.updateBtnn {
+    cursor: pointer;
+    border: none;
+    background-color: #404040;
+    color: #fff;
+    padding: 3px 7px;
+    border-radius: 3px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: 12px;
+}

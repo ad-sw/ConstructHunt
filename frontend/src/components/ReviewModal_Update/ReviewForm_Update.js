@@ -28,7 +28,7 @@ function ReviewFormUpdate({review, setShowModal}) {
           required
           onChange={e => setReviews(e.target.value)}
           />
-          <button type='submit'>Update Review</button>
+          <button className="updateBtnn" type='submit'>Update</button>
         </form>
       </div>
       );

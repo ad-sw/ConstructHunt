@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
+import './LoginForm.css';
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="loginForm" onSubmit={handleSubmit}>
       <ul>
         {errors.map((error, idx) => (
           <li key={idx}>{error}</li>
@@ -48,7 +49,7 @@ function LoginForm() {
           required
         />
       </label>
-      <button type="submit">Log In</button>
+      <button className="loginBtn" type="submit">Log In</button>
       <button className="demoBtn" onClick={() => {setCredential('Demo-lition'); setPassword('password');}}>Demo User</button>
     </form>
   );

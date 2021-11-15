@@ -57,7 +57,7 @@ function ProductFormCreate({setShowModal}) {
             required
             onChange={(e) => setDescription(e.target.value)}
             />
-            <button type='submit'>Create Product</button>
+            <button className="createProductBtnn" type='submit'>Create</button>
           </form>
         </div>
       );

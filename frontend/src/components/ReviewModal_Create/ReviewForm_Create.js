@@ -30,7 +30,7 @@ function ReviewFormCreate({productId, setShowModal}) {
           required
           onChange={e => setReview(e.target.value)}
           />
-          <button type='submit'>Create Review</button>
+          <button className="createBtnn" type='submit'>Create</button>
         </form>
       </div>
       );

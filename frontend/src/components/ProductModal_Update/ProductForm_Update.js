@@ -55,7 +55,7 @@ function ProductFormUpdate({product, setShowModal}) {
             required
             onChange={(e) => setDescription(e.target.value)}
             />
-            <button type='submit'>Update Product</button>
+            <button className="updateBtnn" type='submit'>Update</button>
           </form>
         </div>
       );
