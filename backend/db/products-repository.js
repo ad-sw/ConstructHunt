@@ -18,7 +18,7 @@ async function addProduct(payload) {
 
 async function updateProduct(payload) {
     const product = await Product.findByPk(payload.productId);
-    await product.update({title: payload.title, imageUrl: payload.imageURL, upvotes: payload.upvotes, link: payload.link, description: payload.description});
+    await product.update({title: payload.title, imageUrl: payload.imageURL, link: payload.link, description: payload.description});
     return product;
 }
 

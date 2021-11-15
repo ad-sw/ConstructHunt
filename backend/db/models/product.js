@@ -5,14 +5,12 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     title: DataTypes.STRING,
     imageUrl: DataTypes.STRING,
-    upvotes: DataTypes.INTEGER,
     link: DataTypes.STRING,
     description: DataTypes.STRING
   }, {});
     Product.associate = function(models) {
     Product.belongsTo(models.User, {foreignKey: "userId"}),
-    Product.hasMany(models.Review, {foreignKey: "productId", onDelete: "CASCADE", hooks: true}),
-    Product.hasMany(models.Upvote, {foreignKey: "productId", onDelete: "CASCADE", hooks: true})
+    Product.hasMany(models.Review, {foreignKey: "productId", onDelete: "CASCADE", hooks: true})
   };
   return Product;
 };

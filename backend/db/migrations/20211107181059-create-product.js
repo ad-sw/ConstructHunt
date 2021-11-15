@@ -22,10 +22,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      upvotes: {
-        type: Sequelize.INTEGER,
-        defaultValue: 0
-      },
       link: {
         allowNull: false,
         type: Sequelize.STRING
