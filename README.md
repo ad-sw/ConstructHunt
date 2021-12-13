@@ -1,7 +1,7 @@
 # Construct(ion) Hunt
->To be edited.
+>Demo login recently stopped working on Heroku but does on localhost. Debugging and polishing underway in the next 1-2 months after a separate project. (Rest of readme to be edited later.)
 ---
-## [Live Site](https://constructhunt.herokuapp.com/) 
+## [Live Site (demo login/signup stopped working on Heroku, fixing)](https://constructhunt.herokuapp.com/) 
 
 ## [Database Schema](https://github.com/ad-sw/ConstructHunt/wiki/Database-Schema)
 
