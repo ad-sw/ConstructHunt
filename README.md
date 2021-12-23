@@ -1,5 +1,5 @@
 # Construct(ion) Hunt
->Polishing underway in the next 1-2 months after a separate project. (Rest of readme to be edited later.)
+>Editing and polishing underway in the next 1-2 months after a separate project. Currently does not have consistent css/html styling throughout. (Rest of readme to be edited later.)
 ---
 ## [Live Site](https://constructhunt.herokuapp.com/) 
 
