@@ -25,7 +25,7 @@ module.exports = {
           userId: 1,
           title: "Boulevard Park",
           imageUrl: "https://i.pinimg.com/originals/ce/f7/48/cef748b2d9d35b8cc72f70810906d77b.jpg",
-          link: "https://www.archdaily.com/174300/levinson-plaza-mission-park-mikyoung-kim-design?ad_medium=gallery",
+          link: "https://www.terrain-studio.com/projects/helios-plaza",
           description: "Between Pike and 7th Steet including an outdoor seating area and community rooms throughout a few stories",
           createdAt: new Date(),
           updatedAt: new Date()
