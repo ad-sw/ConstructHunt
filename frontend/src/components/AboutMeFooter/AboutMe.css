@@ -1,31 +1,30 @@
 #author {
-    margin: .1px;
-    /* top: -500px; */
+    /* margin: .1px;
     bottom: 10%;
-    color: #afafaf;
+    color: #afafaf; */
     /* margin-left:-50px;
     left:50%; */
 }
 .links {
-    text-align: center;
+    /* text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
     opacity: .12;
-    position: relative;
+    position: relative; */
     /* margin-left:-50px;
    left:50%; */
 }
 .AboutMe {
-    text-align: center;
+    /* text-align: center;
     display: block;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
+    position: relative; */
     /* margin-left:-50px;
    left:50%; */
 }
-#linkedin {
+/* #linkedin {
     padding-right: 4px;
-}
+} */

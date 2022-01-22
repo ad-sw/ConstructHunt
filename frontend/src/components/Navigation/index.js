@@ -1,52 +1,51 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-// import { Route, Switch } from "react-router-dom";
-import ProfileButton from './ProfileButton';
-import LoginFormModal from '../LoginFormModal';
-import SignupFormModal from '../SignupFormModal';
-// import { Redirect } from 'react-router-dom';
-import './Navigation.css';
+// import React from 'react';
+// import { NavLink } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
+// // import { Route, Switch } from "react-router-dom";
+// import ProfileButton from './ProfileButton';
+// import LoginFormModal from '../LoginFormModal';
+// import SignupFormModal from '../SignupFormModal';
+// // import { Redirect } from 'react-router-dom';
+// import './Navigation.css';
 
-function Navigation({ isLoaded }){
-  const sessionUser = useSelector(state => state.session.user);
+// function Navigation({ isLoaded }){
+//   const sessionUser = useSelector(state => state.session.user);
 
-  let sessionLinks;
-  if (sessionUser) {
-    sessionLinks = (
-      <>
-      <ProfileButton user={sessionUser} />
-      </>
-    );
-  } else {
-    sessionLinks = (
-      <>
-        <LoginFormModal />
-        <SignupFormModal />
-      </>
-    );
-  }
+//   let sessionLinks;
+//   if (sessionUser) {
+//     sessionLinks = (
+//       <>
+//       <ProfileButton user={sessionUser} />
+//       </>
+//     );
+//   } else {
+//     sessionLinks = (
+//       <>
+//         <LoginFormModal />
+//         <SignupFormModal />
+//       </>
+//     );
+//   }
 
-  return (
-    // <ul>
-    //   <li>
-    //     <NavLink exact to="/">Home</NavLink>
-    //     {isLoaded && sessionLinks}
-    //   </li>
-    // </ul>
+//   return (
+//     // <ul>
+//     //   <li>
+//     //     <NavLink exact to="/">Home</NavLink>
+//     //     {isLoaded && sessionLinks}
+//     //   </li>
+//     // </ul>
 
-      <header className="header">
-        <div id='linking'>
-          <div id="homeLink"><NavLink exact to="/">Home</NavLink></div>
-          <div id="productLink"><NavLink exact to="/products">Products</NavLink></div>
-          <div id="aboutLink"><NavLink exact to="/about">About</NavLink></div>
-        </div>
+//       <header className="header">
+//         <div id='linking'>
+//         <div className="profile-button"><NavLink exact to="/"><div className="logoC">C</div></NavLink></div>
+//           <div id="productLink"><NavLink exact to="/products">Products</NavLink></div>
+//           <div id="aboutLink"><NavLink exact to="/about">About</NavLink></div>
+//         </div>
 
-        {/* <h2 id="title">Construct(ion) Hunt</h2> */}
-        <div id="logBtns">{isLoaded && sessionLinks}</div>
-      </header>
+//         <div id="logBtns">{isLoaded && sessionLinks}</div>
+//       </header>
 
-  );
-}
+//   );
+// }
 
-export default Navigation;
+// export default Navigation;

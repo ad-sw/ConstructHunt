@@ -6,14 +6,16 @@ function SignupFormModal() {
   const [showModal, setShowModal] = useState(false);
 
   return (
+    <div>
     <>
-      <button onClick={() => setShowModal(true)}>Sign up</button>
+      <button className="RegUserDemoBtns" onClick={() => setShowModal(true)}>Sign up</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <SignupForm />
         </Modal>
       )}
     </>
+    </div>
   );
 }
 
