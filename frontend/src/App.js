@@ -9,6 +9,8 @@ import ProductModal from "./components/ProductModal";
 // import AboutMe from "./components/AboutMeFooter/AboutMe";
 // import Slideshow from "./components/HomeImages";
 import SearchBar from "./components/SearchBar";
+import LoginForm from "./components/auth/LoginForm";
+import SignUpForm from "./components/SignupFormModal/SignupForm";
 import ProductProfilePgModal from "./components/ProductProfilePage"
 import NavBar from '../src/components/NavigationBar';
 // import ProductFormCreate from "./components/ProductModal_Create";
@@ -17,6 +19,7 @@ function App() {
   const dispatch = useDispatch();
   // const sessionUser = useSelector(state => state.session.user);
   const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
@@ -35,6 +38,14 @@ function App() {
             <p>Under Construction</p>
             <img alt="test" style={{filter: "grayscale(100%)", border: "10px solid transparent"}} height="450" width="650" src="https://ultimate-survival-training.com/wp-content/uploads/2018/02/tourist-2.jpg"/>
           </center>
+          </Route>
+          <Route path='/login' exact={true}>
+            <LoginForm/>
+          </Route>
+          <Route path='/sign-up' exact={true}>
+          {isLoaded && (
+            <SignUpForm/>
+            )}
           </Route>
           <Route exact path="/about">
             <AboutUs />

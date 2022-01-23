@@ -78,6 +78,7 @@ input[name="search"]:focus {
     padding: 12px 20px 12px 40px;
     outline: 3.5px solid #e065434d;
     box-sizing: border-box;
+    z-index: 0;
 }
 input[name="search"]:focus + .searchBarExpands {
     display:block;
@@ -88,6 +89,7 @@ input[name="search"]:focus + .searchBarExpands {
     color: #757575;
     outline: 3.5px solid #e065434d;
     box-sizing: border-box;
+    z-index: 0;
 }
 .searchBarExpands {
     /* display:block; */
@@ -111,13 +113,14 @@ input[name="search"]:focus + .searchBarExpands {
     box-sizing: border-box;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
+    z-index: 0;
 }
 .searchIcon {
     vertical-align: middle;
     position: absolute;
     top: 2%;
     /* background-color: black; */
-    padding: 8px;
-    left: -25px;
+    padding: 8px 6px 8px 8px;
+    left: -26px;
     /* display: flex; */
   }
