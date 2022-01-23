@@ -560,7 +560,7 @@ a:hover, a:visited, a:link, a:active {
   /* position: absolute; */
   /* top: 82px; */
   /* top: 81px; */
-  top: 2px;
+  top: 24px;
   left: 0;
   position: relative;
   right: 0;
@@ -580,7 +580,7 @@ a:hover, a:visited, a:link, a:active {
   display: block;
   border-radius: 3px;
   width: 540x;
-  height: 580px;
+  height: 577px;
   /* height: 490px; */
   /* margin: 40px auto; */
   background: white;
@@ -591,7 +591,7 @@ a:hover, a:visited, a:link, a:active {
 .borderColor2 {
   border: 20px solid #F3F3F3;
   width: 560px;
-  height: 600px;
+  height: 597px;
   margin: 11px auto;
   border-radius: 3px;
   /* box-shadow: 5px 8px 2px .5px #cc6e5467; */
@@ -661,6 +661,6 @@ a:hover, a:visited, a:link, a:active {
   color: #e74e24;
   font-weight: 500;
   margin-top: 6px;
-  font-size: 11px;
+  font-size: 10px;
   margin-bottom: 1px;
 }

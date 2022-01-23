@@ -45,7 +45,8 @@ function SignupForm() {
     }
     if(password.length > 256) {
       error.push('. : Please enter a shorter password than 255 characters.')
-    } else if (password.length < 6) {
+    }
+    else if (password.length < 6) {
     error.push('. : Please enter a password longer than 5 characters.')
     }
     return error;
@@ -116,7 +117,7 @@ function SignupForm() {
       <div className="spaceInBetween"/>
       <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/150657508-06dbeb82-27d9-4035-bc0a-69d421048c5b.png"/></div>
       <div className="loginText2">Sign up on Construct Hunt</div>
-      <div className="textStuff">Join our community of friendly folks discovering and sharing the latest products in urban planning and architecture.</div>
+      <div className="textStuff">Join our community of friendly folks discovering and sharing the latest products in architecture and city planning.</div>
         <button onClick={demoLogin} className="demoBtn3">Sign in with demo</button>
         <form onSubmit={onSignUp} className="login-form">
           <div className="errors">
