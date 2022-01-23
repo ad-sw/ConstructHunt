@@ -12,6 +12,7 @@ import AboutMe from './AboutMe';
 import LoginForm from '../auth/LoginForm';
 import SignupFormModal from '../SignupFormModal';
 import SearchBar from '../SearchBar';
+import LoginFormModal from '../LoginFormModal'
 import '../../../src/index.css';
 
 function NavBar(){
@@ -42,19 +43,22 @@ function NavBar(){
       <ProfileButton user={sessionUser} />
       </>
     );
-  } else {
+  }
+
+  if (!sessionUser) {
     sessionLinks = (
       <>
-        <NavLink className="RegUserDemoBtns2" to='/login' exact={true} activeClassName='active1'>
+        {/* <NavLink className="RegUserDemoBtns2" to='/sign-in' exact={true} activeClassName='active1'>
           Sign in
         </NavLink>
         <NavLink className="RegUserDemoBtns" to='/sign-up' exact={true} activeClassName='active1'>
           Sign Up
-        </NavLink>
+        </NavLink> */}
+        <LoginFormModal/>
+        <SignupFormModal/>
       </>
     );
   }
-
 
   let productLinks = (
       <>

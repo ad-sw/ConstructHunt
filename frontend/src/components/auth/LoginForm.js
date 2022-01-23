@@ -7,11 +7,11 @@ import * as sessionActions from "../../store/session";
 const LoginForm = () => {
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  let [password, setPassword] = useState('');
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
-  const [credential, setCredential] = useState("");
+  let [credential, setCredential] = useState("");
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
@@ -58,25 +58,41 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
-    dispatch(sessionActions?.login({ credential, password })).catch(
+    dispatch(sessionActions.login({ credential, password })).catch(
       async (res) => {
-        const data = await res?.json();
-        if (data && data?.errors) setErrors(data?.errors);
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
       }
     );
     history.push('/');
   };
+
+  const demoLogin = async() => {
+    setCredential('Demo');
+    setPassword('password');
+    setErrors([]);
+    credential = 'Demo';
+    password = 'password';
+    await dispatch(sessionActions.login({ credential, password })).catch(
+      async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      }
+    );
+  }
 
   return (<>{isLoaded && (
       <div className="login-page">
         <div className="borderColor">
         <div className="login-container2">
           {/* <img className="logoLogin" src="https://user-images.githubusercontent.com/86431563/150657634-361535b3-47c5-4e55-a9b3-508a8cf3eac8.png"/> */}
-        <a href={`/sign-up`} className="loginText">SIGN UP</a>
+        {/* <img src="https://user-images.githubusercontent.com/86431563/150663661-8f2fe759-4770-4443-86ac-3891024905d1.png"/> */}
+        {/* <a href={`/sign-up`} className="loginText">Sign Up</a> */}
         <div className="spaceInBetween"/>
         <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/150657508-06dbeb82-27d9-4035-bc0a-69d421048c5b.png"/></div>
         <div className="loginText2">Sign up on Construct Hunt</div>
-        <button onClick={() => {setCredential('demo@user.io'); setPassword('password');}} className="demoBtn2">LOG IN WITH DEMO</button>
+        <div className="textStuff">Join our community of friendly folks discovering and sharing the latest products in urban planning and architecture.</div>
+        <button onClick={demoLogin} className="demoBtn2">Log in with Demo</button>
           <form onSubmit={handleSubmit} className="login-form">
           <div className="errors">
             {errors.map((error, ind) => (
@@ -86,9 +102,9 @@ const LoginForm = () => {
             <div>
               <input
                 className="email-input"
-                name='usename or email'
+                name='Usename or Email'
                 type='text'
-                placeholder='usename or email'
+                placeholder='Usename or Email'
                 value={credential}
                 onChange={(e) => setCredential(e.target.value)}
                 required
@@ -104,7 +120,7 @@ const LoginForm = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <button type='submit' className="login-button">LOG IN</button>
+              <button type='submit' className="login-button">Sign in</button>
             </div>
           </form>
         </div>

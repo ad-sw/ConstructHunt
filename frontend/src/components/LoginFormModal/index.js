@@ -11,11 +11,11 @@ function LoginFormModal() {
   const [showModal, setShowModal] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false)
 
-  const demoLogin = async () => {
-    const demoUser = {credential: "demo@user.io", password: "password"};
-    await dispatch(login(demoUser));
-    history.push('/');
-  }
+  // const demoLogin = async () => {
+  //   const demoUser = {credential: "demo@user.io", password: "password"};
+  //   await dispatch(login(demoUser));
+  //   history.push('/');
+  // }
 
   useEffect(() => {
       setIsLoaded(true)
