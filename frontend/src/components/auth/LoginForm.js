@@ -86,9 +86,9 @@ const LoginForm = () => {
             <div>
               <input
                 className="email-input"
-                name='email'
+                name='usename or email'
                 type='text'
-                placeholder='email'
+                placeholder='usename or email'
                 value={credential}
                 onChange={(e) => setCredential(e.target.value)}
                 required
