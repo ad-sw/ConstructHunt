@@ -101,7 +101,7 @@ function NavBar(){
   return (<>
     <header className="navbar">
       {/* <div id='linking'> */}
-      <div className="profile-button"><NavLink exact to="/"><div className="logoC">C</div></NavLink></div>
+      <NavLink exact to="/"><div className="profile-button"><div className="logoC">C</div></div></NavLink>
       {/* </div> */}
       <div className="searchBarT"><SearchBar/></div><div className="space-between"></div>
       <div className="linkGroup">

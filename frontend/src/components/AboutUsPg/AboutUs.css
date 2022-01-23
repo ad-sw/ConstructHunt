@@ -1,24 +1,34 @@
 .descriptionAbout {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-    padding-bottom: 0px;
-    bottom: 0px;
-    display: block;
-    margin-bottom: 0px;
-    max-width: 600px;
-    height: 100%;
-    /* transform: skew(8deg, 0deg); */
-    /* font-style: italic; */
-    font-size: 25px;
-    color: rgb(57, 57, 57);
+    display:inline-block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    align-self: center;
-    text-align: center;
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    margin: 35px auto auto auto;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 7%;
+    width: 1550px;
+    /* max-height: 900px; */
+    overflow: hidden;
+    height: 570px;
+    padding-bottom: 80px;
+    overflow: hidden;
 }
 #textDesc {
-    padding-bottom: 16px;
+    max-width: 800px;
+    display: flex;
+    /* position: absolute; */
+    font-size: 25px;
+    margin: 50px auto 0 auto;
+    color: rgb(53, 53, 53);
+    z-index: 12;
+    padding: 15px 100px 35px 100px;
+    background-color: #e2e2e24d;
+    box-shadow: 0px 0px 700px #ffffff inset;
 }
 #banner2 {
     transform: rotateY(180deg);
@@ -45,6 +55,15 @@
 .cropPicsAbout:hover {
     filter: sepia(220%) hue-rotate(180deg) brightness(91%) saturate(320%);
 }
-/* #imagesSize {
-    margin: -10px 0px 0px -180px;
-} */
+.backgroundThing {
+    vertical-align: top;
+    background-size: 470px 900px;
+    clip-path: inset(50px 0px 0px 0px);
+    height: 520px;
+    width: 1000px;
+    padding: 0;
+    margin: -60px auto -20px auto;
+    box-shadow: 0px 0px 1000px #ffffff inset;
+    opacity: .9;
+    background: linear-gradient(180deg,rgb(255, 255, 255, .1), rgb(255, 255, 255, 1)), url('https://user-images.githubusercontent.com/86431563/150698136-eae20d3c-dd88-4af4-b4e9-db31915c7b4e.jpg') no-repeat center;
+}

@@ -299,19 +299,13 @@ a:hover, a:visited, a:link, a:active {
   color: #4B587C;
 }
 #logBtns {
-  position: fixed;
-  right: 0;
+  height: 40px;
+  left: 0;
+  margin-left: auto;
   top: 0;
-  border: none;
-  outline: 0;
   cursor: pointer;
-  right: 0;
+  color: white;
   display: flex;
-  position: fixed;
-  top: 0;
-  margin: 20px 30px 20px 20px;
-  outline: none;
-  border: none;
 }
 .RegUserDemoBtns {
   outline: none;
