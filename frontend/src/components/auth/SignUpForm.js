@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
-import { signUp, login } from '../../store/session';
+import { login, signup } from '../../store/session';
+import * as sessionActions from "../../store/session";
 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
   const [first_name, setFirstName] = useState('');
   const [last_name, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  let [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
   const user = useSelector(state => state.session.user);
   const [loaded, setLoaded] = useState(false);
+  let [credential, setCredential] = useState("");
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -47,7 +49,15 @@ const SignUpForm = () => {
   }
 
   const demoLogin = async() => {
-    await dispatch(login('demo@test.io', 'password'));
+    setErrors([]);
+    credential = 'Demo';
+    password = 'password';
+    await dispatch(sessionActions.login({ credential, password })).catch(
+      async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      }
+    );
   }
 
   // const onSignUp = async (e) => {
@@ -75,14 +85,13 @@ const SignUpForm = () => {
           password
       }
     if (password === repeatPassword) {
-      const data = await dispatch(signUp(payload));
+      const data = await dispatch(signup(payload));
       if(data) {
         setErrors(data)
         }
       }
     }
   };
-
 
 
   const updateFirstName = (e) => {
@@ -106,18 +115,20 @@ const SignUpForm = () => {
   };
 
   if (user) {
-    return <Redirect to={`/users/${user.id}/routes`}/>;
+    return <Redirect to={`/`}/>;
   }
 
 
   return (<div>{loaded && (
       <div className="signup-page">
+        <div className="borderColor2">
         <div className="login-form-container">
-        <a href={`/login`} className="loginText">LOG IN</a>
-          <button onClick={demoLogin} className="demoBtn2">LOG IN WITH DEMO</button>
-            <div className='or-container2'>
-                  <span className='divider'></span><span className='or-text'>OR</span><span className='divider'></span>
-            </div>
+        {/* <a href={`/sign-in`} className="loginText">Sign in</a> */}
+        <div className="spaceInBetween"/>
+        <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/150657508-06dbeb82-27d9-4035-bc0a-69d421048c5b.png"/></div>
+        <div className="loginText2">Sign up on Construct Hunt</div>
+        <div className="textStuff">Join our community of friendly folks discovering and sharing the latest products in urban planning and architecture.</div>
+          <button onClick={demoLogin} className="demoBtn3">Sign in with demo</button>
           <form onSubmit={onSignUp} className="login-form">
             <div className="errors">
               {errors.map((error, idx) => (
@@ -127,7 +138,7 @@ const SignUpForm = () => {
             <div>
               <input
                 type='text'
-                className="email-input"
+                className="email-input2"
                 placeholder="first name"
                 name='first_name'
                 value={first_name}
@@ -138,7 +149,7 @@ const SignUpForm = () => {
             <div>
               <input
                 type='text'
-                className="email-input"
+                className="email-input2"
                 placeholder="last name"
                 name='last_name'
                 value={last_name}
@@ -149,7 +160,7 @@ const SignUpForm = () => {
             <div>
               <input
                 type='text'
-                className="email-input"
+                className="email-input2"
                 placeholder="email"
                 name='email'
                 value={email}
@@ -160,7 +171,7 @@ const SignUpForm = () => {
             <div>
               <input
                 type='password'
-                className='password-input'
+                className='email-input2'
                 placeholder="password"
                 name='password'
                 value={password}
@@ -171,16 +182,17 @@ const SignUpForm = () => {
             <div>
               <input
                 type='password'
-                className='password-input'
+                className='email-input2'
                 placeholder="repeat password"
                 name='repeat_password'
                 value={repeatPassword}
                 onChange={updateRepeatPassword}
                 required
               />
-              <button type='submit' className="signup-button">SIGN UP</button>
+              <button type='submit' className="signup-button">Sign up</button>
             </div>
           </form>
+          </div>
         </div>
       </div>)}
     </div>

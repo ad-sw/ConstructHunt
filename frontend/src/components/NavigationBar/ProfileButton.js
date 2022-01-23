@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from "react-router";
+import { NavLink } from "react-router-dom";
 import * as sessionActions from '../../store/session';
 
 function ProfileButton({ user }) {
@@ -48,11 +49,12 @@ function ProfileButton({ user }) {
       </button>
       {showMenu && (
         <ul className="profile-dropdown" id="style">
-          <li>{user.first_name}&nbsp;{user.last_name}</li>
-          <li><i>Member Since</i> {date}</li>
-          <li>
-            <button className="logoutBtn" onClick={logout}>Log Out</button>
-          </li>
+          <li id="dropdownLink3">{user.username}</li>
+          <li><NavLink to='/my-hunts' exact={true} activeClassName='active1' id="dropdownLink2">My hunts</NavLink></li>
+          <li><NavLink to='/my-collections' exact={true} activeClassName='active1' id="dropdownLink2">My collections</NavLink></li>
+          <li><NavLink to='/my-topics' exact={true} activeClassName='active1' id="dropdownLink2">My topics</NavLink></li>
+          <li className="logoutBtn"id="dropdownLink4" onClick={logout}>Log Out</li>
+          {/* </li> */}
         </ul>
       )}
     </>
