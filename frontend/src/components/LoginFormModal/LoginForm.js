@@ -20,6 +20,22 @@ function LoginForm() {
     })();
   }, [dispatch]);
 
+  const validator = () => {
+    let error = []
+
+    if(password.length < 6) {
+      error.push('. : Please enter a password longer than five characters.')
+    }
+    if(password.length > 256) {
+      error.push('. : Please enter a password shorter than 255 characters.')
+    }
+    else if(email.length > 256) {
+      error.push('. : Please enter an email shorter 255 characters.')
+    }
+    return error;
+  }
+
+
   const demoLogin = async() => {
     setCredential('Demo');
     setPassword('password');
@@ -36,13 +52,23 @@ function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const errorsArr = validator()
+
+
     setErrors([]);
     dispatch(sessionActions?.login({ credential, password })).catch(
       async (res) => {
         const data = await res?.json();
-        if (data && data?.errors) setErrors(data?.errors);
+        if(errorsArr.length) {
+          setErrors(errorsArr)
+        } else{
+          const payload = {
+              email,
+              password
+          }
       }
-    );
+      });
     history.push('/');
   };
 

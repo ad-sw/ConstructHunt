@@ -389,7 +389,7 @@ a:hover, a:visited, a:link, a:active {
   left: 0;
   right: 0;
   margin: auto;
-  height: 600px;
+  height: 610px;
   z-index: 0;
   /* width: 800px; */
   content: '';
@@ -560,12 +560,12 @@ a:hover, a:visited, a:link, a:active {
   /* position: absolute; */
   /* top: 82px; */
   /* top: 81px; */
-  top: 17px;
+  top: 2px;
   left: 0;
   position: relative;
   right: 0;
   margin: auto;
-  height: 630px;
+  height: 670px;
   /* width: 800px; */
   content: '';
   z-index: 800;
@@ -580,7 +580,7 @@ a:hover, a:visited, a:link, a:active {
   display: block;
   border-radius: 3px;
   width: 540x;
-  height: 550px;
+  height: 580px;
   /* height: 490px; */
   /* margin: 40px auto; */
   background: white;
@@ -591,7 +591,7 @@ a:hover, a:visited, a:link, a:active {
 .borderColor2 {
   border: 20px solid #F3F3F3;
   width: 560px;
-  height: 570px;
+  height: 600px;
   margin: 11px auto;
   border-radius: 3px;
   /* box-shadow: 5px 8px 2px .5px #cc6e5467; */
@@ -656,4 +656,11 @@ a:hover, a:visited, a:link, a:active {
   font-weight: 550;
   padding: 11px 16px;
   cursor: pointer;
+}
+.errors{
+  color: #e74e24;
+  font-weight: 500;
+  margin-top: 6px;
+  font-size: 11px;
+  margin-bottom: 1px;
 }
