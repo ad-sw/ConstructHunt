@@ -50,7 +50,7 @@ function LoginForm() {
         />
       </label>
       <button className="loginBtn" type="submit">Log In</button>
-      <button className="demoBtn" onClick={() => {setCredential('Demo-lition'); setPassword('password');}}>Demo</button>
+      <button className="demoBtn" onClick={() => {setCredential('Demo'); setPassword('password');}}>Demo</button>
     </form>
   );
 }

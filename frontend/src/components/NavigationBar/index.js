@@ -9,7 +9,7 @@ import CommunityButton from './CommunityButton';
 import JobButton from './JobButton';
 import AboutButton from './AboutButton';
 import AboutMe from './AboutMe';
-import LoginFormModal from '../LoginFormModal';
+import LoginForm from '../auth/LoginForm';
 import SignupFormModal from '../SignupFormModal';
 import SearchBar from '../SearchBar';
 import '../../../src/index.css';
@@ -45,8 +45,12 @@ function NavBar(){
   } else {
     sessionLinks = (
       <>
-        <LoginFormModal />
-        <SignupFormModal />
+        <NavLink className="RegUserDemoBtns2" to='/login' exact={true} activeClassName='active1'>
+          Sign in
+        </NavLink>
+        <NavLink className="RegUserDemoBtns" to='/sign-up' exact={true} activeClassName='active1'>
+          Sign Up
+        </NavLink>
       </>
     );
   }

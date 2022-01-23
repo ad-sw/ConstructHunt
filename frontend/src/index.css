@@ -48,9 +48,29 @@ a:hover, a:visited, a:link, a:active {
   justify-content: center;
   width: 225px;
   z-index: 1;
-  /* z-index: 20000; */
   position: absolute;
   margin: -7px 0 0 55px;
+}
+.circleClose {
+  background-color: #FFFFFF;
+  z-index: 50000;
+  position: fixed;
+  color: #333333;
+  top: 20px;
+  left: 100px;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  /* font-weight: 500; */
+  font-size: 25px;
+  padding: 2.5px 12px 5px 12px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.circleClose:hover {
+  color: #ec572e;
 }
 .space-between {
   margin: 40px 0 0 40px;
@@ -61,6 +81,8 @@ a:hover, a:visited, a:link, a:active {
   vertical-align: middle;
   display: flex;
   align-items: center;
+  z-index: 1;
+  background-color: white;
   padding: 20px 30px 20px 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.109);
   /* background-color: white; */
@@ -276,4 +298,150 @@ a:hover, a:visited, a:link, a:active {
 }
 .linkss {
   display: flex;
+}
+.login-page {
+  align-items: center;
+  position: absolute;
+  /* top: 82px; */
+  top: 81px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 600px;
+  /* width: 800px; */
+  content: '';
+  /* z-index: -8; */
+  overflow: hidden;
+  background: linear-gradient(rgba(94, 94, 94, 0.76), rgba(151, 151, 151, 0)), url('');
+}
+.borderColor {
+  border: 20px solid #F3F3F3;
+  width: 560px;
+  height: 444px;
+  margin: 40px auto;
+  border-radius: 3px;
+  box-shadow: 5px 8px 2px .5px #cc6e5467;
+}
+.login-container2 {
+  align-items: center;
+  text-align: center;
+  /* margin: 30% auto; */
+  padding-bottom: 20px;
+  display: block;
+  border-radius: 3px;
+  width: 540x;
+  height: 424px;
+  /* height: 490px; */
+  /* margin: 40px auto; */
+  background: white;
+  /* border: 2px solid #BFBFBF; */
+  border-radius: .5px;
+  /* -moz-outline-radius: 15px; */
+}
+.spaceInBetween {
+  height: 5px;
+}
+.loginText {
+  float: right;
+  margin-top: 10px;
+  margin-right: 39px;
+  color: #9297A3;
+}
+.loginText2 {
+  display: flex;
+  margin: 25px auto 0 25%;
+  font-weight: 410;
+  color: #21293ccc;
+  font-size: 20px;
+  letter-spacing: .05px;
+}
+.logoThing {
+  outline: 1px solid #8E8E8E;
+  /* margin: 0; */
+  border-radius: 50px;
+  width: 84px;
+  height: 84.5px;
+  margin: 20px auto 0 41.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.loginLogo {
+  display: flex;
+  background-color: #EFEBEB;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  padding: 4px 6px 2px 0;
+  border: 3px solid #EFEBEB;
+  outline: 1px solid #8E8E8E;
+  /* outline: .5px solid grey; */
+  align-items: center;
+}
+.demoBtn2 {
+  width: 320.6px;
+  background-color: white;
+  color: grey;
+  height: 44px;
+  border-radius: 1px;
+  border: .5px solid rgb(172, 172, 172);
+  padding: 12px 16px 12px 16px;
+  margin: 20px auto 0 auto;
+  display:flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.or-text {
+  padding-top: 2px;
+}
+.login-form {
+  align-items: center;
+  text-align: center;
+  padding: 0px 35px;
+}
+.login-button{
+  margin-top: 10px;
+  margin-bottom: 13px;
+  width: 320.6px;
+  background-color: rgba(65, 144, 148, 0.619);
+  color: white;
+  height: 44px;
+  border-radius: 1px;
+  border: .5px solid rgb(172, 172, 172);
+  padding: 12px 16px;
+}
+.login-button:hover{
+  background-color: rgba(61, 154, 157, 0.755);
+  cursor: pointer;
+}
+.email-input{
+  margin-top: 10px;
+  width: 287px;
+  height: 18.5px;
+  background-color: #f0f0f0;
+  border-radius: 1px;
+  color: #9297A3;
+  border: .5px solid rgb(172, 172, 172);
+  padding: 12px 16px;
+}
+.password-input{
+  margin-top: 10px;
+  width: 287px;
+  height: 18.5px;
+  background-color: #f0f0f0;
+  color: #9297A3;
+  border-radius: 1px;
+  border: .5px solid rgb(172, 172, 172);
+  padding: 12px 16px;
+}
+.divider {
+  display: block;
+  width: 40%;
+  height: 1px;
+  padding-top: 7px;
+  border-bottom: 1px #a6a6a6 solid;
 }
