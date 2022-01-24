@@ -118,7 +118,7 @@ function SignupForm() {
       <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/150657508-06dbeb82-27d9-4035-bc0a-69d421048c5b.png"/></div>
       <div className="loginText2">Sign up on Construct Hunt</div>
       <div className="textStuff">Join our community of friendly folks discovering and sharing the latest products in architecture and city planning.</div>
-        <button onClick={demoLogin} className="demoBtn3">Sign in with demo</button>
+        <button onClick={demoLogin} className="demoBtn3">Sign in with Demo</button>
         <form onSubmit={onSignUp} className="login-form">
           <div className="errors">
             {errors.map((error, idx) => (

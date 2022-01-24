@@ -133,18 +133,20 @@ a:hover, a:visited, a:link, a:active {
   gap: 1rem;
 }
 .profile-dropdown {
-  top: 40px;
-  right: 0px;
+  top: 61px;
+  right: 30px;
   color: #4b587cc4;
   letter-spacing: 1px;
   font-size: 16px;
   z-index: 2000;
   margin: 0;
+  outline: none;
+  border: none;
   font-weight: 425;
   position: absolute;
   padding: 0;
   background-color: white;
-  box-shadow: 0 0 3px 3px rgba(120, 120, 120, 0.1);
+  box-shadow: 0 0 3px 3px rgba(87, 87, 87, 0.08);
 }
 .profile-dropdown a {
   z-index: 3000;
@@ -169,8 +171,8 @@ a:hover, a:visited, a:link, a:active {
   background-color: rgb(247, 247, 247);
   list-style-type: none;
   width: 190px;
-  border-radius: 3px;
-  border: .5px rgba(174, 174, 174, 0.5) solid;
+  border-radius: 10px;
+  border: .1px rgba(207, 207, 207, 0.3) solid;
 }
 #dropdownLink2 {
   color: #4b587cc4;
@@ -663,6 +665,7 @@ a:hover, a:visited, a:link, a:active {
   font-size: 16px;
   /* z-index: 2000; */
   font-weight: 550;
+  border-radius: 0px 0px 10px 10px;
   padding: 11px 16px;
   cursor: pointer;
 }
@@ -684,6 +687,12 @@ a:hover, a:visited, a:link, a:active {
 
 #pgContent {
   display: flex;
-  width: 900px;
-  margin: 40px 140px;
+  /* width: 1000px; */
+  margin: 40px auto;
+  /* padding: 40px auto 0 auto; */
+  /* left: 20px; */
+  /* position: relative; */
+  /* align-items: center; */
+  justify-content: center;
+
 }

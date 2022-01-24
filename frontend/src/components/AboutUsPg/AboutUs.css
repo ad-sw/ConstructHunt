@@ -1,17 +1,17 @@
 .descriptionAbout {
-    display:inline-block;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
-    margin: 35px auto auto auto;
+    margin: 40px auto 0 auto;
     right: 0;
     left: 0;
-    z-index: -1;
+    /* z-index: -1; */
     content: "";
-    position: absolute;
+    /* position: absolute; */
     top: 7%;
-    width: 1550px;
+    /* width: 1550px; */
     /* max-height: 900px; */
     overflow: hidden;
     height: 570px;
@@ -25,7 +25,7 @@
     font-size: 25.5px;
     margin: 40px auto 0px auto;
     color: rgb(53, 53, 54);
-    z-index: 12;
+    z-index: 1;
     padding: 15px 100px 37px 100px;
     background-color: #dddbd94d;
     box-shadow: 0px 0px 700px #ffffff inset;
@@ -42,28 +42,34 @@
     position: relative;
     top: -10px;
 }
-.cropPicsAbout {
-    width: 670px; /* width of container */
-    height: 390px; /* height of container */
+/* .cropPicsAbout {
+    width: 670px;
+    height: 390px;
     overflow: hidden;
     margin-bottom: 10px;
     margin-top: 20px;
     margin-left: -50px;
     opacity: .6;
     border-radius: 200px;
-}
-.cropPicsAbout:hover {
+} */
+/* .cropPicsAbout:hover {
     filter: sepia(220%) hue-rotate(180deg) brightness(91%) saturate(320%);
-}
+} */
 .backgroundThing {
-    vertical-align: top;
+    /* vertical-align: top; */
     background-size: 470px 900px;
     clip-path: inset(50px 0px 0px 0px);
-    height: 520px;
-    width: 1000px;
+    height: 500px;
+    /* width: 1000px; */
     padding: 0;
+    z-index: 2;
     margin: -60px auto -20px auto;
     box-shadow: 0px 0px 1000px #ffffff inset;
     opacity: .9;
     background: linear-gradient(180deg,rgb(255, 255, 255, .1), rgb(255, 255, 255, 1)), url('https://user-images.githubusercontent.com/86431563/150698136-eae20d3c-dd88-4af4-b4e9-db31915c7b4e.jpg') no-repeat center;
 }
+/* .innerDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
