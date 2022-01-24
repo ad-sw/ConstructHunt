@@ -53,8 +53,8 @@ function App() {
           </Route>
           <Route>
             <center>
-            <h1 id="h1404">404:</h1>
-            <h4 id="text404">Page Not Found</h4>
+            <br></br><br></br><br></br>
+            <p>Under Construct(ion)</p>
             <img alt="test" style={{filter: "grayscale(100%)", border: "10px solid transparent"}} height="450" width="650" src="https://ultimate-survival-training.com/wp-content/uploads/2018/02/tourist-2.jpg"/>
             </center>
           </Route>
