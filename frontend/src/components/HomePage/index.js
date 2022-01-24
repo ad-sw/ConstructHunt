@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import {getProducts} from '../../store/product'
 import{ NavLink } from 'react-router-dom';
-// import ProductModal from '../ProductModal';
 import '../../../src/index'
+import {getReviews} from "../../store/review";
 
 export default function HomePage(){
     const dispatch = useDispatch()
@@ -12,11 +12,15 @@ export default function HomePage(){
 
     useEffect(() => {
         (async () => {
-            await dispatch(getProducts())
-            setIsLoaded(true)
+            dispatch(getProducts())
+            .then(() => dispatch(getReviews()))
+            .then(setIsLoaded(true));
         })();
     }, [dispatch, sessionUser])
     const products = useSelector(state => Object.values(state.products))
+    const reviews = useSelector(state => Object.values(state.reviews))
+
+    console.log(reviews, 'ok')
 
 
     if (!isLoaded) {

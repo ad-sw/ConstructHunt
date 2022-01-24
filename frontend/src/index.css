@@ -348,7 +348,7 @@ a:hover, a:visited, a:link, a:active {
   position: fixed;
   cursor: pointer;
   display: flex;
-  z-index: 3;
+  z-index: 53;
 }
 .AboutMe {
   height: 55px;
@@ -356,7 +356,7 @@ a:hover, a:visited, a:link, a:active {
   width: 64px;
   position: relative;
   padding: 5px;
-  z-index: 560;
+  z-index: 1;
   border-top-right-radius: 10px;
   /* border-top-left-radius: 10px; */
   background-color: rgb(236, 236, 236);
@@ -374,7 +374,7 @@ a:hover, a:visited, a:link, a:active {
   display: flex;
 }
 #modal {
-  z-index: 50;
+  z-index: 5;
 }
 /* LOGIN PAGE */
 .login-page {
