@@ -43,7 +43,7 @@ export default function HomePage(){
                                     <div className="inline">
                                         <div className="fullName">{product?.title}</div>
                                         <div className="smallerTxt">{product?.description}</div>
-                                        <div className="txtDesc"># Msg<div>Free Options </div><div>•&nbsp;&nbsp;&nbsp;Open Source</div></div>
+                                        <div className="txtDesc"># Msg<div>Free & Paid Options </div><div>•&nbsp;&nbsp;&nbsp;Open Source</div></div>
                                     </div>
                                     <div className="upvote"></div>
                                 </div>
