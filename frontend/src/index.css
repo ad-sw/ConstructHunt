@@ -690,13 +690,21 @@ a:hover, a:visited, a:link, a:active {
 .upvote {
   border: 1px solid #D9E1EC;
   border-radius: 5px;
-  width: 52px;
-  height: 64px;
+  width: 32px;
+  height: 42px;
   float: right;
   right: -170px;
   margin-top: 7.5px;
   cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 18px;
+  padding: 14px 10px 8px 10px;
+  opacity: .8;
+  text-align: center;
 }
 .flex {
   display: flex;
@@ -733,4 +741,11 @@ a:hover, a:visited, a:link, a:active {
   opacity: .7;
   color: #363D4E;
   font-weight: 450;
+}
+.arrow {
+  width: 18px;
+  height: 15px;
+}
+.upvoteText {
+  font-size: 15px;
 }

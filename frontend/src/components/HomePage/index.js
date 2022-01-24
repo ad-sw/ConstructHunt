@@ -14,7 +14,7 @@ export default function HomePage(){
     useEffect(() => {
         (async () => {
             // await dispatch(getProducts())
-            await dispatch(getAllReviews())
+            // await dispatch(getAllReviews())
             await dispatch(getProductsWithReviews())
             setIsLoaded(true);
         })();
@@ -50,7 +50,8 @@ export default function HomePage(){
                                         <div className="txtDesc"><div className="opacity"><img className="bubble" src="https://user-images.githubusercontent.com/86431563/150877606-3394655d-b79c-4561-a1a3-b8313667ac29.png"/>&nbsp; {product.Reviews.length}</div><div>Free & Paid Options </div><div>•&nbsp;&nbsp;&nbsp;Open Source</div></div>
                                     </div>
                                 <div className="upvote">
-                                   0
+                                   <img className="arrow" src="https://user-images.githubusercontent.com/86431563/150881722-fe0f3572-0d7a-4f6e-a237-3ea07be4197d.png"/>
+                                   <div className="upvoteText">0</div>
                                 </div>
                                 </div>
                             </NavLink>
