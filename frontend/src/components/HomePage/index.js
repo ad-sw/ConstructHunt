@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import {getProducts} from '../../store/product'
+import {getProducts, getProductsWithReviews} from '../../store/product'
 import{ NavLink } from 'react-router-dom';
+import HomeTest from '../HTest'
 import '../../../src/index'
-import {getReviews} from "../../store/review";
+import {getAllReviews} from "../../store/review";
 
 export default function HomePage(){
     const dispatch = useDispatch()
@@ -12,15 +13,15 @@ export default function HomePage(){
 
     useEffect(() => {
         (async () => {
-            dispatch(getProducts())
-            .then(() => dispatch(getReviews()))
-            .then(setIsLoaded(true));
+            // await dispatch(getProducts())
+            await dispatch(getAllReviews())
+            await dispatch(getProductsWithReviews())
+            setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
-    const products = useSelector(state => Object.values(state.products))
-    const reviews = useSelector(state => Object.values(state.reviews))
 
-    console.log(reviews, 'ok')
+    const products = useSelector(state => Object.values(state.products))
+    // const reviews = useSelector(state => state.products.Reviews)
 
 
     if (!isLoaded) {
@@ -34,7 +35,6 @@ export default function HomePage(){
 
     return (
     <div id="pgContent">{isLoaded && (<>
-    {/* <div className="spaceBtwn"> */}
         <div className="products">
         <div className="titleDiv">Is the next 🏛️ here?</div>
             {products?.map(product => {
@@ -47,9 +47,11 @@ export default function HomePage(){
                                     <div className="inline">
                                         <div className="fullName">{product?.title}</div>
                                         <div className="smallerTxt">{product?.description}</div>
-                                        <div className="txtDesc"># Msg<div>Free & Paid Options </div><div>•&nbsp;&nbsp;&nbsp;Open Source</div></div>
+                                        <div className="txtDesc"><div className="opacity"><img className="bubble" src="https://user-images.githubusercontent.com/86431563/150877606-3394655d-b79c-4561-a1a3-b8313667ac29.png"/>&nbsp; {product.Reviews.length}</div><div>Free & Paid Options </div><div>•&nbsp;&nbsp;&nbsp;Open Source</div></div>
                                     </div>
-                                    <div className="upvote"></div>
+                                <div className="upvote">
+                                   0
+                                </div>
                                 </div>
                             </NavLink>
                         </div>
@@ -57,7 +59,6 @@ export default function HomePage(){
                 )
             })}
             </div>
-        {/* </div> */}
         <div className="stuff">
             placeholder
         </div>

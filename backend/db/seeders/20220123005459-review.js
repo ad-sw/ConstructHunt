@@ -15,6 +15,21 @@ module.exports = {
           userId: 2,
           productId: 2,
           review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 2,
+          productId: 2,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 1,
+          productId: 1,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 2,
+          productId: 2,
+          review: /*commerce.productDescription()*/ loremIpsum(),
         }
       ], {});
   },

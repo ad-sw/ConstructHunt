@@ -1,10 +1,19 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const { check, validationResult } = require('express-validator');
+const { User, Product, Review } = require("../../db/models");
 
 const ReviewRepository = require('../../db/reviews-repository');
 
 const router = express.Router();
+
+router.get('/', asyncHandler(async function(req, res) {
+    const reviews = await Review.findAll({
+        order: [["createdAt", "DESC"]],
+        include: [{model: Product}, {model: User}],
+    });
+    return res.json(reviews);
+}));
 
 router.get('/:productId', asyncHandler(async function(req, res) {
     const reviews = await ReviewRepository.getReviews(req.params.productId);

@@ -1,7 +1,8 @@
 import {csrfFetch} from './csrf';
 
 const LOAD_PRODUCTS = 'product/LOAD';
-const LOAD_ONE_PRODUCT = 'product/LOAD_ONE'
+const LOAD_PRODUCTS_WITH_REVIEWS = 'product/LOAD_PRODUCTS_WITH_REVIEWS';
+// const LOAD_ONE_PRODUCT = 'product/LOAD_ONE'
 const UPDATE_PRODUCTS = 'product/UPDATE';
 const ADD_PRODUCTS = 'product/ADD';
 const DELETE_PRODUCTS = 'product/DELETE';
@@ -34,6 +35,15 @@ export const getProducts = () => async (dispatch) => {
     if (response.ok) {
         const products = await response.json();
         dispatch(load(products.products));
+    }
+};
+
+export const getProductsWithReviews = () => async (dispatch) => {
+    const response = await csrfFetch(`/api/products/reviews`);
+
+    if (response.ok) {
+        const productsWithReviews = await response.json();
+        dispatch(load(productsWithReviews));
     }
 };
 
@@ -101,22 +111,22 @@ const productReducer = (state = {}, action) => {
                 newState[product.id] = product;
               })
             return newState;
-
+        case LOAD_PRODUCTS_WITH_REVIEWS:
+            const newState2 = {...state};
+            console.log(action,'test')
+            return newState2;
         case ADD_PRODUCTS:
             const addState = {...state};
             addState[action.product.id] = action.product;
             return addState;
-
         case UPDATE_PRODUCTS:
             const updateState = {...state};
             updateState[action.product.id] = action.product;
             return updateState;
-
         case DELETE_PRODUCTS:
             const delState = {...state};
             delete delState[action.productId];
             return delState;
-
         default:
             return state;
     }

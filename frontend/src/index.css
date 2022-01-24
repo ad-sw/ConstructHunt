@@ -711,10 +711,26 @@ a:hover, a:visited, a:link, a:active {
 .txtDesc {
   font-size: 11px;
   color: #4b587c9c;
-  bottom: 0;
+  bottom: 0px;
   position: absolute;
   width: 220px;
   justify-content: space-between;
   display: flex;
   letter-spacing: -.7px;
+  vertical-align: bottom;
+  margin-bottom: 1.5px;
+}
+.bubble {
+  height: 11px;
+  margin-bottom: 1px;
+  width: 11.5px;
+  transform: scaleX(-1);
+  vertical-align: bottom;
+}
+.opacity {
+  vertical-align: bottom;
+  bottom: 0;
+  opacity: .7;
+  color: #363D4E;
+  font-weight: 450;
 }
