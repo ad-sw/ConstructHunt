@@ -31,7 +31,7 @@ export default function HomePage(){
     return (
     <div id="pgContent">{isLoaded && (<>
         <div className="products">
-        <div className="titleDiv">Is the next ⛪ here?</div>
+        <div className="titleDiv">Is the next 🏛️ here?</div>
             {products?.map(product => {
                 return (
                     <div className="friendCard">
