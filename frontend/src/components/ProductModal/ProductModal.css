@@ -37,7 +37,7 @@
 .titleDiv {
   font-size: 24px;
   font-weight: 420;
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 23px;
   color: #21293ce7;
 }
 .friendCard {
@@ -46,7 +46,7 @@
   background-color: #FFFFFF;
   /* outline: 1px solid #DEE1E7; */
   align-items: center;
-  width: 800px;
+  width: 750px;
   height: 81px;
   text-align: center;
   display: inline-block;
@@ -77,10 +77,4 @@
 .inline {
   display: inline-block;
   text-align: left;
-}
-.stuff {
-  width: 370px;
-  display: flex;
-  padding: 0 0 0 31px;
-  margin: 10px 0 0 24px;
 }

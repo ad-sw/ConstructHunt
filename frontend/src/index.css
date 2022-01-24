@@ -675,7 +675,7 @@ a:hover, a:visited, a:link, a:active {
 #pgContent {
   display: flex;
   width: 1269px;
-  margin: 40px auto;
+  margin: 40px auto 40px 6.59%;
   /* padding: 40px auto 0 auto; */
   /* left: 20px; */
   /* position: relative; */
@@ -748,4 +748,12 @@ a:hover, a:visited, a:link, a:active {
 }
 .upvoteText {
   font-size: 15px;
+  margin-bottom: 1.5px;
+}
+.stuff {
+  width: 370px;
+  display: flex;
+  padding: 0 0 0 31px;
+  margin: 10px 0 0 24px;
+  border-left: 1.5px solid #e3e3e38f;
 }
