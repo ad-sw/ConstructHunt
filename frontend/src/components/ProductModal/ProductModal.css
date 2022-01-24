@@ -9,7 +9,7 @@
   width: 800px;
   /* justify-content: center;
   text-align: center; */
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 .a {
   cursor: pointer;
@@ -42,10 +42,9 @@
 }
 .friendCard {
   padding: 24px 0px;
-  margin-bottom: 15px;
-  margin: auto auto 15px auto;
+  margin: auto auto 0px auto;
   background-color: #FFFFFF;
-  outline: 1px solid #DEE1E7;
+  /* outline: 1px solid #DEE1E7; */
   align-items: center;
   width: 800px;
   height: 81px;
@@ -54,15 +53,17 @@
 }
 .soMany {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 .fullName {
-  top: 50%;
+  /* top: 50%; */
   cursor: pointer;
   font-size: 15.5px;
   font-weight: 420;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: #21293ce7;
 }
 .friendContent {

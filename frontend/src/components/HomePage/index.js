@@ -30,6 +30,7 @@ export default function HomePage(){
 
     return (
     <div id="pgContent">{isLoaded && (<>
+    {/* <div className="spaceBtwn"> */}
         <div className="products">
         <div className="titleDiv">Is the next 🏛️ here?</div>
             {products?.map(product => {
@@ -38,16 +39,21 @@ export default function HomePage(){
                         <div className="soMany" key={product?.id}>
                             <NavLink className="soMany" to={`/products/${product?.id}`}>
                                 <img className="friendContent" src={product?.imageUrl} alt="display"></img>
-                                <div className="inline">
-                                    <div className="fullName">{product?.title}</div>
-                                    <div>{product?.description}</div>
+                                <div className="flex">
+                                    <div className="inline">
+                                        <div className="fullName">{product?.title}</div>
+                                        <div className="smallerTxt">{product?.description}</div>
+                                        <div className="txtDesc"># Msg<div>Free Options </div><div>•&nbsp;&nbsp;&nbsp;Open Source</div></div>
+                                    </div>
+                                    <div className="upvote"></div>
                                 </div>
                             </NavLink>
                         </div>
                     </div>
                 )
             })}
-        </div>
+            </div>
+        {/* </div> */}
         <div className="stuff">
             placeholder
         </div>

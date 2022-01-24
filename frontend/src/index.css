@@ -594,19 +594,6 @@ a:hover, a:visited, a:link, a:active {
   margin: 11px auto;
   border-radius: 3px;
 }
-.inline {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-/* .borderColor2 {
-  border: 20px solid #F3F3F3;
-  height: 597px;
-  width: 560px;
-  margin: 11px auto;
-  border-radius: 3px;
-  box-shadow: 5px 8px 2px .5px #cc6e5467;
-} */
 .email-input2 {
   margin-top: 5px;
   width: 287px;
@@ -687,12 +674,47 @@ a:hover, a:visited, a:link, a:active {
 
 #pgContent {
   display: flex;
-  /* width: 1000px; */
+  width: 1269px;
   margin: 40px auto;
   /* padding: 40px auto 0 auto; */
   /* left: 20px; */
   /* position: relative; */
   /* align-items: center; */
   justify-content: center;
-
+}
+.smallerTxt {
+  font-size: 14px;
+  color: #4b587cd0;
+  width: 460px;
+}
+.upvote {
+  border: 1px solid #D9E1EC;
+  border-radius: 5px;
+  width: 52px;
+  height: 64px;
+  float: right;
+  right: -170px;
+  margin-top: 7.5px;
+  cursor: pointer;
+  display: flex;
+}
+.flex {
+  display: flex;
+  flex: 2 4 auto;
+  width: 632px;
+  justify-content: space-between;
+}
+.inline {
+  display: inline-block;
+  text-align: left;
+}
+.txtDesc {
+  font-size: 11px;
+  color: #4b587c9c;
+  bottom: 0;
+  position: absolute;
+  width: 200px;
+  justify-content: space-between;
+  display: flex;
+  letter-spacing: -.7px;
 }
