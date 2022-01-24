@@ -1,18 +1,21 @@
 .products {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-    padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  /* flex-wrap: wrap; */
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  /* justify-content: center;
+  text-align: center; */
+  padding-bottom: 50px;
 }
 .a {
-    cursor: pointer;
+  cursor: pointer;
 }
 .productImg {
-  height: 240px;
-  width: 390px;
+  height: 80px;
+  width: 80px;
   margin: 3px 10px;
   border-radius: 7px;
   border: .3px solid #d8d8d8;
@@ -28,4 +31,53 @@
   font-size: 20px;
   margin: 0;
   padding: 0;
+}
+
+.titleDiv {
+  font-size: 24px;
+  font-weight: 420;
+  padding-bottom: 10px;
+  color: #21293ce7;
+}
+.friendCard {
+  padding: 24px 0px;
+  margin-bottom: 15px;
+  margin: auto auto 15px auto;
+  background-color: #FFFFFF;
+  outline: 1px solid #DEE1E7;
+  align-items: center;
+  width: 652px;
+  height: 81px;
+  text-align: center;
+  display: inline-block;
+}
+.soMany {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.fullName {
+  top: 50%;
+  cursor: pointer;
+  font-size: 15.5px;
+  font-weight: 420;
+  padding-bottom: 10px;
+  color: #21293ce7;
+}
+.friendContent {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(175, 175, 175);
+  margin-right: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.inline {
+  display: inline-block;
+  text-align: left;
+}
+.stuff {
+  margin-top: 10px;
+  width: 312px;
+  padding-left: 24px;
 }

@@ -12,11 +12,6 @@ const load = (products) => ({
     products
   });
 
-// const loadOne = (product) => ({
-//     type: LOAD_ONE_PRODUCT,
-//     product
-// })
-
 const add = (product) => ({
     type: ADD_PRODUCTS,
     product
@@ -106,11 +101,6 @@ const productReducer = (state = {}, action) => {
                 newState[product.id] = product;
               })
             return newState;
-
-        // case LOAD_ONE_PRODUCT:
-        //     const oneState = {...state};
-        //     oneState[action.product.id] = action.product;
-        //     return oneState;
 
         case ADD_PRODUCTS:
             const addState = {...state};

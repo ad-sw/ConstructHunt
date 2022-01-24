@@ -15,7 +15,6 @@ const AboutMe = () =>{
           </div>
       </div>
     </div>
-    <div className='footer2'>&nbsp;</div>
     </>
     )
 }

@@ -18,19 +18,33 @@ function ProductModal() {
     useEffect(() => dispatch(getProducts()), [dispatch]);
     const products = useSelector(state => Object.values(state.products))
 
+    // let productDisplay = products?.map(product => {
+    //     return (
+    //         <div className="friendCard">
+    //             <div className="soMany" key={product?.id}>
+    //                 <NavLink className="soMany" to={`/products/${product?.id}`}>
+    //                     <img className="friendContent" src={product?.imageUrl} alt="display"></img>
+    //                     <div className="fullName">{product?.title}</div>
+    //                 </NavLink>
+    //             </div>
+    //         </div>
+    //     )
+    //     })
+
     return (
         <><div className="products">
             {products?.map(product => {
-            return (
-                <div key={product?.id}>
-                    <h2 id="productTitle">{product?.title}</h2>
-                    {<NavLink to={`/products/${product?.id}`}>
-                    <img className="productImg" src={product?.imageUrl} height="25%" width="50%" alt="display"></img>
-                    </NavLink>
-                    }
-                </div>
-            )
-            })}
+                return (
+                    <div className="friendCard">
+                        <div className="soMany" key={product?.id}>
+                            <NavLink className="soMany" to={`/products/${product?.id}`}>
+                                <img className="friendContent" src={product?.imageUrl} alt="display"></img>
+                                <div className="fullName">{product?.title}</div>
+                            </NavLink>
+                        </div>
+                    </div>
+                )
+                })}
         </div>
         <div>
             {sessionUser && <ProductFormCreate/>}

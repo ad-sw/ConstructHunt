@@ -666,10 +666,24 @@ a:hover, a:visited, a:link, a:active {
   padding: 11px 16px;
   cursor: pointer;
 }
+#loadingGif{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100%;
+}
 .errors{
   color: #e74e24;
   font-weight: 500;
   margin-top: 6px;
   font-size: 11px;
   margin-bottom: 1px;
+}
+
+#pgContent {
+  display: flex;
+  width: 900px;
+  margin: 40px 140px;
 }

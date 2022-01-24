@@ -13,6 +13,7 @@ import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import ProductProfilePgModal from "./components/ProductProfilePage"
 import NavBar from '../src/components/NavigationBar';
+import HomePage from '../src/components/HomePage'
 // import ProductFormCreate from "./components/ProductModal_Create";
 
 function App() {
@@ -26,18 +27,12 @@ function App() {
 
   return (
     <>
-      {/* <Navigation isLoaded={isLoaded} /> */}
-
       {isLoaded && (
         <BrowserRouter>
         <NavBar/>
         <Switch>
           <Route exact path="/">
-          <p></p><p></p><p></p><p></p><p></p><center></center><br></br>
-          <center>
-            <p>Under Construction</p>
-            <img alt="test" style={{filter: "grayscale(100%)", border: "10px solid transparent"}} height="450" width="650" src="https://ultimate-survival-training.com/wp-content/uploads/2018/02/tourist-2.jpg"/>
-          </center>
+            <HomePage/>
           </Route>
           <Route path='/sign-in' exact={true}>
             <LoginForm/>

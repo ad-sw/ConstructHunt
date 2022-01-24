@@ -98,7 +98,7 @@ input[name="search"]:focus + .searchBarExpands {
     cursor:pointer;
     /* height: 50px; */
     /* z-index: 1000; */
-    border-radius: 2.5px;
+    border-radius: 6px;
     height: 38px;
     color: #757575;
     /* width: 182px; */
