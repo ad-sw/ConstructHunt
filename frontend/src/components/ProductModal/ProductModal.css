@@ -50,6 +50,7 @@
   height: 81px;
   text-align: center;
   display: inline-block;
+  cursor: pointer;
 }
 .soMany {
   display: flex;
@@ -77,4 +78,15 @@
 .inline {
   display: inline-block;
   text-align: left;
+}
+
+.product-container {
+  align-items: center;
+  text-align: center;
+  display: block;
+  border-radius: 3px;
+  padding: 20px;
+  height: 800px;
+  width: 1100px;
+  background: white;
 }

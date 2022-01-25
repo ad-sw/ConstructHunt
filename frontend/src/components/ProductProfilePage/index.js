@@ -10,29 +10,45 @@ import ReviewModal from '../../components/ReviewModal';
 import ReviewModalCreate from '../../components/ReviewModal_Create';
 import "./ProductProfile.css";
 import "../../components/ReviewModal/ReviewModal.css"
+import {getProductsWithReviews} from '../../store/product'
 
-function ProductProfilePgModal() {
+function ProductProfilePgModal({product}) {
     const sessionUser = useSelector(state => state.session.user);
-    const { id } = useParams();
     const dispatch = useDispatch();
     const [isLoaded, setIsLoaded] = useState(false);
-    const product = useSelector(state => state.products[id])
 
-    useEffect(() => dispatch(getProducts()).then(() => setIsLoaded(true)), [dispatch]);
+    useEffect(() => {
+        (async () => {
+            // await dispatch(getProducts())
+            // await dispatch(getAllReviews())
+            await dispatch(getProductsWithReviews())
+            setIsLoaded(true);
+        })();
+    }, [dispatch, sessionUser])
 
-    if (!isLoaded) {
-        return (
-        <div id="loadingGif">
-                <img src={"https://cdn.dribbble.com/users/56427/screenshots/6003020/budio_hero_illustration_for_animation_2.gif"} height="400px" width="600px" alt="loading"/>
-                <div className="loadText">Loading</div>
-            </div>
-        );
-    }
+    // function componentWillUnmount() {
+    //     if (this.props.inModal && !window.location.hash.includes('@')) {
+    //       window.location.hash = this.state.prevHash;
+    //     }
+
+    //     const body = document.getElementsByTagName('body')[0]
+    //     body.classList.remove('no-scroll')
+    //   }
+
+    // function componentDidMount() {
+    //     this.props.fetchProduct(product?.id);
+    //     if (this.props.inModal && !this.state.loaded) {
+    //       const body = document.getElementsByTagName('body')[0];
+    //       body.classList.add('no-scroll');
+    //       this.setState({loaded: true});
+    //     }
+    //   }
 
     return (
         isLoaded && (
         <>
-                <div key={product?.id}  className="productProfile">
+                <div key={product?.id}  className="modal-child">
+                <div className="product-container">
                     <h2 id="prodProfileTitle">{product?.title}</h2>
 
                     {<a href={product?.link}><img className="profileImg" src={product?.imageUrl} height="25%" width="50%" alt="display"></img></a>}
@@ -52,7 +68,13 @@ function ProductProfilePgModal() {
                         <ProductModalDelete product={product}/></>}
                         {sessionUser && <ReviewModalCreate productId={product?.id}/>}
                     </div>
-
+                    nnnnnnnnnnnn<p></p>
+                    nnnnnnnnnnnn<p></p>
+                    nnnnnnnnnnnn<p></p>
+                    nnnnnnnnnnnn<p></p>
+                    nnnnnnnnnnnn<p></p>
+                    nnnnnnnnnnnn<p></p>
+                </div>
                 </div>
         </>
         )

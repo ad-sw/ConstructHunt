@@ -4,7 +4,7 @@
     flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
-    margin: 40px auto 0 auto;
+    margin: 30px auto 0 auto;
     right: 0;
     left: 0;
     /* z-index: -1; */
@@ -14,19 +14,18 @@
     /* width: 1550px; */
     /* max-height: 900px; */
     overflow: hidden;
-    height: 570px;
+    height: 530px;
     padding-bottom: 80px;
-    overflow: hidden;
 }
 #textDesc {
     max-width: 800px;
     display: flex;
     /* position: absolute; */
     font-size: 25.5px;
-    margin: 40px auto 0px auto;
+    margin: 70px auto 0px auto;
     color: rgb(53, 53, 54);
     z-index: 1;
-    padding: 15px 100px 37px 100px;
+    padding: 15px 100px 36px 100px;
     background-color: #dddbd94d;
     box-shadow: 0px 0px 700px #ffffff inset;
 }
@@ -57,9 +56,9 @@
 } */
 .backgroundThing {
     /* vertical-align: top; */
-    background-size: 470px 900px;
-    clip-path: inset(50px 0px 0px 0px);
-    height: 500px;
+    /* background-size: 450px 900px; */
+    clip-path: inset(45px 0px 0px 0px);
+    height: 480px;
     /* width: 1000px; */
     padding: 0;
     z-index: 2;

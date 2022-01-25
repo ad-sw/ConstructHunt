@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { Modal } from '../../context/Modal';
 import { useSelector, useDispatch } from 'react-redux';
 import {getProducts, getProductsWithReviews} from '../../store/product'
 import{ NavLink } from 'react-router-dom';
 import HomeTest from '../HTest'
+import ProductProfilePgModal from "../ProductProfilePage";
 import '../../../src/index'
 import {getAllReviews} from "../../store/review";
+import ProductModal from '../ProductModal'
 
 export default function HomePage(){
     const dispatch = useDispatch()
     const sessionUser = useSelector(state => state.session.user)
     const [isLoaded, setIsLoaded] = useState(false)
+    const [showModal, setShowModal] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
         (async () => {
@@ -20,45 +25,25 @@ export default function HomePage(){
         })();
     }, [dispatch, sessionUser])
 
+    const handleCancel = (e) => {
+        e.preventDefault();
+        setShowModal(false);
+        }
+
+
     const products = useSelector(state => Object.values(state.products))
-    // const reviews = useSelector(state => state.products.Reviews)
 
-
-    if (!isLoaded) {
+    let productCont = products?.map(product => {
         return (
-        <div id="loadingGif">
-                <img src={"https://cdn.dribbble.com/users/56427/screenshots/6003020/budio_hero_illustration_for_animation_2.gif"} height="400px" width="600px" alt="loading"/>
-                <div className="loadText">Loading</div>
-            </div>
-        );
-    }
+            <ProductModal key={product?.id} product={product} />
+        )
+    })
 
     return (
     <div id="pgContent">{isLoaded && (<>
         <div className="products">
         <div className="titleDiv">Is the next 🏛️ here?</div>
-            {products?.map(product => {
-                return (
-                    <div className="friendCard">
-                        <div className="soMany" key={product?.id}>
-                            <NavLink className="soMany" to={`/products/${product?.id}`}>
-                                <img className="friendContent" src={product?.imageUrl} alt="display"></img>
-                                <div className="flex">
-                                    <div className="inline">
-                                        <div className="fullName">{product?.title}</div>
-                                        <div className="smallerTxt">{product?.description}</div>
-                                        <div className="txtDesc"><div className="opacity"><img className="bubble" src="https://user-images.githubusercontent.com/86431563/150877606-3394655d-b79c-4561-a1a3-b8313667ac29.png"/>&nbsp; {product.Reviews.length}</div><div>Free & Paid Options </div><div>•&nbsp;&nbsp;&nbsp;Open Source</div></div>
-                                    </div>
-                                <div className="upvote">
-                                   <img className="arrow" src="https://user-images.githubusercontent.com/86431563/150881722-fe0f3572-0d7a-4f6e-a237-3ea07be4197d.png"/>
-                                   <div className="upvoteText">0</div>
-                                </div>
-                                </div>
-                            </NavLink>
-                        </div>
-                    </div>
-                )
-            })}
+            {productCont}
             </div>
         <div className="stuff">
             placeholder
