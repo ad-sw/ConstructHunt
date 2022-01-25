@@ -559,31 +559,25 @@ a:hover, a:visited, a:link, a:active {
 /* SIGN UP PAGE */
 .signup-page {
   align-items: center;
-  /* position: absolute; */
-  /* top: 82px; */
-  /* top: 81px; */
-  top: 65px;
-  left: 0;
   position: absolute;
+  /* top: 82px; */
+  top: 60px;
+  left: 0;
   right: 0;
   margin: auto;
   height: 670px;
-  /* width: 800px; */
-  /* content: ''; */
-  max-width: 560x;
-  width: 560x;
+  width: 560px;
   z-index: 0;
-  overflow-y: hidden;
+  overflow: hidden;
   /* background: linear-gradient(rgba(95, 91, 88, 0.76), rgba(151, 151, 151, 0)), url(''); */
 }
 .login-form-container {
   align-items: center;
   text-align: center;
   /* margin: 30% auto; */
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   display: block;
   border-radius: 3px;
-  width: 560px;
   max-width: 560px;
   /* height: 577px; */
   /* height: 490px; */
