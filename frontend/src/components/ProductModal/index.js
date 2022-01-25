@@ -31,19 +31,25 @@ function ProductModal({product}) {
 
     const handleCancel = (e) => {
         e.preventDefault();
+        const body = document.getElementsByTagName('body')[0]
+        body.classList.remove('no-scroll')
         setShowModal(false);
         }
 
-    const openMenu = () => {
-        if (showModal) return;
+    const openMenu = (e) => {
+        e.preventDefault()
+        // if (showModal) return;
         // document.documentElement.style.overflow = 'hidden';
         // document.body.scroll = "no";
-        const body = document.getElementsByTagName('body')[0];
-        body.classList.add('no-scroll');
+        const newest = document.getElementsByTagName("body")[0];
+        newest.classList.add("no-scroll");
+        // const body = document.getElementsByTagName('body')[0];
+        // body.classList.add('no-scroll');
         setShowModal(true);
         };
 
-    const closeMenu = () => {
+    const closeMenu = (e) => {
+        e.preventDefault()
         const body = document.getElementsByTagName('body')[0]
         body.classList.remove('no-scroll')
         // document.documentElement.style.overflow = 'scroll';
@@ -65,11 +71,6 @@ function ProductModal({product}) {
                             &nbsp; {product?.Reviews?.length}</div><div>Free & Paid Options </div>
                             <div>•&nbsp;</div>{(product?.id %2 === 0) && (<>Open Source</>)}{(product?.id % 2 !== 0) && (<>Freelance</>)}</div>
                         </div>
-                        {showModal && (
-                            <Modal onClose={closeMenu}>
-                                <ProductProfilePgModal product={product}/>
-                                <button className="circleClose" onClick={handleCancel} >x</button>
-                            </Modal>)}
                         {!sessionUser && (
                         <Upvotes/>)}
                         {sessionUser && (
@@ -81,7 +82,11 @@ function ProductModal({product}) {
             </div>
         </div>
     </div>
-
+    {showModal && (
+        <Modal onClose={closeMenu}>
+            <ProductProfilePgModal product={product}/>
+            <button className="circleClose" onClick={handleCancel} >x</button>
+        </Modal>)}
     </>);
 }
 

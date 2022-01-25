@@ -21,17 +21,33 @@ function LoginFormModal() {
       setIsLoaded(true)
   }, [setIsLoaded]);
 
+  const openMenu = (e) => {
+    e.preventDefault()
+    const newest = document.getElementsByTagName("body")[0];
+    newest.classList.add("no-scroll");
+    setShowModal(true);
+    };
+
   const handleCancel = (e) => {
     e.preventDefault();
+    const body = document.getElementsByTagName('body')[0]
+    body.classList.remove('no-scroll')
     setShowModal(false);
-  }
+    }
+
+  const closeMenu = (e) => {
+    e.preventDefault()
+    const body = document.getElementsByTagName('body')[0]
+    body.classList.remove('no-scroll')
+    setShowModal(false);
+    };
 
   return (
     <div>
     <>
-      <button className="RegUserDemoBtns2" onClick={() => setShowModal(true)}>Sign in</button>
+      <button className="RegUserDemoBtns2" onClick={openMenu}>Sign in</button>
       {showModal && (<>
-        <Modal onClose={() => setShowModal(false)}>
+        <Modal onClose={handleCancel}>
           <LoginForm />
           <button className="circleClose" onClick={handleCancel} >x</button>
         </Modal>

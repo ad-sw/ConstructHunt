@@ -20,18 +20,36 @@ function Upvotes({product}) {
     const [showModal, setShowModal] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false)
 
+    const openMenu = (e) => {
+        e.preventDefault()
+        const newest = document.getElementsByTagName("body")[0];
+        newest.classList.add("no-scroll");
+        setShowModal(true);
+        };
+
     const handleCancel = (e) => {
         e.preventDefault();
+            const body = document.getElementsByTagName('body')[0]
+            body.classList.remove('no-scroll')
         setShowModal(false);
         }
 
+    const closeMenu = (e) => {
+        e.preventDefault()
+        const body = document.getElementsByTagName('body')[0]
+        body.classList.remove('no-scroll')
+        // document.documentElement.style.overflow = 'scroll';
+        // document.body.scroll = "yes";
+        setShowModal(false);
+        };
+
     return (<>
-        <div className="upvote" onClick={() => setShowModal(true)}>
+        <div className="upvote" onClick={openMenu}>
             <img className="arrow" src="https://user-images.githubusercontent.com/86431563/150881722-fe0f3572-0d7a-4f6e-a237-3ea07be4197d.png"/>
             <div className="upvoteText">0</div>
         </div>
         {showModal && (
-            <Modal onClose={() => setShowModal(false)}>
+            <Modal onClose={closeMenu}>
               <SignupForm />
               <button className="circleClose" onClick={handleCancel} >x</button>
             </Modal>

@@ -7,6 +7,7 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
+  overflow-y: scroll;
   font-family: 'Rubik', sans-serif;
   /* font-family: 'Sarabun', sans-serif; */
 }
@@ -566,13 +567,13 @@ a:hover, a:visited, a:link, a:active {
   position: absolute;
   right: 0;
   margin: auto;
-  height: 690px;
+  height: 670px;
   /* width: 800px; */
   /* content: ''; */
   max-width: 560x;
   width: 560x;
   z-index: 0;
-  overflow: hidden;
+  overflow-y: hidden;
   /* background: linear-gradient(rgba(95, 91, 88, 0.76), rgba(151, 151, 151, 0)), url(''); */
 }
 .login-form-container {
@@ -774,4 +775,3 @@ a:hover, a:visited, a:link, a:active {
 body.no-scroll {
   overflow-y: hidden;
 }
-
