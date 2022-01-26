@@ -979,7 +979,7 @@ hr {
   display: flex;
 }
 .upvote-button {
-  background-color: green;
+  background-color: #7AC3BC;
   width: 170px;
   padding: 12px;
   display: block;
@@ -996,10 +996,10 @@ hr {
   } */
 }
 span.upvote-button:hover {
-  background-color: lighten(green, 5%)
+  background-color: lighten(#7AC3BC, 5%)
 }
 span.upvote-button:active {
-  background-color: lighten(green, 5%);
+  background-color: lighten(#7AC3BC, 5%);
   margin-top: 2px;
   margin-bottom: -2px;
 }
