@@ -40,61 +40,23 @@ function ProductProfilePgModal({product}) {
                         <div className="titleTagline">
                             <div id="prodProfileTitle2">{product?.title}</div>
                             <p id="productDescription2">{product?.description.slice(0, 68)}</p>
+                            <div className="buttons">
+                                <div className="priceOption">Free & Paid Options</div>
+                                <div className="toolType">{(product?.id %2 === 0) && (<>Open Source</>)}{(product?.id % 2 !== 0) && (<>Freelance</>)}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-         {/*<main>
-            <section className="main-image">
-              <section className="gallery">
-                <GalleryDisplay youtube={youtube} screenshots={screenshotUrls} />
-              </section>
-              <p className='description'>
-                <span>DESCRIPTION</span>
-                {description}
-              </p>
-            </section>
-
-            <h4>REVIEWS</h4>
-            <section className="discussion">
-              <section className="review-input">
-                <ReviewInput review={
-                  {
-                    product_id: id,
-                    reviewer_id: this.props.loggedIn,
-                    parent_review_id: null
-                  }
-                } profilePictureUrl={this.props.profilePictureCurrentUser}
-                />
-              </section>
-              <span className='reviews'>
-                <ul>
-                  {review_ids.slice(0).reverse().map(id => {
-                    return (
-                      <Review key={`review-${id}`} id={id} />
-                      )
-                  })}
-                  {review_ids.length === 0 ? (
-                    "no reviews yet"
-                  ) : (null)}
-                </ul>
-              </span>
-            </section>
-            </main> */}
             <div className="leftSide">
                 <div className="main-image">
                     <div className="gallery">
-                        {/* <div className="main-info"> */}
-                            <a className="main-info" target="_blank" rel="noopener noreferrer" href={product?.link}>
+=                           <a className="main-info" target="_blank" rel="noopener noreferrer" href={product?.link}>
                                 <img className="img5" src={product?.imageUrl} alt="display"/>
                             </a>
-                        {/* </div> */}
-
                         <img className="filmstrip" src={product?.imageUrl} alt="display"/>
                         <img className="filmstrip" src={product?.imageUrl} alt="display"/>
                         <img className="filmstrip" src={product?.imageUrl} alt="display"/>
                         <img className="filmstrip" src={product?.imageUrl} alt="display"/>
-                        {/* <GalleryDisplay youtube={youtube} screenshots={screenshotUrls} /> */}
                     </div>
                     <p className='description'>
                         {product?.description}
@@ -117,12 +79,12 @@ function ProductProfilePgModal({product}) {
                     {sessionUser && <ReviewModalCreate productId={product?.id}/>}
                 </div>
             </div>
-            {/* nnnnnnnnnnnn<p></p>
-            nnnnnnnnnnnn<p></p>
-            nnnnnnnnnnnn<p></p>
-            nnnnnnnnnnnn<p></p>
-            nnnnnnnnnnnn<p></p>
-            nnnnnnnnnnnn<p></p> */}
+
+
+
+            <div>
+
+            </div>
         </div>
         </div>
         </>

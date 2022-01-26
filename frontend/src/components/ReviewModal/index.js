@@ -34,10 +34,15 @@ function ReviewModal({product}) {
             return (
             <div className="review" key={review?.id}>
                 <div className="review1">
-                    <div className="reviewUser">{reviewUser[review?.userId-1].username}</div>
-                    <div className="review-body">
-                        {review?.review}
-                        <div className="review-body2">{date}</div>
+                    <div className="flexThis">
+                        <div className="circle"></div>
+                        <div className="styleThis">
+                            <div className="reviewUser">{reviewUser[review?.userId-1].username}</div>
+                            <div className="review-body">
+                                {review?.review}
+                                <div className="review-body2">{date}</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="">

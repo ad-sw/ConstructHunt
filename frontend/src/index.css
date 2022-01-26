@@ -713,6 +713,7 @@ a:hover, a:visited, a:link, a:active {
 .inline {
   display: inline-block;
   text-align: left;
+  cursor: pointer;
 }
 .txtDesc {
   font-size: 11px;
@@ -772,20 +773,22 @@ body.no-scroll {
 .headerSection {
   display: flex;
   flex-direction: row;
-  height: 120px;
+  height: 100px;
   width: 100%;
-  padding: 30px 0px;
-  margin: 0px 15px;
+  /* padding: 30px 0px; */
+  margin: 30px 15px;
 }
 .mainInfo {
   width: 460px;
   display: flex;
   flex-direction: row;
   text-align: left;
+  height: 100px;
 }
 .titleTagline {
   width: fit-content;
   padding: 0px 20px;
+  height: 100px;
 }
 .main-info {
   width: 100%;
@@ -853,6 +856,7 @@ body.no-scroll {
   font-size: 13px;
   border-bottom: 1px solid lightgrey;
   padding-bottom: 20px;
+  margin-bottom: 13px;
   color: #21293cde;
   font-weight: 405;
 }
@@ -860,20 +864,6 @@ body.no-scroll {
   display: flex;
   padding: 10px;
   flex-direction: column;
-}
-.review-body {
-  display: inherit;
-  flex-direction: column;
-  padding-left: 10px;
-}
-.review-body2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 11px;
-  color: #4B587C;
-  margin-left: 27px;
-  opacity: .65;
 }
 .review {
   text-align: left;
@@ -918,13 +908,164 @@ body.no-scroll {
 } */
 .reviewUser {
   font-weight: 402;
-  margin-top: 5px;
+  margin-top: 7px;
   font-size: 13px;
-  color: #21293c9d;
-  padding: 20px 0px;
-  margin: -8px 0px;
+  /* padding: 20px 0px 5px 32px; */
+  margin: -26.5px 0px -8px 38px;
+  display: flex;
+  color: #21293cb2;
 }
 .review1 {
-  padding: 20px 0px;
+  padding: 28px 0px;
   margin: -25px 0px;
 }
+.circle {
+  background-color: #DFDFDF;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  z-index: 1;
+}
+.flexThis {
+  display: flex;
+  flex-direction: column;
+}
+.review-body {
+  flex-direction: column;
+  margin-left: 14px;
+  padding-left: 20px;
+  padding: 18px 0px 0px 24px;
+  display: flex;
+  border-left: 1.5px solid #ebebebef;
+}
+.review-body2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 11px;
+  color: #4B587C;
+  margin-left: 27px;
+  opacity: .65;
+}
+.buttons {
+  display: flex;
+  padding: 0;
+  align-items: flex-start;
+  position: relative;
+  flex-direction: row;
+  margin: 6px 0 0 0;
+  /* height: 20px; */
+}
+.priceOption {
+  border: 1px solid #D9E1EC;
+  /* width: 98px; */
+  height: 17px;
+  padding: 3px 8px 0px 8px;
+  font-size: 11px;
+  border-radius: 3px;
+  text-align: center;
+  color: #404b6b;
+  /* margin: 20px 0 0 auto; */
+  letter-spacing: -.1px;
+  margin-right: 10px;
+}
+.toolType {
+  border: 1px solid #D9E1EC;
+  /* width: 98px; */
+  height: 17px;
+  padding: 3px 8px 0px 8px;
+  font-size: 11px;
+  border-radius: 3px;
+  text-align: center;
+  color: #404b6b;
+  /* margin: 20px 0 0 auto; */
+  letter-spacing: -.1px;
+}
+
+
+
+
+
+
+/* aside.product {
+  width: 320px;
+
+  hr {
+    margin: 20px 0;
+    border: 1px solid $lightgray;
+  }
+
+  div.upvote-section {
+    display: flex;
+
+    span.upvote-button {
+      background-color: $web-hunt-green;
+      width: 170px;
+      padding: 12px;
+      display: block;
+      text-align: center;
+      color: $white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+
+      div {
+        display: inline-block;
+        color: $lllgray;
+      }
+    }
+
+    span.upvote-button:hover {
+      background-color: lighten($web-hunt-green, 5%)
+    }
+
+    span.upvote-button:active {
+      background-color: lighten($web-hunt-green, 5%);
+      margin-top: 2px;
+      margin-bottom: -2px;
+    }
+
+    section.website-link {
+      border-top: 1px solid $lightlightgray;
+    }
+
+    div.product-upvoters {
+      margin-left: 25px;
+
+      span.upvoter-picture {
+        background-color: lightcoral;
+        margin-left: -10px;
+      }
+
+      img.upvoter-picture {
+        background-color: lightcoral;
+        margin-left: -10px;
+      }
+    }
+
+  }
+
+  section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: $white;
+    border-radius: 5px;
+  }
+
+  section.hunter-link {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    a {
+      margin-left: 10px;
+      transition: color .3s;
+
+      &:hover {
+        color: $web-hunt-green;
+      }
+    }
+  }
+} */
