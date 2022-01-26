@@ -50,7 +50,7 @@ function ProductProfilePgModal({product}) {
             <div className="leftSide">
                 <div className="main-image">
                     <div className="gallery">
-                           <a className="main-info" target="_blank" rel="noopener noreferrer" href={product?.link}>
+                            <a className="main-info" target="_blank" rel="noopener noreferrer" href={product?.link}>
                                 <img className="img5" src={product?.imageUrl} alt="display"/>
                             </a>
                         <img className="filmstrip" src={product?.imageUrl} alt="display"/>
@@ -63,7 +63,6 @@ function ProductProfilePgModal({product}) {
                         <div className="dateProd">FEATURED {date}</div>
                     </p>
                 </div>
-
                 <div className="discuss">DISCUSSION</div>
                 <div className="description2">
                 <div className="reviewInput">Would you recommend this product?</div>
@@ -71,7 +70,6 @@ function ProductProfilePgModal({product}) {
                         {<ReviewModal product={product}/>}
                     </div>
                 </div>
-
                 <div className="CreateUpdateDeleteBtns">
                     {sessionUser?.id === product?.userId &&
                     <><ProductModalUpdate product={product}/>
@@ -81,9 +79,65 @@ function ProductProfilePgModal({product}) {
             </div>
 
 
+            {/* <aside className='product'>
+            <div className='upvote-section'>
+              <span
+                onClick={this.upVote.bind(this)}
+                className="upvote-button">{(upvoted) ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }<div>
+                  {upvote_ids.length}</div>
+              </span>
+              <div className='product-upvoters'>
+                {upvoters && Object.values(upvoters).map((user,idx) => {
+                  return (idx < 3) ? (<img key={user.id} className='ppr upvoter-picture' src={user.profilePictureUrl} />) : null;
+                })}
+              </div>
+            </div>
 
-            <div>
+            <hr />
 
+            <section className="website-link">
+              <h4>Website</h4>
+              <a href={website.toLowerCase().startsWith('http') ? website : `http://${website}`} target="_blank">{this.cleanUrl(website)}</a>
+            </section>
+
+            <hr />
+
+            <section className="hunter-link">
+              <h4>Hunter</h4>
+              <img src={hunter.profilePictureUrl} className="profile-picture-round"/>
+              <Link to={`/@${hunter.username}`}>@{hunter.username}</Link>
+            </section>
+          </aside> */}
+            <div className="rightSide">
+                <div className="upvote-section">
+                    <span
+                    onClick={'this.upVote.bind(this)'}
+                    className="upvote-button">{('hi') ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }
+                    <div>
+                        {'hi'}
+                    </div>
+                    </span>
+                    <div className='product-upvoters'>
+                    {'hi' && Object.values('hi').map((user,idx) => {
+                    return (idx < 3) ? (<img key={user.id} className='upvoter-picture' src={user.profilePictureUrl} />) : null;
+                    })}
+                    </div>
+                </div>
+
+                <hr />
+
+                <section className="website-link">
+                <h4>Website</h4>
+                {/* <a href={'k'.toLowerCase().startsWith('http') ? 'website' : `http://${'website'}`} target="_blank">{this.cleanUrl('website')}</a> */}
+                </section>
+
+                <hr />
+
+                <section className="hunter-link">
+                <h4>Hunter</h4>
+                <img src={'user.profilePictureUrl'} className="profile-picture-round"/>
+                {/* <Link to={`/@${user.username}`}>@{user.username}</Link> */}
+                </section>
             </div>
         </div>
         </div>

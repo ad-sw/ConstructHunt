@@ -878,34 +878,6 @@ body.no-scroll {
   font-weight: 403;
   letter-spacing: .5px;
 }
-/* section.discussion {
-  padding: 20px;
-
-  section.review-input {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    border-bottom: 1px solid $lightgray;
-    padding-bottom: 20px;
-
-    form {
-      display: inherit;
-      width: 100%;
-      align-items: inherit;
-      margin-left: 10px;
-
-      input {
-        flex-grow: 1;
-      }
-
-      button {
-        margin: 10px;
-        padding: 8px;
-        height: fit-content;
-      }
-    }
-  }
-} */
 .reviewUser {
   font-weight: 402;
   margin-top: 7px;
@@ -983,89 +955,77 @@ body.no-scroll {
   letter-spacing: -.1px;
 }
 
+.rightSide {
+  width: 288px;
+  min-height: 564.3px;
+  margin: 0 20px 20px 0;
+  /* margin-bottom: 20px; */
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 179.7px;
+  border: 1px solid #D9E1EC;
+  border-radius: 5px;
+  right: 0;
+}
+hr {
+  margin: 20px 0;
+  border: 1px solid lightgrey;
+}
+.upvote-section {
+  display: flex;
+}
+.upvote-button {
+  background-color: green;
+  width: 170px;
+  padding: 12px;
+  display: block;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
 
-
-
-
-
-/* aside.product {
-  width: 320px;
-
-  hr {
-    margin: 20px 0;
-    border: 1px solid $lightgray;
-  }
-
-  div.upvote-section {
-    display: flex;
-
-    span.upvote-button {
-      background-color: $web-hunt-green;
-      width: 170px;
-      padding: 12px;
-      display: block;
-      text-align: center;
-      color: $white;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 500;
-
-      div {
-        display: inline-block;
-        color: $lllgray;
-      }
-    }
-
-    span.upvote-button:hover {
-      background-color: lighten($web-hunt-green, 5%)
-    }
-
-    span.upvote-button:active {
-      background-color: lighten($web-hunt-green, 5%);
-      margin-top: 2px;
-      margin-bottom: -2px;
-    }
-
-    section.website-link {
-      border-top: 1px solid $lightlightgray;
-    }
-
-    div.product-upvoters {
-      margin-left: 25px;
-
-      span.upvoter-picture {
-        background-color: lightcoral;
-        margin-left: -10px;
-      }
-
-      img.upvoter-picture {
-        background-color: lightcoral;
-        margin-left: -10px;
-      }
-    }
-
-  }
-
-  section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: $white;
-    border-radius: 5px;
-  }
-
-  section.hunter-link {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-
-    a {
-      margin-left: 10px;
-      transition: color .3s;
-
-      &:hover {
-        color: $web-hunt-green;
-      }
-    }
-  }
+  /* div {
+    display: inline-block;
+    color: $lllgray;
+  } */
+}
+span.upvote-button:hover {
+  background-color: lighten(green, 5%)
+}
+span.upvote-button:active {
+  background-color: lighten(green, 5%);
+  margin-top: 2px;
+  margin-bottom: -2px;
+}
+section.website-link {
+  border-top: 1px solid lightgrey;
+}
+div.product-upvoters {
+  margin-left: 25px;
+}
+span.upvoter-picture {
+  background-color: lightcoral;
+  margin-left: -10px;
+}
+img.upvoter-picture {
+  background-color: lightcoral;
+  margin-left: -10px;
+}
+section.hunter-link {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+/* a {
+  margin-left: 10px;
+  transition: color .3s;
+} */
+/* a:hover {
+  color: green;
 } */
