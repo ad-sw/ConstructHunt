@@ -769,3 +769,43 @@ a:hover, a:visited, a:link, a:active {
 body.no-scroll {
   overflow-y: hidden;
 }
+.headerSection {
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+  width: 100%;
+  padding: 30px 0px;
+  margin: 0px 15px;
+}
+.mainInfo {
+  width: 460px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.titleTagline {
+  width: fit-content;
+  padding: 0px 20px;
+}
+.main-info {
+  width: 100%;
+  /* border: 1px solid lightgray; */
+  align-self: flex-start;
+  height: 360px;
+  display: flex;
+  overflow-x: scroll;
+}
+.filmstrip {
+  width: 60px;
+  height: 60px;
+  margin: 15px 12px 0px 0px;
+  /* border: .1px solid rgba(211, 211, 211, 0.438); */
+  align-self: flex-start;
+  left: 0;
+  border-radius: 3px;
+}
+.gallery {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+}

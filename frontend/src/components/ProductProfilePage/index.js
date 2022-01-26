@@ -26,56 +26,96 @@ function ProductProfilePgModal({product}) {
         })();
     }, [dispatch, sessionUser])
 
-    // function componentWillUnmount() {
-    //     if (this.props.inModal && !window.location.hash.includes('@')) {
-    //       window.location.hash = this.state.prevHash;
-    //     }
-
-    //     const body = document.getElementsByTagName('body')[0]
-    //     body.classList.remove('no-scroll')
-    //   }
-
-    // function componentDidMount() {
-    //     this.props.fetchProduct(product?.id);
-    //     if (this.props.inModal && !this.state.loaded) {
-    //       const body = document.getElementsByTagName('body')[0];
-    //       body.classList.add('no-scroll');
-    //       this.setState({loaded: true});
-    //     }
-    //   }
-
     return (
         isLoaded && (
         <>
-                <div key={product?.id}  className="modal-child">
-                <div className="product-container">
-                    <h2 id="prodProfileTitle">{product?.title}</h2>
-
-                    {<a href={product?.link}><img className="profileImg" src={product?.imageUrl} height="25%" width="50%" alt="display"></img></a>}
-
-                    <p id="productDescription">{product?.description}</p>
-
-                    <div className="productDiscussionWrapper">
-                    <h4 className="discussionTitle">Product Discussion:</h4>
-                        <div className="reviewsTable">
-                            {<ReviewModal product={product}/>}
+            <div key={product?.id}  className="modal-child">
+            <div className="product-container">
+                <div className="headerSection">
+                    <div className="mainInfo">
+                        {<a href={product?.link}><img className="profileImg" src={product?.imageUrl} height="25%" width="50%" alt="display"/></a>}
+                        <div className="titleTagline">
+                            <div id="prodProfileTitle2">{product?.title}</div>
+                            <p id="productDescription2">{product?.description.slice(0, 68)}</p>
                         </div>
                     </div>
+                </div>
 
-                    <div className="CreateUpdateDeleteBtns">
-                        {sessionUser?.id === product?.userId &&
-                        <><ProductModalUpdate product={product}/>
-                        <ProductModalDelete product={product}/></>}
-                        {sessionUser && <ReviewModalCreate productId={product?.id}/>}
+         {/*<main>
+            <section className="main-image">
+              <section className="gallery">
+                <GalleryDisplay youtube={youtube} screenshots={screenshotUrls} />
+              </section>
+              <p className='description'>
+                <span>DESCRIPTION</span>
+                {description}
+              </p>
+            </section>
+
+            <h4>REVIEWS</h4>
+            <section className="discussion">
+              <section className="review-input">
+                <ReviewInput review={
+                  {
+                    product_id: id,
+                    reviewer_id: this.props.loggedIn,
+                    parent_review_id: null
+                  }
+                } profilePictureUrl={this.props.profilePictureCurrentUser}
+                />
+              </section>
+              <span className='reviews'>
+                <ul>
+                  {review_ids.slice(0).reverse().map(id => {
+                    return (
+                      <Review key={`review-${id}`} id={id} />
+                      )
+                  })}
+                  {review_ids.length === 0 ? (
+                    "no reviews yet"
+                  ) : (null)}
+                </ul>
+              </span>
+            </section>
+            </main> */}
+            <div className="leftSide">
+                <div className="main-image">
+                    <div className="gallery">
+                        <img className="main-info" src={product?.imageUrl} alt="display"/>
+                        <img className="filmstrip" src={product?.imageUrl} alt="display"/>
+                        <img className="filmstrip" src={product?.imageUrl} alt="display"/>
+                        <img className="filmstrip" src={product?.imageUrl} alt="display"/>
+                        <img className="filmstrip" src={product?.imageUrl} alt="display"/>
+                        {/* <GalleryDisplay youtube={youtube} screenshots={screenshotUrls} /> */}
                     </div>
-                    nnnnnnnnnnnn<p></p>
-                    nnnnnnnnnnnn<p></p>
-                    nnnnnnnnnnnn<p></p>
-                    nnnnnnnnnnnn<p></p>
-                    nnnnnnnnnnnn<p></p>
-                    nnnnnnnnnnnn<p></p>
+                    <p className='description'>
+                        <span>DESCRIPTION</span>
+                        {product?.description}
+                    </p>
                 </div>
+
+                <div className="productDiscussionWrapper">
+                <h4 className="discussionTitle">Product Discussion:</h4>
+                    <div className="reviewsTable">
+                        {<ReviewModal product={product}/>}
+                    </div>
                 </div>
+
+                <div className="CreateUpdateDeleteBtns">
+                    {sessionUser?.id === product?.userId &&
+                    <><ProductModalUpdate product={product}/>
+                    <ProductModalDelete product={product}/></>}
+                    {sessionUser && <ReviewModalCreate productId={product?.id}/>}
+                </div>
+            </div>
+            {/* nnnnnnnnnnnn<p></p>
+            nnnnnnnnnnnn<p></p>
+            nnnnnnnnnnnn<p></p>
+            nnnnnnnnnnnn<p></p>
+            nnnnnnnnnnnn<p></p>
+            nnnnnnnnnnnn<p></p> */}
+        </div>
+        </div>
         </>
         )
    );

@@ -7,15 +7,15 @@
   padding-bottom: 50px;
 }
 .profileImg {
-  height: 350px;
-  width: 550px;
-  margin: 3px 10px 0 10px;
-  border-radius: 5px;
-  border: .3px solid #d8d8d8;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 4px;
 }
 .profileImg:hover {
   transition: all 0.01s ease;
-  filter: brightness(101%) saturate(125%);
+  opacity: .97;
+  filter: sepia(310%) hue-rotate(320deg) brightness(88%) saturate(260%);
 }
 .reviewsTable {
   overflow-x: hidden;
@@ -62,7 +62,6 @@
   flex-wrap: wrap;
   float: right;
   padding: 0;
-  /* width: 550px; */
 }
 .CreateUpdateDeleteBtns {
   display: inline-block;
@@ -74,12 +73,60 @@
 #prodProfileTitle {
   color: #515460;
   font-size: 20px;
-  margin: 0;
+  margin: 0 0 5px 0;
   padding: 0;
   display: block;
+  font-weight: 480;
+}
+#prodProfileTitle2 {
+  color: #363d4e;
+  font-size: 26px;
+  margin: 0 0 5px 0;
+  padding: 0;
+  display: block;
+  font-weight: 400;
+
 }
 #productDescription {
   margin: 0;
   padding: 0;
   font-size: 12px;
+}
+p#productDescription2 {
+  color: #4b587c;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 390;
+}
+.leftSide {
+  width: 700px;
+}
+.main-image, .discussion {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+.main-image {
+  padding: 20px;
+  border: 1px solid #D9E1EC;
+}
+/* img.carousel-main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+
+} */
+p.description {
+  border-top: 1px solid lightgrey;
+  padding-top: 20px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+span {
+  font-size: 11px;
+  padding-bottom: 10px;
+  color: grey;
+  display: block;
 }
