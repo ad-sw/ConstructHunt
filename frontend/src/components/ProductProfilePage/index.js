@@ -50,7 +50,7 @@ function ProductProfilePgModal({product}) {
             <div className="leftSide">
                 <div className="main-image">
                     <div className="gallery">
-=                           <a className="main-info" target="_blank" rel="noopener noreferrer" href={product?.link}>
+                           <a className="main-info" target="_blank" rel="noopener noreferrer" href={product?.link}>
                                 <img className="img5" src={product?.imageUrl} alt="display"/>
                             </a>
                         <img className="filmstrip" src={product?.imageUrl} alt="display"/>
