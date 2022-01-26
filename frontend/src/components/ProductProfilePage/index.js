@@ -26,6 +26,9 @@ function ProductProfilePgModal({product}) {
         })();
     }, [dispatch, sessionUser])
 
+    let event = new Date(product?.createdAt);
+    let date = event.toLocaleDateString().slice(0,5) + event.toLocaleDateString().slice(7,9)
+
     return (
         isLoaded && (
         <>
@@ -33,7 +36,7 @@ function ProductProfilePgModal({product}) {
             <div className="product-container">
                 <div className="headerSection">
                     <div className="mainInfo">
-                        {<a href={product?.link}><img className="profileImg" src={product?.imageUrl} height="25%" width="50%" alt="display"/></a>}
+                        {<img className="profileImg" src={product?.imageUrl} height="25%" width="50%" alt="display"/>}
                         <div className="titleTagline">
                             <div id="prodProfileTitle2">{product?.title}</div>
                             <p id="productDescription2">{product?.description.slice(0, 68)}</p>
@@ -81,7 +84,12 @@ function ProductProfilePgModal({product}) {
             <div className="leftSide">
                 <div className="main-image">
                     <div className="gallery">
-                        <img className="main-info" src={product?.imageUrl} alt="display"/>
+                        {/* <div className="main-info"> */}
+                            <a className="main-info" target="_blank" rel="noopener noreferrer" href={product?.link}>
+                                <img className="img5" src={product?.imageUrl} alt="display"/>
+                            </a>
+                        {/* </div> */}
+
                         <img className="filmstrip" src={product?.imageUrl} alt="display"/>
                         <img className="filmstrip" src={product?.imageUrl} alt="display"/>
                         <img className="filmstrip" src={product?.imageUrl} alt="display"/>
@@ -89,14 +97,15 @@ function ProductProfilePgModal({product}) {
                         {/* <GalleryDisplay youtube={youtube} screenshots={screenshotUrls} /> */}
                     </div>
                     <p className='description'>
-                        <span>DESCRIPTION</span>
                         {product?.description}
+                        <div className="dateProd">FEATURED {date}</div>
                     </p>
                 </div>
 
-                <div className="productDiscussionWrapper">
-                <h4 className="discussionTitle">Product Discussion:</h4>
-                    <div className="reviewsTable">
+                <div className="discuss">DISCUSSION</div>
+                <div className="description2">
+                <div className="reviewInput">Would you recommend this product?</div>
+                    <div className="review">
                         {<ReviewModal product={product}/>}
                     </div>
                 </div>

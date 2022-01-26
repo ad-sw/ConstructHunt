@@ -22,7 +22,7 @@
   transition: all 0.05s ease;
   transform: scale(1.004);
   box-shadow: 0 0 6px rgb(198, 198, 198);
-  filter: sepia(200%) hue-rotate(180deg) brightness(88%) saturate(140%);
+  filter: sepia(270%) hue-rotate(180deg) brightness(88%) saturate(130%) ;
 }
 #productTitle {
   color: #515460;
@@ -85,10 +85,9 @@
   /* height: 800px; */
   width: 1100px;
   background: #FAFBFF;
-
   top: 10%;
   left: 0;
-  bottom: 50px;
+  /* bottom: 50px; */
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;

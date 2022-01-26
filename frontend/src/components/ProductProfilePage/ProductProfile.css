@@ -13,9 +13,10 @@
   border-radius: 4px;
 }
 .profileImg:hover {
+  cursor: url('https://user-images.githubusercontent.com/86431563/151103210-15615268-d505-4ad7-8523-7f8b23abfd51.png'), auto;
   transition: all 0.01s ease;
   opacity: .97;
-  filter: sepia(310%) hue-rotate(320deg) brightness(88%) saturate(260%);
+  filter: sepia(320%) hue-rotate(320deg) brightness(86%) saturate(260%);
 }
 .reviewsTable {
   overflow-x: hidden;
@@ -121,8 +122,10 @@ p#productDescription2 {
 p.description {
   border-top: 1px solid lightgrey;
   padding-top: 20px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5em;
+  text-align: left;
+  font-weight: 350;
 }
 span {
   font-size: 11px;
