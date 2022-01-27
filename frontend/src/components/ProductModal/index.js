@@ -3,10 +3,6 @@ import {getProducts} from '../../store/product';
 import {useEffect, useState} from 'react';
 import SignupFormModal from '../SignupFormModal';
 import { NavLink /*, useHistory*/ } from 'react-router-dom';
-// import ProductModalUpdate from '../../components/ProductModal_Update';
-// import ProductModalDelete from '../../components/ProductModal_Delete';
-// import ReviewModal from '../../components/ReviewModal';
-// import ReviewModalCreate from '../../components/ReviewModal_Create';
 import {getProductsWithReviews} from '../../store/product'
 import ProductFormCreate from "../../components/ProductModal_Create";
 import "./ProductModal.css";
@@ -14,16 +10,19 @@ import { Modal } from '../../context/Modal';
 import ProductProfilePgModal from "../ProductProfilePage";
 import Upvotes from '../Upvotes'
 
-function ProductModal({product}) {
+function ProductModal({product, setShowModal2}) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [showModal, setShowModal] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false)
+    const newest = document.getElementsByTagName("body")[0];
 
     useEffect(() => {
         (async () => {
             // await dispatch(getProducts())
             // await dispatch(getAllReviews())
+            await newest.classList.add("no-scroll");
             await dispatch(getProductsWithReviews())
             setIsLoaded(true);
         })();
@@ -46,6 +45,7 @@ function ProductModal({product}) {
         // const body = document.getElementsByTagName('body')[0];
         // body.classList.add('no-scroll');
         setShowModal(true);
+
     };
 
     const closeMenu = (e) => {
@@ -84,7 +84,7 @@ function ProductModal({product}) {
     </div>
     {showModal && (
         <Modal onClose={closeMenu}>
-            <ProductProfilePgModal product={product}/>
+            <ProductProfilePgModal product={product} setShowModal={setShowModal}/>
             <button className="circleClose" onClick={handleCancel} >x</button>
         </Modal>)}
     </>);

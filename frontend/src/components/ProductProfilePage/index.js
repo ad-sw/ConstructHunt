@@ -1,30 +1,23 @@
 import {useSelector, useDispatch} from 'react-redux';
-// import {getOneProduct} from '../../store/product';
-import {getProducts} from '../../store/product';
 import {useEffect, useState} from 'react';
-// import { NavLink } from 'react-router-dom';
-import {useParams } from 'react-router';
 import ProductModalUpdate from '../../components/ProductModal_Update';
 import ProductModalDelete from '../../components/ProductModal_Delete';
 import ReviewModal from '../../components/ReviewModal';
-import ReviewModalCreate from '../../components/ReviewModal_Create';
 import "./ProductProfile.css";
 import "../../components/ReviewModal/ReviewModal.css"
 import {getProductsWithReviews} from '../../store/product'
-import { Modal } from '../../context/Modal';
-import { NavLink } from 'react-router-dom';
 import ReviewFormCreate from '../../components/ReviewModal_Create/ReviewForm_Create';
+import SignupFormModal from '../SignupFormModalCopy'
 
-function ProductProfilePgModal({product}) {
+function ProductProfilePgModal({product, setShowModal}) {
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const [isLoaded, setIsLoaded] = useState(false);
-    const [showModal, setShowModal] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
         (async () => {
-            // await dispatch(getProducts())
-            // await dispatch(getAllReviews())
+
             await dispatch(getProductsWithReviews())
             setIsLoaded(true);
         })();
@@ -32,13 +25,6 @@ function ProductProfilePgModal({product}) {
 
     let event = new Date(product?.createdAt);
     let date = event.toLocaleDateString().slice(0,5) + event.toLocaleDateString().slice(7,9)
-
-    const handleCancel = (e) => {
-        e.preventDefault();
-        const body = document.getElementsByTagName('body')[0]
-        body.classList.remove('no-scroll')
-        setShowModal(false);
-    }
 
     return (
         isLoaded && (
@@ -49,7 +35,14 @@ function ProductProfilePgModal({product}) {
                     <div className="mainInfo">
                         {<img className="profileImg" src={product?.imageUrl} height="25%" width="50%" alt="display"/>}
                         <div className="titleTagline">
-                            <div id="prodProfileTitle2">{product?.title}</div>
+                        <div className="CreateUpdateDeleteBtns">
+                            <div id="prodProfileTitle2">
+                                {product?.title}
+                                    {sessionUser?.id === product?.userId &&
+                                    <><ProductModalUpdate product={product} setShowModal={setShowModal}/>
+                                    <ProductModalDelete product={product} setShowModal={setShowModal}/></>}
+                                </div>
+                            </div>
                             <p id="productDescription2">{product?.description.slice(0, 68)}</p>
                             <div className="buttons">
                                 <div className="priceOption">Free & Paid Options</div>
@@ -78,46 +71,14 @@ function ProductProfilePgModal({product}) {
                 <div className="description2">
                 <div className="reviewInput">
                     Would you recommend this product?
-                    <ReviewFormCreate productId={product.id} review={product.Review}/>
+                    <ReviewFormCreate productId={product?.id} review={product?.Review}/>
                 </div>
                     <div className="review">
                         {<ReviewModal product={product}/>}
                     </div>
                 </div>
-                <div className="CreateUpdateDeleteBtns">
-                    {sessionUser?.id === product?.userId &&
-                    <><ProductModalUpdate product={product}/>
-                    <ProductModalDelete product={product}/></>}
-                    {sessionUser && <ReviewModalCreate productId={product?.id}/>}
-                </div>
             </div>
 
-
-            {/* <aside className='product'>
-            <div className='upvote-section'>
-              <span
-                onClick={this.upVote.bind(this)}
-                className="upvote-button">{(upvoted) ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }<div>
-                  {upvote_ids.length}</div>
-              </span>
-              <div className='product-upvoters'>
-                {upvoters && Object.values(upvoters).map((user,idx) => {
-                  return (idx < 3) ? (<img key={user.id} className='ppr upvoter-picture' src={user.profilePictureUrl} />) : null;
-                })}
-              </div>
-            </div>
-            <hr />
-            <section className="website-link">
-              <h4>Website</h4>
-              <a href={website.toLowerCase().startsWith('http') ? website : `http://${website}`} target="_blank">{this.cleanUrl(website)}</a>
-            </section>
-            <hr />
-            <section className="hunter-link">
-              <h4>Hunter</h4>
-              <img src={hunter.profilePictureUrl} className="profile-picture-round"/>
-              <Link to={`/@${hunter.username}`}>@{hunter.username}</Link>
-            </section>
-          </aside> */}
             <div className="rightSide">
                 <div className="upvote-section">
                     {sessionUser && (
@@ -129,7 +90,7 @@ function ProductProfilePgModal({product}) {
                         </div>
                     </span>
                     )}
-                    {!sessionUser && (
+                    {/* {!sessionUser && (
                     <NavLink exact to={`/sign-up`}>
                         <span
                         className="upvote-button">{('hi') ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }
@@ -138,6 +99,11 @@ function ProductProfilePgModal({product}) {
                             </div>
                         </span>
                     </NavLink>
+                    )} */}
+                    {!sessionUser && (
+                    <span>
+                        <SignupFormModal setShowModal={setShowModal} product={product}/>
+                    </span>
                     )}
 
                     <div className='product-upvoters'>

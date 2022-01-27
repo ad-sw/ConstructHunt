@@ -616,10 +616,10 @@ a:hover, a:visited, a:link, a:active {
   left: 0;
   right: 0;
   margin: auto;
-  height: 690px;
+  height: 100%;
   /* z-index: -100; */
   overflow: hidden;
-  background: linear-gradient(rgba(95, 91, 88, 0.76), rgba(151, 151, 151, .2));
+  background: linear-gradient(rgba(95, 91, 88, 0.76), rgba(151, 151, 151, .35));
 }
 .login-form-container {
   align-items: center;
@@ -644,7 +644,7 @@ a:hover, a:visited, a:link, a:active {
   border: 20px solid #F3F3F3;
   background: white;
   border-radius: .5px;
-  margin: 21px auto;
+  margin: 35px auto;
   border-radius: 3px;
   outline: 1px solid lightgrey;
   /* border-left: 1px solid #acacac83;;
@@ -831,6 +831,9 @@ a:hover, a:visited, a:link, a:active {
 body.no-scroll {
   overflow-y: hidden;
 }
+.product-container.hide {
+  display: none;
+}
 .headerSection {
   display: flex;
   flex-direction: row;
@@ -879,7 +882,7 @@ body.no-scroll {
   border-radius: 3px;
 }
 .filmstrip:hover {
-  cursor: url('https://user-images.githubusercontent.com/86431563/151103210-15615268-d505-4ad7-8523-7f8b23abfd51.png'), auto;
+  cursor: url('https://user-images.githubusercontent.com/86431563/151346087-034e7646-242e-46cf-8dfc-c939ba55294e.png'), auto;
   filter: sepia(320%) hue-rotate(320deg) brightness(86%) saturate(260%) opacity(.95);
 }
 .gallery {
@@ -955,6 +958,15 @@ body.no-scroll {
   width: 15px;
   padding-left: 8px;
   cursor: pointer;
+  opacity: .65;
+}
+.sizeDots2 {
+  width: 15px;
+  padding-left: 8px;
+  opacity: .65;
+}
+.dateThing {
+  opacity: .65;
 }
 .t1 {
   background-color: black;
@@ -996,8 +1008,9 @@ body.no-scroll {
   align-items: flex-start;
   font-size: 11px;
   color: #4B587C;
+  margin-top: 9px;
   margin-left: 40px;
-  opacity: .65;
+  /* opacity: .65; */
   width: 200px;
 }
 .buttons {
@@ -1069,11 +1082,8 @@ hr {
   cursor: pointer;
   font-size: 13px;
   font-weight: 500;
-
-  /* div {
-    display: inline-block;
-    color: $lllgray;
-  } */
+  outline: none;
+  border: none;
 }
 span.upvote-button:hover {
   background-color: lighten(#7AC3BC, 5%)
@@ -1118,6 +1128,19 @@ section.hunter-link {
   border: 1px #ACD9FF solid;
   outline: none;
 }
+.createB2 {
+  width: 56px;
+  height: 24px;
+  border: none;
+  border-radius: 2px;
+  background-color: #F64900;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 11px;
+  font-weight: 547;
+  letter-spacing: .5px;
+}
 .createB {
   width: 56px;
   height: 34px;
@@ -1130,7 +1153,7 @@ section.hunter-link {
   text-align: center;
   padding-top: 2px;
   font-size: 11px;
-  font-weight: 547;
+  font-weight: 600;
   letter-spacing: .5px;
 }
 .createB:hover {
@@ -1141,30 +1164,187 @@ section.hunter-link {
   display: flex;
   justify-content: space-between;
 }
-.order {
-  display: flex;
-  flex-direction: column;
-}
+/* .order {
+  background-color: rgba(211, 211, 211, 0.349);
+} */
 .thingHere {
   cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: row;
 }
 .reviewEditBtn {
   outline: none;
   border: none;
   background-color: none;
-  width: 30px;
   /* text-align: center;
   justify-content: center; */
   cursor: pointer;
+  position: relative;
+  padding: 2px .8px 2px 1px;
+  border-top: .5px solid rgba(211, 211, 211, 0.747);
+  border-bottom: .5px solid rgba(211, 211, 211, 0.747);
+  display: inline-block;
+  background-color: rgba(211, 211, 211, 0.253);
 }
-.formReviewUpdate {
-  /* position: absolute; */
+.reviewEditBtn:first-child {
+  padding-left: 3px;
+  padding-right: 1px;
+  border-left: .5px solid rgba(211, 211, 211, 0.747);
+}
+.reviewEditBtn:last-child {
+  padding-left: 1px;
+  padding-right: 3px;
+  border-right: .5px solid rgba(211, 211, 211, 0.747);
+}
+#formReviewUpdate {
   display: flex;
   flex-direction: row;
 }
 .tried {
-
+  cursor: pointer;
+  border: none;
+  background-color: none;
+  outline: none;
 }
 .deleteLink {
   cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.flexSide {
+  justify-content: space-between;
+  margin-left: 7px;
+  padding-left: 1px;
+  /* display: flex; */
+  padding-top: .5px;
+  padding-left: 2.5px;
+  align-items: flex-end;
+  /* width: 30px; */
+  /* display: grid; */
+}
+.idk {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+.delIcon {
+  height: 11.5px;
+  width: 11.5px;
+  opacity: .84;
+}
+.closeIcon {
+  /* margin-top: 10px; */
+  width: 8.5px;
+  opacity: .76;
+  color: #BEBEBE;
+  font-size: 17px;
+  margin-left: 1.3px;
+  margin-right: 1.7px;
+  font-weight: 450;
+  background-color: rgba(128, 128, 128, 0.082);
+  height: 9.2px;
+  margin-top: 2.2px;
+  margin-bottom: .4px;
+  outline: none;
+  border: none;
+  /* text-align: center;
+  justify-content: center; */
+  cursor: pointer;
+ }
+.editIcon {
+  height: 11.5px;
+  width: 12.5px;
+  opacity: .85;
+  align-items: center;
+  transform: rotate(-10deg);
+}
+.createB4 {
+  width: 56px;
+  height: 26px;
+  border: none;
+  opacity: .7;
+  border-radius: 2px;
+  background-color: #db6e3f;
+  color: white;
+  cursor: pointer;
+  margin-left: 6px;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+.createB4:hover {
+  background-color: #e96932;
+}
+.test2 {
+  background-color: #FFFFFF;
+  border: 1px #D9E1EC solid;
+  padding: 5px 20px 5px 10px;
+  width: 370px;
+  height: 14px;
+  border-radius: 3px;
+  letter-spacing: .2px;
+  color: #4B587C;
+  margin: 0 0 3px 0;
+  letter-spacing: .3px;
+}
+.test2:hover, .test2:active, .test2:focus {
+  border: 1px #ACD9FF solid;
+  outline: none;
+}
+/* .btn {
+  border: 1px solid #D9E1EC;
+  background-color: #363d4e0e;
+  height: 22px;
+  padding: 4px 8px 3px 8px;
+  font-size: 11px;
+  border-radius: 3px;
+  text-align: center;
+  color: #404b6b;
+  letter-spacing: -.1px;
+  cursor: pointer;
+}
+.btn:first-child {
+  margin-top: 48px;
+}
+.btn:last-child {
+  margin-top: 8px;
+} */
+.idkk {
+  height: 22px;
+  width: 22px;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 9px;
+  opacity: .9;
+  margin-bottom: 4px;
+  opacity: .79;
+}
+.idkk2 {
+  height: 21.6px;
+  width: 22.21px;
+  display: flex;
+  align-items: flex-end;
+  opacity: .9;
+  margin-bottom: 2.2px;
+  opacity: .79;
+}
+.idkk:hover {
+  opacity: 1;
+}
+.idkk2:hover {
+  opacity: 1;
+}
+.CreateUpdateDeleteBtns {
+  display: flex;
+  flex-direction: row;
+  /* opacity: .79; */
+  cursor: pointer;
+  align-items: flex-end;
+  /* margin-right: 232px; */
+  /* justify-content: space-between; */
 }

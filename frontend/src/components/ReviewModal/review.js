@@ -2,11 +2,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import {getReviews} from '../../store/review';
 import {getAllUsers} from '../../store/user'
 import {useEffect, useState} from 'react';
-// import ReviewModalCreate from '../../components/ReviewModal_Create';
 import ReviewModalUpdate from '../../components/ReviewModal_Update';
-import ReviewFormUpdate from '../../components/ReviewModal_Update/ReviewForm_Update'
 import ReviewDelete from '../../components/ReviewModal_Delete';
-// import { Modal } from '../../context/Modal';
 
 function ReviewTest({review, date}) {
     const dispatch = useDispatch();
@@ -34,22 +31,26 @@ function ReviewTest({review, date}) {
             <div className="review-body">
                 {review?.review}
                 <div className="review-body2">
-                    <div>{date}</div>
+                    <div className="dateThing">{date}</div>
                     <div className="idk">
 
-                    <img onClick={() => setShowModal(true)} className="sizeDots" src="https://user-images.githubusercontent.com/86431563/151293988-212a7e41-a810-45e9-a13a-1819480b61af.png"/>
+                    {sessionUser?.id !== review?.userId && (<>
+                        <img onClick={() => setShowModal(true)} className="sizeDots2" src="https://user-images.githubusercontent.com/86431563/151293988-212a7e41-a810-45e9-a13a-1819480b61af.png"/>
+                        </>)}
 
-                    {sessionUser?.id === review?.userId && showModal && (
+                    {sessionUser?.id === review?.userId && (<>
+                        <img onClick={() => setShowModal(true)} className="sizeDots" src="https://user-images.githubusercontent.com/86431563/151293988-212a7e41-a810-45e9-a13a-1819480b61af.png"/>
+                        {showModal && (<>
                         <div className="order" onClose={() => setShowModal(false)}>
-                            <>
-                            {/* <button className="updateReviewBtn">Update</button>
-                            <button className="updateReviewBtn">Delete</button> */}
-                            <ReviewModalUpdate review={review}/>
-                            <ReviewDelete review={review}/>
-                            </>
-                            <div onClick={handleCancel} className="thingHere">close</div>
-                        </div>
-                    )}
+                            <div className="flexSide">
+                                <ReviewModalUpdate review={review} setShowModal={setShowModal} showModal={showModal}/>
+                                <ReviewDelete review={review}/>
+                            <div onClick={handleCancel} className="reviewEditBtn">
+                                <img className="closeIcon" src="https://user-images.githubusercontent.com/86431563/151359385-3e784422-886f-4c31-8f6c-1b039b1c0032.png"/>
+                            </div>
+                            </div>
+                        </div></>)}
+                        </>)}
                     </div>
                 </div>
             </div>
