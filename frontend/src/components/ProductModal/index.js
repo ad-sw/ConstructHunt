@@ -34,7 +34,7 @@ function ProductModal({product}) {
         const body = document.getElementsByTagName('body')[0]
         body.classList.remove('no-scroll')
         setShowModal(false);
-        }
+    }
 
     const openMenu = (e) => {
         e.preventDefault()
@@ -46,7 +46,7 @@ function ProductModal({product}) {
         // const body = document.getElementsByTagName('body')[0];
         // body.classList.add('no-scroll');
         setShowModal(true);
-        };
+    };
 
     const closeMenu = (e) => {
         e.preventDefault()
@@ -55,7 +55,7 @@ function ProductModal({product}) {
         // document.documentElement.style.overflow = 'scroll';
         // document.body.scroll = "yes";
         setShowModal(false);
-        };
+    };
 
     return (<>
     <div className="friendCard">

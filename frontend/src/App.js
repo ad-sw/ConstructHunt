@@ -11,6 +11,7 @@ import ProductModal from "./components/ProductModal";
 import SearchBar from "./components/SearchBar";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
+import SignupFormPage from "../src/components/SignupFormPage"
 import ProductProfilePgModal from "./components/ProductProfilePage"
 import NavBar from '../src/components/NavigationBar';
 import HomePage from '../src/components/HomePage'
@@ -39,7 +40,7 @@ function App() {
           </Route>
           <Route path='/sign-up' exact={true}>
           {isLoaded && (
-            <SignUpForm/>
+            <SignupFormPage/>
             )}
           </Route>
           <Route exact path="/about">

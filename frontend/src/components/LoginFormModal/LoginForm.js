@@ -84,7 +84,7 @@ function LoginForm() {
       {/* <img src="https://user-images.githubusercontent.com/86431563/150663661-8f2fe759-4770-4443-86ac-3891024905d1.png"/> */}
       {/* <a href={`/sign-up`} className="loginText">Sign Up</a> */}
       {/* <div className="spaceInBetween"/> */}
-      <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/150657508-06dbeb82-27d9-4035-bc0a-69d421048c5b.png"/></div>
+      <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/151272960-32862845-4cd0-4618-89c8-cbd657c31d15.png"/></div>
       <div className="loginText2">Sign up on Construct Hunt</div>
       <div className="textStuff">Join our community of friendly folks discovering and sharing the latest products in architecture and city planning.</div>
       <button onClick={demoLogin} className="demoBtn2">Sign in with Demo</button>

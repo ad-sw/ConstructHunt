@@ -11,11 +11,14 @@ import ReviewModalCreate from '../../components/ReviewModal_Create';
 import "./ProductProfile.css";
 import "../../components/ReviewModal/ReviewModal.css"
 import {getProductsWithReviews} from '../../store/product'
+import { Modal } from '../../context/Modal';
+import { NavLink } from 'react-router-dom';
 
 function ProductProfilePgModal({product}) {
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const [isLoaded, setIsLoaded] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         (async () => {
@@ -28,6 +31,13 @@ function ProductProfilePgModal({product}) {
 
     let event = new Date(product?.createdAt);
     let date = event.toLocaleDateString().slice(0,5) + event.toLocaleDateString().slice(7,9)
+
+    const handleCancel = (e) => {
+        e.preventDefault();
+        const body = document.getElementsByTagName('body')[0]
+        body.classList.remove('no-scroll')
+        setShowModal(false);
+    }
 
     return (
         isLoaded && (
@@ -110,13 +120,26 @@ function ProductProfilePgModal({product}) {
           </aside> */}
             <div className="rightSide">
                 <div className="upvote-section">
+                    {sessionUser && (
                     <span
                     onClick={'this.upVote.bind(this)'}
                     className="upvote-button">{('hi') ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }
-                    <div>
-                        {'hi'}
-                    </div>
+                        <div>
+                            {'hi'}
+                        </div>
                     </span>
+                    )}
+                    {!sessionUser && (
+                    <NavLink exact to={`/sign-up`}>
+                        <span
+                        className="upvote-button">{('hi') ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }
+                            <div>
+                                {'hi'}
+                            </div>
+                        </span>
+                    </NavLink>
+                    )}
+
                     <div className='product-upvoters'>
                     {'hi' && Object.values('hi').map((user,idx) => {
                     return (idx < 3) ? (<img key={user.id} className='upvoter-picture' src={user.profilePictureUrl} />) : null;
