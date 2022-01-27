@@ -322,7 +322,8 @@ a:hover, a:visited, a:link, a:active {
   cursor: pointer;
   color: white;
   display: flex;
-  cursor: not-allowed;
+  /* cursor: not-allowed; */
+  cursor: default;
 }
 .RegUserDemoBtns3 {
   outline: none;
