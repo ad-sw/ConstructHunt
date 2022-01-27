@@ -45,8 +45,6 @@ function ReviewFormCreate({productId, setShowModal}) {
         placeholder="Sign in to post a review"
         className="test"
         value={review}
-        // required
-        // onChange={e => setReview(e.target.value)}
         />
         <div className="createB2" type='submit'>SEND</div>
       </form>

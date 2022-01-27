@@ -2,11 +2,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import {getReviews} from '../../store/review';
 import {getAllUsers} from '../../store/user'
 import {useEffect, useState} from 'react';
-// import ReviewModalCreate from '../../components/ReviewModal_Create';
 import ReviewModalUpdate from '../../components/ReviewModal_Update';
-import ReviewFormUpdate from '../../components/ReviewModal_Update/ReviewForm_Update'
 import ReviewDelete from '../../components/ReviewModal_Delete';
-// import { Modal } from '../../context/Modal';
 
 function ReviewTest({review, date}) {
     const dispatch = useDispatch();
