@@ -1,18 +1,19 @@
 .products {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-    padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  /* flex-wrap: wrap; */
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 800px;
 }
 .a {
-    cursor: pointer;
+  cursor: pointer;
 }
 .productImg {
-  height: 240px;
-  width: 390px;
+  height: 80px;
+  width: 80px;
   margin: 3px 10px;
   border-radius: 7px;
   border: .3px solid #d8d8d8;
@@ -21,11 +22,75 @@
   transition: all 0.05s ease;
   transform: scale(1.004);
   box-shadow: 0 0 6px rgb(198, 198, 198);
-  filter: sepia(200%) hue-rotate(180deg) brightness(88%) saturate(140%);
+  filter: sepia(270%) hue-rotate(180deg) brightness(88%) saturate(130%) ;
 }
 #productTitle {
   color: #515460;
   font-size: 20px;
   margin: 0;
   padding: 0;
+}
+
+.titleDiv {
+  font-size: 24px;
+  font-weight: 420;
+  padding: 0 0 5px 23px;
+  color: #21293ce7;
+}
+.friendCard {
+  padding: 24px 0px;
+  margin: auto auto 0px auto;
+  background-color: #FFFFFF;
+  /* outline: 1px solid #DEE1E7; */
+  align-items: center;
+  width: 750px;
+  height: 81px;
+  text-align: center;
+  display: inline-block;
+}
+.soMany {
+  display: flex;
+  /* align-items: center; */
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.fullName {
+  cursor: pointer;
+  font-size: 15.5px;
+  font-weight: 420;
+  padding-bottom: 5px;
+  color: #21293ce7;
+}
+.friendContent {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(175, 175, 175);
+  margin-right: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.inline {
+  display: inline-block;
+  text-align: left;
+}
+
+.product-container {
+  align-items: center;
+  text-align: center;
+  /* display: block; */
+  border-radius: 3px;
+  padding: 20px;
+  /* height: 800px; */
+  width: 1100px;
+  background: #FAFBFF;
+  top: 10%;
+  left: 0;
+  /* bottom: 50px; */
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: baseline;
+  min-height: 800px;
 }

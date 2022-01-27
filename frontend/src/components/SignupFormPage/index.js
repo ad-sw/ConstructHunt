@@ -1,75 +1,189 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
+import { login, signup } from '../../store/session';
 import * as sessionActions from "../../store/session";
 
 function SignupFormPage() {
-  const dispatch = useDispatch();
-  const sessionUser = useSelector((state) => state.session.user);
-  const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
+  const [first_name, setFirstName] = useState('');
+  const [last_name, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  let [password, setPassword] = useState('');
+  const [repeatPassword, setRepeatPassword] = useState('');
+  const user = useSelector(state => state.session.user);
+  const [loaded, setLoaded] = useState(false);
+  let [credential, setCredential] = useState("");
+  const dispatch = useDispatch();
 
-  if (sessionUser) return <Redirect to="/" />;
+  useEffect(() => {
+    (async() => {
+      setLoaded(true);
+    })();
+  }, [dispatch]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (password === confirmPassword) {
-      setErrors([]);
-      return dispatch(sessionActions?.signup({ email, username, password }))
-        .catch(async (res) => {
-          const data = await res?.json();
-          if (data && data?.errors) setErrors(data?.errors);
-        });
+  const validator = () => {
+    let error = []
+    if(first_name.length > 41) {
+        error.push('. : Please enter a shorter first name than 40 characters.')
+    } else if(first_name.length < 4) {
+      error.push('. : Please enter a first name longer than 3 characters.')
     }
-    return setErrors(['Confirm Password field must be the same as the Password field']);
+    if(last_name.length > 41) {
+      error.push('. : Please enter a shorter last name than 40 characters.')
+    } else if(last_name.length < 4) {
+      error.push('. : Please enter a last name longer than 3 characters.')
+    }
+    if(password !== repeatPassword) {
+      error.push('. : Please enter matching passwords.')
+    }
+    if(email.length > 256) {
+        error.push('. : Please enter a shorter email than 255 characters.')
+    }
+    if(password.length > 256) {
+      error.push('. : Please enter a shorter password than 255 characters.')
+    } else if (password.length < 6) {
+    error.push('. : Please enter a password longer than 5 characters.')
+    }
+    return error;
+  }
+
+  const demoLogin = async() => {
+    setErrors([]);
+    credential = 'Demo';
+    password = 'password';
+    await dispatch(sessionActions.login({ credential, password })).catch(
+      async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      }
+    );
+  }
+
+  const onSignUp = async (e) => {
+    e.preventDefault();
+    const errorsArr = validator()
+    if(errorsArr.length) {
+      setErrors(errorsArr)
+    } else{
+      const payload = {
+          first_name,
+          last_name,
+          email,
+          password
+      }
+    if (password === repeatPassword) {
+      const data = await dispatch(signup(payload));
+      if(data) {
+        setErrors(data)
+        }
+      }
+    }
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-      </ul>
-      <label>
-        Email
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Username
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Confirm Password
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit">Sign Up</button>
-    </form>
+  const updateFirstName = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const updateLastName = (e) => {
+    setLastName(e.target.value);
+  };
+
+  const updateEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const updatePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const updateRepeatPassword = (e) => {
+    setRepeatPassword(e.target.value);
+  };
+
+  if (user) {
+    return <Redirect to={`/`}/>;
+  }
+
+  return (<>
+    <div className="signupPage2">
+      <div className="login-form-container2">
+      {/* <a href={`/sign-in`} className="loginText">Sign in</a> */}
+      <div className="spaceInBetween"/>
+      <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/151272960-32862845-4cd0-4618-89c8-cbd657c31d15.png"/></div>
+      <div className="loginText2">Sign up on Construct Hunt</div>
+      <div className="textStuff">Join our community of friendly folks discovering and sharing the latest products in urban planning and architecture.</div>
+        <button onClick={demoLogin} className="demoBtn3">Sign in with demo</button>
+        <form onSubmit={onSignUp} className="login-form">
+          <div className="errors">
+            {errors.map((error, idx) => (
+            <div key={idx}>{error.split(':')[1]}</div>
+            ))}
+          </div>
+          <div>
+            <input
+              type='text'
+              className="email-input2"
+              placeholder="first name"
+              name='first_name'
+              value={first_name}
+              onChange={updateFirstName}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type='text'
+              className="email-input2"
+              placeholder="last name"
+              name='last_name'
+              value={last_name}
+              onChange={updateLastName}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type='text'
+              className="email-input2"
+              placeholder="email"
+              name='email'
+              value={email}
+              onChange={updateEmail}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type='password'
+              className='email-input2'
+              placeholder="password"
+              name='password'
+              value={password}
+              onChange={updatePassword}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type='password'
+              className='email-input2'
+              placeholder="repeat password"
+              name='repeat_password'
+              value={repeatPassword}
+              onChange={updateRepeatPassword}
+              required
+            />
+            <button type='submit' className="signup-button">Sign up</button>
+          </div>
+        </form>
+        </div>
+      </div>
+      <div id="logBtns2">
+        <button className="RegUserDemoBtns4">Sign in</button>
+        <button className="RegUserDemoBtns3">Sign up</button>
+        </div>
+      </>
   );
 }
 

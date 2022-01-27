@@ -22,7 +22,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 1,
+          userId: 3,
           title: "Boulevard Park",
           imageUrl: "https://i.pinimg.com/originals/ce/f7/48/cef748b2d9d35b8cc72f70810906d77b.jpg",
           link: "https://www.terrain-studio.com/projects/helios-plaza",
@@ -31,7 +31,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 2,
+          userId: 1,
           title: "Public Library",
           imageUrl: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fda%2F0b%2Fc3%2Fda0bc3da40ddff4d001eca5145342416.jpg&f=1&nofb=1",
           link: "https://www.spl.org/",
@@ -49,7 +49,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 1,
+          userId: 3,
           title: "Fountain Park",
           imageUrl: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F96%2F7e%2F93%2F967e93b456c0c37580e4a8eb3fe5941d.jpg&f=1&nofb=1",
           link: "https://www.portland.gov/parks/lovejoy-fountain-park",

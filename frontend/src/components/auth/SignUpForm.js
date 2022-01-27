@@ -125,7 +125,7 @@ const SignUpForm = () => {
         <div className="login-form-container">
         {/* <a href={`/sign-in`} className="loginText">Sign in</a> */}
         <div className="spaceInBetween"/>
-        <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/150657508-06dbeb82-27d9-4035-bc0a-69d421048c5b.png"/></div>
+        <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/151272960-32862845-4cd0-4618-89c8-cbd657c31d15.png"/></div>
         <div className="loginText2">Sign up on Construct Hunt</div>
         <div className="textStuff">Join our community of friendly folks discovering and sharing the latest products in urban planning and architecture.</div>
           <button onClick={demoLogin} className="demoBtn3">Sign in with demo</button>
@@ -194,7 +194,8 @@ const SignUpForm = () => {
           </form>
           </div>
         </div>
-      </div>)}
+      </div>
+      )}
     </div>
     );
   }

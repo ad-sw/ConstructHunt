@@ -2,8 +2,9 @@ import {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {updateReview} from '../../store/review';
 
-function ReviewFormUpdate({review, setShowModal}) {
+function ReviewFormUpdate({review}) {
     const [reviews, setReviews] = useState(review.review);
+    const [showModal, setShowModal] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -21,14 +22,14 @@ function ReviewFormUpdate({review, setShowModal}) {
 
     return (
       <div>
-        <form className="formUpdateReview" onSubmit={handleSubmit}>
-          <textarea
+        <form className="formReviewUpdate" onSubmit={handleSubmit}>
+          <input
           placeholder="Review"
           value={reviews}
           required
           onChange={e => setReviews(e.target.value)}
           />
-          <button className="updateBtnn" type='submit'>Update</button>
+          <div className="tried" type='submit'>Update</div>
         </form>
       </div>
       );

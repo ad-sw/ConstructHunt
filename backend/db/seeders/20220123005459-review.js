@@ -13,7 +13,62 @@ module.exports = {
         },
         {
           userId: 2,
+          productId: 1,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 3,
           productId: 2,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 1,
+          productId: 2,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 2,
+          productId: 2,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 3,
+          productId: 3,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 1,
+          productId: 3,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 2,
+          productId: 4,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 1,
+          productId: 4,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 3,
+          productId: 5,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 3,
+          productId: 6,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 1,
+          productId: 6,
+          review: /*commerce.productDescription()*/ loremIpsum(),
+        },
+        {
+          userId: 2,
+          productId: 6,
           review: /*commerce.productDescription()*/ loremIpsum(),
         }
       ], {});

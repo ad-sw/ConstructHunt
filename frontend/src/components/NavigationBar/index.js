@@ -8,6 +8,7 @@ import ProductButton from './ProductButton';
 import CommunityButton from './CommunityButton';
 import JobButton from './JobButton';
 import AboutButton from './AboutButton';
+import ToolButton from './ToolButton';
 import AboutMe from './AboutMe';
 import LoginForm from '../auth/LoginForm';
 import SignupFormModal from '../SignupFormModal';
@@ -72,6 +73,12 @@ function NavBar(){
       </>
     )
 
+  let toolLinks = (
+    <>
+    <ToolButton user={sessionUser} id="toolLink" activeClassName="link-active"/>
+    </>
+  )
+
   let jobLinks = (
       <>
       <JobButton user={sessionUser} id="jobLink" activeClassName="link-active"/>
@@ -101,12 +108,13 @@ function NavBar(){
   return (<>
     <header className="navbar">
       {/* <div id='linking'> */}
-      <div className="profile-button"><NavLink exact to="/"><div className="logoC">C</div></NavLink></div>
+      <NavLink exact to="/"><div className="profile-button"><div className="logoC">C</div></div></NavLink>
       {/* </div> */}
       <div className="searchBarT"><SearchBar/></div><div className="space-between"></div>
       <div className="linkGroup">
         <div id="productLink" activeClassName="link-active">{isLoaded && productLinks}</div>
         <div id="communityLink" activeClassName="link-active">{isLoaded && communityLinks}</div>
+        <div id="toolLink" activeClassName="link-active">{isLoaded && toolLinks}</div>
         <div id="jobLink" activeClassName="link-active">{isLoaded && jobLinks}</div>
         <div id="aboutLink" activeClassName="link-active">{isLoaded && aboutLinks}</div>
       </div>
