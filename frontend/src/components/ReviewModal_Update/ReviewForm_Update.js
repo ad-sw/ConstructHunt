@@ -4,6 +4,7 @@ import {updateReview} from '../../store/review';
 
 function ReviewFormUpdate({review, setShowModal}) {
     const [reviews, setReviews] = useState(review.review);
+    // const [showModal, setShowModal] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -20,17 +21,16 @@ function ReviewFormUpdate({review, setShowModal}) {
       };
 
     return (
-      <div>
-        <form className="formUpdateReview" onSubmit={handleSubmit}>
-          <textarea
+        <form id="formReviewUpdate" onSubmit={handleSubmit}>
+          <input
           placeholder="Review"
           value={reviews}
+          className="test2"
           required
           onChange={e => setReviews(e.target.value)}
           />
-          <button className="updateBtnn" type='submit'>Update</button>
+          <button className="createB4" type='submit'>Update</button>
         </form>
-      </div>
       );
 }
 

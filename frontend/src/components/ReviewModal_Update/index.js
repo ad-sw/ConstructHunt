@@ -14,12 +14,14 @@ function ReviewModalUpdate({review}) {
 
   return (
     <>
-      <button onClick={() => setShowModal(true)} className="updateReviewBtn">Update</button>
       {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
+        // <Modal onClose={() => setShowModal(false)}>
           <ReviewFormUpdate review={review} setShowModal={setShowModal}/>
-        </Modal>
+        // </Modal>
       )}
+      <div className="reviewEditBtn" onClick={() => setShowModal(true)}>
+        <img className="editIcon" src="https://user-images.githubusercontent.com/86431563/151337748-b20c873a-1ecd-403d-9494-c34d192a48de.png"/>
+      </div>
     </>
   );
 }

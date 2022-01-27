@@ -25,9 +25,10 @@ async function updateProduct(payload) {
 async function deleteProduct(productId) {
     const product = await Product.findByPk(productId);
     if (!product) throw new Error('Cannot find item');
-
-    await Product.destroy({ where: { id: product.id }});
-    return product.id;
+    // await Product.destroy({ where: { id: product.id }});
+    await product.destroy()
+    const products = await Product.findAll()
+    return products;
 }
 
 module.exports = {

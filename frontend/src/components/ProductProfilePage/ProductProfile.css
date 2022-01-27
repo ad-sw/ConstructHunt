@@ -7,15 +7,16 @@
   padding-bottom: 50px;
 }
 .profileImg {
-  height: 350px;
-  width: 550px;
-  margin: 3px 10px 0 10px;
-  border-radius: 5px;
-  border: .3px solid #d8d8d8;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 4px;
 }
 .profileImg:hover {
+  cursor: url('https://user-images.githubusercontent.com/86431563/151346315-e02cb483-3c01-49b5-807b-7b4350d995ef.png'), auto;
   transition: all 0.01s ease;
-  filter: brightness(101%) saturate(125%);
+  opacity: .97;
+  filter: sepia(320%) hue-rotate(320deg) brightness(86%) saturate(260%);
 }
 .reviewsTable {
   overflow-x: hidden;
@@ -62,24 +63,71 @@
   flex-wrap: wrap;
   float: right;
   padding: 0;
-  /* width: 550px; */
-}
-.CreateUpdateDeleteBtns {
-  display: inline-block;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: auto;
-  max-width: 550px;
 }
 #prodProfileTitle {
   color: #515460;
   font-size: 20px;
-  margin: 0;
+  margin: 0 0 5px 0;
   padding: 0;
   display: block;
+  font-weight: 480;
+}
+#prodProfileTitle2 {
+  color: #363d4e;
+  font-size: 26px;
+  margin: 0 0 5px 0;
+  padding: 0;
+  display: block;
+  font-weight: 400;
+  height: 30px;
+  width: 500px;
+  align-items: flex-end;
+  /* justify-content: space-between; */
+  display: flex;
+  flex-direction: row;
 }
 #productDescription {
   margin: 0;
   padding: 0;
   font-size: 12px;
+}
+p#productDescription2 {
+  color: #4b587c;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  width: 300px;
+  font-weight: 390;
+}
+.leftSide {
+  width: 700px;
+}
+.main-image, .discussion {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+.main-image {
+  padding: 20px;
+  border: 1px solid #D9E1EC;
+}
+/* img.carousel-main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+} */
+p.description {
+  border-top: 1px solid lightgrey;
+  padding-top: 20px;
+  font-size: 13px;
+  line-height: 1.5em;
+  text-align: left;
+  font-weight: 350;
+}
+span {
+  font-size: 11px;
+  padding-bottom: 10px;
+  color: grey;
+  display: block;
 }
