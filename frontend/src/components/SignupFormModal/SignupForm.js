@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Redirect, useHistory } from 'react-router-dom';
 import { login, signup } from '../../store/session';
 import * as sessionActions from "../../store/session";
+import './SignupForm.css';
 
 function SignupForm() {
   const [errors, setErrors] = useState([]);
@@ -45,7 +46,8 @@ function SignupForm() {
     }
     if(password.length > 256) {
       error.push('. : Please enter a shorter password than 255 characters.')
-    } else if (password.length < 6) {
+    }
+    else if (password.length < 6) {
     error.push('. : Please enter a password longer than 5 characters.')
     }
     return error;
@@ -109,15 +111,13 @@ function SignupForm() {
   }
 
   return (<div>{loaded && (
+    // <div className="blackBack">
     <div className="signup-page">
-      <div className="borderColor2">
       <div className="login-form-container">
-      {/* <a href={`/sign-in`} className="loginText">Sign in</a> */}
-      <div className="spaceInBetween"/>
-      <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/150657508-06dbeb82-27d9-4035-bc0a-69d421048c5b.png"/></div>
+      <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/151272960-32862845-4cd0-4618-89c8-cbd657c31d15.png"/></div>
       <div className="loginText2">Sign up on Construct Hunt</div>
-      <div className="textStuff">Join our community of friendly folks discovering and sharing the latest products in urban planning and architecture.</div>
-        <button onClick={demoLogin} className="demoBtn3">Sign in with demo</button>
+      <div className="textStuff">Join our community of friendly folks discovering and sharing the latest products in architecture and city planning.</div>
+        <button onClick={demoLogin} className="demoBtn3">Sign in with Demo</button>
         <form onSubmit={onSignUp} className="login-form">
           <div className="errors">
             {errors.map((error, idx) => (
@@ -177,11 +177,11 @@ function SignupForm() {
               value={repeatPassword}
               onChange={updateRepeatPassword}
               required
-            />
+            /><div>
             <button type='submit' className="signup-button">Sign up</button>
+            </div>
           </div>
         </form>
-        </div>
       </div>
     </div>)}
   </div>

@@ -14,12 +14,12 @@ function ReviewModalUpdate({review}) {
 
   return (
     <>
-      <button onClick={() => setShowModal(true)} className="updateReviewBtn">Update</button>
       {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
+        // <Modal onClose={() => setShowModal(false)}>
           <ReviewFormUpdate review={review} setShowModal={setShowModal}/>
-        </Modal>
+        // </Modal>
       )}
+      <div className="reviewEditBtn" onClick={() => setShowModal(true)}>Edit</div>
     </>
   );
 }

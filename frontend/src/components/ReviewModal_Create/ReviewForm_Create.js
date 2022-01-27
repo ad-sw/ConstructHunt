@@ -18,22 +18,40 @@ function ReviewFormCreate({productId, setShowModal}) {
         };
 
         await dispatch(createReview(payload));
-        setShowModal(false);
+        // setShowModal(false);
       };
 
-    return (
+    return (<>
+      {sessionUser && (
       <div>
-        <form className="formCreateReview" onSubmit={handleSubmit}>
-          <textarea
-          placeholder="Review"
+        <form className="field" onSubmit={handleSubmit}>
+          <div className="circle"></div>
+          <input
+          placeholder="What do you think of this product?"
+          className="test"
           value={review}
           required
           onChange={e => setReview(e.target.value)}
           />
-          <button className="createBtnn" type='submit'>Create</button>
+          <button className="createB" type='submit'>SEND</button>
         </form>
       </div>
-      );
+      )}
+
+      {!sessionUser &&(
+        <form className="field">
+        <div className="circle"></div>
+        <input
+        placeholder="Please sign in to leave a review"
+        className="test"
+        value={review}
+        // required
+        // onChange={e => setReview(e.target.value)}
+        />
+        {/* <button className="createB" type='submit'>SEND</button> */}
+      </form>
+      )}
+    </>);
 }
 
 export default ReviewFormCreate;

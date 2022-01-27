@@ -14,19 +14,35 @@ function SignupFormModal() {
       setIsLoaded(true)
   }, [setIsLoaded]);
 
+  const openMenu = (e) => {
+    e.preventDefault()
+    const newest = document.getElementsByTagName("body")[0];
+    newest.classList.add("no-scroll");
+    setShowModal(true);
+    };
+
   const handleCancel = (e) => {
     e.preventDefault();
+        const body = document.getElementsByTagName('body')[0]
+        body.classList.remove('no-scroll')
     setShowModal(false);
-  }
+    }
+
+  const closeMenu = (e) => {
+    e.preventDefault()
+    const body = document.getElementsByTagName('body')[0]
+    body.classList.remove('no-scroll')
+    setShowModal(false);
+    };
 
   return (
     <div>
     <>
-      <button className="RegUserDemoBtns" onClick={() => setShowModal(true)}>Sign up</button>
+      <button className="RegUserDemoBtns" onClick={openMenu}>Sign up</button>
       {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
+        <Modal onClose={closeMenu}>
           <SignupForm />
-          <button className="circleClose" onClick={handleCancel} >x</button>
+          <button className="circleClose" onClick={handleCancel}>x</button>
         </Modal>
       )}
     </>

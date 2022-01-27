@@ -29,20 +29,28 @@ const validateSignup = [
 
 // Sign up
 router.post(
-    '/',
-    validateSignup,
-    asyncHandler(async (req, res) => {
-      const { email, password, username } = req.body;
-      const user = await User.signup({ email, username, password });
+  '/',
+  validateSignup,
+  asyncHandler(async (req, res) => {
+    const { email, password, username } = req.body;
+    const user = await User.signup({ email, username, password });
 
-      // const product = await Product.create({userId: createdUser.id, title: "Product 1"})
+    // const product = await Product.create({userId: createdUser.id, title: "Product 1"})
 
-      await setTokenCookie(res, user);
+    await setTokenCookie(res, user);
 
-      return res.json({
-        user,
-      });
-    }),
-  );
+    return res.json({
+      user,
+    });
+  }),
+);
+
+router.get(
+  "/",
+  asyncHandler(async (req, res) => {
+    const users = await User.findAll();
+    return res.json(users);
+  })
+);
 
 module.exports = router;

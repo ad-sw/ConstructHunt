@@ -1,7 +1,7 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const {check, validationResult} = require('express-validator');
-const {Product} = require('../../db/models');
+const {Product, Review} = require('../../db/models');
 const {Op} = require('sequelize');
 
 const ProductRepository = require('../../db/products-repository');
@@ -11,6 +11,13 @@ const router = express.Router();
 router.get('/', asyncHandler(async function(req, res) {
     const products = await ProductRepository.getProducts();
     return res.json({products});
+}));
+
+router.get('/reviews', asyncHandler(async function(req, res) {
+  const productsWithReviews = await Product.findAll({
+    include: [{model: Review}],
+  });
+  return res.json(productsWithReviews);
 }));
 
 router.get('/:productId', asyncHandler(async function(req, res) {
