@@ -3,10 +3,6 @@ import {getProducts} from '../../store/product';
 import {useEffect, useState} from 'react';
 import SignupFormModal from '../SignupFormModal';
 import { NavLink /*, useHistory*/ } from 'react-router-dom';
-// import ProductModalUpdate from '../../components/ProductModal_Update';
-// import ProductModalDelete from '../../components/ProductModal_Delete';
-// import ReviewModal from '../../components/ReviewModal';
-// import ReviewModalCreate from '../../components/ReviewModal_Create';
 import {getProductsWithReviews} from '../../store/product'
 import ProductFormCreate from "../../components/ProductModal_Create";
 import "./ProductModal.css";
