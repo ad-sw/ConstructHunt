@@ -17,7 +17,6 @@ router.get('/reviews', asyncHandler(async function(req, res) {
   const productsWithReviews = await Product.findAll({
     include: [{model: Review}],
   });
-  console.log(productsWithReviews, 'idk')
   return res.json(productsWithReviews);
 }));
 

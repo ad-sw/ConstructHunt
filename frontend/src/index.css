@@ -1165,3 +1165,6 @@ section.hunter-link {
 .tried {
 
 }
+.deleteLink {
+  cursor: pointer;
+}

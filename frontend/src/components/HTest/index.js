@@ -26,7 +26,6 @@ export default function HomeTest(){
             if (review.productId === product?.id) {
                 newArr.push(review.productId)
             }
-            console.log(newArr)
             return newArr;
         })
     })

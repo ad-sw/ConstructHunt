@@ -12,12 +12,12 @@ function ReviewDelete({review}) {
 
   return (
     <>
-      <button className="deleteReviewBtn" onClick={(e) => {
+      <div className="deleteLink" onClick={(e) => {
         e.preventDefault();
         dispatch(deleteReview(review.id));
         }}>
           Delete
-      </button>
+      </div>
     </>
   );
 }

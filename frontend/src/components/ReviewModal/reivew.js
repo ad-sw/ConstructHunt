@@ -36,8 +36,10 @@ function ReviewTest({review, date}) {
                 <div className="review-body2">
                     <div>{date}</div>
                     <div className="idk">
+
                     <img onClick={() => setShowModal(true)} className="sizeDots" src="https://user-images.githubusercontent.com/86431563/151293988-212a7e41-a810-45e9-a13a-1819480b61af.png"/>
-                    {showModal && (
+
+                    {sessionUser.id === review.userId && showModal && (
                         <div className="order" onClose={() => setShowModal(false)}>
                             <>
                             {/* <button className="updateReviewBtn">Update</button>

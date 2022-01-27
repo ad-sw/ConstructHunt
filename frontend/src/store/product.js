@@ -113,7 +113,6 @@ const productReducer = (state = {}, action) => {
             return newState;
         case LOAD_PRODUCTS_WITH_REVIEWS:
             const newState2 = {...state};
-            console.log(action,'test')
             return newState2;
         case ADD_PRODUCTS:
             const addState = {...state};
