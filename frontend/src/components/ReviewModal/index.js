@@ -57,7 +57,7 @@ function ReviewModal({product}) {
                         <div className="circle"></div>
                         <div className="styleThis">
                             <div className="reviewUser">{reviewUser[review?.userId-1].username}</div>
-                            <ReviewTest review={review?.review} date={date}/>
+                            <ReviewTest review={review} date={date}/>
                         </div>
                     </div>
                 </div>

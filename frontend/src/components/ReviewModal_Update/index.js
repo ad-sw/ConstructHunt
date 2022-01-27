@@ -7,10 +7,11 @@ import "./ReviewUpdate.css";
 function ReviewModalUpdate({review}) {
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector(state => state.session.user);
+  console.log(review, sessionUser)
 
-  // if (sessionUser.id !== review.userId) {
-  //   return null;
-  // }
+  if (sessionUser.id !== review.userId) {
+    return null;
+  }
 
   return (
     <>

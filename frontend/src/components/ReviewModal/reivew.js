@@ -32,7 +32,7 @@ function ReviewTest({review, date}) {
     return isLoaded && (
         <>
             <div className="review-body">
-                {review}
+                {review?.review}
                 <div className="review-body2">
                     <div>{date}</div>
                     <div className="idk">
