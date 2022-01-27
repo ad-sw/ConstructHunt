@@ -18,19 +18,21 @@ function ReviewFormCreate({productId, setShowModal}) {
         };
 
         await dispatch(createReview(payload));
-        setShowModal(false);
+        // setShowModal(false);
       };
 
     return (
       <div>
-        <form className="formCreateReview" onSubmit={handleSubmit}>
-          <textarea
-          placeholder="Review"
+        <form className="field" onSubmit={handleSubmit}>
+          <div className="circle"></div>
+          <input
+          placeholder="What do you think of this product?"
+          className="test"
           value={review}
           required
           onChange={e => setReview(e.target.value)}
           />
-          <button className="createBtnn" type='submit'>Create</button>
+          <button className="createB" type='submit'>SEND</button>
         </form>
       </div>
       );

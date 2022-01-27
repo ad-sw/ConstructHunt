@@ -8,18 +8,18 @@ function ReviewModalUpdate({review}) {
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector(state => state.session.user);
 
-  if (sessionUser.id !== review.userId) {
-    return null;
-  }
+  // if (sessionUser.id !== review.userId) {
+  //   return null;
+  // }
 
   return (
     <>
-      <button onClick={() => setShowModal(true)} className="updateReviewBtn">Update</button>
       {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
+        // <Modal onClose={() => setShowModal(false)}>
           <ReviewFormUpdate review={review} setShowModal={setShowModal}/>
-        </Modal>
+        // </Modal>
       )}
+      <div className="reviewEditBtn" onClick={() => setShowModal(true)}>Edit</div>
     </>
   );
 }

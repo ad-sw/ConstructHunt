@@ -913,13 +913,16 @@ body.no-scroll {
 .reviewInput {
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: left;
   font-size: 13px;
   border-bottom: 1px solid lightgrey;
   padding-bottom: 20px;
   margin-bottom: 13px;
+  margin-top: 1px;
   color: #21293cde;
   font-weight: 405;
+  flex-direction: column;
+  text-align: left;
 }
 .review2 {
   display: flex;
@@ -948,6 +951,21 @@ body.no-scroll {
   display: flex;
   color: #21293cb2;
 }
+.sizeDots {
+  width: 15px;
+  padding-left: 8px;
+  cursor: pointer;
+}
+.t1 {
+  background-color: black;
+  /* position: fixed; */
+  height: 20px;
+  width: 20px;
+  /* left: 50%; */
+  z-index: 90000;
+  color: black;
+  /* top: 50%; */
+}
 .review1 {
   padding: 28px 0px;
   margin: -25px 0px;
@@ -974,12 +992,13 @@ body.no-scroll {
 }
 .review-body2 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   font-size: 11px;
   color: #4B587C;
-  margin-left: 27px;
+  margin-left: 40px;
   opacity: .65;
+  width: 200px;
 }
 .buttons {
   display: flex;
@@ -1083,10 +1102,66 @@ section.hunter-link {
   align-items: flex-start;
   flex-wrap: wrap;
 }
-/* a {
-  margin-left: 10px;
-  transition: color .3s;
-} */
-/* a:hover {
-  color: green;
-} */
+.test {
+  background-color: #FFFFFF;
+  border: 1px #D9E1EC solid;
+  padding: 5px 20px 5px 10px;
+  width: 519px;
+  height: 22px;
+  border-radius: 3px;
+  letter-spacing: .2px;
+  color: #4B587C;
+  margin: 0;
+  letter-spacing: .3px;
+}
+.test:hover, .test:active, .test:focus {
+  border: 1px #ACD9FF solid;
+  outline: none;
+}
+.createB {
+  width: 56px;
+  height: 34px;
+  border: none;
+  border-radius: 2px;
+  background-color: #F64900;
+  color: white;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 2px;
+  font-size: 11px;
+  font-weight: 547;
+  letter-spacing: .5px;
+}
+.createB:hover {
+  background-color: #FE4C00;
+}
+.field {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.order {
+  display: flex;
+  flex-direction: column;
+}
+.thingHere {
+  cursor: pointer;
+}
+.reviewEditBtn {
+  outline: none;
+  border: none;
+  background-color: none;
+  width: 30px;
+  /* text-align: center;
+  justify-content: center; */
+  cursor: pointer;
+}
+.formReviewUpdate {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+}
+.tried {
+
+}

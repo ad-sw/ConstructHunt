@@ -13,6 +13,7 @@ import "../../components/ReviewModal/ReviewModal.css"
 import {getProductsWithReviews} from '../../store/product'
 import { Modal } from '../../context/Modal';
 import { NavLink } from 'react-router-dom';
+import ReviewFormCreate from '../../components/ReviewModal_Create/ReviewForm_Create';
 
 function ProductProfilePgModal({product}) {
     const sessionUser = useSelector(state => state.session.user);
@@ -75,7 +76,10 @@ function ProductProfilePgModal({product}) {
                 </div>
                 <div className="discuss">DISCUSSION</div>
                 <div className="description2">
-                <div className="reviewInput">Would you recommend this product?</div>
+                <div className="reviewInput">
+                    Would you recommend this product?
+                    <ReviewFormCreate productId={product.id} review={product.Review}/>
+                </div>
                     <div className="review">
                         {<ReviewModal product={product}/>}
                     </div>
