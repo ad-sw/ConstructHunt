@@ -1,7 +1,8 @@
 # Construct(ion) Hunt
->Polishing underway in the next 1-2 months after a separate project. (Rest of readme to be edited later.)
+>Polishing underway in the next 1-2 months after a separate project. (Rest of readme to be edited later.)<br>
+>This site was made in memory of <a href="https://www.tributearchive.com/obituaries/23057254/michael-howard-swires/wall" target="_blank" rel="noopener noreferrer">Michael Swires</a>.
 ---
-## [Live Site](https://constructhunt.herokuapp.com/) 
+## [Live Site](https://constructhunt.herokuapp.com/)
 
 ## [Database Schema](https://github.com/ad-sw/ConstructHunt/wiki/Database-Schema)
 

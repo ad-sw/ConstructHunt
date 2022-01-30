@@ -1,8 +1,9 @@
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {createReview} from '../../store/review';
+import SignupFormModal2 from '../SignupFormModalCopy2'
 
-function ReviewFormCreate({productId, setShowModal}) {
+function ReviewFormCreate({productId, setShowModal, product}) {
     const [review, setReview] = useState('');
 
     const sessionUser = useSelector(state => state.session.user);
@@ -16,7 +17,7 @@ function ReviewFormCreate({productId, setShowModal}) {
           productId,
           review
         };
-
+        await setReview('');
         await dispatch(createReview(payload));
         // setShowModal(false);
       };
@@ -46,7 +47,9 @@ function ReviewFormCreate({productId, setShowModal}) {
         className="test"
         value={review}
         />
-        <div className="createB2" type='submit'>SEND</div>
+        <div className="createB2" type='submit'>
+          <SignupFormModal2 setShowModal={setShowModal} product={product}/>
+        </div>
       </form>
       )}
     </>);

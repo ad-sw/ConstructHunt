@@ -5,7 +5,12 @@ function AboutUs() {
   return (
       <div className="descriptionAbout">
         <div className="innerDiv">
-            <div id="textDesc"><center>Construct Hunt surfaces the best new products, every day. It's a place for product-loving enthusiasts to share and geek out about the latest buildings, parks, city plans, neighborhoods, and hub centers in development.</center></div>
+            <div id="textDesc">
+              <center>
+                Construct Hunt surfaces the best new products, every day. It's a place for product-loving enthusiasts to share and geek out about the latest buildings, parks, city plans, neighborhoods, and hub centers in development.
+                <div className="gpa">This site was made in memory of <a href="https://www.tributearchive.com/obituaries/23057254/michael-howard-swires/wall" target="_blank" rel="noopener noreferrer">Michael Swires</a>.</div>
+              </center>
+            </div>
             {/* <div className="backgroundThing"><img className="backgroundThing" src="https://user-images.githubusercontent.com/86431563/150698136-eae20d3c-dd88-4af4-b4e9-db31915c7b4e.jpg"/></div> */}
             {/* <div className="cropPicsAbout"><center> */}
             <div className="backgroundThing"></div>

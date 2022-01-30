@@ -17,7 +17,6 @@ function ProductProfilePgModal({product, setShowModal}) {
 
     useEffect(() => {
         (async () => {
-
             await dispatch(getProductsWithReviews())
             setIsLoaded(true);
         })();
@@ -71,11 +70,16 @@ function ProductProfilePgModal({product, setShowModal}) {
                 <div className="description2">
                 <div className="reviewInput">
                     Would you recommend this product?
+                    {sessionUser && (
                     <ReviewFormCreate productId={product?.id} review={product?.Review}/>
+                    )}
+                    {!sessionUser && (
+                        <ReviewFormCreate productId={product?.id} product={product} review={product?.Review} setShowModal={setShowModal}/>
+                    )}
                 </div>
-                    <div className="review">
-                        {<ReviewModal product={product}/>}
-                    </div>
+                <div className="review">
+                    {<ReviewModal product={product}/>}
+                </div>
                 </div>
             </div>
 
@@ -90,16 +94,6 @@ function ProductProfilePgModal({product, setShowModal}) {
                         </div>
                     </span>
                     )}
-                    {/* {!sessionUser && (
-                    <NavLink exact to={`/sign-up`}>
-                        <span
-                        className="upvote-button">{('hi') ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }
-                            <div>
-                                {'hi'}
-                            </div>
-                        </span>
-                    </NavLink>
-                    )} */}
                     {!sessionUser && (
                     <span>
                         <SignupFormModal setShowModal={setShowModal} product={product}/>

@@ -16,14 +16,14 @@ function ProductModal({product, setShowModal2}) {
     const [showModal, setShowModal] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false)
-    const newest = document.getElementsByTagName("body")[0];
+    // const newest = document.getElementsByTagName("body")[0];
+    // newest.classList.add("no-scroll");
 
     useEffect(() => {
         (async () => {
             // await dispatch(getProducts())
             // await dispatch(getAllReviews())
-            await newest.classList.add("no-scroll");
-            await dispatch(getProductsWithReviews())
+            dispatch(getProductsWithReviews())
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -71,13 +71,13 @@ function ProductModal({product, setShowModal2}) {
                             &nbsp; {product?.Reviews?.length}</div><div>Free & Paid Options </div>
                             <div>•&nbsp;</div>{(product?.id %2 === 0) && (<>Open Source</>)}{(product?.id % 2 !== 0) && (<>Freelance</>)}</div>
                         </div>
-                        {!sessionUser && (
-                        <Upvotes/>)}
                         {sessionUser && (
                         <div className="upvote">
                             <img className="arrow" src="https://user-images.githubusercontent.com/86431563/150881722-fe0f3572-0d7a-4f6e-a237-3ea07be4197d.png"/>
                             <div className="upvoteText">0</div>
                         </div>)}
+                        {!sessionUser && (
+                        <Upvotes/>)}
                     </div>
             </div>
         </div>
