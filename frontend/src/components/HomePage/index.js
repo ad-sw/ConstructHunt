@@ -23,7 +23,6 @@ export default function HomePage(){
         (async () => {
             // await dispatch(getProducts())
             // await dispatch(getAllReviews())
-
             await dispatch(getProductsWithReviews())
             setIsLoaded(true);
         })();
@@ -42,6 +41,15 @@ export default function HomePage(){
             <ProductModal key={product?.id} product={product} />
         )
     })
+
+    if (!isLoaded) {
+        return (
+            <div id="loadingGif">
+                <img src={"https://cdn.dribbble.com/users/56427/screenshots/6003020/budio_hero_illustration_for_animation_2.gif"} height="615px" width="850px" alt="loading"/>
+                <div className="loadText">Loading</div>
+            </div>
+            );
+        }
 
     return (
     <div id="pgContent">{isLoaded && (<>
