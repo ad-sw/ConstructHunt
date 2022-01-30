@@ -238,15 +238,6 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 1,
-          title: "College Building",
-          imageUrl: "https://images.adsttc.com/media/images/5336/1685/c07a/80cb/6b00/027f/slideshow/Scrim-of-Both-Residence-Towers-and-Ariel-View-of-the-Academic-Center.jpg?1396053610",
-          link: "https://www.archdaily.com/491193/emerson-college-los-angeles-morphosis-architects?ad_source=search&ad_medium=projects_tab",
-          description: "Park on 5th street and Alder Way that includes trees, benches, water fountains, tables, and sculptor pieces",
-          createdAt: new Date(),
-          updatedAt: new Date()
-        },
-        {
           userId: 2,
           title: "Plaza Deichmann",
           imageUrl: "https://images.adsttc.com/media/images/5129/673b/b3fc/4b11/a700/6b17/large_jpg/1295360771-bg170111-07.jpg?1414308330",
@@ -366,7 +357,7 @@ module.exports = {
         {
           userId: 1,
           title: "Floating Skybridge Park",
-          imageUrl: "https://i.mooool.com/img/2020/07/20200715152633887.jpeg?x-oss-process=style%2Fboombox_image545-2x",
+          imageUrl: "https://images.adsttc.com/media/images/5f54/b6b9/b357/6574/5200/0414/slideshow/Vitality_island%EF%BC%883%EF%BC%89.jpg?1599387311",
           link: "https://www.archdaily.com/947168/floating-archipelago-pedestrian-bridge-design-fcha?ad_medium=gallery",
           description: "Between Pike and 7th Steet including an outdoor seating area and community rooms throughout a few stories",
           createdAt: new Date(),
@@ -571,18 +562,9 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 2,
-          title: "Scholars Green Park",
-          imageUrl: "https://i.pinimg.com/564x/0e/ea/4c/0eea4c857ce316d1ed13be70bd6caeb8.jpg",
-          link: "https://landezine.com/scholars-green-park-by-gh3/",
-          description: "Between Pike and 7th Steet including an outdoor seating area and community rooms throughout a few stories",
-          createdAt: new Date(),
-          updatedAt: new Date()
-        },
-        {
           userId: 3,
           title: "Symantec Chengdu Campus",
-          imageUrl: "https://i.pinimg.com/564x/e4/b4/39/e4b439aeec161b35409a0255db22234f.jpg",
+          imageUrl: "https://landezine.com/wp-content/uploads/2015/06/Symantec-Chengdu-Tom-Fox-01.jpg",
           link: "https://landezine.com/symantec-chengdu-campus-by-swa/",
           description: "Between Pike and 7th Steet including an outdoor seating area and community rooms throughout a few stories",
           createdAt: new Date(),

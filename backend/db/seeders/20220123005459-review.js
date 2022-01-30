@@ -686,26 +686,26 @@ module.exports = {
           productId: 66,
           review: /*commerce.productDescription()*/ loremIpsum(),
         },
-        {
-          userId: 2,
-          productId: 67,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 1,
-          productId: 67,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 3,
-          productId: 68,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 3,
-          productId: 68,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
+        // {
+        //   userId: 2,
+        //   productId: 67,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
+        // {
+        //   userId: 1,
+        //   productId: 67,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
+        // {
+        //   userId: 3,
+        //   productId: 68,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
+        // {
+        //   userId: 3,
+        //   productId: 68,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
         // {
         //   userId: 1,
         //   productId: 69,
