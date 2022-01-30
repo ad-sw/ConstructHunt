@@ -15,19 +15,19 @@ module.exports = {
       },
       title: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(400)
       },
       imageUrl: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(400)
       },
       link: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(400)
       },
       description: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(400)
       },
       createdAt: {
         allowNull: false,
