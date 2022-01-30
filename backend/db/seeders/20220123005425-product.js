@@ -140,7 +140,7 @@ module.exports = {
         },
         {
           userId: 1,
-          title: "Plaza Park",
+          title: "Different Plaza Park",
           imageUrl: "https://i.pinimg.com/originals/f7/aa/87/f7aa873cf80572b82a7125201f840f37.jpg",
           link: "https://hzhang.photoshelter.com/image/I0000f_.gxrOBCT8",
           description: "Park on 5th street and Alder Way that includes trees, benches, water fountains, tables, and sculptor pieces",
@@ -185,7 +185,7 @@ module.exports = {
         },
         {
           userId: 3,
-          title: "Boulevard Park",
+          title: "Office Parklet",
           imageUrl: "https://i.pinimg.com/originals/ce/f7/48/cef748b2d9d35b8cc72f70810906d77b.jpg",
           link: "https://www.terrain-studio.com/projects/helios-plaza",
           description: "Between Pike and 7th Steet including an outdoor seating area and community rooms throughout a few stories",
@@ -545,15 +545,6 @@ module.exports = {
         },
         {
           userId: 3,
-          title: "House in Spain",
-          imageUrl: "https://images.adsttc.com/media/images/61e9/bc95/3e4b/312b/1200/0011/slideshow/Casa_Rotonda_-_03_Fotograf%C3%ADa_Javier_Callejas_ok.jpg?1642708102",
-          link: "https://www.archdaily.com/975511/rotonda-house-alberto-campo-baeza?ad_source=search&ad_medium=projects_tab",
-          description: "Between Pike and 7th Steet including an outdoor seating area and community rooms throughout a few stories",
-          createdAt: new Date(),
-          updatedAt: new Date()
-        },
-        {
-          userId: 3,
           title: "College Campus",
           imageUrl: "https://images.adsttc.com/media/images/59ca/4d93/b22e/38e8/8300/0055/slideshow/Rocco_Chu_Hai_College_Photo01.jpg?1506430350",
           link: "https://www.archdaily.com/880408/new-campus-development-of-chu-hai-college-of-higher-education-rocco-design-architects?ad_source=search&ad_medium=projects_tab",
@@ -563,7 +554,7 @@ module.exports = {
         },
         {
           userId: 2,
-          title: "SWA Group",
+          title: "Greenway Plaza",
           imageUrl: "https://i.pinimg.com/564x/a0/80/c8/a080c85651974b5287a451f4a32e277a.jpg",
           link: "https://issuu.com/hidesignpublish/docs/corporatecommerciallandscape/123?epik=dj0yJnU9M2dJcjVydGctV0Z4UTNSN0tyeU1QWFRDeEdsVWUwdG8mcD0wJm49ei1DXzRTM2RwLXBJM1d4bU9IQnlFdyZ0PUFBQUFBR0gyUjA0",
           description: "Between Pike and 7th Steet including an outdoor seating area and community rooms throughout a few stories",

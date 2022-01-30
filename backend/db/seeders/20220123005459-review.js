@@ -671,21 +671,21 @@ module.exports = {
           productId: 65,
           review: /*commerce.productDescription()*/ loremIpsum(),
         },
-        {
-          userId: 3,
-          productId: 66,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 1,
-          productId: 66,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 2,
-          productId: 66,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
+        // {
+        //   userId: 3,
+        //   productId: 66,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
+        // {
+        //   userId: 1,
+        //   productId: 66,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
+        // {
+        //   userId: 2,
+        //   productId: 66,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
         // {
         //   userId: 2,
         //   productId: 67,
