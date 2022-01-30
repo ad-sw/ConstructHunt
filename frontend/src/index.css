@@ -863,8 +863,8 @@ body.no-scroll {
   overflow-y: hidden;
 }
 .img5 {
-  height: 360px;
   width: 100%;
+  height: 80%;
   align-self: flex-start;
   display: flex;
 }
@@ -1130,14 +1130,18 @@ section.hunter-link {
 }
 .createB2 {
   width: 56px;
-  height: 24px;
+  height: 22px;
   border: none;
   border-radius: 2px;
   background-color: #F64900;
   color: white;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 6px;
+  cursor: pointer;
+  padding-bottom: 6px;
   font-size: 11px;
+  /* display: flex; */
+  /* margin: auto; */
   font-weight: 547;
   letter-spacing: .5px;
 }
@@ -1244,7 +1248,7 @@ section.hunter-link {
   margin-right: 1.7px;
   font-weight: 450;
   background-color: rgba(128, 128, 128, 0.082);
-  height: 9.2px;
+  height: 9px;
   margin-top: 2.2px;
   margin-bottom: .4px;
   outline: none;
@@ -1347,4 +1351,65 @@ section.hunter-link {
   align-items: flex-end;
   /* margin-right: 232px; */
   /* justify-content: space-between; */
+}
+.gpa {
+  font-size: 13px;
+  color: #656565;
+}
+.gpa a {
+  color: #da482094;
+}
+.gpa a:hover {
+  border-bottom: 1px dashed grey;
+  font-style: italic;
+}
+.formModal {
+  background-size: 80%;
+  background-repeat: no-repeat;
+  width: 275px;
+  height: 230px;
+  padding: 0px 35px 27px 40px;
+  background: url('https://user-images.githubusercontent.com/86431563/151684547-42ccc62d-ab6a-4a75-a415-bcb69408ec67.png');
+  border: 1px solid black;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  position: relative;
+  margin: auto;
+  border-top: 6px solid #d85632;
+  /* box-shadow: 0px 0px 700px #ffffff inset; */
+}
+.outerWrapBtn {
+  display: flex;
+  margin: auto;
+  /* position: absolute; */
+  position: relative;
+  flex-direction: row;
+  /* text-align: center; */
+}
+.modalBtn {
+  position: relative;
+  outline: none;
+  border: none;
+  color: #817a76;
+  cursor: pointer;
+  border-radius: 1px;
+  background-color: rgb(230, 230, 230);
+}
+.modalBtn:first-child {
+  margin-right: 10px;
+}
+.modalBtn:hover {
+  background-color: rgb(222, 222, 222);
+}
+.innerModalContent {
+  display: flex;
+  color: #7a7878;
+  flex-direction: column;
+  position: relative;
+  margin: 215px auto auto auto;
+}
+.letsBolden {
+  font-weight: 470;
 }

@@ -16,10 +16,14 @@ export default function HomePage(){
     const [showModal, setShowModal] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
 
+    // const body = document.getElementsByTagName('body')[0]
+    // body.classList.remove('no-scroll')
+
     useEffect(() => {
         (async () => {
             // await dispatch(getProducts())
             // await dispatch(getAllReviews())
+
             await dispatch(getProductsWithReviews())
             setIsLoaded(true);
         })();

@@ -4,9 +4,7 @@ import SignupForm from './SignupForm';
 import { useHistory } from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 
-function SignupFormModal() {
-  const dispatch = useDispatch();
-  const history = useHistory();
+function SignupFormModal({product}) {
   const [showModal, setShowModal] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -18,30 +16,32 @@ function SignupFormModal() {
     e.preventDefault()
     const newest = document.getElementsByTagName("body")[0];
     newest.classList.add("no-scroll");
+    const newest2 = document.getElementsByClassName("product-container")[0];
+    newest2.classList.add("hide");
     setShowModal(true);
     };
 
   const handleCancel = (e) => {
     e.preventDefault();
-    const body = document.getElementsByTagName('body')[0]
-    body.classList.remove('no-scroll')
+    const newest2 = document.getElementsByClassName("product-container")[0];
+    newest2.classList.remove("hide");
     setShowModal(false);
     }
 
   const closeMenu = (e) => {
     e.preventDefault()
-    const body = document.getElementsByTagName('body')[0]
-    body.classList.remove('no-scroll')
+    const newest2 = document.getElementsByClassName("product-container")[0];
+    newest2.classList.remove("hide");
     setShowModal(false);
     };
 
   return (
     <div>
     <>
-      <button className="RegUserDemoBtns" onClick={openMenu}>Sign up</button>
+      <button className="createB2" onClick={openMenu}>SEND</button>
       {showModal && (
         <Modal onClose={closeMenu}>
-          <SignupForm />
+          <SignupForm setShowModal={setShowModal} product={product}/>
           <button className="circleClose" onClick={handleCancel}>x</button>
         </Modal>
       )}
