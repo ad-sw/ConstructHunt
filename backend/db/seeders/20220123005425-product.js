@@ -96,7 +96,7 @@ module.exports = {
         {
           userId: 1,
           title: "Memorial Museum",
-          imageUrl: "http://architectuul-production.com.s3-eu-central-1.amazonaws.com/b3/c0a8d6334f49ee89d72cd77be52f6a/4edde321-ab90-40c5-bfd1-7a616d7b5f76_original.jpg",
+          imageUrl: "https://user-images.githubusercontent.com/86431563/151779086-733d86e6-a042-4dd1-8f2a-eb1c78706d90.PNG",
           link: "http://architectuul.com/architecture/view_image/shiba-ryotaro-memorial-museum/3686",
           description: "Park on 5th street and Alder Way that includes trees, benches, water fountains, tables, and sculptor pieces",
           createdAt: new Date(),
@@ -573,7 +573,7 @@ module.exports = {
         {
           userId: 1,
           title: "Environmental Design Campus",
-          imageUrl: "http://ohtori-c.com/wp02/wp-content/uploads/2018/10/49%E5%BA%83%E5%B7%9E%E9%9B%B2%E5%9F%8E02.jpg",
+          imageUrl: "https://user-images.githubusercontent.com/86431563/151778805-3b6d3b90-0f80-442b-ba1b-67ea4045cb5a.PNG",
           link: "http://ohtori-c.com/2015/08/12/guangzhou-vanke-cloud-city/",
           description: "Between Pike and 7th Steet including an outdoor seating area and community rooms throughout a few stories",
           createdAt: new Date(),
