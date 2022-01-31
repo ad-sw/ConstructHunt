@@ -84,7 +84,7 @@ function ProductModal({product, setShowModal2}) {
     </div>
     {showModal && (
         <Modal onClose={closeMenu}>
-            <ProductProfilePgModal product={product} setShowModal={setShowModal}/>
+            <ProductProfilePgModal product={product} setShowModal={setShowModal} showModal={showModal}/>
             <button className="circleClose" onClick={handleCancel} >x</button>
         </Modal>)}
     </>);
