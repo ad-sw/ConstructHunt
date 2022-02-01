@@ -14,7 +14,8 @@ import SignUpForm from "./components/auth/SignUpForm";
 import SignupFormPage from "../src/components/SignupFormPage"
 import ProductProfilePgModal from "./components/ProductProfilePage"
 import NavBar from '../src/components/NavigationBar';
-import HomePage from '../src/components/HomePage'
+import HomePage from '../src/components/HomePage';
+import ProductFormCreate from '../src/components/ProductModal_Create/ProductForm_Create';
 // import ProductFormCreate from "./components/ProductModal_Create";
 
 function App() {
@@ -48,17 +49,20 @@ function App() {
           </Route>
           <Route exact path="/products">
           <center>
-            <br></br><br></br><br></br>
+            <br></br><br></br><br></br><br></br><br></br><br></br>
             <p>Under Construct(ion)</p>
             <img alt="test" style={{filter: "grayscale(100%)", border: "10px solid transparent"}} height="450" width="650" src="https://ultimate-survival-training.com/wp-content/uploads/2018/02/tourist-2.jpg"/>
             </center>
+          </Route>
+          <Route exact path="/products/new">
+            <ProductFormCreate />
           </Route>
           {/* <Route exact path="/products/:id">
             <ProductProfilePgModal/>
           </Route> */}
           <Route>
             <center>
-            <br></br><br></br><br></br>
+            <br></br><br></br><br></br><br></br><br></br><br></br>
             <p>Under Construct(ion)</p>
             <img alt="test" style={{filter: "grayscale(100%)", border: "10px solid transparent"}} height="450" width="650" src="https://ultimate-survival-training.com/wp-content/uploads/2018/02/tourist-2.jpg"/>
             </center>

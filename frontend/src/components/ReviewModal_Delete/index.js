@@ -42,19 +42,19 @@ function ReviewDelete({review}) {
       <div onClick={() => setShowModal(true)} className="reviewEditBtn">
         <img className="delIcon" src="https://user-images.githubusercontent.com/86431563/151331165-d3e401af-8a9a-427f-9aa5-9e518e23cc2f.png"/>
       </div>
-        {isLoaded && showModal && (
-            <Modal onClose={() => setShowModal(false)}>
-                <div className="formModal">
-                  <div className="innerModalContent">
-                    <div className="letsBolden">Delete this review?</div>
-                    <div className="outerWrapBtn">
-                    <button type="submit" onClick={handleDelete} className="modalBtn">Yes</button>
-                    <button type="submit" onClick={handleCancel} className="modalBtn">Cancel</button>
-                    </div>
+      {isLoaded && showModal && (
+          <Modal onClose={() => setShowModal(false)}>
+              <div className="formModal">
+                <div className="innerModalContent">
+                  <div className="letsBolden">Delete this review?</div>
+                  <div className="outerWrapBtn">
+                  <button type="submit" onClick={handleDelete} className="modalBtn">Yes</button>
+                  <button type="submit" onClick={handleCancel} className="modalBtn">Cancel</button>
                   </div>
                 </div>
-            </Modal>
-        )}
+              </div>
+          </Modal>
+      )}
     </>
   );
 }

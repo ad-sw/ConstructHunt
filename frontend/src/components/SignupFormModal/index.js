@@ -16,8 +16,8 @@ function SignupFormModal() {
 
   const openMenu = (e) => {
     e.preventDefault()
-    const newest = document.getElementsByTagName("body")[0];
-    newest.classList.add("no-scroll");
+    const body = document.getElementsByTagName('body')[0]
+    body.classList.add('no-scroll');
     setShowModal(true);
     };
 

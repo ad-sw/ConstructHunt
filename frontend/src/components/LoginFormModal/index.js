@@ -9,34 +9,26 @@ function LoginFormModal() {
   const dispatch = useDispatch();
   const history = useHistory();
   const [showModal, setShowModal] = useState(false);
-// <<<<<<< Updated upstream
   const [isLoaded, setIsLoaded] = useState(false)
-
-// <<<<<<< Updated upstream
-  // const demoLogin = async () => {
-  //   const demoUser = {credential: "demo@user.io", password: "password"};
-  //   await dispatch(login(demoUser));
-  //   history.push('/');
-  // }
-// =======
-// =======
-// >>>>>>> Stashed changes
-  const demoLogin = async () => {
-    const demoUser = {credential: "demo@user.io", password: "password"};
-    await dispatch(login(demoUser));
-    history.push('/');
-  }
-// <<<<<<< Updated upstream
-// >>>>>>> Stashed changes
 
   useEffect(() => {
       setIsLoaded(true)
   }, [setIsLoaded]);
 
+  const demoLogin = async (e) => {
+    const newest = document.getElementsByTagName("body")[0];
+    newest.classList.remove("no-scroll");
+
+    const demoUser = {credential: "demo@user.io", password: "password"};
+    await dispatch(login(demoUser));
+    history.push('/');
+    closeMenu(e)
+  }
+
   const openMenu = (e) => {
     e.preventDefault()
-    const newest = document.getElementsByTagName("body")[0];
-    newest.classList.add("no-scroll");
+    const body = document.getElementsByTagName('body')[0]
+    body.classList.add('no-scroll');
     setShowModal(true);
     };
 
@@ -52,13 +44,7 @@ function LoginFormModal() {
     const body = document.getElementsByTagName('body')[0]
     body.classList.remove('no-scroll')
     setShowModal(false);
-// <<<<<<< Updated upstream
     };
-// =======
-  // }
-// =======
-// >>>>>>> Stashed changes
-// >>>>>>> Stashed changes
 
   return (
     <div>

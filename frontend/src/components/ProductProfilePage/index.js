@@ -25,6 +25,15 @@ function ProductProfilePgModal({product, setShowModal}) {
     let event = new Date(product?.createdAt);
     let date = event.toLocaleDateString().slice(0,5) + event.toLocaleDateString().slice(7,9)
 
+    if (!isLoaded) {
+        return (
+            <div id="loadingGif">
+                <img src={"https://cdn.dribbble.com/users/56427/screenshots/6003020/budio_hero_illustration_for_animation_2.gif"} height="650px" width="850px" alt="loading"/>
+                <div className="loadText">Loading</div>
+            </div>
+            );
+        }
+
     return (
         isLoaded && (
         <>
