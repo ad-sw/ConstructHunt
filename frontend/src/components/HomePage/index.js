@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Modal } from '../../context/Modal';
 import { useSelector, useDispatch } from 'react-redux';
 import {getProducts, getProductsWithReviews} from '../../store/product'
-import{ NavLink } from 'react-router-dom';
-import HomeTest from '../HTest'
 import ProductProfilePgModal from "../ProductProfilePage";
 import '../../../src/index'
 import {getAllReviews} from "../../store/review";
