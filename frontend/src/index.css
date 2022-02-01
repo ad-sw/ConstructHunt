@@ -776,13 +776,12 @@ a:hover, a:visited, a:link, a:active {
   font-size: 11px;
   margin-bottom: 1px;
 }
-
 #pgContent {
   display: flex;
   width: 1269px;
   /* top: 120px; */
   padding-top: 125px;
-  margin: 0 auto 40px 6.59%;
+  margin: 0 auto 0px 6.59%;
   /* padding: 40px auto 0 auto; */
   /* left: 20px; */
   /* position: relative; */
@@ -1759,7 +1758,7 @@ section.hunter-link {
   margin: 0;
   letter-spacing: .3px;
   resize: none;
-  z-index:
+  outline: none;
 }
 .test31:hover, .test31:active, .test31:focus {
   border: 1px #7397d4d3 solid;
@@ -1790,7 +1789,7 @@ section.hunter-link {
   width: 572px;
 }
 .createB6 {
-  margin-top: 20px;
+  margin: 60px 0 35px 0;
   width: 216px;
   height: 40px;
   border: none;
@@ -1818,4 +1817,93 @@ section.hunter-link {
 .inline2 {
   display: flex;
   flex-direction: row;
+}
+.inputHeaderPg4 {
+  font-size: 16px;
+  color: #4B587C;
+  /* font-weight: 500; */
+  opacity: .9;
+  margin: 12px 0 0 0;
+  padding-bottom: 20px;
+}
+.inputHeaderPg4 a {
+  color: #d68872;
+}
+.inputHeaderPg4 a:hover {
+  color: #d47a61;
+}
+.test4 {
+  background-color: #FFFFFF;
+  border: 2px #D9E1EC dashed;
+  padding: 8px 12px;
+  width: 546px;
+  height: 22px;
+  border-radius: 3px;
+  letter-spacing: .2px;
+  color: #4B587C;
+  margin: 0;
+  letter-spacing: .3px;
+  margin: 0 0 5px 0;
+}
+.test4:active, .test4:focus {
+  border: 2px #D9E1EC solid;
+  /* box-shadow: 0 0 3px 3px #d5e5ff71; */
+  outline: none;
+}
+.createB7 {
+  margin: 60px 0 35px 0;
+  width: 138px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F64900;
+  color: white;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 2px;
+  font-size: 14px;
+  font-weight: 540;
+  letter-spacing: -.2px;
+}
+.createB7:hover {
+  background-color: #FE4C00;
+}
+.createB8 {
+  margin: 60px 0 35px 0;
+  width: 205px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F64900;
+  color: white;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 2px;
+  font-size: 14px;
+  font-weight: 540;
+  letter-spacing: -.2px;
+}
+.createB8:hover {
+  background-color: #FE4C00;
+}
+.test30 {
+  background-color: #FCFDFF;
+  border: 1px #D9E1EC solid;
+  padding: 8px 12px;
+  width: 600px;
+  height: 258px;
+  border-radius: 3px;
+  letter-spacing: .2px;
+  color: #4B587C;
+  margin: 0;
+  letter-spacing: .3px;
+  resize: none;
+  outline: none;
+}
+.test30:hover, .test31:active, .test31:focus {
+  border: 1px #7397d4d3 solid;
+  box-shadow: 0 0 3px 3px #d5e5ff71;
+  outline: none;
 }
