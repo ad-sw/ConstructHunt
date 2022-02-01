@@ -85,7 +85,8 @@ a:hover, a:visited, a:link, a:active {
   vertical-align: middle;
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 5;
   background-color: white;
   padding: 20px 30px 20px 30px;
@@ -344,15 +345,15 @@ a:hover, a:visited, a:link, a:active {
 }
 #logBtns {
   height: 40px;
-  left: 0;
+  padding-right: 50px;
   margin-left: auto;
   top: 0;
   cursor: pointer;
   color: white;
   display: flex;
   flex-direction: row;
-  float: right;
   align-items: center;
+  /* margin: 0; */
 }
 #logBtns2 {
   height: 40px;
@@ -763,6 +764,7 @@ a:hover, a:visited, a:link, a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 75px;
   margin: 0 auto;
   text-align: center;
   filter: brightness(85%) saturate(450%) sepia(40%);
@@ -778,7 +780,9 @@ a:hover, a:visited, a:link, a:active {
 #pgContent {
   display: flex;
   width: 1269px;
-  margin: 40px auto 40px 6.59%;
+  /* top: 120px; */
+  padding-top: 125px;
+  margin: 0 auto 40px 6.59%;
   /* padding: 40px auto 0 auto; */
   /* left: 20px; */
   /* position: relative; */
@@ -1504,6 +1508,14 @@ section.hunter-link {
   font-weight: 470;
 }
 .backColor {
+  /* background-color: #f7e0b72d; */
+  /* position: fixed; */
+  right: 0;
+  height: 100%;
+  width: 60%;
+  z-index: 4;
+}
+.behindBack {
   background-color: #f7e0b72d;
   position: fixed;
   right: 0;
@@ -1512,7 +1524,7 @@ section.hunter-link {
 }
 .contents {
   width: 100%;
-  padding: 40px 210px 40px 64px;
+  padding: 40px 210px 0px 64px;
   align-items: left;
   display: flex;
   align-items: left;
@@ -1552,7 +1564,7 @@ section.hunter-link {
 }
 .leftSide {
   width: 32%;
-  margin: 110px 0 0 0;
+  margin: 0px 0 0 0;
   padding: 0;
 }
 .linkThing {
@@ -1608,13 +1620,29 @@ section.hunter-link {
   /* padding: 60px 15px 0px 15px; */
   /* justify-content: space-evenly; */
 }
+.spaceBehindLeft {
+  width: 22%;
+  min-width: 240px;
+  max-width: 300px;
+  height: 200px;
+  margin: 0 0 0 0;
+  padding: 0;
+  /* z-index: -500; */
+}
 .leftSide2 {
   width: 22%;
   min-width: 240px;
   max-width: 300px;
   height: 200px;
-  margin: 45px 0 0 0;
+  margin: 44.5px 0 0 0;
   padding: 0;
+  position: fixed;
+}
+.leftSide3 {
+  width: 40%;
+  height: 400px;
+  /* height: 100%; */
+  margin: 120px 0 0 auto;
 }
 .backColor2 {
   right: 0;
@@ -1638,7 +1666,7 @@ section.hunter-link {
   font-size: 16px;
   font-weight: 780;
   min-width: 240px;
-  padding: 16px 12px 12px 12px;
+  padding: 12px;
   cursor: pointer;
 }
 #communityLink2:hover {
@@ -1681,17 +1709,28 @@ section.hunter-link {
 #pageWrap {
   display: flex;
   height: 100%;
+  padding-top: 48px;
   flex-direction: row;
   /* margin: 0 auto; */
 }
+.thingBehindgoTopp {
+  padding: 90px 0 20px 0;
+  /* top: 80px; */
+  width: 100%;
+}
 .goTopp {
-  display: flex;
+  /* display: flex; */
   border-bottom: 1px solid #dde3ff;
-  padding: 20px 0;
+  padding: 30px 0 20px 0;
   font-size: 14px;
   color: #21293C;
   font-weight: 520;
   opacity: .95;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  background-color: white;
+  z-index: 4;
 }
 .anotherDiv {
   flex-direction: row;
@@ -1706,4 +1745,77 @@ section.hunter-link {
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
+}
+.test31 {
+  background-color: #FFFFFF;
+  border: 1px #D9E1EC solid;
+  /* padding: 5px 20px 5px 10px; */
+  padding: 8px 12px;
+  width: 546px;
+  height: 138px;
+  border-radius: 3px;
+  letter-spacing: .2px;
+  color: #4B587C;
+  margin: 0;
+  letter-spacing: .3px;
+  resize: none;
+  z-index:
+}
+.test31:hover, .test31:active, .test31:focus {
+  border: 1px #7397d4d3 solid;
+  box-shadow: 0 0 3px 3px #d5e5ff71;
+  outline: none;
+}
+.descriptionBar{
+  width: 99px;
+  height: .3rem;
+  background-color: #C9CFDF;
+  margin-top: 0;
+  position: absolute;
+  /* right: 0; */
+  float: right;
+  display: flex;
+  flex-direction: row;
+  margin: 150.5px 0 0 471px;
+  z-index: 500;
+}
+.descriptionTotal{
+  height: .3rem;
+  background-color: #7D8AB0;
+  transition: all 2s;
+  max-width: 100%;
+}
+.barNDescription {
+  display: flex;
+  width: 572px;
+}
+.createB6 {
+  margin-top: 20px;
+  width: 216px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F64900;
+  color: white;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 2px;
+  font-size: 14px;
+  font-weight: 540;
+  letter-spacing: -.2px;
+}
+.createB6:hover {
+  background-color: #FE4C00;
+}
+.diffColor {
+  color: #6f79966b;
+  font-size: 10px;
+  margin-left: 3px;
+  margin-top: 2.5px;
+  letter-spacing: -1;
+}
+.inline2 {
+  display: flex;
+  flex-direction: row;
 }

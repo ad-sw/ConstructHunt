@@ -599,9 +599,10 @@ function ProductFormCreate({setShowModal}) {
       </ul>
         {page === 1 ? (<>
         <div id='pageWrap'>
-          <div className="leftSide">
+          <div className="leftSide3">
             <img src="https://image.freepik.com/free-vector/flat-engineering-construction-illustrated_23-2148892788.jpg" width="88%" height="115%"/>
           </div>
+          <div className="behindBack"></div>
           <div className="backColor">
             <div className='contents'>
               <div className="formWrap">
@@ -635,10 +636,13 @@ function ProductFormCreate({setShowModal}) {
         {page === 2 ? (<>
         <div id="pageWidth">
           <div className="hereWeGo">
-          <div className="goTopp">Status: Draft</div>
+            <div className='thingBehindgoTopp'></div>
+            <div className="goTopp">Status: Draft</div>
           <div className="anotherDiv">
-            <div className="leftSide2">
-              <FormNavBar/>
+            <div className="spaceBehindLeft">
+              <div className="leftSide2">
+                <FormNavBar/>
+              </div>
             </div>
             <div className="backColor2">
               <div className="contents2">
@@ -681,16 +685,27 @@ function ProductFormCreate({setShowModal}) {
                 <div className="linkHead">Description</div>
                 <div className="inlineTry">
                   <div className="inputHeaderPg3">Description of the product</div>
-                  <div className="greySide">260 characters max</div>
+                  <div className="inline2">
+                    <div className="greySide">260 characters max</div>
+                    <div className="diffColor">({Math.round((description.length / 260) * 100 )+'%'})</div>
+                  </div>
                 </div>
-                <input
-                type="text"
-                className='test3'
-                placeholder="Short description of the product"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                />
-                <button className="createB5" type='submit' onClick={() => nextPage()}>Next step: Images and media</button>
+
+                <div className="barNDescription">
+                  <div className="descriptionBar">
+                    <div className="descriptionTotal"
+                    style={{width: (description.length / 260)*100}}>
+                    </div>
+                  </div>
+                  <textarea
+                  type="text"
+                  className='test31'
+                  placeholder="Short description of the product"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  />
+                </div>
+                <button className="createB6" type='submit' onClick={() => nextPage()}>Next step: Images and media</button>
               </div>
               </div>
             </div>
@@ -717,8 +732,8 @@ function ProductFormCreate({setShowModal}) {
 
           <div {...getRootProps({ className: 'dropzone' })}>
             <input {...getInputProps()} />
-            <p>Drag 'n' drop an image files here, or click to select file</p>
-            <p>(Only .jpg .jpeg and .png images are allowed)</p>
+            {/* <p>Drag 'n' drop an image files here, or click to select file</p>
+            <p>(Only .jpg .jpeg and .png images are allowed)</p> */}
           </div>
           </div>
         </>) : null}
