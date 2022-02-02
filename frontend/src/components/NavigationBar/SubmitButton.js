@@ -15,7 +15,7 @@ function SubmitButton({ user }) {
       <div class="dropdown">
       <button activeClassName="link-active" id="submitLink">Submit</button>
         <div className="dropdown-content2">
-          <NavLink to={`/products/new`} exact={true} activeClassName='active' id="dropdownLink">New product</NavLink>
+          <NavLink to={`/products/new/1`} exact={true} activeClassName='active' id="dropdownLink">New product</NavLink>
         </div>
       </div>
     </>

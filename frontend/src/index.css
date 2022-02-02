@@ -1256,7 +1256,7 @@ section.hunter-link {
   justify-content: space-between;
 }
 .field2 {
-  /* margin-top: 20px; */
+  /* margin-top: 50px; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -1602,12 +1602,31 @@ section.hunter-link {
   font-weight: 500;
   margin: 36px 0 4px 0;
 } */
+.twoWays {
+  width: 100%;
+  margin-top: 32px;
+  grid-template-columns: repeat(auto-fill, 300px);
+  display: grid;
+}
 .inputHeaderPg3 {
   font-size: 14px;
   color: #21293C;
-  font-weight: 500;
+  font-weight: 400;
   opacity: .95;
-  margin: 34px 0 4px 0;
+  margin: 15px 0 4px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* align-items: baseline;
+  justify-content: baseline; */
+}
+.dot {
+  height: 95%;
+  width: 6%;
+  /* height: 13px;
+  width: 13px; */
+  opacity: .9;
+  margin: 0 7px 0 0;
 }
 #pageWidth {
   display: flex;
@@ -1650,7 +1669,7 @@ section.hunter-link {
 }
 .contents2 {
   width: 100%;
-  max-width: 800px;
+  /* max-width: 800px; */
   padding: 39px 210px 40px 100px;
   align-items: left;
   display: flex;
@@ -1659,28 +1678,43 @@ section.hunter-link {
   justify-content: flex-start;
   left: 0;
   height: 100%;
+  min-width: 600px;
 }
 #communityLink2 {
   color: #4B587C;
   font-size: 16px;
   font-weight: 780;
-  min-width: 240px;
-  padding: 12px;
+  padding: 12px 40px 12px 20px;
   cursor: pointer;
+  text-align: left;
 }
+#communityLink2:hover {
+  background-color: #EEF2FF;
+  padding: 12px 40px 12px 20px;
+  cursor: pointer;
+  text-align: left;
+}
+.link-active {
+  text-align: left;
+  padding: 12px 0px;
+  /* background-color: #FEF6F2; */
+}
+/* .link-active:hover {
+  text-align: left;
+  background-color: #EEF2FF;
+} */
 #communityLink2:hover {
   min-width: 240px;
   text-align: left;
   background-color: #EEF2FF;
 }
-#communityLink2:focus, #communityLink2:active {
-  min-width: 240px;
+#communityLink2.selected, #communityLink2.current, #communityLink2.active {
+  min-width: 300px;
   text-align: left;
   background-color: #FEF6F2;
 }
 .linkHead {
   margin-top: 40px;
-  /* margin-bottom: 35px; */
   padding-top: 32px;
   font-size: 24px;
   color: #21293C;
@@ -1906,4 +1940,78 @@ section.hunter-link {
   border: 1px #7397d4d3 solid;
   box-shadow: 0 0 3px 3px #d5e5ff71;
   outline: none;
+}
+
+
+.group {
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  align-items: baseline;
+  justify-content: baseline;
+}
+.group3 {
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  align-items: baseline;
+  justify-content: baseline;
+  margin: 0 0 30px 0;
+}
+.group2 {
+  display: flex;
+  height: 48px;
+  align-items:flex-start;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: baseline;
+}
+.inputHeaderPgs {
+  font-size: 14px;
+  color: #21293C;
+  font-weight: 500;
+  opacity: .95;
+  display: flex;
+  position: relative;
+}
+.underneathTxt {
+  display: flex;
+  float: right;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  font-size: 14px;
+  color: #4B587C;
+  opacity: .85;
+  margin-top: 5px;
+}
+.innerBioPg8 {
+  font-size: 16px;
+  color: #4B587C;
+  opacity: .95;
+  margin: 12px 0px 34px 0px;
+}
+.hideBtn {
+  outline: none;
+  border: none;
+  position: absolute;
+}
+.createB9 {
+  margin: 60px 0 35px 0;
+  width: 108px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F64900;
+  color: white;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 2px;
+  font-size: 14px;
+  font-weight: 540;
+  letter-spacing: -.2px;
+}
+.createB9:hover {
+  background-color: #FE4C00;
 }
