@@ -57,6 +57,9 @@ function ProductModal({product, setShowModal2}) {
         setShowModal(false);
     };
 
+    const topics = [['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
+    ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
+
     return (<>
     <div className="friendCard">
         <div className="soMany">
@@ -69,7 +72,7 @@ function ProductModal({product, setShowModal2}) {
                             <div className="txtDesc"><div className="opacity">
                             <img className="bubble" src="https://user-images.githubusercontent.com/86431563/150877606-3394655d-b79c-4561-a1a3-b8313667ac29.png"/>
                             &nbsp; {product?.Reviews?.length}</div><div>Free & Paid Options </div>
-                            <div>•&nbsp;</div>{(product?.id %2 === 0) && (<>Open Source</>)}{(product?.id % 2 !== 0) && (<>Freelance</>)}</div>
+                            <div>•&nbsp;</div>{topics[product?.topicId -1]}</div>
                         </div>
                         {sessionUser && (
                         <div className="upvote">

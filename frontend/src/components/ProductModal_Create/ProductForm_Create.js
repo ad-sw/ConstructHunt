@@ -12,56 +12,17 @@ function ProductFormCreate({setShowModal, page}) {
   const sessionUser = useSelector(state => state.session.user);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [image, setImage] = useState(null);
+  const [thumbnail, setThumbnail] = useState(null);
   const [topic, setTopic] = useState('');
   const [tagline, setTagline] = useState('');
   const [link, setLink] = useState('');
   const [galleryImage1, setGalleryImage1] = useState('');
   const [galleryImage2, setGalleryImage2] = useState('');
   const [galleryImage3, setGalleryImage3] = useState('');
-  const [thumbnail, setThumbnail] = useState('');
   const [firstReview, setFirstReview] = useState('');
   // const [page, setPage] = useState(1);
   const [errors, setErrors] = useState([]);
-  let count = 0;
-
-    const {
-      acceptedFiles,
-      fileRejections,
-      getRootProps,
-      getInputProps
-    } = useDropzone({
-      accept: 'image/jpg, image/jpeg, image/png',
-      maxFiles: 1,
-      maxSize: 10000000,
-      onDrop: acceptedFiles => {
-        setImage(acceptedFiles.map(file => Object.assign(file, {
-          preview: URL.createObjectURL(file)
-        })))
-      }
-    });
-
-    const acceptedFileItems = acceptedFiles.map(file => (
-      <li key={file.path}>
-        {file.path} - {(file.size / 1024 / 1024).toFixed(2)} MB
-      </li>
-    ));
-
-    const fileRejectionItems = fileRejections.map(({ file, errors }) => (
-      <li key={file.path}>
-        {file.path} - {file.size} bytes
-        <ul>
-          {errors.map(e => (
-            <li key={e.code}>{e.message}</li>
-          ))}
-        </ul>
-      </li>
-    ));
-
-    const thumb = image?.map(file => (
-          <img src={file.preview}
-          style={{width: '200px' }}/>
-    ));
+  const [price, setPrice] = React.useState('free');
 
   function nextPage() {
     const errors = [];
@@ -82,12 +43,10 @@ function ProductFormCreate({setShowModal, page}) {
       if (description.length > 261) errors.push("Please enter a description shorter than 60 characters")
     }
     setErrors(errors)
-    if(fileRejectionItems.length) setImage([])
     // if(!errors.length) setPage((page) => page +1);
   }
 
   function prevPage() {
-    if(fileRejectionItems.length) setImage([])
     // if(!errors.length) setPage((page) => page -1);
   }
 
@@ -150,7 +109,6 @@ function ProductFormCreate({setShowModal, page}) {
     //   const file = e.target.files[0];
     //   if (file) setVideo(file);
     // };
-    const [price, setPrice] = React.useState('free');
 
     const handleChange = (e) => {
       setPrice(e.target.value)
@@ -158,8 +116,6 @@ function ProductFormCreate({setShowModal, page}) {
     const resetRadioState = () => {
       setPrice('');
     }
-
-    let arr = []
 
   return (<>
     <form

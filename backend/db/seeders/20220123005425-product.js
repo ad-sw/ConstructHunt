@@ -5,6 +5,7 @@ module.exports = {
       return queryInterface.bulkInsert('Products', [
         {
           userId: 1,
+          topicId: 5,
           name: "Technology Business District",
           thumbnailUrl: "https://i.mooool.com/img/2018/07/mooool-beiqijiaDSC02101.jpg",
           galleryImage1: 'https://i.mooool.com/img/2018/07/mooool-MSP-Beiqijia-Technology-Business-District6.jpg?x-oss-process=style%2Fboombox_image545-2x',
@@ -18,6 +19,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 8,
           name: "Art Academy",
           thumbnailUrl: "https://images.adsttc.com/media/images/6193/8371/9a95/7a66/5a21/b4dd/slideshow/feature.jpg?1637057416",
           galleryImage1: 'https://images.adsttc.com/media/images/6193/8307/9a95/7a17/5f26/55d1/slideshow/29-ti-yu-guan-gym-c-tian-fang-fang.jpg?1637057317',
@@ -31,6 +33,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 10,
           name: "Disney Concert Hall",
           thumbnailUrl: "https://i.pinimg.com/564x/60/6f/00/606f0041a89e7a3b6abb2ba2888df3c6.jpg",
           galleryImage1: 'https://cdn.vox-cdn.com/thumbor/bl0gvSkyH48Dsjr6dHfi5kkPHyI=/0x0:1302x868/1200x800/filters:focal(547x330:755x538)/cdn.vox-cdn.com/uploads/chorus_image/image/69926926/Screen_Shot_2021_09_29_at_9.17.44_AM.0.png',
@@ -44,6 +47,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 8,
           name: "Environmental Technology Building",
           thumbnailUrl: "https://images.adsttc.com/media/images/5909/a3a6/e58e/ce23/0900/015d/slideshow/11131_MR_N115_tabloid.jpg?1493803929",
           galleryImage1: 'https://images.adsttc.com/media/images/5909/a2f1/e58e/cea7/2500/02a5/slideshow/11131_MR_N103_tabloid.jpg?1493803749',
@@ -57,6 +61,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "Revitalized Alley",
           thumbnailUrl: "https://blog.architizer.com/wp-content/uploads/15609761751890055_01_CityThread_3_photo_by_Garey_Gomez.jpg-768x1027.jpg",
           galleryImage1: 'https://images.adsttc.com/media/images/5c5c/5138/284d/d18a/1b00/005c/slideshow/21_CityThread_night_photo_by_Benjamin_Chase.jpg.jpg?1549553935',
@@ -70,6 +75,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Yuandang Bridge",
           thumbnailUrl: "https://images.adsttc.com/media/images/61de/b14b/3e4b/31b3/5600/00b9/slideshow/BAU679_Image_006.jpg?1641984322",
           galleryImage1: 'https://images.adsttc.com/media/images/61de/b17b/3e4b/31f8/f300/00b7/slideshow/BAU679_Image_013.jpg?1641984371',
@@ -83,6 +89,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "City Library",
           thumbnailUrl: "https://sdg-migration-id.s3.amazonaws.com/interior-design-best-of-year-retail-beijing-bookstore-Zhongshuge-xliving-li-xiang-idx210101_boy_MixedRetail05-4.jpg",
           galleryImage1: 'https://sdg-migration-id.s3.amazonaws.com/interior-design-best-of-year-retail-beijing-bookstore-Zhongshuge-xliving-li-xiang-idx210101_boy_MixedRetail03-1.jpg',
@@ -96,6 +103,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Greenway River Path",
           thumbnailUrl: "https://www.turenscape.com/upload/project/201708/468cc889ac4fe796f391940355455314.jpg",
           galleryImage1: 'https://www.turenscape.com/upload/project/201708/468e72581cd99e3d05558aac9a64757d.jpg',
@@ -109,6 +117,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 8,
           name: "Culture & Tech Building",
           thumbnailUrl: "https://cdn.homedit.com/wp-content/uploads/2014/08/Emerson-College-Campus-Architecture-Art2-768x512.jpg",
           galleryImage1: 'https://cdn.homedit.com/wp-content/uploads/2014/08/Emerson-College-Campus-Architecture-Art.jpg',
@@ -122,6 +131,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Greentown Plaza",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151689141-89e2eb84-7886-42c2-be51-95cc10a77900.jpg",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152101594-1060308d-f4d9-46ae-8218-b47b3ededbba.PNG',
@@ -135,11 +145,12 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 8,
           name: "Memorial Museum",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151779086-733d86e6-a042-4dd1-8f2a-eb1c78706d90.PNG",
-          galleryImage1: 'http://architectuul-production.com.s3-eu-central-1.amazonaws.com/8c/e15907ba6c4e60b7d899b4d3806449/4edde1ed-c584-4631-aab2-7a7e6d7b5f76_original.jpg',
-          galleryImage2: 'http://architectuul-production.com.s3-eu-central-1.amazonaws.com/8e/f30abd7808422fb99d7d686a0b30f4/4edde22f-5fb4-4109-a13f-7a806d7b5f76_original.jpg',
-          galleryImage3: 'http://architectuul-production.com.s3-eu-central-1.amazonaws.com/5c/b41c06215940da98622b760e4b272d/4edde9c5-43c4-4ff1-9cd5-7a7e6d7b5f76_original.jpg',
+          galleryImage1: 'https://user-images.githubusercontent.com/86431563/152209475-f0bb6673-a22c-4fe0-a0bc-c08d1b3b6179.PNG',
+          galleryImage2: 'https://user-images.githubusercontent.com/86431563/152209489-e3a47ad1-203a-4f63-8169-ba541a6a053e.PNG',
+          galleryImage3: 'https://user-images.githubusercontent.com/86431563/152209506-91a00e6b-2680-48e6-b6b2-7ead7967cf5b.PNG',
           link: "http://architectuul.com/architecture/view_image/shiba-ryotaro-memorial-museum/3686",
           tagline: 'Between Pike and 7th Steet including an outdoor seating area',
           description: "Park on 5th street and Alder Way that includes trees, benches, water fountains, tables, and sculptor pieces",
@@ -148,6 +159,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 10,
           name: "Soundwave Center",
           thumbnailUrl: "https://images.adsttc.com/media/images/61a7/5aba/f91c/8177/5200/0035/slideshow/Opening_on_the_roof_photo_by_Jonathan_Leijonhufvud.jpg?1638357658",
           galleryImage1: 'https://images.adsttc.com/media/images/61a7/5cc3/f91c/8177/5200/0049/slideshow/Semi-outdoor_amphitheater_photo_by_Zhu_Runzi.jpg?1638358182',
@@ -161,6 +173,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Public Library",
           thumbnailUrl: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fda%2F0b%2Fc3%2Fda0bc3da40ddff4d001eca5145342416.jpg&f=1&nofb=1",
           galleryImage1: 'https://rex-ny.com/wp-content/uploads/2018/02/REX_Seattle-Library_03_Living-Room_Credit-Ramon-Prat.jpg',
@@ -174,11 +187,12 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Knowledge Park",
           thumbnailUrl: "https://images.adsttc.com/media/images/5f6b/e89d/63c0/176b/3f00/03ff/slideshow/mod_1V3A9026a.jpg?1600907401",
           galleryImage1: 'https://images.adsttc.com/media/images/5f6b/e884/63c0/177d/1000/0586/slideshow/mod_1V3A8849a.jpg?1600907377',
           galleryImage2: 'https://images.adsttc.com/media/images/5f6b/e9be/63c0/177d/1000/0591/slideshow/mod_base_317a_copy.jpg?1600907690',
-          galleryImage3: 'https://images.adsttc.com/media/images/5f6b/e937/63c0/177d/1000/058c/slideshow/mod_3h_mome_9817.jpg?1600907556',
+          galleryImage3: '',
           link: "https://www.archdaily.com/948325/campus-and-creative-innovation-knowledge-park-3h-architecture",
           tagline: 'Between Pike and 7th Steet including an outdoor seating area',
           description: "Park on 5th street and Alder Way that includes trees, benches, water fountains, tables, and sculptor pieces",
@@ -187,6 +201,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 3,
           name: "Visitor Center",
           thumbnailUrl: "https://static.dezeen.com/uploads/2018/07/inagawa-cemetry-david-chipperfield-architecture_dezeen_2364_col_19-852x983.jpg",
           galleryImage1: 'https://static.dezeen.com/uploads/2018/07/inagawa-cemetry-david-chipperfield-architecture_dezeen_2364_hero-1-852x479.jpg',
@@ -200,6 +215,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Freeway Park",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151692688-5fb148cf-0bd4-4416-abc6-1651789fdb06.jpg",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152101842-abea8f84-c9f2-4516-8545-a89a05cbb581.PNG',
@@ -213,6 +229,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Upper River Side",
           thumbnailUrl: "https://i.mooool.com/img/2019/12/mooool-LandView-Performance50.jpg?x-oss-process=style%2Fboombox_image1600",
           galleryImage1: 'https://i.pinimg.com/564x/fe/4c/d1/fe4cd13a188c2535fadc0e18d65193ce.jpg',
@@ -226,6 +243,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 5,
           name: "Research & Training Center",
           thumbnailUrl: "https://images.adsttc.com/media/images/5007/065f/28ba/0d41/4800/0af7/slideshow/stringio.jpg?1414102068",
           galleryImage1: 'https://images.adsttc.com/media/images/5007/0684/28ba/0d41/4800/0afc/slideshow/stringio.jpg?1414102072',
@@ -239,6 +257,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "Copenhagen Plaza Park",
           thumbnailUrl: "https://i.pinimg.com/564x/83/5b/fc/835bfc6d7ee348a2e54fcbd26ba395d3.jpg",
           galleryImage1: 'https://images.rove.me/w_1920,q_85/aairbmnbk172v9oj6dba/copenhagen-superkilen-park.jpg',
@@ -252,6 +271,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 3,
           name: "Cemetary Garden",
           thumbnailUrl: "https://i.pinimg.com/564x/c1/47/51/c147511f2cbbdfdcb68d4622332fd9c0.jpg",
           galleryImage1: 'https://barcelonaarchitecturecenter.files.wordpress.com/2012/03/20120317_012.jpg',
@@ -265,6 +285,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Different Plaza Park",
           thumbnailUrl: "https://i.pinimg.com/originals/f7/aa/87/f7aa873cf80572b82a7125201f840f37.jpg",
           galleryImage1: 'https://i.pinimg.com/originals/79/7a/af/797aaf7f718eed091fb98247ed1f9aa5.jpg',
@@ -278,6 +299,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 8,
           name: "Another Public Library",
           thumbnailUrl: "https://archinect.imgix.net/uploads/2h/2h4gdabflewkkwtu.jpg?fit=crop&auto=compress%2Cformat&w=615",
           galleryImage1: 'https://archinect.imgix.net/uploads/wy/wy3h0eg0jre2k1lt.jpg?fit=crop&auto=compress%2Cformat&w=615',
@@ -291,6 +313,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 5,
           name: "City Hub Building",
           thumbnailUrl: "https://d3igjmthvmn71a.cloudfront.net/wp-content/uploads/nottingham-city-hub-56_50477141943_o-scaled.jpg",
           galleryImage1: 'https://d3igjmthvmn71a.cloudfront.net/wp-content/uploads/nottingham-city-hub-01_50477783647_o-1024x683.jpg',
@@ -304,6 +327,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Alley Park",
           thumbnailUrl: "https://i.mooool.com/img/2019/05/mooool-SPI-NCD-Lianfa-Zanglong-4.jpg?x-oss-process=style%2Fboombox_image545-2x",
           galleryImage1: 'https://i.mooool.com/img/2019/05/mooool-SPI-NCD-Lianfa-Zanglong-20.jpg?x-oss-process=style%2Fboombox_image545-2x',
@@ -317,6 +341,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 8,
           name: "Astronomy Park",
           thumbnailUrl: "https://images.adsttc.com/media/images/61c4/b2b0/b038/0601/6505/30fe/slideshow/18.jpg?1640280783",
           galleryImage1: 'https://images.adsttc.com/media/images/61c4/b2af/b038/0601/6505/30fd/slideshow/10.jpg?1640280842',
@@ -330,6 +355,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 3,
           name: "Memorial Lakeside Park",
           thumbnailUrl: "https://landezine.com/wp-content/uploads/2013/10/Lakewood-Cemetery-Garden-Mausoleum-Landscape-by-Halvorson-Design-Partnership-008-730x489.jpg",
           galleryImage1: 'https://landezine.com/wp-content/uploads/2013/10/Lakewood-Cemetery-Garden-Mausoleum-Landscape-by-Halvorson-Design-Partnership-010-730x440.jpg',
@@ -343,6 +369,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 8,
           name: "School Campus",
           thumbnailUrl: "https://landezine.com/wp-content/uploads/2019/05/7.-St-Ignatius-Riverview-PaulMcMillan.jpg",
           galleryImage1: 'https://landezine.com/wp-content/uploads/2019/05/13.-St-Ignatius-Riverview-PaulMcMillan.jpg',
@@ -356,6 +383,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 7,
           name: "Office Parklet",
           thumbnailUrl: "https://i.pinimg.com/originals/ce/f7/48/cef748b2d9d35b8cc72f70810906d77b.jpg",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152102091-da41b6f5-410f-4901-a557-1bb0cb333826.PNG',
@@ -369,6 +397,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 8,
           name: "City Library",
           thumbnailUrl: "https://i.pinimg.com/564x/17/16/30/1716309308a8c36a77b6e1ac42752515.jpg",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152102331-4285fc76-f84a-45bb-bca0-90daf5c6536e.PNG',
@@ -382,6 +411,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 3,
           name: "Memorial Park",
           thumbnailUrl: "https://worldstrides.com/wp-content/uploads/2015/10/Tour-Highlight-Vietnam-and-Monument-_-iStock_000063717879_Large-min.jpg",
           galleryImage1: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dcphotoguide.com%2Fwp-content%2Fuploads%2F2017%2F04%2Fvietnam-memorial-washington-dc-at-sunrise-12-copyright-havecamerawilltravel-com.jpg&f=1&nofb=1',
@@ -395,6 +425,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 5,
           name: "Seafront Towers",
           thumbnailUrl: "https://images.adsttc.com/media/images/5b95/3b0a/f197/cc77/b300/0072/slideshow/%E6%B3%B3%E6%B1%A0.jpg?1536506602",
           galleryImage1: 'https://images.adsttc.com/media/images/5b95/39ec/f197/cc72/ee00/024e/slideshow/%E5%81%A5%E5%BA%B7%E9%93%BE%E5%8C%BA%E5%9F%9F.jpg?1536506319',
@@ -408,6 +439,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "NYC Streetscape Plaza",
           thumbnailUrl: "https://www.cabinetmagazine.org/issues/45/cabinet_045_trainor_james_006.jpg",
           galleryImage1: 'https://www.cabinetmagazine.org/issues/45/cabinet_045_trainor_james_005.jpg',
@@ -421,6 +453,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "Urban Development Plaza",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151692935-f7cb4ff0-1f4b-4823-adcf-43f59a0137de.PNG",
           galleryImage1: 'https://images.adsttc.com/media/images/5f06/229a/b357/6588/b300/0447/slideshow/Kaunas-V-Plaza-Urban-Design-Architecture-Corner-Building-0989.jpg?1594237565',
@@ -434,6 +467,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 4,
           name: "Fountain Park",
           thumbnailUrl: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F96%2F7e%2F93%2F967e93b456c0c37580e4a8eb3fe5941d.jpg&f=1&nofb=1",
           galleryImage1: 'http://www.dililah.org/images/lovejoy/lovejoy6.jpg',
@@ -447,6 +481,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 3,
           name: "9/11 Memorial",
           thumbnailUrl: "https://landezine.com/wp-content/uploads/2013/03/National-9_11-Memorial-by-PWP-Landscape-Architecture-02.jpg",
           galleryImage1: 'https://landezine.com/wp-content/uploads/2013/03/National-9_11-Memorial-by-PWP-Landscape-Architecture-03.jpg',
@@ -460,6 +495,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 9,
           name: "Climbing Gym",
           thumbnailUrl: "https://images.adsttc.com/media/images/5fb9/b902/63c0/17dd/6300/0387/slideshow/Stephane_Brugger_3.jpg?1606007036",
           galleryImage1: 'https://images.adsttc.com/media/images/5fb9/b9f9/63c0/17d6/2c00/04ec/slideshow/Ralph_Ka%CC%88mena_4.jpg?1606007279',
@@ -473,6 +509,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 5,
           name: "Civic Building",
           thumbnailUrl: "https://www.architectureanddesign.com.au/getmedia/ff14a241-b6e6-46dc-9b2f-abb2abe2534f/110905_library_viaCouncil.aspx?&ext=.jpg",
           galleryImage1: 'https://www.architectureanddesign.com.au/getmedia/67a5ff16-e9e8-4d6e-a0f8-88ff681c90eb/110905_library_viaTheWest1.aspx?&ext=.jpg',
@@ -486,6 +523,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 3,
           name: "Healing Memorial Square",
           thumbnailUrl: "https://i.pinimg.com/564x/0b/73/ab/0b73ab7afc66fd0ce84501abe9e54385.jpg",
           galleryImage1: 'https://landezine.com/wp-content/uploads/2015/06/04_memorial-sandra_pereznieto.jpg',
@@ -499,11 +537,12 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Street Intersection Park Plaza",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151689109-ec42e648-14fb-4fde-98cc-48ec3158b0af.jpg",
-          galleryImage1: 'https://user-images.githubusercontent.com/86431563/152102630-88d07d6c-2460-475c-ac2b-8ed038a6867b.PNG',
-          galleryImage2: 'https://user-images.githubusercontent.com/86431563/152102639-789f9207-0d80-440a-91b5-97218468e99a.PNG',
-          galleryImage3: 'https://user-images.githubusercontent.com/86431563/152102633-782d3e93-f2c3-4b73-bba0-a6ffca4dfb3e.PNG',
+          galleryImage1: 'https://user-images.githubusercontent.com/86431563/152102639-789f9207-0d80-440a-91b5-97218468e99a.PNG',
+          galleryImage2: 'https://user-images.githubusercontent.com/86431563/152102630-88d07d6c-2460-475c-ac2b-8ed038a6867b.PNG',
+          galleryImage3: 'https://user-images.githubusercontent.com/86431563/152210252-f3281dc4-d821-4f8f-b8ed-a67e9d7cd2ed.PNG',
           link: "http://www.archina.com/index.php?g=ela&m=index&a=works&id=3133",
           tagline: 'Between Pike and 7th Steet including an outdoor seating area',
           description: "Between Pike and 7th Steet including an outdoor seating area and community rooms throughout a few stories",
@@ -512,6 +551,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Midtown Center Plaza",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151689091-a513a62c-5615-48c6-8602-369680743666.jpg",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152103296-f0af7ee3-56e0-4851-9ce8-0488e7ace995.PNG',
@@ -525,6 +565,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 3,
           name: "War Memorial",
           thumbnailUrl: "https://i.pinimg.com/564x/c0/95/0a/c0950a87cec1e4b93ce525067bac98a5.jpg",
           galleryImage1: 'http://www.tzg.com.au/cms/wp-content/uploads/2008/07/004_pbh-1000x771.jpg',
@@ -538,6 +579,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Plaza Deichmann",
           thumbnailUrl: "https://images.adsttc.com/media/images/5129/6722/b3fc/4b11/a700/6b12/large_jpg/1295360732-bg170111-02.jpg?1414308317",
           galleryImage1: 'https://images.adsttc.com/media/images/5129/671d/b3fc/4b11/a700/6b11/large_jpg/1295360724-bg170111-01.jpg?1414308314',
@@ -551,6 +593,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 7,
           name: "Office Building",
           thumbnailUrl: "https://images.adsttc.com/media/images/6155/0e56/9f88/b401/642c/a9a9/slideshow/1091-n108-a3digital.jpg?1632964250",
           galleryImage1: 'https://images.adsttc.com/media/images/6155/0e56/acae/0201/65ca/6696/slideshow/1091-n242-a3digital.jpg?1632964224',
@@ -564,6 +607,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 4,
           name: "Rotating Street Park",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151689049-d8f7dc53-9056-43f3-a373-0ac2c6f15017.jpg",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152104301-08d93a0f-c3ad-488d-8322-f9db1f60c805.PNG',
@@ -577,6 +621,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 3,
           name: "Remembrance Parklet",
           thumbnailUrl: "https://landezine.com/wp-content/uploads/2010/01/g028_dno_10_tb2.jpg",
           galleryImage1: 'https://landezine.com/wp-content/uploads/2010/01/g028_dno_14_jm.jpg',
@@ -590,6 +635,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 7,
           name: "College Library",
           thumbnailUrl: "https://static.dezeen.com/uploads/2016/10/weston-library-wilkinson-eyre-architecture-education-university-of-oxford-uk_dezeen_2364_ss_6-1.jpg",
           galleryImage1: 'https://static.dezeen.com/uploads/2016/10/weston-library-wilkinson-eyre-architecture-education-university-of-oxford-uk_dezeen_2364_ss_3-1.jpg',
@@ -603,6 +649,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 1,
           name: "Gateway One",
           thumbnailUrl: "https://i.pinimg.com/564x/3c/d7/ae/3cd7ae49257b42096e64371e457eed55.jpg",
           galleryImage1: 'https://www.arch2o.com/wp-content/uploads/2020/08/Arch2O-gateway-one-shekou-spark-architects-3-2048x1139.jpg',
@@ -616,6 +663,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 3,
           name: "Remembrance Site",
           thumbnailUrl: "https://archinect.imgix.net/uploads/fv/fvngqliqbfmexvne.jpg?fit=crop&auto=compress%2Cformat&w=615",
           galleryImage1: 'https://archinect.imgix.net/uploads/t8/t8515hhtemne5tsc.jpg?fit=crop&auto=compress%2Cformat&w=615',
@@ -629,6 +677,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "Public Street Park",
           thumbnailUrl: "https://www.s-onsite.com/onsite_images/80/TNC-KF-004-D-_C_.jpg",
           galleryImage1: 'https://www.s-onsite.com/onsite_images/80/TNC-OS-002-D-_C_.jpg',
@@ -642,6 +691,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 8,
           name: "University Hall",
           thumbnailUrl: "https://images.adsttc.com/media/images/61db/214f/1af7/4a01/65e0/bfa4/slideshow/21-morgan-state-university-credit-nic-lehoux.jpg?1641751012",
           galleryImage1: 'https://images.adsttc.com/media/images/61db/214d/23d7/e846/446c/5942/slideshow/24-morgan-state-university-credit-nic-lehoux.jpg?1641750943',
@@ -655,6 +705,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Children's Street Park",
           thumbnailUrl: "https://100architects.com/wp-content/uploads/2019/09/DSC_1084-1.jpg",
           galleryImage1: 'https://100architects.com/wp-content/uploads/2019/09/M1.jpg',
@@ -668,6 +719,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 3,
           name: "Naval Cemetary",
           thumbnailUrl: "https://i.pinimg.com/564x/d1/30/f5/d130f58565786f57901a86370c660fcf.jpg",
           galleryImage1: 'https://www.nbwla.com/sites/default/files/styles/width_75_pc-breakpoints_theme_nbwla_xl_1x/public/project-images/170716_20-33-35__Y9A8667-Edit%20-small.jpg?itok=V07TiWi0',
@@ -681,6 +733,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 8,
           name: "Leisure Library",
           thumbnailUrl: "https://static.dezeen.com/uploads/2017/11/tianjin-binhai-library-mvrdv-architecture-public-and-leisure-china_dezeen_2364_col_13-852x568.jpg",
           galleryImage1: 'https://static.dezeen.com/uploads/2017/11/tianjin-binhai-library-mvrdv-architecture-public-and-leisure-china_dezeen_2364_col_11-852x568.jpg',
@@ -694,6 +747,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 3,
           name: "Memorial Square",
           thumbnailUrl: "https://media.architecturaldigest.com/photos/55e7633e302ba71f30163949/master/w_1920%2Cc_limit/dam-images-architecture-the-ten-most-significant-memorial-buildings-memorials-09-pentagon-memorial.jpg",
           galleryImage1: 'https://ideasoil.media.clients.ellingtoncms.com/img/photos/2021/07/27/Hydrel-911_Memorial-4-web_t960.jpg?b8ea04f16efcb7dc07c41fa674167d6870b19a92',
@@ -707,6 +761,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Urban Bloom",
           thumbnailUrl: "https://i.pinimg.com/564x/65/a2/f6/65a2f69ce38109a4da8dba280242690f.jpg",
           galleryImage1: 'https://images.arq.com.mx/eyecatcher/590590/23881.jpg',
@@ -720,6 +775,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "Skybridge Garden Park",
           thumbnailUrl: "https://arquitecturayempresa.es/sites/default/files/content/arquitectura_mykd_crown_sky_garden_george_heinrich_06.jpg",
           galleryImage1: 'https://arquitecturayempresa.es/sites/default/files/content/arquitectura_mykd_crown_sky_garden_george_heinrich_02.jpg',
@@ -733,6 +789,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 7,
           name: "Growth Campus",
           thumbnailUrl: "https://images.adsttc.com/media/images/6116/29e1/f91c/816f/a100/02dd/slideshow/%CE%A6%E2%96%92%C3%AD%CF%83%E2%96%92%E2%96%92%C2%B5%C3%A1%C3%AD%CF%83%C3%AE%E2%95%912007_2021_(24).jpg?1628842439",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152090239-48baa8f0-b9e2-4df4-bf66-4b1b975d4d29.PNG',
@@ -746,6 +803,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Waterfall Walkway",
           thumbnailUrl: "https://i.pinimg.com/564x/bb/e3/03/bbe3034cdf870dcbfe54b83b472e7813.jpg",
           galleryImage1: 'https://www.designcurial.com/Uploads/NewsArticle/6716694/main.jpg',
@@ -759,6 +817,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Sunset Parklet",
           thumbnailUrl: "https://www.contemporist.com/wp-content/uploads/2015/07/parklet_020715_06.jpg",
           galleryImage1: 'https://www.contemporist.com/wp-content/uploads/2015/07/parklet_020715_04.jpg',
@@ -772,6 +831,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "Hyperlane",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/152104560-fcacee21-6b54-408a-aaa6-667f16f2a16e.PNG",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/151689021-c86080b3-30fc-4a2d-820c-dec025b233b9.jpg',
@@ -785,6 +845,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 3,
           name: "Firefighter Memorial",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151722213-9c8e753a-66d6-43e8-bd32-cf7717ee33b8.PNG",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152104845-f0b8af23-c939-4bd1-9a91-d3f01461baa3.PNG',
@@ -798,6 +859,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 10,
           name: "Performing Arts Center",
           thumbnailUrl: "https://images.adsttc.com/media/images/6172/e8fb/ad53/d719/aa1c/2e39/slideshow/01.jpg?1634920750",
           galleryImage1: 'https://images.adsttc.com/media/images/6172/eb1b/b6d0/4c01/6577/fdfd/slideshow/014.jpg?1634921273',
@@ -811,11 +873,12 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 4,
           name: "Environmental Design Campus",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151778805-3b6d3b90-0f80-442b-ba1b-67ea4045cb5a.PNG",
-          galleryImage1: 'http://ohtori-c.com/wp02/wp-content/uploads/2018/10/49%E5%BA%83%E5%B7%9E%E9%9B%B2%E5%9F%8E01.jpg',
-          galleryImage2: 'http://ohtori-c.com/wp02/wp-content/uploads/2018/10/49%E5%BA%83%E5%B7%9E%E9%9B%B2%E5%9F%8E04.jpg',
-          galleryImage3: 'http://ohtori-c.com/wp02/wp-content/uploads/2018/10/49%E5%BA%83%E5%B7%9E%E9%9B%B2%E5%9F%8E05.jpg',
+          galleryImage1: 'https://user-images.githubusercontent.com/86431563/152210789-afe339eb-b054-4519-94d7-85ee55bf54dc.PNG',
+          galleryImage2: 'https://user-images.githubusercontent.com/86431563/152210798-226332a4-8a66-4e0d-a6d3-84ef158d69d1.PNG',
+          galleryImage3: 'https://user-images.githubusercontent.com/86431563/152210807-b0691823-a2f3-4b33-a71b-509bb2b341ab.PNG',
           link: "http://ohtori-c.com/2015/08/12/guangzhou-vanke-cloud-city/",
           tagline: 'Between Pike and 7th Steet including an outdoor seating area',
           description: "Between Pike and 7th Steet including an outdoor seating area and community rooms throughout a few stories",
@@ -824,6 +887,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Skybridge Park",
           thumbnailUrl: "https://dspncdn.com/a1/media/692x/10/8a/da/108ada857fcc128b5f09d48ade8e1bbd.jpg",
           galleryImage1: 'https://dspncdn.com/a1/media/692x/31/5d/aa/315daa62989827d7fb38ee04b6828479.jpg',
@@ -837,6 +901,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "Town River Reconstruction",
           thumbnailUrl: "https://images.adsttc.com/media/images/5451/ae44/e58e/ce64/0100/009d/slideshow/portada_MG_2569_%C3%B5%C2%A9%C3%87%C2%B5%C2%A3%C6%92.jpg?1414639167",
           galleryImage1: 'https://images.adsttc.com/media/images/5451/adb6/e58e/ce3e/f600/0073/slideshow/_MG_2550.jpg?1414639020',
@@ -850,6 +915,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 3,
           name: "Lakeside Cemetary",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151721339-31a81b41-66c0-41c5-9638-863fe18db418.PNG",
           galleryImage1: 'https://www.spoon-tamago.com/wp-content/uploads/2016/01/sayama-cemetary-chapel-3.jpg',
@@ -863,6 +929,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 7,
           name: "Eagle Studio",
           thumbnailUrl: "https://images.adsttc.com/media/images/5f21/451e/b357/653d/3a00/07e3/slideshow/DSCF3861%C2%A9%E7%94%B0%E6%96%B9%E6%96%B9.jpg?1596015890",
           galleryImage1: 'https://images.adsttc.com/media/images/5f21/4456/b357/653d/3a00/07dc/slideshow/DSCF3611%C2%A9%E7%94%B0%E6%96%B9%E6%96%B9.jpg?1596015691',
@@ -876,6 +943,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Floating Skybridge Park",
           thumbnailUrl: "https://images.adsttc.com/media/images/5f54/b6b9/b357/6574/5200/0414/slideshow/Vitality_island%EF%BC%883%EF%BC%89.jpg?1599387311",
           galleryImage1: 'https://images.adsttc.com/media/images/5f54/b668/b357/6574/5200/040e/slideshow/Pleasure_island%EF%BC%881%EF%BC%89.jpg?1599387230',
@@ -889,6 +957,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 3,
           name: "National Memorial",
           thumbnailUrl: "https://massdesigngroup.org/sites/default/files/styles/lightbox/public/primarycarousel/2018AK19_118.jpg?itok=zx72ZZmK",
           galleryImage1: 'https://massdesigngroup.org/sites/default/files/styles/hero/public/2018-08/Memory_11_1.jpg?itok=jHrGP5Jq',
@@ -902,6 +971,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Public Sauna",
           thumbnailUrl: "https://images.adsttc.com/media/images/5bcb/72b6/f197/cc4e/4000/0051/slideshow/20180913-soriamoria-0780.jpg?1540059820",
           galleryImage1: 'https://images.adsttc.com/media/images/5bcb/7298/f197/cccd/6300/0048/slideshow/20180913-soriamoria-0459.jpg?1540059789',
@@ -915,6 +985,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 3,
           name: "Memorial Parklet",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151721128-0e6d726a-9004-4994-bc6d-462f768fd046.PNG",
           galleryImage1: 'https://www.contemporist.com/wp-content/uploads/2019/04/modern-sculpture-memorial-040419-1129-01.jpg',
@@ -928,6 +999,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 8,
           name: "School Rooftop Plaza",
           thumbnailUrl: "https://images.adsttc.com/media/images/61d7/ea9e/336e/2873/4574/5495/slideshow/001-top.jpg?1641540284",
           galleryImage1: 'https://images.adsttc.com/media/images/61d7/ea98/336e/284b/541c/133d/slideshow/006.jpg?1641540268',
@@ -941,6 +1013,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 5,
           name: "Subway Station",
           thumbnailUrl: "https://images.adsttc.com/media/images/6189/0b09/f91c/81ef/1800/0023/slideshow/%E5%9F%BA%E6%9C%AC%E5%9E%8B%E7%A7%BB%E5%8A%A8%E9%A9%BF%E7%AB%99-A8_%E8%8B%8F%E5%B7%9E%E6%98%86%E4%BB%91%E7%BB%BF%E5%BB%BA%E6%9C%A8%E7%BB%93%E6%9E%84%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%881%EF%BC%89.jpg?1636371183",
           galleryImage1: 'https://images.adsttc.com/media/images/618b/81d1/9a95/7a01/645d/5dca/slideshow/feature.jpg?1636532706',
@@ -954,6 +1027,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 3,
           name: "World War Memorial",
           thumbnailUrl: "https://static.dezeen.com/uploads/2015/11/Mausoleum-of-the-Martyrdom-of-Polish-Villages-in-Michniow_Nizio-Design-International_dezeen_1568_5.jpg",
           galleryImage1: 'https://static.dezeen.com/uploads/2015/11/Mausoleum-of-the-Martyrdom-of-Polish-Villages-in-Michniow_Nizio-Design-International_dezeen_936_8.jpg',
@@ -967,6 +1041,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "Rooftop Park",
           thumbnailUrl: "https://images.adsttc.com/media/images/61d5/9dce/23d7/e813/6a89/1fb8/slideshow/trop-anvilla-did-studio-03.jpg?1641390084",
           galleryImage1: 'https://images.adsttc.com/media/images/61d5/9dcd/23d7/e813/6a89/1fb7/slideshow/trop-anvilla-did-studio-04.jpg?1641389820',
@@ -980,6 +1055,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 3,
           name: "Temple Hilltop",
           thumbnailUrl: "https://s2.glbimg.com/0wp4OwyLNv8WtL86cSScyCD4pVk=/smart/e.glbimg.com/og/ed/f/original/2017/08/04/tadao-ando-the-hill-of-the-buddha-sapporo-japan-designboom-00.jpg",
           galleryImage1: 'https://s2.glbimg.com/G6F_BG59awTc7-KrsfqInXmwutM=/smart/e.glbimg.com/og/ed/f/original/2017/08/04/22628867.jpg',
@@ -993,6 +1069,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Parkway Outlet",
           thumbnailUrl: "https://images.adsttc.com/media/images/61b0/b95e/f7cf/d31e/fe36/e9e2/slideshow/07-al-musallah-photographer-mikkel-frost.jpg?1638971763",
           galleryImage1: 'https://images.adsttc.com/media/images/61b0/b95e/f7cf/d301/644a/903e/slideshow/04-al-hosn-musallah-in-front-of-cfb-photographer-mikkel-frost.jpg?1638971766',
@@ -1006,6 +1083,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 8,
           name: "Student Activity Center",
           thumbnailUrl: "https://images.adsttc.com/media/images/5510/ea22/e58e/ce15/1100/03a6/large_jpg/portada_UTActivityCtr24_(Custom).jpg?1427171842",
           galleryImage1: 'https://images.adsttc.com/media/images/5510/ed57/e58e/ce15/1100/03b1/large_jpg/UTSAC_6_(Custom).jpg?1427172668',
@@ -1019,6 +1097,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Waterfront Park",
           thumbnailUrl: "https://images.adsttc.com/media/images/618b/9d43/9a95/7a01/645d/5dcc/slideshow/feature.jpg?1636539745",
           galleryImage1: 'https://images.adsttc.com/media/images/618a/6c20/f91c/8123/d300/00a7/slideshow/15_%E6%99%AF%E8%A7%82%E8%8D%89%E5%9D%A1_Landscaped_meadow_%C2%A9%E6%9B%BE%E5%A4%A9%E5%9F%B9.jpg?1636461579',
@@ -1032,6 +1111,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 3,
           name: "Contemplative Cemetary Park",
           thumbnailUrl: "https://i.pinimg.com/564x/b7/21/56/b72156680d05bcfb071f53504c32481a.jpg",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152105059-6a425fb6-a97f-457d-bc04-e165ab9b27aa.PNG',
@@ -1045,6 +1125,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "Acaponeta Public Park",
           thumbnailUrl: "https://images.adsttc.com/media/images/61e0/7f01/3e4b/314c/6e00/003f/slideshow/12_Espacio_Publico_Acaponeta__CCA_Centro_de_Colaboraci%C3%B3n_Arquitect%C3%B3nica_ok.jpg?1642102514",
           galleryImage1: 'https://images.adsttc.com/media/images/61e7/2b40/3e4b/31e6/5b00/005e/slideshow/11_Espacio_Publico_Acaponeta__CCA_Centro_de_Colaboraci%C3%B3n_Arquitect%C3%B3nica_ok.jpg?1642539831',
@@ -1058,6 +1139,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 3,
           name: "Pondside Cemetary",
           thumbnailUrl: "https://landezine.com/wp-content/uploads/2011/01/Karres-en-Brands-landscape-architecture-cemetery-Langedijk-Entrance-building-Onix_-photo-Saph_Rob-de-Jong.jpg",
           galleryImage1: 'https://landezine.com/wp-content/uploads/2011/01/Karres-en-Brands-landscape-architecture-cemetery-Langedijk-Entrance-area-with-Birch-trees.jpg',
@@ -1071,6 +1153,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Patchwork Park",
           thumbnailUrl: "https://maraniarchitects.com/wp-content/uploads/2015/08/012_SO.09_Plaza-II-01-1024x685.jpg",
           galleryImage1: 'https://i.pinimg.com/736x/f9/1f/b6/f91fb6c2c0a527fbef274253a6db0de8.jpg',
@@ -1084,6 +1167,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 6,
           name: "Inner Building",
           thumbnailUrl: "https://images.adsttc.com/media/images/55d3/c12e/e58e/cea1/ec00/009a/slideshow/portada_3.jpg?1439940898",
           galleryImage1: 'https://images.adsttc.com/media/images/55d3/c0dc/e58e/ce20/e900/0094/slideshow/16.jpg?1439940815',
@@ -1097,6 +1181,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Park Garden",
           thumbnailUrl: "https://i.mooool.com/img/2019/10/mooool-IAPA-Pty.-Ltd.-POLY-PARC-GARDEN1.jpg",
           galleryImage1: 'https://i.mooool.com/img/2019/10/mooool-IAPA-Pty.-Ltd.-POLY-PARC-GARDEN5.jpg',
@@ -1110,6 +1195,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 3,
           name: "Memorial Brick Building",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151722177-85733457-cc0c-4c00-946e-fa1b26e24f6d.PNG",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152105372-03d9eae6-a92b-4984-9ef9-ec6bd5ef2c9b.PNG',
@@ -1123,6 +1209,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 7,
           name: "School Building",
           thumbnailUrl: "https://images.adsttc.com/media/images/5e5d/13c4/6ee6/7e88/ef00/021d/slideshow/Ros_Kavanagh.jpg?1583158203",
           galleryImage1: 'https://images.adsttc.com/media/images/5e5d/125c/6ee6/7e0f/0100/09ec/slideshow/Ros_Kavanagh__.jpg?1583157846',
@@ -1136,6 +1223,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 8,
           name: "College Campus",
           thumbnailUrl: "https://images.adsttc.com/media/images/59ca/4d93/b22e/38e8/8300/0055/slideshow/Rocco_Chu_Hai_College_Photo01.jpg?1506430350",
           galleryImage1: 'https://images.adsttc.com/media/images/59ca/4d39/b22e/38e8/8300/0053/slideshow/Rocco_Chu_Hai_College_Photo04.jpg?1506430262',
@@ -1149,6 +1237,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 2,
           name: "Memorial Museum Park",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151722147-9ae8c85f-e681-451a-9a69-ed6a01750e3f.PNG",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152105610-d39d86d7-11e1-40e4-a32d-27ebbc0d4556.PNG',
@@ -1162,6 +1251,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 2,
           name: "Greenway Plaza",
           thumbnailUrl: "https://i.pinimg.com/564x/a0/80/c8/a080c85651974b5287a451f4a32e277a.jpg",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152093478-1896137c-5b9f-4285-8fb9-4b60a836bd15.PNG',
@@ -1175,6 +1265,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 8,
           name: "Symantec Chengdu Campus",
           thumbnailUrl: "https://landezine.com/wp-content/uploads/2015/06/Symantec-Chengdu-Tom-Fox-01.jpg",
           galleryImage1: 'https://landezine.com/wp-content/uploads/2015/06/Symantec-Chengdu-Tom-Fox-06.jpg',
@@ -1188,6 +1279,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 6,
           name: "Shifting Cubes",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151722113-a2a371ed-474b-4531-b15c-279ed8fa20b6.PNG",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152105835-c647f94a-e4be-4c15-9593-cf2848722b42.PNG',
@@ -1201,6 +1293,7 @@ module.exports = {
         },
         {
           userId: 3,
+          topicId: 4,
           name: "College Center for Design",
           thumbnailUrl: "https://images.adsttc.com/media/images/6141/aaec/c5a0/d71a/3318/067f/slideshow/1805-07-1.jpg?1631693573",
           galleryImage1: 'https://images.adsttc.com/media/images/6141/aaea/5737/3601/6579/44e8/slideshow/1805-21-1.jpg?1631693562',
@@ -1214,6 +1307,7 @@ module.exports = {
         },
         {
           userId: 1,
+          topicId: 2,
           name: "Pond Park",
           thumbnailUrl: "https://i.pinimg.com/564x/de/21/ba/de21ba402f5b98390c85b1e748e207a9.jpg",
           galleryImage1: 'https://user-images.githubusercontent.com/86431563/152106074-c0f4507d-7f1f-4ad4-baae-7ef2cd32b76e.PNG',
@@ -1227,6 +1321,7 @@ module.exports = {
         },
         {
           userId: 2,
+          topicId: 3,
           name: "Cemetary Square",
           thumbnailUrl: "https://www.thelagroup.com/wp-content/uploads/2017/05/LAG-JER893_1000x600.jpg",
           galleryImage1: 'https://www.thelagroup.com/wp-content/uploads/2017/05/saratoga-p5_1000x600.jpg',

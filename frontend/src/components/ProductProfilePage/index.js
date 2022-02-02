@@ -15,14 +15,18 @@ function ProductProfilePgModal({product, setShowModal}) {
     const [isLoaded, setIsLoaded] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     const product2 = useSelector(state => state.product);
-    let newArr = [product.thumbnailUrl, product.galleryImage1, product.galleryImage2, product.galleryImage3]
-    console.log(newArr, 'test')
+
     useEffect(() => {
         (async () => {
             await dispatch(getProductsWithReviews())
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
+
+    let newArr = [product.thumbnailUrl, product.galleryImage1, product.galleryImage2, product.galleryImage3]
+
+    const topics = [['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
+    ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
 
     let event = new Date(product?.createdAt);
     let date = event.toLocaleDateString().slice(0,5) + event.toLocaleDateString().slice(7,9)
@@ -56,7 +60,7 @@ function ProductProfilePgModal({product, setShowModal}) {
                             <p id="productDescription2">{product?.tagline}</p>
                             <div className="buttons">
                                 <div className="priceOption">Free & Paid Options</div>
-                                <div className="toolType">{(product?.id %2 === 0) && (<>Open Source</>)}{(product?.id % 2 !== 0) && (<>Freelance</>)}</div>
+                                <div className="toolType">{topics[product?.topicId -1]}</div>
                             </div>
                         </div>
                     </div>
