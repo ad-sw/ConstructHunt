@@ -910,8 +910,8 @@ body.no-scroll {
   overflow-y: hidden;
 }
 .img5 {
-  width: 100%;
-  height: 80%;
+  min-width: 658px;
+  height: 584.97px;
   align-self: flex-start;
   display: flex;
 }
@@ -1621,7 +1621,7 @@ section.hunter-link {
   justify-content: baseline; */
 }
 .dot {
-  height: 95%;
+  height: 99%;
   width: 6%;
   /* height: 13px;
   width: 13px; */

@@ -16,9 +16,9 @@ function ProductFormCreate({setShowModal, page}) {
   const [topic, setTopic] = useState('');
   const [tagline, setTagline] = useState('');
   const [link, setLink] = useState('');
-  const [galleryImages1, setGalleryImages1] = useState('');
-  const [galleryImages2, setGalleryImages2] = useState('');
-  const [galleryImages3, setGalleryImages3] = useState('');
+  const [galleryImage1, setGalleryImage1] = useState('');
+  const [galleryImage2, setGalleryImage2] = useState('');
+  const [galleryImage3, setGalleryImage3] = useState('');
   const [thumbnail, setThumbnail] = useState('');
   const [firstReview, setFirstReview] = useState('');
   // const [page, setPage] = useState(1);
@@ -327,22 +327,22 @@ function ProductFormCreate({setShowModal, page}) {
                 type="text"
                 className='test4'
                 placeholder="Gallery image URL 1"
-                value={galleryImages1}
-                onChange={(e) => setGalleryImages1(e.target.value)}
+                value={galleryImage1}
+                onChange={(e) => setGalleryImage1(e.target.value)}
                 />
                 <input
                 type="text"
                 className='test4'
                 placeholder="Gallery image URL 2"
-                value={galleryImages2}
-                onChange={(e) => setGalleryImages2(e.target.value)}
+                value={galleryImage2}
+                onChange={(e) => setGalleryImage2(e.target.value)}
                 />
                 <input
                 type="text"
                 className='test4'
                 placeholder="Gallery image URL 3"
-                value={galleryImages3}
-                onChange={(e) => setGalleryImages3(e.target.value)}
+                value={galleryImage3}
+                onChange={(e) => setGalleryImage3(e.target.value)}
                 />
                 <button className="createB7" type='submit' onClick={(e) => {e.preventDefault(); history.push(`/products/new/4`);}}>Next step: Extras</button>
               </div>
@@ -476,10 +476,10 @@ function ProductFormCreate({setShowModal, page}) {
                     Thumbnail
                   </div>
                   <div className="inputHeaderPg3">
-                    {galleryImages1 && galleryImages2 && galleryImages3 && (
+                    {galleryImage1 && galleryImage2 && galleryImage3 && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068916-5aed329b-080d-4785-9287-288d6ff7ec7d.PNG"/>
                     )}
-                    {!galleryImages1 && !galleryImages2 && !galleryImages3 && (
+                    {!galleryImage1 && !galleryImage2 && !galleryImage3 && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070478-bd631695-cdb2-4e09-99ae-e1028f89dcd8.PNG"/>
                     )}
                     Gallery images
