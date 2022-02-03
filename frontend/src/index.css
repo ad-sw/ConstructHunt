@@ -132,12 +132,35 @@ a:hover, a:visited, a:link, a:active {
   font-size: 16px;
   z-index: 3000;
   font-weight: 425;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  /* background-color: white; */
+  /* height: 44px; */
 }
 #dropdownLink:hover {
   color: #56648a;
   border-bottom: .5px solid rgba(128, 128, 128, 0.089);
   z-index: 2000;
   /* background-color: #f1f4fc;  */
+}
+#dropdownLink2 {
+  color: #4b587cc4;
+  letter-spacing: 1px;
+  font-size: 16px;
+  z-index: 3000;
+  font-weight: 425;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #FBFBFB;
+  height: 44px;
+  border-radius: 4px;
+}
+#dropdownLink2:hover {
+  color: #56648a;
+  border-bottom: .5px solid rgba(128, 128, 128, 0.089);
+  z-index: 2000;
 }
 .navbtn-holder{
   display: flex;
@@ -1158,6 +1181,23 @@ section.hunter-link {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+}
+.test9 {
+  background-color: #FFFFFF;
+  border: 1px #D9E1EC solid;
+  padding: 5px 20px 5px 7px;
+  width: 572px;
+  height: 40px;
+  border-radius: 3px;
+  letter-spacing: .2px;
+  color: #4B587C;
+  margin: 0;
+  letter-spacing: .3px;
+}
+.test9:hover, .test9:active, .test9:focus {
+  border: 1px #7397d4d3 solid;
+  box-shadow: 0 0 3px 3px #d5e5ff71;
+  outline: none;
 }
 .test3 {
   background-color: #FFFFFF;

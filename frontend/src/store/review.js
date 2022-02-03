@@ -51,6 +51,7 @@ export const getReviews = (productId) => async (dispatch) => {
 };
 
 export const createReview = (payload) => async (dispatch) => {
+    console.log(payload, 'comment fired')
     const response = await csrfFetch(`/api/reviews/${payload.productId}`, {
         method: "POST",
         headers: {"Content-Type":"application/json"},

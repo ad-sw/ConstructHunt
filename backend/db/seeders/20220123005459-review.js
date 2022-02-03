@@ -931,16 +931,16 @@ module.exports = {
           productId: 94,
           review: /*commerce.productDescription()*/ loremIpsum(),
         },
-        {
-          userId: 2,
-          productId: 95,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 1,
-          productId: 95,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
+        // {
+        //   userId: 2,
+        //   productId: 95,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
+        // {
+        //   userId: 1,
+        //   productId: 95,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
       ], {});
   },
 

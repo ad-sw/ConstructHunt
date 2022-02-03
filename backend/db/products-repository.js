@@ -12,6 +12,8 @@ async function getOneProduct(productId) {
 }
 
 async function addProduct(payload) {
+    console.log(payload, 'test')
+
     const product = await Product.create(payload);
     return product;
 }

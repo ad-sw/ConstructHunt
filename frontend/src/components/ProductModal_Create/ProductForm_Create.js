@@ -1,10 +1,12 @@
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {createProduct} from '../../store/product';
+import {createProduct, getProductsWithReviews} from '../../store/product';
+import { createReview } from '../../store/review';
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { useDropzone } from 'react-dropzone'
-import FormNavBar from '../NavigationBarForm'
+import { getProducts } from '../../store/product';
+import FormNavBar from '../NavigationBarForm';
+import FirstReview from '../../components/ProductModal_Create/firstreview';
 
 function ProductFormCreate({setShowModal, page}) {
   const dispatch = useDispatch();
@@ -12,22 +14,39 @@ function ProductFormCreate({setShowModal, page}) {
   const sessionUser = useSelector(state => state.session.user);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [thumbnail, setThumbnail] = useState(null);
-  const [topic, setTopic] = useState('');
+  const [thumbnailUrl, setThumbnailUrl] = useState('');
+  const [topicId, setTopicId] = useState('');
   const [tagline, setTagline] = useState('');
   const [link, setLink] = useState('');
   const [galleryImage1, setGalleryImage1] = useState('');
   const [galleryImage2, setGalleryImage2] = useState('');
   const [galleryImage3, setGalleryImage3] = useState('');
   const [firstReview, setFirstReview] = useState('');
-  // const [page, setPage] = useState(1);
   const [errors, setErrors] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false)
   const [price, setPrice] = React.useState('free');
+  // const {pathname} = history.location
+  // const pageNumber = pathname.split('/')[3]
+  const userId = useSelector(state => state.session.user.id)
 
-  function nextPage() {
+  useEffect(() => {
+    (async () => {
+        await dispatch(getProducts())
+        setIsLoaded(true);
+    })();
+  }, [dispatch, sessionUser])
+
+
+  const productsObj = useSelector(state => state?.products)
+  const productArr = Object.values(productsObj)
+  console.log(productArr.filter(product => product?.userId === userId))
+
+  const productId = productArr[Object.entries(productsObj)?.length-1]?.id
+  const nextPage = async() => {
     const errors = [];
 
     if (page === 1){
+      console.log(link, 'test')
       if (!link.length) errors.push("Please enter a link")
       if ((link.split('.com')[0].length < 9) !== false) errors.push("Please enter a full valid link")
       if (link.slice(Math.max(link.length - 4, 1)) !== '.com') errors.push("Please enter a valid link ending in '.com'")
@@ -43,72 +62,8 @@ function ProductFormCreate({setShowModal, page}) {
       if (description.length > 261) errors.push("Please enter a description shorter than 60 characters")
     }
     setErrors(errors)
-    // if(!errors.length) setPage((page) => page +1);
+    if(!errors.length) history.push(`/products/new/${page+1}`);
   }
-
-  function prevPage() {
-    // if(!errors.length) setPage((page) => page -1);
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    let newErrors = [];
-    // const new_event = await dispatch(newEvent({
-    //   hostId,
-    //   name,
-    //   description,
-    //   start_date,
-    //   end_date,
-    //   venue,
-    //   venue_types,
-    //   address,
-    //   city,
-    //   state: state.value,
-    //   zip,
-    //   // country: country.value,
-    //   // lat,
-    //   // lng,
-    //   genres,
-    //   types,
-    //   image: image[0],
-    //   video,
-    // }))
-    // .then(() => {
-    //   setName("");
-    //   setDescription("");
-    //   setStart_date(null);
-    //   setEnd_date(null);
-    //   setVenue("");
-    //   setVenue_types(null);
-    //   setCity("");
-    //   setState("")
-    //   setCountry("");
-    //   // setLat(null);
-    //   // setLng(null);
-    //   setGenres(null);
-    //   setTypes([]);
-    //   setImage([]);
-    //   setVideo([]);
-    // })
-    // .catch(async (res) => {
-    //   const data = await res.json();
-    //   if (data && data.errors) {
-    //     newErrors = data.errors;
-    //     setErrors(newErrors);
-    //   }
-    //   });
-    //   if(new_event) history.push(`/events/${new_event.id}`)
-    }
-
-    // const updateImageFile = (e) => {
-    //   const file = e.target.files[0]
-    //   if (file) setImage(file);
-    // };
-
-    // const updateVideoFile = (e) => {
-    //   const file = e.target.files[0];
-    //   if (file) setVideo(file);
-    // };
 
     const handleChange = (e) => {
       setPrice(e.target.value)
@@ -117,13 +72,15 @@ function ProductFormCreate({setShowModal, page}) {
       setPrice('');
     }
 
+    const topics_arr = [[],['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
+    ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
+
   return (<>
     <form
-      onSubmit={handleSubmit}
       className='field2'>
-      <ul>
+      {/* <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-      </ul>
+      </ul> */}
         {page === 1 ? (<>
         <div id='pageWrap'>
           <div className="leftSide3">
@@ -149,7 +106,7 @@ function ProductFormCreate({setShowModal, page}) {
               onFocus={(e) => setLink('https://')}
               onChange={(e) => setLink(e.target.value)}
               />
-              <button className="createB5" type='submit' onClick={(e) => {e.preventDefault(); history.push(`/products/new/2`);}}>Get started</button>
+              <button className="createB5" type='submit' onClick={nextPage}>Get started</button>
               <div className="Qs">Frequent questions</div>
               <div className="totalWidth"><a className="linkThing" href="https://help.producthunt.com/en/articles/5473056-how-to-post-main-info" target="_blank" rel="noopener noreferrer">The info you need to come prepared with to post <svg width="6" height="12" xmlns="http://www.w3.org/2000/svg" class="styles_arrow__I_9GT"><path d="M1.781.375A1 1 0 00.22 1.625L3.72 6l-3.5 4.375a1 1 0 101.562 1.25l4-5a1 1 0 000-1.25l-4-5z" fill="#9ba1a1"></path></svg></a></div>
               <div className="totalWidth"><a className="linkThing" href="https://help.producthunt.com/en/articles/5473242-how-to-post-launching" target="_blank" rel="noopener noreferrer">What happens after immediately launching <svg width="6" height="12" xmlns="http://www.w3.org/2000/svg" class="styles_arrow__I_9GT"><path d="M1.781.375A1 1 0 00.22 1.625L3.72 6l-3.5 4.375a1 1 0 101.562 1.25l4-5a1 1 0 000-1.25l-4-5z" fill="#9ba1a1"></path></svg></a></div>
@@ -182,6 +139,7 @@ function ProductFormCreate({setShowModal, page}) {
                 <input
                 type="text"
                 className='test3'
+                height="30px"
                 placeholder="Simply the name of the product"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -211,13 +169,19 @@ function ProductFormCreate({setShowModal, page}) {
 
                 <div className="linkHead">Topic</div>
                 <div className="inputHeaderPg3">Select a topic</div>
-                <input
-                type="text"
-                className='test3'
-                placeholder="Select a topic"
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-                />
+                <select className='test9' required value={topicId} onChange={(e) => setTopicId(e.target.value)}>
+                  <option value={0}>{topics_arr[0]}</option>
+                  <option value={1}>{topics_arr[1]}</option>
+                  <option value={2}>{topics_arr[2]}</option>
+                  <option value={3}>{topics_arr[3]}</option>
+                  <option value={4}>{topics_arr[4]}</option>
+                  <option value={5}>{topics_arr[5]}</option>
+                  <option value={6}>{topics_arr[6]}</option>
+                  <option value={7}>{topics_arr[7]}</option>
+                  <option value={8}>{topics_arr[8]}</option>
+                  <option value={9}>{topics_arr[9]}</option>
+                  <option value={10}>{topics_arr[10]}</option>
+                </select>
 
                 <div className="linkHead">Description</div>
                 <div className="inlineTry">
@@ -242,7 +206,7 @@ function ProductFormCreate({setShowModal, page}) {
                   onChange={(e) => setDescription(e.target.value)}
                   />
                 </div>
-                <button className="createB6" type='submit' onClick={(e) => {e.preventDefault(); history.push(`/products/new/3`);}}>Next step: Images and media</button>
+                <button className="createB6" type='submit' onClick={nextPage}>Next step: Images and media</button>
               </div>
               </div>
             </div>
@@ -271,13 +235,13 @@ function ProductFormCreate({setShowModal, page}) {
                 type="text"
                 className='test3'
                 placeholder="Thumbnail image URL here"
-                value={thumbnail}
-                onChange={(e) => setThumbnail(e.target.value)}
+                value={thumbnailUrl}
+                onChange={(e) => setThumbnailUrl(e.target.value)}
                 />
                 <div className="linkHead">Gallery</div>
                 <div className="inputHeaderPg4">
                   The first image will be used as the social preview when your link is shared online.
-                  <br></br>We recommend 3 image URLs.  <a href="https://help.producthunt.com/en/articles/5473122-how-to-post-media" target="_blank" rel="noopener noreferrer">Read our tips for great product galleries →</a>
+                  <br></br>Optional, though we recommend 3 image URLs.  <a href="https://help.producthunt.com/en/articles/5473122-how-to-post-media" target="_blank" rel="noopener noreferrer">Read our tips for great product galleries →</a>
                 </div>
                 <input
                 type="text"
@@ -300,7 +264,7 @@ function ProductFormCreate({setShowModal, page}) {
                 value={galleryImage3}
                 onChange={(e) => setGalleryImage3(e.target.value)}
                 />
-                <button className="createB7" type='submit' onClick={(e) => {e.preventDefault(); history.push(`/products/new/4`);}}>Next step: Extras</button>
+                <button className="createB7" type='submit' onClick={nextPage}>Next step: Extras</button>
               </div>
               </div>
             </div>
@@ -361,7 +325,7 @@ function ProductFormCreate({setShowModal, page}) {
                   value={firstReview}
                   onChange={(e) => setFirstReview(e.target.value)}
                   />
-                <button className="createB8" type='submit' onClick={(e) => {e.preventDefault(); history.push(`/products/new/5`);}}>Next step: Launch Checklist</button>
+                <button className="createB8" type='submit' onClick={nextPage}>Next step: Launch Checklist</button>
               </div>
               </div>
             </div>
@@ -414,19 +378,19 @@ function ProductFormCreate({setShowModal, page}) {
                     Description
                   </div>
                   <div className="inputHeaderPg3">
-                    {topic && (
+                    {topicId && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068919-fef304fc-2f78-45ca-965f-7f0160c6c808.PNG"/>
                     )}
-                    {!topic && (
+                    {!topicId && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070470-13d159d8-5fe7-4c8c-bc05-433973bb079c.PNG"/>
                     )}
                     Topic
                   </div>
                   <div className="inputHeaderPg3">
-                    {thumbnail && (
+                    {thumbnailUrl && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068910-33fed964-fb0c-4c3d-bcb9-74a52288d0ce.PNG"/>
                     )}
-                    {!thumbnail && (
+                    {!thumbnailUrl && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070479-55195ec7-bb36-4473-8d9d-6aae089d2622.PNG"/>
                     )}
                     Thumbnail
@@ -435,7 +399,10 @@ function ProductFormCreate({setShowModal, page}) {
                     {galleryImage1 && galleryImage2 && galleryImage3 && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068916-5aed329b-080d-4785-9287-288d6ff7ec7d.PNG"/>
                     )}
-                    {!galleryImage1 && !galleryImage2 && !galleryImage3 && (
+                    {(!galleryImage1 && !galleryImage2 && !galleryImage3) | (galleryImage1 && !galleryImage2 && !galleryImage3) |
+                    (galleryImage1 && galleryImage2 && !galleryImage3) | (!galleryImage1 && galleryImage2 && !galleryImage3) |
+                    (!galleryImage1 && galleryImage2 && galleryImage3) | (!galleryImage1 && !galleryImage2 && galleryImage3) |
+                    (galleryImage1 && !galleryImage2 && galleryImage3) && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070478-bd631695-cdb2-4e09-99ae-e1028f89dcd8.PNG"/>
                     )}
                     Gallery images
@@ -459,7 +426,10 @@ function ProductFormCreate({setShowModal, page}) {
                     Write the first review
                   </div>
                 </div>
-                <button className="createB9" type='submit'>Launch now</button> {/*onClick={handleSubmit}*/}
+                <FirstReview productId={productId} userId={userId} firstReview={firstReview} setErrors={setErrors}
+                topicId={topicId} name={name} thumbnailUrl={thumbnailUrl} link={link} tagline={tagline} description={description}
+                galleryImage1={galleryImage1} galleryImage2={galleryImage2} galleryImage3={galleryImage3}/>
+                {/* <button className="createB9" type='submit'>Launch now</button> */}
               </div>
               </div>
             </div>

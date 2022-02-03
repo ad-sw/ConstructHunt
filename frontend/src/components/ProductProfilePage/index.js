@@ -24,7 +24,9 @@ function ProductProfilePgModal({product, setShowModal}) {
     }, [dispatch, sessionUser])
 
     let newArr = [product.thumbnailUrl, product.galleryImage1, product.galleryImage2, product.galleryImage3]
-
+    if (newArr.includes(null)) {
+        newArr = newArr.filter(image => image !== null && image !== '' && image.length > 1);
+    }
     const topics = [['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
     ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
 
@@ -76,16 +78,16 @@ function ProductProfilePgModal({product, setShowModal}) {
                     <div className="gallery">
                             <a className="main-info" target="_blank" rel="noopener noreferrer" href={product?.link}>
                                 {newArr.map(image => {
-                                    if (image.length > 1) return <img className="img5" src={image} alt="display" height="584.97px" min-width="658px"/>
+                                    if (image?.length > 1) return <img className="img5" src={image} alt="display" height="584.97px" min-width="658px"/>
                                 })}
                             </a>
-                        {product?.galleryImage1.length > 1 && (<>
+                        {product?.galleryImage1?.length > 1 && (<>
                         <img className="filmstrip" src={product?.galleryImage1} alt="display"/>
                         </>)}
-                        {product?.galleryImage2.length > 1 && (<>
+                        {product?.galleryImage2?.length > 1 && (<>
                         <img className="filmstrip" src={product?.galleryImage2} alt="display"/>
                         </>)}
-                        {product?.galleryImage3.length > 1 && (<>
+                        {product?.galleryImage3?.length > 1 && (<>
                         <img className="filmstrip" src={product?.galleryImage3} alt="display"/>
                         </>)}
                     </div>

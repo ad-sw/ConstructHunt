@@ -47,15 +47,6 @@ export const getProductsWithReviews = () => async (dispatch) => {
     }
 };
 
-// export const getOneProduct = (productId) => async (dispatch) => {
-//     const response = await fetch(`/api/products/${productId}`);
-
-//     if (response.ok) {
-//         const productId = await response.json();
-//         dispatch(loadOne(productId.productId));
-//     }
-//   };
-
 export const searchProducts = (searchTerm) => async (dispatch) => {
     const response = await csrfFetch(`/api/products/search/${searchTerm}`);
 
@@ -66,12 +57,13 @@ export const searchProducts = (searchTerm) => async (dispatch) => {
 };
 
 export const createProduct = (payload) => async (dispatch) => {
+    console.log(payload, 'backend payload')
     const response = await csrfFetch(`/api/products`, {
         method: "POST",
         headers: {"Content-Type":"application/json"},
         body: JSON.stringify(payload)
     });
-
+    console.log(response, 'backend response')
     if (response.ok) {
         const product = await response.json();
         dispatch(add(product.product));
