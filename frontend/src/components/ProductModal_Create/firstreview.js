@@ -5,6 +5,7 @@ import {deleteProduct, getProductsWithReviews} from '../../store/product';
 import {useHistory} from 'react-router-dom';
 import { createReview } from '../../store/review';
 import {createProduct} from '../../store/product'
+import {csrfFetch} from '../../store/csrf';
 
 function FirstReview({userId, firstReview, setErrors, topicId, name, thumbnailUrl, link, tagline, description, galleryImage1, galleryImage2, galleryImage3}) {
   const dispatch = useDispatch();
@@ -90,8 +91,8 @@ function FirstReview({userId, firstReview, setErrors, topicId, name, thumbnailUr
         await dispatch(createProduct(payload))
         let productId = productArr[Object.entries(productsObj)?.length-1]?.id
 
-        new Promise((resolve) => {
-            fetch("./api/products.json").then((data) => {
+        new Promise(async(resolve) => {
+            await csrfFetch("/api/products").then((data) => {
               resolve(data);
             });
           })
