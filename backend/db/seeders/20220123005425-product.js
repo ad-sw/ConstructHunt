@@ -18,7 +18,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 2,
+          userId: 1,
           topicId: 8,
           name: "Art Academy",
           thumbnailUrl: "https://images.adsttc.com/media/images/6193/8371/9a95/7a66/5a21/b4dd/slideshow/feature.jpg?1637057416",
@@ -32,7 +32,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 2,
+          userId: 1,
           topicId: 10,
           name: "Disney Concert Hall",
           thumbnailUrl: "https://i.pinimg.com/564x/60/6f/00/606f0041a89e7a3b6abb2ba2888df3c6.jpg",
@@ -60,7 +60,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 3,
+          userId: 1,
           topicId: 2,
           name: "Revitalized Alley",
           thumbnailUrl: "https://blog.architizer.com/wp-content/uploads/15609761751890055_01_CityThread_3_photo_by_Garey_Gomez.jpg-768x1027.jpg",
@@ -116,7 +116,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 3,
+          userId: 1,
           topicId: 8,
           name: "Culture & Tech Building",
           thumbnailUrl: "https://cdn.homedit.com/wp-content/uploads/2014/08/Emerson-College-Campus-Architecture-Art2-768x512.jpg",
@@ -144,7 +144,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 2,
+          userId: 1,
           topicId: 10,
           name: "Soundwave Center",
           thumbnailUrl: "https://images.adsttc.com/media/images/61a7/5aba/f91c/8177/5200/0035/slideshow/Opening_on_the_roof_photo_by_Jonathan_Leijonhufvud.jpg?1638357658",
@@ -1138,7 +1138,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 1,
+          userId: 3,
           topicId: 2,
           name: "Patchwork Park",
           thumbnailUrl: "https://maraniarchitects.com/wp-content/uploads/2015/08/012_SO.09_Plaza-II-01-1024x685.jpg",
@@ -1152,7 +1152,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 1,
+          userId: 2,
           topicId: 6,
           name: "Inner Building",
           thumbnailUrl: "https://images.adsttc.com/media/images/55d3/c12e/e58e/cea1/ec00/009a/slideshow/portada_3.jpg?1439940898",
@@ -1166,7 +1166,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 2,
+          userId: 1,
           topicId: 2,
           name: "Park Garden",
           thumbnailUrl: "https://i.mooool.com/img/2019/10/mooool-IAPA-Pty.-Ltd.-POLY-PARC-GARDEN1.jpg",
@@ -1180,7 +1180,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 2,
+          userId: 1,
           topicId: 3,
           name: "Memorial Brick Building",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151722177-85733457-cc0c-4c00-946e-fa1b26e24f6d.PNG",
@@ -1208,7 +1208,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 3,
+          userId: 1,
           topicId: 8,
           name: "College Campus",
           thumbnailUrl: "https://images.adsttc.com/media/images/59ca/4d93/b22e/38e8/8300/0055/slideshow/Rocco_Chu_Hai_College_Photo01.jpg?1506430350",
@@ -1222,7 +1222,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 3,
+          userId: 1,
           topicId: 2,
           name: "Memorial Museum Park",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151722147-9ae8c85f-e681-451a-9a69-ed6a01750e3f.PNG",
@@ -1236,7 +1236,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 2,
+          userId: 1,
           topicId: 2,
           name: "Greenway Plaza",
           thumbnailUrl: "https://i.pinimg.com/564x/a0/80/c8/a080c85651974b5287a451f4a32e277a.jpg",
@@ -1250,7 +1250,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 3,
+          userId: 1,
           topicId: 8,
           name: "Campus Greenscape",
           thumbnailUrl: "https://landezine.com/wp-content/uploads/2015/06/Symantec-Chengdu-Tom-Fox-01.jpg",
@@ -1264,7 +1264,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 3,
+          userId: 1,
           topicId: 6,
           name: "Shifting Cubes",
           thumbnailUrl: "https://user-images.githubusercontent.com/86431563/151722113-a2a371ed-474b-4531-b15c-279ed8fa20b6.PNG",
@@ -1278,7 +1278,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 3,
+          userId: 1,
           topicId: 4,
           name: "College Center for Design",
           thumbnailUrl: "https://images.adsttc.com/media/images/6141/aaec/c5a0/d71a/3318/067f/slideshow/1805-07-1.jpg?1631693573",
@@ -1306,7 +1306,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          userId: 2,
+          userId: 1,
           topicId: 3,
           name: "Cemetary Square",
           thumbnailUrl: "https://www.thelagroup.com/wp-content/uploads/2017/05/LAG-JER893_1000x600.jpg",

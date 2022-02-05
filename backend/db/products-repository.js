@@ -12,9 +12,9 @@ async function getOneProduct(productId) {
 }
 
 async function addProduct(payload) {
-    console.log(payload, 'test')
-
     const product = await Product.create(payload);
+    if (!product) throw new Error('Cannot find item');
+    
     return product;
 }
 

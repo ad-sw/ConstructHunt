@@ -25,7 +25,7 @@ const update = (product) => ({
 
 const remove = (productId) => ({
     type: DELETE_PRODUCTS,
-    productId
+    payload: productId
 })
 
 //thunk
@@ -57,13 +57,12 @@ export const searchProducts = (searchTerm) => async (dispatch) => {
 };
 
 export const createProduct = (payload) => async (dispatch) => {
-    console.log(payload, 'backend payload')
     const response = await csrfFetch(`/api/products`, {
         method: "POST",
         headers: {"Content-Type":"application/json"},
         body: JSON.stringify(payload)
     });
-    console.log(response, 'backend response')
+
     if (response.ok) {
         const product = await response.json();
         dispatch(add(product.product));
@@ -88,13 +87,23 @@ export const deleteProduct = (productId) => async (dispatch) => {
         method: "DELETE"
     });
 
-    if (response.ok) {
-        const productId = await response.json();
-        dispatch(remove(productId.productId))
+//     if (response.ok) {
+//         const product = await response.json();
+//         dispatch(remove(product.productId))
+//     }
+// }
+if(response.ok) {
+    dispatch(remove(productId))
+  } else if (response.status < 500){
+    const data = await response.json()
+    if (data.errors) {
+      return data.errors
     }
+  } else {
+    return ['An error occurred. Please try again.']
+  }
 }
 
-//reducer
 const productReducer = (state = {}, action) => {
     switch (action.type) {
         case LOAD_PRODUCTS:
@@ -116,7 +125,7 @@ const productReducer = (state = {}, action) => {
             return updateState;
         case DELETE_PRODUCTS:
             const delState = {...state};
-            delete delState[action.productId];
+            delete delState[action.payload];
             return delState;
         default:
             return state;

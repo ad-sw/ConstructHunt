@@ -789,6 +789,7 @@ a:hover, a:visited, a:link, a:active {
   align-items: center;
   padding-top: 75px;
   margin: 0 auto;
+  z-index: 5000;
   text-align: center;
   filter: brightness(85%) saturate(450%) sepia(40%);
 }

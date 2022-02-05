@@ -39,14 +39,11 @@ function ProductFormCreate({setShowModal, page}) {
 
   const productsObj = useSelector(state => state?.products)
   const productArr = Object.values(productsObj)
-  console.log(productArr.filter(product => product?.userId === userId))
-
   const productId = productArr[Object.entries(productsObj)?.length-1]?.id
+
   const nextPage = async() => {
     const errors = [];
-
     if (page === 1){
-      console.log(link, 'test')
       if (!link.length) errors.push("Please enter a link")
       if ((link.split('.com')[0].length < 9) !== false) errors.push("Please enter a full valid link")
       if (link.slice(Math.max(link.length - 4, 1)) !== '.com') errors.push("Please enter a valid link ending in '.com'")
@@ -399,10 +396,10 @@ function ProductFormCreate({setShowModal, page}) {
                     {galleryImage1 && galleryImage2 && galleryImage3 && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068916-5aed329b-080d-4785-9287-288d6ff7ec7d.PNG"/>
                     )}
-                    {(!galleryImage1 && !galleryImage2 && !galleryImage3) | (galleryImage1 && !galleryImage2 && !galleryImage3) |
+                    {((!galleryImage1 && !galleryImage2 && !galleryImage3) | (galleryImage1 && !galleryImage2 && !galleryImage3) |
                     (galleryImage1 && galleryImage2 && !galleryImage3) | (!galleryImage1 && galleryImage2 && !galleryImage3) |
                     (!galleryImage1 && galleryImage2 && galleryImage3) | (!galleryImage1 && !galleryImage2 && galleryImage3) |
-                    (galleryImage1 && !galleryImage2 && galleryImage3) && (
+                    (galleryImage1 && !galleryImage2 && galleryImage3) | !(galleryImage1 && galleryImage2 && galleryImage3)) && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070478-bd631695-cdb2-4e09-99ae-e1028f89dcd8.PNG"/>
                     )}
                     Gallery images
