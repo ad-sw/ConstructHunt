@@ -787,11 +787,35 @@ a:hover, a:visited, a:link, a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 75px;
+  padding-top: 35px;
   margin: 0 auto;
   z-index: 5000;
   text-align: center;
   filter: brightness(85%) saturate(450%) sepia(40%);
+}
+.loadingGiff {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: 20px auto 0 auto;
+  z-index: 5000;
+  text-align: center;
+  /* filter: brightness(85%) saturate(450%) sepia(40%); */
+}
+.loadingGiff.show{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 50px; */
+  padding: 0 auto 0 auto;
+  position:relative;
+  margin: 40px auto 0 100px;
+  z-index: 5000;
+  text-align: center;
+  filter: brightness(75%) saturate(300%) sepia(10%);
 }
 .errors{
   color: #e74e24;
@@ -1631,23 +1655,26 @@ section.hunter-link {
   color: #21293C;
   font-weight: 600;
 }
+.titlePg2.hide {
+  display: none;
+}
 .innerBioPg2 {
   font-size: 16px;
   color: #4B587C;
   opacity: .95;
   margin: 12px 0px 0px 0px;
 }
-/* .inputHeaderPg2 {
-  font-size: 14px;
-  color: #21293C;
-  font-weight: 500;
-  margin: 36px 0 4px 0;
-} */
+.innerBioPg2.hide {
+  display: none;
+}
 .twoWays {
   width: 100%;
   margin-top: 32px;
   grid-template-columns: repeat(auto-fill, 300px);
   display: grid;
+}
+.twoWays.hide {
+  display: none;
 }
 .inputHeaderPg3 {
   font-size: 14px;
@@ -1696,6 +1723,12 @@ section.hunter-link {
   margin: 44.5px 0 0 0;
   padding: 0;
   position: fixed;
+}
+.leftSide2.hide {
+  display: none;
+}
+.spaceBehindLeft.hide {
+  display: none;
 }
 .leftSide3 {
   width: 40%;
@@ -1792,6 +1825,9 @@ section.hunter-link {
   /* top: 80px; */
   width: 100%;
 }
+.thingBehindgoTopp.hide {
+  display: none;
+}
 .goTopp {
   /* display: flex; */
   border-bottom: 1px solid #dde3ff;
@@ -1805,6 +1841,9 @@ section.hunter-link {
   width: 100%;
   background-color: white;
   z-index: 4;
+}
+.goTopp.hide {
+  display: none;
 }
 .anotherDiv {
   flex-direction: row;
@@ -2055,4 +2094,7 @@ section.hunter-link {
 }
 .createB9:hover {
   background-color: #FE4C00;
+}
+.createB9.hide {
+  display: none;
 }
