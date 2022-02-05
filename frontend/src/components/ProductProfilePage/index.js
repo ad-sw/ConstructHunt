@@ -14,6 +14,7 @@ function ProductProfilePgModal({product, setShowModal}) {
     const dispatch = useDispatch();
     const [isLoaded, setIsLoaded] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
+    const product2 = useSelector(state => state.product);
 
     useEffect(() => {
         (async () => {
@@ -21,6 +22,13 @@ function ProductProfilePgModal({product, setShowModal}) {
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
+
+    let newArr = [product.thumbnailUrl, product.galleryImage1, product.galleryImage2, product.galleryImage3]
+    if (newArr.includes(null)) {
+        newArr = newArr.filter(image => image !== null && image !== '' && image.length > 1);
+    }
+    const topics = [['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
+    ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
 
     let event = new Date(product?.createdAt);
     let date = event.toLocaleDateString().slice(0,5) + event.toLocaleDateString().slice(7,9)
@@ -41,34 +49,47 @@ function ProductProfilePgModal({product, setShowModal}) {
             <div className="product-container">
                 <div className="headerSection">
                     <div className="mainInfo">
-                        {<img className="profileImg" src={product?.imageUrl} height="25%" width="50%" alt="display"/>}
+                        {<img className="profileImg" src={product?.thumbnailUrl} height="25%" width="50%" alt="display"/>}
                         <div className="titleTagline">
                         <div className="CreateUpdateDeleteBtns">
                             <div id="prodProfileTitle2">
-                                {product?.title}
+                                {product?.name}
                                     {sessionUser?.id === product?.userId &&
                                     <><ProductModalUpdate product={product} setShowModal={setShowModal}/>
                                     <ProductModalDelete product={product} setShowModal={setShowModal}/></>}
                                 </div>
                             </div>
-                            <p id="productDescription2">{product?.description.slice(0, 68)}</p>
+                            <p id="productDescription2">{product?.tagline}</p>
                             <div className="buttons">
                                 <div className="priceOption">Free & Paid Options</div>
-                                <div className="toolType">{(product?.id %2 === 0) && (<>Open Source</>)}{(product?.id % 2 !== 0) && (<>Freelance</>)}</div>
+                                <div className="toolType">{topics[product?.topicId -1]}</div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                {/* <span className='main-image'>
+                {this.props.screenshots.map(screenshot => {
+                return <img key={`scr-${screenshot}`} className='carousel-main' src={screenshot} alt="" />
+                })}
+                </span> */}
             <div className="leftSide">
                 <div className="main-image">
                     <div className="gallery">
                             <a className="main-info" target="_blank" rel="noopener noreferrer" href={product?.link}>
-                                <img className="img5" src={product?.imageUrl} alt="display"/>
+                                {newArr.map(image => {
+                                    if (image?.length > 1) return <img className="img5" src={image} alt="display" height="584.97px" min-width="658px"/>
+                                })}
                             </a>
-                        <img className="filmstrip" src={product?.imageUrl} alt="display"/>
-                        <img className="filmstrip" src={product?.imageUrl} alt="display"/>
-                        <img className="filmstrip" src={product?.imageUrl} alt="display"/>
-                        <img className="filmstrip" src={product?.imageUrl} alt="display"/>
+                        {product?.galleryImage1?.length > 1 && (<>
+                        <img className="filmstrip" src={product?.galleryImage1} alt="display"/>
+                        </>)}
+                        {product?.galleryImage2?.length > 1 && (<>
+                        <img className="filmstrip" src={product?.galleryImage2} alt="display"/>
+                        </>)}
+                        {product?.galleryImage3?.length > 1 && (<>
+                        <img className="filmstrip" src={product?.galleryImage3} alt="display"/>
+                        </>)}
                     </div>
                     <p className='description'>
                         {product?.description}
@@ -83,7 +104,7 @@ function ProductProfilePgModal({product, setShowModal}) {
                     <ReviewFormCreate productId={product?.id} review={product?.Review}/>
                     )}
                     {!sessionUser && (
-                        <ReviewFormCreate productId={product?.id} product={product} review={product?.Review} setShowModal={setShowModal}/>
+                    <ReviewFormCreate productId={product?.id} product={product} review={product?.Review} setShowModal={setShowModal}/>
                     )}
                 </div>
                 <div className="review">

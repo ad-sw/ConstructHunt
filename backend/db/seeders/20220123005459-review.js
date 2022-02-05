@@ -931,46 +931,16 @@ module.exports = {
           productId: 94,
           review: /*commerce.productDescription()*/ loremIpsum(),
         },
-        {
-          userId: 2,
-          productId: 95,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 1,
-          productId: 95,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 3,
-          productId: 96,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 3,
-          productId: 97,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 1,
-          productId: 97,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 2,
-          productId: 97,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 1,
-          productId: 98,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
-        {
-          userId: 2,
-          productId: 98,
-          review: /*commerce.productDescription()*/ loremIpsum(),
-        },
+        // {
+        //   userId: 2,
+        //   productId: 95,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
+        // {
+        //   userId: 1,
+        //   productId: 95,
+        //   review: /*commerce.productDescription()*/ loremIpsum(),
+        // },
       ], {});
   },
 

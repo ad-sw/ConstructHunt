@@ -21,9 +21,13 @@ function ProductDelete({product, setShowModal, showModal}) {
   const handleDelete = (e) => {
     e.preventDefault();
     dispatch(deleteProduct(product.id))
-    .then(dispatch(getProductsWithReviews()))
-    .then(setShowMenu(false))
+    dispatch(getProductsWithReviews())
+    const body = document.getElementsByTagName('body')[0]
+    body.classList.remove('no-scroll')
+    setIsLoaded(true);
+    setShowMenu(false);
   }
+
   const handleCancel = (e) => {
     e.preventDefault();
     setShowMenu(false);
@@ -33,8 +37,7 @@ function ProductDelete({product, setShowModal, showModal}) {
     return null;
   }
 
-  return (
-    <>
+  return (<>
     <div onClick={() => setShowMenu(true)}>
       <img src="https://user-images.githubusercontent.com/86431563/151363182-3977ff1c-23fe-49ae-b4e8-6a454064110f.png" className="idkk2"/>
     </div>
@@ -51,8 +54,7 @@ function ProductDelete({product, setShowModal, showModal}) {
               </div>
           </Modal>
       )}
-    </>
-  );
+  </>);
 }
 
 export default ProductDelete;

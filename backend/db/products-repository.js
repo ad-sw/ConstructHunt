@@ -13,6 +13,8 @@ async function getOneProduct(productId) {
 
 async function addProduct(payload) {
     const product = await Product.create(payload);
+    if (!product) throw new Error('Cannot find item');
+    
     return product;
 }
 

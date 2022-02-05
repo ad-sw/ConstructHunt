@@ -1,155 +1,48 @@
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {createProduct} from '../../store/product';
+import {createProduct, getProductsWithReviews} from '../../store/product';
+import { createReview } from '../../store/review';
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { useDropzone } from 'react-dropzone'
-import FormNavBar from '../NavigationBarForm'
+import { getProducts } from '../../store/product';
+import FormNavBar from '../NavigationBarForm';
+import FirstReview from '../../components/ProductModal_Create/firstreview';
 
-function ProductFormCreate({setShowModal}) {
-//     const [title, setTitle] = useState('');
-//     const [imageUrl, setImageUrl] = useState('');
-//     const [link, setLink] = useState('');
-//     const [description, setDescription] = useState('');
-
-//     const sessionUser = useSelector(state => state.session.user);
-
-//     const dispatch = useDispatch();
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-
-//         let payload = {
-//           userId: sessionUser.id,
-//           title,
-//           imageUrl,
-//           link,
-//           description
-//         };
-//         // await dispatch(createProduct(payload));
-//       };
-
-//     return (<>
-//         <div id="pageWrap">
-//           <div className="leftSide">
-//             <img src="https://image.freepik.com/free-vector/flat-engineering-construction-illustrated_23-2148892788.jpg" width="88%" height="115%"/>
-//           </div>
-//           <div className="backColor">
-//             <div className='contents'>
-//               <div className="formWrap">
-//                 Submit a product
-//               </div>
-//               <div className="classicBio">
-//                 Found a cool product you want everyone to know about? Or maybe you made one yourself and want the world to know about it?
-//                 You're in the right place. So relax and follow the steps.
-//               </div>
-//               <div className="someTxt">Link to the product</div>
-//               <form onSubmit={handleSubmit} className="field2">
-//                 {/* <input
-//                 type='text'
-//                 placeholder='Title'
-//                 value={title}
-//                 required
-//                 onChange={e => setTitle(e.target.value)}
-//                   />
-//                 <input
-//                 type="url"
-//                 placeholder="Image"
-//                 value={imageUrl}
-//                 required
-//                 onChange={(e) => setImageUrl(e.target.value)}
-//                 /> */}
-//                 <input
-//                 className="test3"
-//                 type="url"
-//                 placeholder="https://www.constructhunt.herokuapp.com/"
-//                 value={link}
-//                 required
-//                 onFocus={(e) => setLink('https://')}
-//                 onChange={(e) => setLink(e.target.value)}
-//                 />
-//                 {/* <textarea
-//                 placeholder="Description"
-//                 value={description}
-//                 required
-//                 onChange={(e) => setDescription(e.target.value)}
-//                 /> */}
-//                 <button className="createB5" type='submit'>Get started</button>
-
-//                 <div className="Qs">Frequent questions</div>
-//                 <div className="totalWidth"><a className="linkThing" href="https://help.producthunt.com/en/articles/5473056-how-to-post-main-info">The info you need to come prepared with to post <svg width="6" height="12" xmlns="http://www.w3.org/2000/svg" class="styles_arrow__I_9GT"><path d="M1.781.375A1 1 0 00.22 1.625L3.72 6l-3.5 4.375a1 1 0 101.562 1.25l4-5a1 1 0 000-1.25l-4-5z" fill="#9ba1a1"></path></svg></a></div>
-//                 <div className="totalWidth"><a className="linkThing" href="https://help.producthunt.com/en/articles/5473242-how-to-post-launching">What happens after immediately launching <svg width="6" height="12" xmlns="http://www.w3.org/2000/svg" class="styles_arrow__I_9GT"><path d="M1.781.375A1 1 0 00.22 1.625L3.72 6l-3.5 4.375a1 1 0 101.562 1.25l4-5a1 1 0 000-1.25l-4-5z" fill="#9ba1a1"></path></svg></a></div>
-//                 <div className="totalWidth"><a className="linkThing" href="https://help.producthunt.com/en/articles/5473225-how-to-post-team">The launch team — know your role <svg width="6" height="12" xmlns="http://www.w3.org/2000/svg" class="styles_arrow__I_9GT"><path d="M1.781.375A1 1 0 00.22 1.625L3.72 6l-3.5 4.375a1 1 0 101.562 1.25l4-5a1 1 0 000-1.25l-4-5z" fill="#9ba1a1"></path></svg></a></div>
-//               </form>
-//               </div>
-//             </div>
-//         </div>
-//       </>);
-// }
+function ProductFormCreate({setShowModal, page}) {
   const dispatch = useDispatch();
   const history = useHistory();
   const sessionUser = useSelector(state => state.session.user);
-  const hostId = sessionUser?.id
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [venue, setVenue] = useState("");
-  const [venue_types, setVenue_types] = useState([]);
-  const [address, setAddress] = useState("");
-  const [zip, setZip] = useState("");
-  const [country, setCountry] = useState("");
-  // const [lat, setLat] = useState(null);
-  // const [lng, setLng] = useState(null);
-  const [image, setImage] = useState(null);
-  const [types, setTypes] = useState([]);
-  // const [preview, setPreview] = useState();
+  const [thumbnailUrl, setThumbnailUrl] = useState('');
+  const [topicId, setTopicId] = useState('');
   const [tagline, setTagline] = useState('');
-  const [imageUrl, setImageUrl] = useState('');
   const [link, setLink] = useState('');
-  const [page, setPage] = useState(1);
+  const [galleryImage1, setGalleryImage1] = useState('');
+  const [galleryImage2, setGalleryImage2] = useState('');
+  const [galleryImage3, setGalleryImage3] = useState('');
+  const [firstReview, setFirstReview] = useState('');
   const [errors, setErrors] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [price, setPrice] = React.useState('free');
+  // const {pathname} = history.location
+  // const pageNumber = pathname.split('/')[3]
+  const userId = useSelector(state => state.session.user.id)
 
-    const {
-      acceptedFiles,
-      fileRejections,
-      getRootProps,
-      getInputProps
-    } = useDropzone({
-      accept: 'image/jpg, image/jpeg, image/png',
-      maxFiles: 1,
-      maxSize: 10000000,
-      onDrop: acceptedFiles => {
-        setImage(acceptedFiles.map(file => Object.assign(file, {
-          preview: URL.createObjectURL(file)
-        })))
-      }
-    });
+  useEffect(() => {
+    (async () => {
+        await dispatch(getProducts())
+        setIsLoaded(true);
+    })();
+  }, [dispatch, sessionUser])
 
-    const acceptedFileItems = acceptedFiles.map(file => (
-      <li key={file.path}>
-        {file.path} - {(file.size / 1024 / 1024).toFixed(2)} MB
-      </li>
-    ));
 
-    const fileRejectionItems = fileRejections.map(({ file, errors }) => (
-      <li key={file.path}>
-        {file.path} - {file.size} bytes
-        <ul>
-          {errors.map(e => (
-            <li key={e.code}>{e.message}</li>
-          ))}
-        </ul>
-      </li>
-    ));
+  const productsObj = useSelector(state => state?.products)
+  const productArr = Object.values(productsObj)
+  const productId = productArr[Object.entries(productsObj)?.length-1]?.id
 
-    const thumb = image?.map(file => (
-          <img src={file.preview}
-          style={{width: '200px' }}/>
-    ));
-
-  function nextPage() {
+  const nextPage = async() => {
     const errors = [];
-    let newArr = [link]
-
     if (page === 1){
       if (!link.length) errors.push("Please enter a link")
       if ((link.split('.com')[0].length < 9) !== false) errors.push("Please enter a full valid link")
@@ -166,82 +59,25 @@ function ProductFormCreate({setShowModal}) {
       if (description.length > 261) errors.push("Please enter a description shorter than 60 characters")
     }
     setErrors(errors)
-    if(fileRejectionItems.length) setImage([])
-    if(!errors.length) setPage((page) => page +1);
+    if(!errors.length) history.push(`/products/new/${page+1}`);
   }
 
-  function prevPage() {
-    if(fileRejectionItems.length) setImage([])
-    if(!errors.length) setPage((page) => page -1);
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    let newErrors = [];
-    // const new_event = await dispatch(newEvent({
-    //   hostId,
-    //   name,
-    //   description,
-    //   start_date,
-    //   end_date,
-    //   venue,
-    //   venue_types,
-    //   address,
-    //   city,
-    //   state: state.value,
-    //   zip,
-    //   // country: country.value,
-    //   // lat,
-    //   // lng,
-    //   genres,
-    //   types,
-    //   image: image[0],
-    //   video,
-    // }))
-    // .then(() => {
-    //   setName("");
-    //   setDescription("");
-    //   setStart_date(null);
-    //   setEnd_date(null);
-    //   setVenue("");
-    //   setVenue_types(null);
-    //   setCity("");
-    //   setState("")
-    //   setCountry("");
-    //   // setLat(null);
-    //   // setLng(null);
-    //   setGenres(null);
-    //   setTypes([]);
-    //   setImage([]);
-    //   setVideo([]);
-    // })
-    // .catch(async (res) => {
-    //   const data = await res.json();
-    //   if (data && data.errors) {
-    //     newErrors = data.errors;
-    //     setErrors(newErrors);
-    //   }
-    //   });
-    //   if(new_event) history.push(`/events/${new_event.id}`)
+    const handleChange = (e) => {
+      setPrice(e.target.value)
+    }
+    const resetRadioState = () => {
+      setPrice('');
     }
 
-    // const updateImageFile = (e) => {
-    //   const file = e.target.files[0]
-    //   if (file) setImage(file);
-    // };
-
-    // const updateVideoFile = (e) => {
-    //   const file = e.target.files[0];
-    //   if (file) setVideo(file);
-    // };
+    const topics_arr = [[],['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
+    ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
 
   return (<>
     <form
-      onSubmit={handleSubmit}
       className='field2'>
-      <ul>
+      {/* <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-      </ul>
+      </ul> */}
         {page === 1 ? (<>
         <div id='pageWrap'>
           <div className="leftSide3">
@@ -267,7 +103,7 @@ function ProductFormCreate({setShowModal}) {
               onFocus={(e) => setLink('https://')}
               onChange={(e) => setLink(e.target.value)}
               />
-              <button className="createB5" type='submit' onClick={() => nextPage()}>Get started</button>
+              <button className="createB5" type='submit' onClick={nextPage}>Get started</button>
               <div className="Qs">Frequent questions</div>
               <div className="totalWidth"><a className="linkThing" href="https://help.producthunt.com/en/articles/5473056-how-to-post-main-info" target="_blank" rel="noopener noreferrer">The info you need to come prepared with to post <svg width="6" height="12" xmlns="http://www.w3.org/2000/svg" class="styles_arrow__I_9GT"><path d="M1.781.375A1 1 0 00.22 1.625L3.72 6l-3.5 4.375a1 1 0 101.562 1.25l4-5a1 1 0 000-1.25l-4-5z" fill="#9ba1a1"></path></svg></a></div>
               <div className="totalWidth"><a className="linkThing" href="https://help.producthunt.com/en/articles/5473242-how-to-post-launching" target="_blank" rel="noopener noreferrer">What happens after immediately launching <svg width="6" height="12" xmlns="http://www.w3.org/2000/svg" class="styles_arrow__I_9GT"><path d="M1.781.375A1 1 0 00.22 1.625L3.72 6l-3.5 4.375a1 1 0 101.562 1.25l4-5a1 1 0 000-1.25l-4-5z" fill="#9ba1a1"></path></svg></a></div>
@@ -286,7 +122,7 @@ function ProductFormCreate({setShowModal}) {
           <div className="anotherDiv">
             <div className="spaceBehindLeft">
               <div className="leftSide2">
-                <FormNavBar/>
+                <FormNavBar page={2}/>
               </div>
             </div>
             <div className="backColor2">
@@ -300,6 +136,7 @@ function ProductFormCreate({setShowModal}) {
                 <input
                 type="text"
                 className='test3'
+                height="30px"
                 placeholder="Simply the name of the product"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -329,13 +166,19 @@ function ProductFormCreate({setShowModal}) {
 
                 <div className="linkHead">Topic</div>
                 <div className="inputHeaderPg3">Select a topic</div>
-                <input
-                type="text"
-                className='test3'
-                placeholder="Select a topic"
-                value={link}
-                onChange={(e) => setLink(e.target.value)}
-                />
+                <select className='test9' required value={topicId} onChange={(e) => setTopicId(e.target.value)}>
+                  <option value={0}>{topics_arr[0]}</option>
+                  <option value={1}>{topics_arr[1]}</option>
+                  <option value={2}>{topics_arr[2]}</option>
+                  <option value={3}>{topics_arr[3]}</option>
+                  <option value={4}>{topics_arr[4]}</option>
+                  <option value={5}>{topics_arr[5]}</option>
+                  <option value={6}>{topics_arr[6]}</option>
+                  <option value={7}>{topics_arr[7]}</option>
+                  <option value={8}>{topics_arr[8]}</option>
+                  <option value={9}>{topics_arr[9]}</option>
+                  <option value={10}>{topics_arr[10]}</option>
+                </select>
 
                 <div className="linkHead">Description</div>
                 <div className="inlineTry">
@@ -360,7 +203,7 @@ function ProductFormCreate({setShowModal}) {
                   onChange={(e) => setDescription(e.target.value)}
                   />
                 </div>
-                <button className="createB6" type='submit' onClick={() => nextPage()}>Next step: Images and media</button>
+                <button className="createB6" type='submit' onClick={nextPage}>Next step: Images and media</button>
               </div>
               </div>
             </div>
@@ -388,37 +231,37 @@ function ProductFormCreate({setShowModal}) {
                 <input
                 type="text"
                 className='test3'
-                placeholder="Simply the name of the product"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                placeholder="Thumbnail image URL here"
+                value={thumbnailUrl}
+                onChange={(e) => setThumbnailUrl(e.target.value)}
                 />
                 <div className="linkHead">Gallery</div>
                 <div className="inputHeaderPg4">
                   The first image will be used as the social preview when your link is shared online.
-                  <br></br>We recommend 3 image URLs.  <a href="https://help.producthunt.com/en/articles/5473122-how-to-post-media" target="_blank" rel="noopener noreferrer">Read our tips for great product galleries →</a>
+                  <br></br>Optional, though we recommend 3 image URLs.  <a href="https://help.producthunt.com/en/articles/5473122-how-to-post-media" target="_blank" rel="noopener noreferrer">Read our tips for great product galleries →</a>
                 </div>
                 <input
                 type="text"
                 className='test4'
-                placeholder=""
-                value={link}
-                onChange={(e) => setLink(e.target.value)}
+                placeholder="Gallery image URL 1"
+                value={galleryImage1}
+                onChange={(e) => setGalleryImage1(e.target.value)}
                 />
                 <input
                 type="text"
                 className='test4'
-                placeholder=""
-                value={link}
-                onChange={(e) => setLink(e.target.value)}
+                placeholder="Gallery image URL 2"
+                value={galleryImage2}
+                onChange={(e) => setGalleryImage2(e.target.value)}
                 />
                 <input
                 type="text"
                 className='test4'
-                placeholder=""
-                value={link}
-                onChange={(e) => setLink(e.target.value)}
+                placeholder="Gallery image URL 3"
+                value={galleryImage3}
+                onChange={(e) => setGalleryImage3(e.target.value)}
                 />
-                <button className="createB7" type='submit' onClick={() => nextPage()}>Next step: Extras</button>
+                <button className="createB7" type='submit' onClick={nextPage}>Next step: Extras</button>
               </div>
               </div>
             </div>
@@ -441,23 +284,33 @@ function ProductFormCreate({setShowModal}) {
             <div className="backColor2">
               <div className="contents2">
                 <div className="titlePg2">Pricing</div>
-                <div className="innerBioPg2">The community really appreciates knowing.</div>
-                <div className="inputHeaderPg3">Free</div>
-                This product is free to use
-                <input
-                type="radio"
-                className=''
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                />
-                <div className="inputHeaderPg3">Paid</div>
-                This product requires payment and there is no free option
-                <input
-                type="radio"
-                className=''
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                />
+                <div className="innerBioPg8">The community really appreciates knowing.</div>
+                <div className="group3">
+                  <input
+                  type="radio"
+                  value="free"
+                  checked={price === 'free'}
+                  onChange={handleChange}
+                  onClick={resetRadioState}
+                  />
+                  <div className="group2">
+                    <div className="inputHeaderPgs">Free</div>
+                    <div className="underneathTxt">This product is free to use (i.e. open to the public)</div>
+                  </div>
+                </div>
+                <div className="group">
+                  <input
+                  type="radio"
+                  value="paid"
+                  checked={price === 'paid'}
+                  onChange={handleChange}
+                  onClick={resetRadioState}
+                  />
+                  <div className="group2">
+                    <div className="inputHeaderPgs">Paid</div>
+                    <div className="underneathTxt">This product requires payment and there is no free option (i.e. rent)</div>
+                  </div>
+                </div>
                 <div className="linkHead">Write the first comment</div>
                 <div className="inputHeaderPg4">
                   This comment will be posted when your product launches. <br></br>Adding a first comment is essential to get the discussion started.
@@ -466,10 +319,10 @@ function ProductFormCreate({setShowModal}) {
                   type="text"
                   className='test30'
                   placeholder="Explain how you discovered this product... invite people to join the conversation, ask questions to the Makers."
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
+                  value={firstReview}
+                  onChange={(e) => setFirstReview(e.target.value)}
                   />
-                <button className="createB8" type='submit' onClick={() => nextPage()}>Next step: Launch Checklist</button>
+                <button className="createB8" type='submit' onClick={nextPage}>Next step: Launch Checklist</button>
               </div>
               </div>
             </div>
@@ -493,14 +346,87 @@ function ProductFormCreate({setShowModal}) {
               <div className="contents2">
                 <div className="titlePg2">Required info</div>
                 <div className="innerBioPg2">Check that you've completed all of the required information.</div>
-                <div className="inputHeaderPg3">Product name</div>
-                <div className="inputHeaderPg3">Product tagline</div>
-                <div className="inputHeaderPg3">Description</div>
-                <div className="inputHeaderPg3">Topic</div>
-                <div className="inputHeaderPg3">Thumbnail</div>
-                <div className="inputHeaderPg3">Gallery images</div>
-                <div className="inputHeaderPg3">Pricing</div>
-                <button className="createB8" type='submit'>Launch now</button> {/*onClick={handleSubmit}*/}
+                <div className="twoWays">
+                  <div className="inputHeaderPg3">
+                    {name && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068907-c45b7f1e-e81c-4abe-b770-3cbb82758f76.PNG"/>
+                    )}
+                    {!name && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070474-0edde74e-6e96-468b-ac5c-1a3d784635a1.PNG"/>
+                    )}
+                    Product name
+                  </div>
+                  <div className="inputHeaderPg3">
+                    {tagline && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068909-42d0103a-a198-4d9f-a9f8-faa831efb338.PNG"/>
+                    )}
+                    {!tagline && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070472-db9cec11-2b35-4146-83aa-72e712698e7f.PNG"/>
+                    )}
+                    Product tagline
+                  </div>
+                  <div className="inputHeaderPg3">
+                    {description && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068918-3ed0a083-569a-400d-b68d-5dd9354b27a8.PNG"/>
+                    )}
+                    {!description && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070471-6835cf70-227b-4d22-8fdd-29e901cf7c69.PNG"/>
+                    )}
+                    Description
+                  </div>
+                  <div className="inputHeaderPg3">
+                    {topicId && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068919-fef304fc-2f78-45ca-965f-7f0160c6c808.PNG"/>
+                    )}
+                    {!topicId && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070470-13d159d8-5fe7-4c8c-bc05-433973bb079c.PNG"/>
+                    )}
+                    Topic
+                  </div>
+                  <div className="inputHeaderPg3">
+                    {thumbnailUrl && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068910-33fed964-fb0c-4c3d-bcb9-74a52288d0ce.PNG"/>
+                    )}
+                    {!thumbnailUrl && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070479-55195ec7-bb36-4473-8d9d-6aae089d2622.PNG"/>
+                    )}
+                    Thumbnail
+                  </div>
+                  <div className="inputHeaderPg3">
+                    {galleryImage1 && galleryImage2 && galleryImage3 && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068916-5aed329b-080d-4785-9287-288d6ff7ec7d.PNG"/>
+                    )}
+                    {((!galleryImage1 && !galleryImage2 && !galleryImage3) | (galleryImage1 && !galleryImage2 && !galleryImage3) |
+                    (galleryImage1 && galleryImage2 && !galleryImage3) | (!galleryImage1 && galleryImage2 && !galleryImage3) |
+                    (!galleryImage1 && galleryImage2 && galleryImage3) | (!galleryImage1 && !galleryImage2 && galleryImage3) |
+                    (galleryImage1 && !galleryImage2 && galleryImage3) | !(galleryImage1 && galleryImage2 && galleryImage3)) && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070478-bd631695-cdb2-4e09-99ae-e1028f89dcd8.PNG"/>
+                    )}
+                    Gallery images
+                  </div>
+                  <div className="inputHeaderPg3">
+                    {price && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068918-3ed0a083-569a-400d-b68d-5dd9354b27a8.PNG"/>
+                    )}
+                    {!price && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070469-72e5f0aa-a0f2-4382-aa96-18fc5512be30.PNG"/>
+                    )}
+                    Pricing
+                  </div>
+                  <div className="inputHeaderPg3">
+                    {firstReview && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068922-fe35ba31-f086-4d9e-9d98-b4ae8e147d3d.PNG"/>
+                    )}
+                    {!firstReview && (
+                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070874-d8af8ada-a0e8-40b7-999f-13ff12a99d4f.PNG"/>
+                    )}
+                    Write the first review
+                  </div>
+                </div>
+                <FirstReview productId={productId} userId={userId} firstReview={firstReview} setErrors={setErrors}
+                topicId={topicId} name={name} thumbnailUrl={thumbnailUrl} link={link} tagline={tagline} description={description}
+                galleryImage1={galleryImage1} galleryImage2={galleryImage2} galleryImage3={galleryImage3}/>
+                {/* <button className="createB9" type='submit'>Launch now</button> */}
               </div>
               </div>
             </div>
