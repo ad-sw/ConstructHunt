@@ -14,13 +14,13 @@ async function getOneProduct(productId) {
 async function addProduct(payload) {
     const product = await Product.create(payload);
     if (!product) throw new Error('Cannot find item');
-    
+
     return product;
 }
 
 async function updateProduct(payload) {
     const product = await Product.findByPk(payload.productId);
-    await product.update({title: payload.title, imageUrl: payload.imageURL, link: payload.link, description: payload.description});
+    await product.update(payload);
     return product;
 }
 

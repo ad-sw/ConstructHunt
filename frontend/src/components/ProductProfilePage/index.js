@@ -68,27 +68,22 @@ function ProductProfilePgModal({product, setShowModal}) {
                     </div>
                 </div>
 
-                {/* <span className='main-image'>
-                {this.props.screenshots.map(screenshot => {
-                return <img key={`scr-${screenshot}`} className='carousel-main' src={screenshot} alt="" />
-                })}
-                </span> */}
             <div className="leftSide">
-                <div className="main-image">
+                <div className="mainImage">
                     <div className="gallery">
-                            <a className="main-info" target="_blank" rel="noopener noreferrer" href={product?.link}>
+                            <a className="mainInfo2" target="_blank" rel="noopener noreferrer" href={product?.link}>
                                 {newArr.map(image => {
                                     if (image?.length > 1) return <img className="img5" src={image} alt="display" height="584.97px" min-width="658px"/>
                                 })}
                             </a>
                         {product?.galleryImage1?.length > 1 && (<>
-                        <img className="filmstrip" src={product?.galleryImage1} alt="display"/>
+                        <img className="carouselPics" src={product?.galleryImage1} alt="display"/>
                         </>)}
                         {product?.galleryImage2?.length > 1 && (<>
-                        <img className="filmstrip" src={product?.galleryImage2} alt="display"/>
+                        <img className="carouselPics" src={product?.galleryImage2} alt="display"/>
                         </>)}
                         {product?.galleryImage3?.length > 1 && (<>
-                        <img className="filmstrip" src={product?.galleryImage3} alt="display"/>
+                        <img className="carouselPics" src={product?.galleryImage3} alt="display"/>
                         </>)}
                     </div>
                     <p className='description'>
@@ -114,11 +109,11 @@ function ProductProfilePgModal({product, setShowModal}) {
             </div>
 
             <div className="rightSide">
-                <div className="upvote-section">
+                <div className="upvoteSection">
                     {sessionUser && (
                     <span
-                    onClick={'this.upVote.bind(this)'}
-                    className="upvote-button">{('hi') ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }
+                    onClick={''}
+                    className="upvoteBtn">{('hi') ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }
                         <div>
                             {'hi'}
                         </div>
@@ -130,26 +125,26 @@ function ProductProfilePgModal({product, setShowModal}) {
                     </span>
                     )}
 
-                    <div className='product-upvoters'>
+                    <div className='productUpvoters'>
                     {'hi' && Object.values('hi').map((user,idx) => {
-                    return (idx < 3) ? (<img key={user.id} className='upvoter-picture' src={'user.profilePictureUrl'} />) : null;
+                    return (idx < 3) ? (<img key={user.id} className='upvoterPic' src={''} />) : null;
                     })}
                     </div>
                 </div>
 
                 <hr />
 
-                <section className="website-link">
+                <section className="websiteLink">
                 <h4>Website</h4>
                 {/* <a href={'k'.toLowerCase().startsWith('http') ? 'website' : `http://${'website'}`} target="_blank">{this.cleanUrl('website')}</a> */}
                 </section>
 
                 <hr />
 
-                <section className="hunter-link">
+                <section className="hunterLink">
                 <h4>Hunter</h4>
-                <img src={'user.profilePictureUrl'} className="profile-picture-round"/>
-                {/* <Link to={`/@${user.username}`}>@{user.username}</Link> */}
+                <img src={''} className="profilePic"/>
+                {/* <Link to={`/@${}`}>@{}</Link> */}
                 </section>
             </div>
         </div>

@@ -10,7 +10,7 @@ import { Modal } from '../../context/Modal';
 import ProductProfilePgModal from "../ProductProfilePage";
 import Upvotes from '../Upvotes'
 
-function ProductModal({product, setShowModal2}) {
+function ProductModal({product, setShowModal2, thumbnailUrl}) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [showModal, setShowModal] = useState(false);
@@ -87,7 +87,7 @@ function ProductModal({product, setShowModal2}) {
     </div>
     {showModal && (
         <Modal onClose={closeMenu}>
-            <ProductProfilePgModal product={product} setShowModal={setShowModal} showModal={showModal}/>
+            <ProductProfilePgModal product={product} setShowModal={setShowModal} showModal={showModal} thumbnailUrl={thumbnailUrl}/>
             <button className="circleClose" onClick={handleCancel} >x</button>
         </Modal>)}
     </>);

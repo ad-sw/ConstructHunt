@@ -65,9 +65,8 @@ function FirstReview({userId, firstReview, setErrors, topicId, name, thumbnailUr
     let nen = document.getElementsByClassName("twoWays")[0];
     let nen2 = document.getElementsByClassName("anotherDiv")[0];
 
-
     async function foo() {
-        let data;
+        // let data;
         newest.classList.add("hide");
         neww.classList.add('hide');
         newww.classList.add('hide');
@@ -78,38 +77,37 @@ function FirstReview({userId, firstReview, setErrors, topicId, name, thumbnailUr
         newwwqq.classList.add('hide');
         nen2.classList.add('hide');
         nen.classList.add('hide');
-        fetch("/api/products").then(function(response){
-            data = response.json();
-        });
-        let result = await Promise.resolve('Response', data);
+        // fetch("/api/products").then(function(response){
+        //     data = response.json();
+        // });
+        // let result = await Promise.resolve('Response', data);
         setTimeout(() => {
             handle2()
-        }, 4000)
-        return result;
+        }, 2000)
+        // return result;
     }
 
     const handle2 = async () => {
-        dispatch(getProductsWithReviews()).then(
-        )
-        .then(productId = productArr[Object.entries(productsObj)?.length-1]?.id)
-        .then(dispatch(createReview({
-            userId: userId,
-            productId: productId+1,
-            review: firstReview})))
-        .then(
-            history.push('/'),
-            newest.classList.remove("hide"),
-            neww.classList.remove('hide'),
-            newww.classList.remove('hide'),
-            newwwt.classList.remove('hide'),
-            newwwtt.classList.remove('hide'),
-            newwwq.classList.remove('hide'),
-            newwwqq.classList.remove('hide'),
-            nen.classList.remove('hide'),
-            nen2.classList.remove('hide'),
-            newer.classList.remove('show'),
-            history.push('/')
-        )
+        // dispatch(getProductsWithReviews()).then(
+        // )
+        // .then(productId = productArr[Object.entries(productsObj)?.length-1]?.id)
+        // .then(dispatch(createReview({
+        //     userId: userId,
+        //     productId: productId+1,
+        //     review: firstReview})))
+        // .then(
+            history.push('/');
+            newest.classList.remove("hide");
+            neww.classList.remove('hide');
+            newww.classList.remove('hide');
+            newwwt.classList.remove('hide');
+            newwwtt.classList.remove('hide');
+            newwwq.classList.remove('hide');
+            newwwqq.classList.remove('hide');
+            nen.classList.remove('hide');
+            nen2.classList.remove('hide');
+            newer.classList.remove('show');
+        //)
     }
 
     return (<>
@@ -118,7 +116,7 @@ function FirstReview({userId, firstReview, setErrors, topicId, name, thumbnailUr
     </button>
     <div className="loadingGiff">
                 <img src={"https://cdn.dribbble.com/users/77121/screenshots/11223084/media/49067e332b338ecd2e9f42afd6b605a3.gif"} height="615px" width="850px" alt="loading"/>
-                <div className="loadText">Thank you for your patience as we verify and load your submission :)</div>
+                <div className="loadText">{'Thank you for your patience as we verify and load your submission :)'}</div>
     </div>
     </>);
 }
