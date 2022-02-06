@@ -86,10 +86,10 @@ function ProductProfilePgModal({product, setShowModal}) {
                         <img className="carouselPics" src={product?.galleryImage3} alt="display"/>
                         </>)}
                     </div>
-                    <p className='description'>
+                    <div className='description'>
                         {product?.description}
                         <div className="dateProd">FEATURED {date}</div>
-                    </p>
+                    </div>
                 </div>
                 <div className="discuss">DISCUSSION</div>
                 <div className="description2">

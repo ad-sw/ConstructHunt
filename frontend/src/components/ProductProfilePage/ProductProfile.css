@@ -111,6 +111,11 @@ p#productDescription2 {
   padding: 20px;
   border: 1px solid #D9E1EC;
 }
+.mainImage2 {
+  padding: 20px;
+  height: 564px;
+  border: 1px solid #D9E1EC;
+}
 .description {
   border-top: 1px solid lightgrey;
   padding-top: 20px;

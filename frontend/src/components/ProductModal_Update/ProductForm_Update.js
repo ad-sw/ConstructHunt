@@ -25,9 +25,13 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
     const [link, setLink] = useState(alink);
     const [description, setDescription] = useState(adescription);
 
+    const newest2 = document.getElementsByClassName("product-container")[0];
+    // newest2.classList.add("hide");
+
     useEffect(() => {
         (async () => {
             await dispatch(getProductsWithReviews())
+            setShowModal(true);
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -47,8 +51,16 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
       };
 
       await dispatch(updateProduct(payload));
+      newest2.classList.remove("hide");
       setShowModal(false);
     };
+
+    const handleCancel = (e) => {
+      e.preventDefault();
+      const newest2 = document.getElementsByClassName("product-container")[0];
+      newest2.classList.remove("hide");
+      setShowModal(false);
+    }
 
     // let newArr = [product.thumbnailUrl, product.galleryImage1, product.galleryImage2, product.galleryImage3]
     // if (newArr.includes(null)) {
@@ -106,7 +118,7 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
                     required
                     onChange={(e) => setTagline(e.target.value)}
                     />
-                    <div className="buttons">
+                    <div className="buttons2">
                       <div className="priceOption">Free & Paid Options</div>
                       <div className="toolType">{topics[product?.topicId -1]}</div>
                     </div>
@@ -115,7 +127,7 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
               </div>
 
           <div className="leftSide">
-              <div className="mainImage">
+              <div className="mainImage2">
                   <div className="gallery">
                     <input
                     type="url"
@@ -141,7 +153,7 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
                     required
                     onChange={(e) => setGalleryImage3(e.target.value)}
                     />
-                  </div>
+                  <div className="groupStuff">
                   <input
                   type="text"
                   placeholder={`${product?.description}`}
@@ -151,6 +163,8 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
                   onChange={(e) => setDescription(e.target.value)}
                   />
                   <div className="dateProd2">FEATURED {date}</div>
+                  </div>
+                  </div>
               </div>
               <div className="discuss">DISCUSSION</div>
               <div className="description2">
@@ -211,6 +225,7 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
           </form>
       </div>
       </div>
+      <button className="circleClose" onClick={handleCancel}>x</button>
       </>
       )
   );

@@ -38,7 +38,7 @@ function SignupFormModal({product}) {
   return (
     <div>
     <>
-      <button className="upvote-button" onClick={openMenu}>{('hi') ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }</button>
+      <button className="upvoteBtn" onClick={openMenu}>{('hi') ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }</button>
       {showModal && (
         <Modal onClose={closeMenu}>
           <SignupForm setShowModal={setShowModal} product={product}/>
