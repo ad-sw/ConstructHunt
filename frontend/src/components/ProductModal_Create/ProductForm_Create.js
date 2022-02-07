@@ -72,8 +72,6 @@ function ProductFormCreate({setShowModal, page}) {
     const topics_arr = [[],['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
     ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
 
-    let test;
-
   return (<>
     <form
       className='field2'>

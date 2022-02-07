@@ -115,6 +115,9 @@ p#productDescription2 {
   padding: 20px;
   height: 564px;
   border: 1px solid #D9E1EC;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 40px;
 }
 .description {
   border-top: 1px solid lightgrey;

@@ -10,7 +10,7 @@ import ReviewFormCreate from '../../components/ReviewModal_Create/ReviewForm_Cre
 import SignupFormModal from '../SignupFormModalCopy'
 import {updateProduct} from '../../store/product';
 
-function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, atagline, agalleryImage1, agalleryImage2, agalleryImage3, alink, aname}) {
+function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, adescription, atagline, agalleryImage1, agalleryImage2, agalleryImage3, alink, aname, atopicId}) {
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const [isLoaded, setIsLoaded] = useState(false);
@@ -23,15 +23,19 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
     const [galleryImage3, setGalleryImage3] = useState(agalleryImage3);
     const [thumbnailUrl, setThumbnailUrl] = useState(athumbnailUrl);
     const [link, setLink] = useState(alink);
+    const [topicId, setTopicId] = useState(atopicId);
     const [description, setDescription] = useState(adescription);
 
     const newest2 = document.getElementsByClassName("product-container")[0];
-    // newest2.classList.add("hide");
+
+    const topics_arr = [[],['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
+    ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
 
     useEffect(() => {
         (async () => {
             await dispatch(getProductsWithReviews())
-            setShowModal(true);
+            // newest2.classList.add("hide");
+            // setShowModal(true);
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -47,6 +51,7 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
         galleryImage3,
         link,
         tagline,
+        topicId,
         description,
       };
 
@@ -82,7 +87,7 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
         }
 
     return (
-      isLoaded && (
+      isLoaded && showModal && (
       <>
           <div key={product?.id}  className="modal-child">
           <div className="product-container">
@@ -120,7 +125,29 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
                     />
                     <div className="buttons2">
                       <div className="priceOption">Free & Paid Options</div>
-                      <div className="toolType">{topics[product?.topicId -1]}</div>
+                      {/* <input
+                      type='text'
+                      className="toolType"
+                      id="prodProfileTitle3"
+                      placeholder={`${product?.name}`}
+                      value={name}
+                      required
+                      onChange={e => setName(e.target.value)}
+                      /> */}
+                      <select className="toolType2" required value={topicId} onChange={(e) => setTopicId(e.target.value)}>
+                        <option value={0}>{topics_arr[0]}</option>
+                        <option value={1}>{topics_arr[1]}</option>
+                        <option value={2}>{topics_arr[2]}</option>
+                        <option value={3}>{topics_arr[3]}</option>
+                        <option value={4}>{topics_arr[4]}</option>
+                        <option value={5}>{topics_arr[5]}</option>
+                        <option value={6}>{topics_arr[6]}</option>
+                        <option value={7}>{topics_arr[7]}</option>
+                        <option value={8}>{topics_arr[8]}</option>
+                        <option value={9}>{topics_arr[9]}</option>
+                        <option value={10}>{topics_arr[10]}</option>
+                      </select>
+                      {/* <div className="toolType">{topics[product?.topicId -1]}</div> */}
                     </div>
                   </div>
                 </div>
@@ -167,8 +194,8 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
                   </div>
               </div>
               <div className="discuss">DISCUSSION</div>
-              <div className="description2">
-              <div className="reviewInput">
+              <div className="description3">
+              {/* <div className="reviewInput">
                   Would you recommend this product?
                   {sessionUser && (
                   <ReviewFormCreate productId={product?.id} review={product?.Review}/>
@@ -179,49 +206,39 @@ function ProductFormUpdate({product, setShowModal, athumbnailUrl, adescription, 
               </div>
               <div className="review">
                   {<ReviewModal product={product}/>}
-              </div>
+              </div> */}
               </div>
           </div>
 
           <div className="rightSide">
-              <div className="upvoteSection">
-                  {sessionUser && (
-                  <span
-                  onClick={''}
-                  className="upvoteBtn">{('hi') ? `▲ UPVOTED  ` : `▲ UPVOTE   ` }
-                      <div>
-                          {'hi'}
-                      </div>
-                  </span>
-                  )}
-                  {!sessionUser && (
-                  <span>
-                      <SignupFormModal setShowModal={setShowModal} product={product}/>
-                  </span>
-                  )}
-
-                  <div className='productUpvoters'>
-                  {'hi' && Object.values('hi').map((user,idx) => {
-                  return (idx < 3) ? (<img key={user.id} className='upvoterPic' src={''} />) : null;
-                  })}
-                  </div>
+            <div className="upvoteSection">
+              {sessionUser && (<>
+              <input
+                type="url"
+                placeholder={`${product?.link}`}
+                className='getItBtn2'
+                value={link}
+                required
+                onChange={(e) => setLink(e.target.value)}
+                />
+              {/* <a href={product?.link} className='getItBtn' target="_blank" rel="noopener noreferrer">
+                GET IT
+              </a> */}
+              <button className="upvoteBtn2"></button>
+              </>)}
+              {!sessionUser && (
+              <button>
+                  <SignupFormModal setShowModal={setShowModal} product={product}/>
+              </button>
+              )}
+              {/* <div className='productUpvoters'>
+              {'hi' && Object.values('hi').map((user,idx) => {
+              return (idx < 3) ? (<img key={user.id} className='upvoterPic' src={''} />) : null;
+              })}
+              </div> */}
               </div>
-
-              <hr />
-
-              <section className="websiteLink">
-              <h4>Website</h4>
-              {/* <a href={'k'.toLowerCase().startsWith('http') ? 'website' : `http://${'website'}`} target="_blank">{this.cleanUrl('website')}</a> */}
-              </section>
-
-              <hr />
-
-              <section className="hunterLink">
-              <h4>Hunter</h4>
-              <img src={''} className="profilePic"/>
-              {/* <Link to={`/@${}`}>@{}</Link> */}
-              </section>
-          </div>
+              <div className="areaBelow2"></div>
+        </div>
           </form>
       </div>
       </div>

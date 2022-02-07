@@ -19,21 +19,21 @@ function SignupFormModal({product}) {
     const newest2 = document.getElementsByClassName("product-container")[0];
     newest2.classList.add("hide");
     setShowModal(true);
-    };
+  };
 
   const handleCancel = (e) => {
     e.preventDefault();
     const newest2 = document.getElementsByClassName("product-container")[0];
     newest2.classList.remove("hide");
     setShowModal(false);
-    }
+  }
 
   const closeMenu = (e) => {
     e.preventDefault()
     const newest2 = document.getElementsByClassName("product-container")[0];
     newest2.classList.remove("hide");
     setShowModal(false);
-    };
+  };
 
   return (
     <div>
