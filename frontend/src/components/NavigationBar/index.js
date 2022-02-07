@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import { useHistory } from "react-router";
 import { useSelector, useDispatch } from 'react-redux';
-// import LogoutButton from '../auth/LogoutButton';
 import ProfileButton from './ProfileButton';
 import ProductButton from './ProductButton';
 import CommunityButton from './CommunityButton';
@@ -13,7 +12,8 @@ import AboutMe from './AboutMe';
 import LoginForm from '../auth/LoginForm';
 import SignupFormModal from '../SignupFormModal';
 import SearchBar from '../SearchBar';
-import LoginFormModal from '../LoginFormModal'
+import LoginFormModal from '../LoginFormModal';
+import SubmitButton from './SubmitButton';
 import '../../../src/index.css';
 
 function NavBar(){
@@ -41,6 +41,7 @@ function NavBar(){
   if (sessionUser) {
     sessionLinks = (
       <>
+      <div className="t3"><SubmitButton/></div>
       <ProfileButton user={sessionUser} />
       </>
     );

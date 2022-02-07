@@ -25,6 +25,8 @@
   "homepage": "https://github.com/ad-sw/another-auth#readme",
   "dependencies": {
     "lorem-ipsum": "^2.0.4",
+    "react-dropzone": "^11.5.3",
+    "react-select": "^5.2.2",
     "react-slideshow-image": "^3.6.0"
   }
 }

@@ -2,12 +2,10 @@ import {csrfFetch} from './csrf';
 
 const LOAD_PRODUCTS = 'product/LOAD';
 const LOAD_PRODUCTS_WITH_REVIEWS = 'product/LOAD_PRODUCTS_WITH_REVIEWS';
-// const LOAD_ONE_PRODUCT = 'product/LOAD_ONE'
 const UPDATE_PRODUCTS = 'product/UPDATE';
 const ADD_PRODUCTS = 'product/ADD';
 const DELETE_PRODUCTS = 'product/DELETE';
 
-//action
 const load = (products) => ({
     type: LOAD_PRODUCTS,
     products
@@ -25,10 +23,9 @@ const update = (product) => ({
 
 const remove = (productId) => ({
     type: DELETE_PRODUCTS,
-    productId
+    payload: productId
 })
 
-//thunk
 export const getProducts = () => async (dispatch) => {
     const response = await csrfFetch(`/api/products`);
 
@@ -46,15 +43,6 @@ export const getProductsWithReviews = () => async (dispatch) => {
         dispatch(load(productsWithReviews));
     }
 };
-
-// export const getOneProduct = (productId) => async (dispatch) => {
-//     const response = await fetch(`/api/products/${productId}`);
-
-//     if (response.ok) {
-//         const productId = await response.json();
-//         dispatch(loadOne(productId.productId));
-//     }
-//   };
 
 export const searchProducts = (searchTerm) => async (dispatch) => {
     const response = await csrfFetch(`/api/products/search/${searchTerm}`);
@@ -96,13 +84,18 @@ export const deleteProduct = (productId) => async (dispatch) => {
         method: "DELETE"
     });
 
-    if (response.ok) {
-        const productId = await response.json();
-        dispatch(remove(productId.productId))
+    if(response.ok) {
+        dispatch(remove(productId))
+    } else if (response.status < 500){
+        const data = await response.json()
+        if (data.errors) {
+        return data.errors
+        }
+    } else {
+        return ['An error occurred. Please try again.']
     }
 }
 
-//reducer
 const productReducer = (state = {}, action) => {
     switch (action.type) {
         case LOAD_PRODUCTS:
@@ -124,7 +117,7 @@ const productReducer = (state = {}, action) => {
             return updateState;
         case DELETE_PRODUCTS:
             const delState = {...state};
-            delete delState[action.productId];
+            delete delState[action.payload];
             return delState;
         default:
             return state;

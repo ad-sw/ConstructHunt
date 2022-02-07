@@ -9,27 +9,27 @@ import {getProductsWithReviews} from '../../store/product'
 import ReviewFormCreate from '../../components/ReviewModal_Create/ReviewForm_Create';
 import SignupFormModal from '../SignupFormModalCopy'
 import ProductCard from '../ProductProfilePage/productCard'
-function ProductProfilePgModal({product, setShowModal, showModal}) {
+
+function ProductProfilePgModal2({product, setShowModal, showModal}) {
     const sessionUser = useSelector(state => state.session.user);
+    const dispatch = useDispatch();
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
     const users = useSelector(state => state.users);
+    const newest2 = document.getElementsByClassName("product-container")[0];
+
     const productTopics = useSelector(state => state.products);
     const productTopicsArr = Object.values(productTopics)
     const productUserId = product?.userId
     const productTopicId = product?.topicId
     const productId = product?.id
     const productTopicsArrFiltered = productTopicsArr.filter (product => product?.topicId === productTopicId && productId !== product?.id)
-    const dispatch = useDispatch();
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
-    const product2 = useSelector(state => state.product);
-    const newest2 = document.getElementsByClassName("product-container")[0];
-    setShowModal(true);
 
     useEffect(() => {
         (async () => {
             // await dispatch(getProductsWithReviews())
-            setShowModal(true);
-            // newest2?.classList?.remove("hide");
+            // setShowModal(true);
+            newest2?.classList?.add("hide");
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -43,18 +43,17 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
 
     let event = new Date(product?.createdAt);
     let date = event.toLocaleDateString().slice(0,5) + event.toLocaleDateString().slice(7,9)
-    // if (document.getElementsByClassName("product-container")[0].hide) {newest2.classList.remove("hide");}
+
+    const handleCancel = (e) => {
+        e.preventDefault();
+        const newest2 = document.getElementsByClassName("product-container")[0];
+        newest2.classList.remove("hide");
+        setShowModal(false);
+      }
 
     const similarProdCards = productTopicsArrFiltered.map(product => {
         return (
-        <ProductCard product={product} ashowModal={showModal} setShowModal={setShowModal}/>
-        // <a className="similarProductCard" href={''}>
-        //     <img className="similarProductImgs" src={product?.thumbnailUrl} height="60px" width="60px"/>
-        //     <div className="rightSideCard">
-        //         <div className="prodNameSim">{product?.name}</div>
-        //         <div className="prodTaglineSim">{product?.tagline}</div>
-        //     </div>
-        // </a>
+        <ProductCard product={product} ashowModal={showModal}/>
         )
       }
     )
@@ -62,7 +61,7 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
     if (!isLoaded) {
         return (
             <div id="loadingGif">
-                <img src={"https://cdn.dribbble.com/users/56427/screenshots/6003020/budio_hero_illustration_for_animation_2.gif"} height="650px" width="850px" alt="loading"/>
+                <img src={"https://cdn.dribbble.com/users/77121/screenshots/11223084/media/49067e332b338ecd2e9f42afd6b605a3.gif"} height="615px" width="850px" alt="loading"/>
                 <div className="loadText">Loading</div>
             </div>
             );
@@ -128,7 +127,7 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
                             )}
                         </div>
                         <div className="review">
-                            {<ReviewModal product={product}/>}
+                            {isLoaded && <ReviewModal product={product}/>}
                         </div>
                         </div>
                     </div>
@@ -154,27 +153,6 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
                             return (idx < 3) ? (<img key={user.id} className='upvoterPic' src={''} />) : null;
                             })}
                             </div> */}
-                        </div>
-                        <div className="relatedProdHeader2">UPVOTERS</div>
-                        <div className="upvoterUsers">
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
-                            <div className="profPicStuff"></div>
                         </div>
                         <div className="areaBelow">
                             <div className="hunterLink">
@@ -205,8 +183,9 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
                     </div>
                 </div>
             </div>
+            <button className="circleClose" onClick={handleCancel}>x</button>
         </>)
    );
 }
 
-export default ProductProfilePgModal;
+export default ProductProfilePgModal2;
