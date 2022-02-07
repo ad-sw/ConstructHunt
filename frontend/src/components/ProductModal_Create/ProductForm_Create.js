@@ -311,7 +311,7 @@ function ProductFormCreate({setShowModal, page}) {
                     <div className="underneathTxt">This product requires payment and there is no free option (i.e. rent)</div>
                   </div>
                 </div>
-                <div className="linkHead">Write the first comment</div>
+                {/* <div className="linkHead">Write the first comment</div>
                 <div className="inputHeaderPg4">
                   This comment will be posted when your product launches. <br></br>Adding a first comment is essential to get the discussion started.
                 </div>
@@ -321,7 +321,7 @@ function ProductFormCreate({setShowModal, page}) {
                   placeholder="Explain how you discovered this product... invite people to join the conversation, ask questions to the Makers."
                   value={firstReview}
                   onChange={(e) => setFirstReview(e.target.value)}
-                  />
+                  /> */}
                 <button className="createB8" type='submit' onClick={nextPage}>Next step: Launch Checklist</button>
               </div>
               </div>
@@ -329,7 +329,6 @@ function ProductFormCreate({setShowModal, page}) {
           </div>
         </div>
         </>) : null}
-
 
         {page === 5 ? (<>
         <div id="pageWidth">
@@ -393,15 +392,15 @@ function ProductFormCreate({setShowModal, page}) {
                     Thumbnail
                   </div>
                   <div className="inputHeaderPg3">
-                    {galleryImage1 && galleryImage2 && galleryImage3 && (
+                    {(galleryImage1 && galleryImage2 && galleryImage3) && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068916-5aed329b-080d-4785-9287-288d6ff7ec7d.PNG"/>
                     )}
-                    {(!galleryImage1 && !galleryImage2 && !galleryImage3) | (galleryImage1 && !galleryImage2 && !galleryImage3) |
-                    (galleryImage1 && galleryImage2 && !galleryImage3) | (!galleryImage1 && galleryImage2 && !galleryImage3) |
-                    (!galleryImage1 && galleryImage2 && galleryImage3) | (!galleryImage1 && !galleryImage2 && galleryImage3) |
-                    (galleryImage1 && !galleryImage2 && galleryImage3) | !(galleryImage1 && galleryImage2 && galleryImage3) && (
-                    <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070478-bd631695-cdb2-4e09-99ae-e1028f89dcd8.PNG"/>
-                    )}
+                    {((!galleryImage1 && !galleryImage2 && !galleryImage3) || (galleryImage1 && !galleryImage2 && !galleryImage3) ||
+                    (galleryImage1 && galleryImage2 && !galleryImage3) || (!galleryImage1 && galleryImage2 && !galleryImage3) ||
+                    (!galleryImage1 && galleryImage2 && galleryImage3) || (!galleryImage1 && !galleryImage2 && galleryImage3) ||
+                    (galleryImage1 && !galleryImage2 && galleryImage3) || !(galleryImage1 && galleryImage2 && galleryImage3)) && (
+                      <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070478-bd631695-cdb2-4e09-99ae-e1028f89dcd8.PNG"/>
+                      )}
                     Gallery images
                   </div>
                   <div className="inputHeaderPg3">
@@ -413,7 +412,7 @@ function ProductFormCreate({setShowModal, page}) {
                     )}
                     Pricing
                   </div>
-                  <div className="inputHeaderPg3">
+                  {/* <div className="inputHeaderPg3">
                     {firstReview && (
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152068922-fe35ba31-f086-4d9e-9d98-b4ae8e147d3d.PNG"/>
                     )}
@@ -421,7 +420,7 @@ function ProductFormCreate({setShowModal, page}) {
                     <img className="dot" src="https://user-images.githubusercontent.com/86431563/152070874-d8af8ada-a0e8-40b7-999f-13ff12a99d4f.PNG"/>
                     )}
                     Write the first review
-                  </div>
+                  </div> */}
                 </div>
                 <FirstReview productId={productId} userId={userId} firstReview={firstReview} setErrors={setErrors}
                 topicId={topicId} name={name} thumbnailUrl={thumbnailUrl} link={link} tagline={tagline} description={description}
@@ -433,16 +432,6 @@ function ProductFormCreate({setShowModal, page}) {
           </div>
         </div>
         </>) : null}
-
-
-        {/* {page!== 1 && page !== 2 && page !== 3 && page !== 4 && <button
-        onClick={() => nextPage()}
-        type="button">
-        Next</button>}
-        {page!== 1 && page !== 2 && page !== 3 && page !== 4 && <button
-        onClick={() => prevPage()}
-        type="button">
-          Prev</button>} */}
     </form>
   </>);
 }

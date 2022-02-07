@@ -2,12 +2,10 @@ import {csrfFetch} from './csrf';
 
 const LOAD_PRODUCTS = 'product/LOAD';
 const LOAD_PRODUCTS_WITH_REVIEWS = 'product/LOAD_PRODUCTS_WITH_REVIEWS';
-// const LOAD_ONE_PRODUCT = 'product/LOAD_ONE'
 const UPDATE_PRODUCTS = 'product/UPDATE';
 const ADD_PRODUCTS = 'product/ADD';
 const DELETE_PRODUCTS = 'product/DELETE';
 
-//action
 const load = (products) => ({
     type: LOAD_PRODUCTS,
     products
@@ -28,7 +26,6 @@ const remove = (productId) => ({
     payload: productId
 })
 
-//thunk
 export const getProducts = () => async (dispatch) => {
     const response = await csrfFetch(`/api/products`);
 
@@ -87,21 +84,16 @@ export const deleteProduct = (productId) => async (dispatch) => {
         method: "DELETE"
     });
 
-//     if (response.ok) {
-//         const product = await response.json();
-//         dispatch(remove(product.productId))
-//     }
-// }
-if(response.ok) {
-    dispatch(remove(productId))
-  } else if (response.status < 500){
-    const data = await response.json()
-    if (data.errors) {
-      return data.errors
+    if(response.ok) {
+        dispatch(remove(productId))
+    } else if (response.status < 500){
+        const data = await response.json()
+        if (data.errors) {
+        return data.errors
+        }
+    } else {
+        return ['An error occurred. Please try again.']
     }
-  } else {
-    return ['An error occurred. Please try again.']
-  }
 }
 
 const productReducer = (state = {}, action) => {
