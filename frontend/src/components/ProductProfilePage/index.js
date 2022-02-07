@@ -27,7 +27,7 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
 
     useEffect(() => {
         (async () => {
-            await dispatch(getProductsWithReviews())
+            // await dispatch(getProductsWithReviews())
             setShowModal(true);
             // newest2?.classList?.remove("hide");
             setIsLoaded(true);
@@ -155,6 +155,27 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
                             })}
                             </div> */}
                         </div>
+                        <div className="relatedProdHeader2">UPVOTERS</div>
+                        <div className="upvoterUsers">
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                        </div>
                         <div className="areaBelow">
                             <div className="hunterLink">
                                 <div className="hunterHeader">HUNTER</div>
@@ -177,6 +198,7 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
                                 </div>
                             </div>
                         </div>
+                        <div className="relatedProdHeader">RELATED PRODUCTS</div>
                         <div className="similarProdCardsSec">
                             {similarProdCards}
                         </div>

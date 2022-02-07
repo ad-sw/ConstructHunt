@@ -905,13 +905,6 @@ a:hover, a:visited, a:link, a:active {
   font-size: 15px;
   margin-bottom: 1.5px;
 }
-.stuff {
-  width: 370px;
-  display: flex;
-  padding: 0 0 0 31px;
-  margin: 10px 0 0 24px;
-  border-left: 1.5px solid #e3e3e38f;
-}
 #mediaContent {
   display: flex;
   width: 800px;
@@ -1238,10 +1231,11 @@ body.no-scroll {
   margin-bottom: 1px;
 }
 .similarProductCard:first-child, .similarProductCard:first-of-type {
-  margin-top: 1px;
+  /* margin-top: 1px; */
 }
 .similarProdCardsSec {
-  max-height: 550px;
+  max-height: 414px;
+  height: 414px;
   overflow-y: scroll;
   outline: .5px solid #D9E1EC;
   border-radius: 3px;
@@ -1253,6 +1247,10 @@ body.no-scroll {
   margin-left: 10px;
 }
 .similarProductImgs {
+  min-height: 60px;
+  min-width: 60px;
+  height: 60px;
+  width: 60px;
   border-radius: 3px;
   filter: sepia(320%) hue-rotate(200deg) brightness(80%) saturate(10%) opacity(.8);
 }
@@ -2443,8 +2441,23 @@ hr {
   border: 1px #24bda6be solid;
   outline: none;
 }
+.upvoterUsers {
+  width: 330px;
+  height: 70px;
+  display: grid;
+  grid-template-columns: 37px 37px 37px 37px 37px 37px 37px 37px 37px;
+  grid-template-rows: auto;
+}
+.profPicStuff {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #60657360;
+}
 .profileImg3 {
   width: 100px;
+  min-width: 100px;
+  min-height: 100px;
   height: 100px;
   margin-right: 10px;
   border-radius: 4px;
@@ -2477,3 +2490,131 @@ hr {
 .submitBtn:hover {
   background-color: #FE4C00;
 }
+.relatedProdHeader {
+  font-size: 11px;
+  color: #4B587C;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.relatedProdHeader2 {
+  font-size: 11px;
+  color: #4B587C;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.stuff {
+  width: 280px;
+  display: flex;
+  padding: 0 0 0 31px;
+  margin: 10px 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  border-left: 1.5px solid #e3e3e38f;
+  max-width: 280px;
+}
+.rightAreaHolder {
+  width: 280px;
+  height: 300px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-color: grey;
+  background: url('https://user-images.githubusercontent.com/86431563/152720655-b8b14664-04d1-4e79-94ee-bed13a45472a.png');
+  filter: sepia(700%) hue-rotate(330deg) brightness(100%) saturate(45%) opacity(1);
+ /* background: url('https://user-images.githubusercontent.com/86431563/152714670-4b50474c-9e1a-424c-8728-a4f31d4e9d33.PNG');
+  filter: sepia(1000%) hue-rotate(330deg) brightness(95%) saturate(60%) opacity(.7); */
+ }
+.testing4 {
+  margin: 40px 0;
+  border-top: 1px solid #D9E1EC;
+  width: 280px;
+  max-width: 280px;
+}
+.testing5 {
+  width: 280px;
+  height: 122px;
+}
+.headerInfo {
+  font-size: 16px;
+  color: #21293C;
+  font-weight: 600;
+  /* margin: 0 24px 0 24px; */
+}
+.innerInfo {
+  font-size: 12px;
+  color: #4B587C;
+  font-weight: 400;
+  margin: 8px 0 33px 0;
+}
+.getStartedBtn {
+  border: 1px solid #D9E1EC;
+  outline: none;
+  background-color: white;
+  border-radius: 3px;
+  color: #21293C;
+  font-weight: 600;
+  width: 280px;
+  padding: 10.4px 93.11px;
+  height: 42px;
+}
+.getStartedBtn:hover {
+  border: 1px solid #FBB79A;
+}
+.miscLinks {
+  font-size: 12px;
+  color: #4B587C;
+  width: 280px;
+  margin: 0;
+  font-weight: 300;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 50px 80px 40px 80px 50px;
+  flex-direction: row;
+}
+.miscLinks2 {
+  font-size: 12px;
+  color: #4B587C;
+  width: 280px;
+  margin: 0 0 0 15px;
+  font-weight: 300;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 60px 45px 55px 120px 50px;
+  flex-direction: row;
+}
+.miscLinks3 {
+  font-size: 12px;
+  color: #4B587C;
+  width: 280px;
+  margin: 0 0 0 15px;
+  padding: 0;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: 70px 80px 70px 100px;
+  flex-direction: row;
+}
+.last {
+  font-size: 12px;
+  color: #4B587C;
+  width: 280px;
+  font-weight: 300;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+ul li:before{
+  /* list-style-type: '\2022'; */
+  list-style-type: '\b7';
+  /* content:"•"; */
+}
+/* ul {
+  list-style-type: disc;
+}
+.miscLinks > li {
+  display: list-item;
+  content: "";
+} */
+/* .miscLinks > li {
+  display:flex;
+} */

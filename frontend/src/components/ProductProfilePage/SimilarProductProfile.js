@@ -27,7 +27,7 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
 
     useEffect(() => {
         (async () => {
-            await dispatch(getProductsWithReviews())
+            // await dispatch(getProductsWithReviews())
             // setShowModal(true);
             newest2?.classList?.add("hide");
             setIsLoaded(true);
@@ -127,7 +127,7 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
                             )}
                         </div>
                         <div className="review">
-                            {<ReviewModal product={product}/>}
+                            {isLoaded && <ReviewModal product={product}/>}
                         </div>
                         </div>
                     </div>
@@ -176,6 +176,7 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
                                 </div>
                             </div>
                         </div>
+                        <div className="relatedProdHeader">RELATED PRODUCTS</div>
                         <div className="similarProdCardsSec">
                             {similarProdCards}
                         </div>

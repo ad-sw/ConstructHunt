@@ -43,7 +43,7 @@ function ReviewModal({product}) {
     const users = useSelector(state => Object.values(state?.users))
     let reviewUser = {...users}
 
-    return isLoaded && (
+    return (isLoaded && (
         <>
             {
             reviewsFilter.map(review => {
@@ -65,7 +65,8 @@ function ReviewModal({product}) {
             )
         })}
         </>
-    );
+      )
+    )
 }
 
 export default ReviewModal;

@@ -33,7 +33,7 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
 
     useEffect(() => {
         (async () => {
-            await dispatch(getProductsWithReviews())
+            // await dispatch(getProductsWithReviews())
             // newest2.classList.add("hide");
             // setShowModal(true);
             setIsLoaded(true);

@@ -42,7 +42,7 @@ function ProductCard({product, ashowModal}) {
 
     return (<>
        <div className="similarProductCard" onClick={openMenu}>
-             <img className="similarProductImgs" src={product?.thumbnailUrl} height="60px" width="60px"/>
+             <img className="similarProductImgs" src={product?.thumbnailUrl}/>
              <div className="rightSideCard">
                  <div className="prodNameSim">{product?.name}</div>
                  <div className="prodTaglineSim">{product?.tagline}</div>
