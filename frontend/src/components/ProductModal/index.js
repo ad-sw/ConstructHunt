@@ -18,12 +18,18 @@ function ProductModal({product, setShowModal2, thumbnailUrl}) {
     const [isLoaded, setIsLoaded] = useState(false)
     // const newest = document.getElementsByTagName("body")[0];
     // newest.classList.add("no-scroll");
+    const try1 = document?.getElementsByClassName("searchList")[0];
+    const searchBar2 = document.getElementsByClassName('searchBarExpands')[0];
 
     useEffect(() => {
         (async () => {
             // await dispatch(getProducts())
             // await dispatch(getAllReviews())
-            dispatch(getProductsWithReviews())
+            // dispatch(getProductsWithReviews())
+            // if (!e.currentTarget.contains(e.relatedTarget)) {
+            //     document.querySelector(".searchList").classList.add("hidden");
+            // }
+            // try1?.classList?.add('hide')
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -37,9 +43,12 @@ function ProductModal({product, setShowModal2, thumbnailUrl}) {
 
     const openMenu = (e) => {
         e.preventDefault()
+        searchBar2.classList.remove('more');
         // if (showModal) return;
         // document.documentElement.style.overflow = 'hidden';
         // document.body.scroll = "no";
+        try1?.classList?.add('hide')
+
         const newest = document.getElementsByTagName("body")[0];
         newest.classList.add("no-scroll");
         // const body = document.getElementsByTagName('body')[0];
@@ -60,14 +69,14 @@ function ProductModal({product, setShowModal2, thumbnailUrl}) {
     const topics = [['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
     ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
 
-    if (!isLoaded) {
-        return (
-            <div id="loadingGif">
-                <img src={"https://cdn.dribbble.com/users/56427/screenshots/6003020/budio_hero_illustration_for_animation_2.gif"} height="650px" width="850px" alt="loading"/>
-                <div className="loadText">Loading</div>
-            </div>
-            );
-        }
+    // if (!isLoaded) {
+    //     return (
+    //         <div id="loadingGif">
+    //             <img src={"https://cdn.dribbble.com/users/56427/screenshots/6003020/budio_hero_illustration_for_animation_2.gif"} height="650px" width="850px" alt="loading"/>
+    //             <div className="loadText">Loading</div>
+    //         </div>
+    //         );
+    //     }
 
     return (<>
     {isLoaded && (

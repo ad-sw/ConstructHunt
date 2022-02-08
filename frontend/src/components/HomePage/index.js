@@ -6,14 +6,13 @@ import ProductProfilePgModal from "../ProductProfilePage";
 import '../../../src/index'
 import {getAllReviews} from "../../store/review";
 import ProductModal from '../ProductModal'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 
 export default function HomePage(){
     const dispatch = useDispatch()
     const sessionUser = useSelector(state => state.session.user)
     const [isLoaded, setIsLoaded] = useState(false)
-    const [showModal, setShowModal] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
+    const history = useHistory();
 
     const body = document.getElementsByTagName('body')[0]
     // body.classList.remove('no-scroll')
@@ -23,16 +22,10 @@ export default function HomePage(){
             // await dispatch(getProducts())
             // await dispatch(getAllReviews())
             body.classList.remove("no-scroll");
-            await dispatch(getProductsWithReviews())
+            await dispatch(getProducts())
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
-
-    const handleCancel = (e) => {
-        e.preventDefault();
-        setShowModal(false);
-        }
-
 
     const products = useSelector(state => Object.values(state.products))
 
@@ -51,6 +44,10 @@ export default function HomePage(){
             );
         }
 
+    const navFunc = (e) => {
+        return history.push('/under-construction')
+    };
+
     return (<>{isLoaded && (
     <div id="pgContent">
         <div className="products">
@@ -65,7 +62,7 @@ export default function HomePage(){
             <div className="testing5">
                 <div className="headerInfo">Launching soon?</div>
                 <div className="innerInfo">Create your own Upcoming page and start building an audience for your launch 🚀</div>
-                <NavLink className="getStartedBtn" exact to={`under-construction`}>Get Started</NavLink>
+                <button className="getStartedBtn" onClick={navFunc}>Get Started</button>
             </div>
             <div className="testing4"></div>
             <ul className="miscLinks">

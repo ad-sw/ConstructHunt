@@ -5,6 +5,12 @@ const LOAD_PRODUCTS_WITH_REVIEWS = 'product/LOAD_PRODUCTS_WITH_REVIEWS';
 const UPDATE_PRODUCTS = 'product/UPDATE';
 const ADD_PRODUCTS = 'product/ADD';
 const DELETE_PRODUCTS = 'product/DELETE';
+const SEARCH_PRODUCTS = 'product/SEARCH';
+
+const search = (search) => ({
+    type: SEARCH_PRODUCTS,
+    search
+  });
 
 const load = (products) => ({
     type: LOAD_PRODUCTS,
@@ -46,10 +52,9 @@ export const getProductsWithReviews = () => async (dispatch) => {
 
 export const searchProducts = (searchTerm) => async (dispatch) => {
     const response = await csrfFetch(`/api/products/search/${searchTerm}`);
-
     if (response.ok) {
-        const products = await response.json();
-        dispatch(load(products.results));
+        const data = await response.json();
+        dispatch(search(data));
     }
 };
 
@@ -107,6 +112,10 @@ const productReducer = (state = {}, action) => {
         case LOAD_PRODUCTS_WITH_REVIEWS:
             const newState2 = {...state};
             return newState2;
+        case SEARCH_PRODUCTS:
+            let newState0 = {...state};
+            newState0.searchedResults = action.search
+            return newState0;
         case ADD_PRODUCTS:
             const addState = {...state};
             addState[action.product.id] = action.product;

@@ -26,24 +26,21 @@ router.get('/:productId', asyncHandler(async function(req, res) {
 }));
 
 router.get(
-    "/search/:searchTerm",
-    asyncHandler(async (req, res) => {
-      const input = req.params.searchTerm;
+  "/search/:searchTerm",
+  asyncHandler(async (req, res) => {
+    const input = req.params.searchTerm;
 
-      const results = await Product.findAll({
-        where: {
-          title: {
-            [Op.iLike]: `%${input}%`,
-          },
+    const results = await Product.findAll({
+      where: {
+        name: {
+          [Op.iLike]: `%${input}%`,
         },
-        limit: 10,
-      });
-      res.json({
-        results
-      });
-    })
-  );
-
+      },
+      // limit: 10,
+    });
+    res.json(results);
+  })
+);
 
 router.post('/', asyncHandler(async function(req, res) {
     const product = await ProductRepository.addProduct(req.body);

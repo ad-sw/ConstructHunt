@@ -26,7 +26,7 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
     const [topicId, setTopicId] = useState(atopicId);
     const [description, setDescription] = useState(adescription);
 
-    const newest2 = document.getElementsByClassName("product-container")[0];
+    const newest2 = document.getElementsByClassName("productContainer")[0];
 
     const topics_arr = [[],['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
     ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
@@ -62,7 +62,7 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
 
     const handleCancel = (e) => {
       e.preventDefault();
-      const newest2 = document.getElementsByClassName("product-container")[0];
+      const newest2 = document.getElementsByClassName("productContainer")[0];
       newest2.classList.remove("hide");
       setShowModal(false);
     }
@@ -90,7 +90,7 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
       isLoaded && showModal && (
       <>
           <div key={product?.id}  className="modal-child">
-          <div className="product-container">
+          <div className="productContainer">
           <form onSubmit={handleSubmit}>
               <div className="headerSection">
                 <div className="mainInfo">

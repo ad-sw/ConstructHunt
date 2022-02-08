@@ -8,7 +8,6 @@ import AboutUs from "./components/AboutUsPg"
 import ProductModal from "./components/ProductModal";
 // import AboutMe from "./components/AboutMeFooter/AboutMe";
 // import Slideshow from "./components/HomeImages";
-import SearchBar from "./components/SearchBar";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import SignupFormPage from "../src/components/SignupFormPage"

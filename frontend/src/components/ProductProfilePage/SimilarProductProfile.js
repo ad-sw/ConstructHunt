@@ -16,7 +16,7 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
     const [isLoaded, setIsLoaded] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     const users = useSelector(state => state.users);
-    const newest2 = document.getElementsByClassName("product-container")[0];
+    const newest2 = document.getElementsByClassName("productContainer")[0];
 
     const productTopics = useSelector(state => state.products);
     const productTopicsArr = Object.values(productTopics)
@@ -24,12 +24,14 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
     const productTopicId = product?.topicId
     const productId = product?.id
     const productTopicsArrFiltered = productTopicsArr.filter (product => product?.topicId === productTopicId && productId !== product?.id)
+    // if (newest2?.length > 1) {
+        newest2?.classList?.add("hide");
+    // }
 
     useEffect(() => {
         (async () => {
             // await dispatch(getProductsWithReviews())
             // setShowModal(true);
-            newest2?.classList?.add("hide");
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -46,9 +48,9 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
 
     const handleCancel = (e) => {
         e.preventDefault();
-        const newest2 = document.getElementsByClassName("product-container")[0];
-        newest2.classList.remove("hide");
         setShowModal(false);
+        const newest2 = document.getElementsByClassName("productContainer")[0];
+        newest2.classList.remove("hide");
       }
 
     const similarProdCards = productTopicsArrFiltered.map(product => {
@@ -70,7 +72,7 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
     return (
         isLoaded && (<>
             <div key={product?.id}  className="modal-child">
-                <div className="product-container">
+                <div className="productContainer">
                     <div className="headerSection">
                         <div className="mainInfo">
                             {<img className="profileImg" src={product?.thumbnailUrl} height="25%" width="50%" alt="display"/>}
@@ -153,6 +155,27 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
                             return (idx < 3) ? (<img key={user.id} className='upvoterPic' src={''} />) : null;
                             })}
                             </div> */}
+                        </div>
+                        <div className="relatedProdHeader2">UPVOTERS</div>
+                        <div className="upvoterUsers">
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
+                            <div className="profPicStuff"></div>
                         </div>
                         <div className="areaBelow">
                             <div className="hunterLink">

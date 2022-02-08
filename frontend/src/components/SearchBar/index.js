@@ -1,51 +1,101 @@
-import {useDispatch} from 'react-redux';
-import { useState } from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {useState, useEffect} from 'react';
 import {searchProducts} from '../../store/product';
-// import { Redirect } from 'react-router-dom';
-
 import "./SearchBar.css";
+import {NavLink, useHistory} from 'react-router-dom';
+import ProductProfilePgModal2 from '../../components/ProductProfilePage/SimilarProductProfile'
+import {Modal} from '../../context/Modal';
+import {getProducts} from '../../store/product'
+import ProductCard from '../ProductProfilePage/productCard';
+import ProductModal from '../ProductModal/index'
 
-
-function SearchBar(){
+function SearchBar() {
     const dispatch = useDispatch();
-    const [search, setSearch] = useState('');
-    // const [test, setTest] = useState('');
+    let [search, setSearch] = useState('');
+    const history = useHistory();
+    const [isLoaded, setIsLoaded] = useState(false)
+    const try1 = document?.getElementsByClassName("searchList")[0];
+    const testing = document?.getElementById('root')
+    const testing2 = document?.getElementById('pgContent')
+    const body = document.getElementsByTagName('body')[0]
+    const searchBarT = document.getElementsByClassName('searchBarT')[0];
+    const searchBar2 = document.getElementsByClassName('searchBarExpands')[0];
 
-    return (
-        <div className="searchBarT">
-        <form className="searchBarT" onSubmit={(e) => {
-            if (search) {
-            e.preventDefault();
+    useEffect(() => {
+        if (search.length > 0) {
+            try1?.classList?.remove('hide')
             dispatch(searchProducts(search));
-            }}
-        }>
-        <div className="">
-        {/* <svg className="searchIcon" width="21px" height="21px" viewBox="0 1.5 16 16" xmlns="http://www.w3.org/2000/svg" class="styles_searchIcon__3Hf35"><path d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5zm8.707 12.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z" fill="#4B587C" opacity="0.5"></path></svg> */}
-        {/* &nbsp;
-        <input
-            className="searchInnerArea but"
-            placeholder="Search Construct Hunt"
-            type="text"
-            name="search"
-            value={search}
-            onChange={e => setSearch(e.target.value)}>
-        </input> */}
-        <img className="searchIcon" src="https://user-images.githubusercontent.com/86431563/150604228-109bc4a5-1562-4e35-88ed-6a8a75a352bc.png" height="19px" width="19px"/>
-        <input
-            type="text"
-            name="search"
-            className="searchBarExpands"
-            placeholder="Search Construct Hunt"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-        />
-        </div>
-        {/* <input class="but" type="button" value = "search"/> */}
-        {/* <button className='searchBtn' type="submit">Search</button> */}
-        {/* <div id="blueBox"></div> */}
+            body.classList.add('no-scroll')
+            searchBar2.classList.add('more');
+          }
+        if (search.length === 0) {
+            try1?.classList?.add('hide')
+            body.classList.add('no-scroll')
+        }
+    setIsLoaded(true);
+    }, [dispatch, search]);
+
+    let searchResults = useSelector((state) => state.products.searchedResults);
+
+    testing?.addEventListener("click", function() {
+        try1?.classList?.add('hide')
+        body.classList.remove('no-scroll')
+        searchBar2?.classList?.remove('more');
+    });
+
+    testing2?.addEventListener("click", function() {
+        try1?.classList?.add('hide')
+        body.classList.remove('no-scroll')
+        searchBar2?.classList?.remove('more');
+    });
+
+    // const showResults = () => {
+    //     try1?.classList?.remove('hide')
+    // };
+
+    const testt = () => {
+        search = 's'
+        setSearch(search)
+        dispatch(searchProducts(search))
+        body.classList.add('no-scroll')
+        // searchBar2.classList.add('more');
+    }
+
+    const searchDropDown = (
+        <div className="searchBarT">
+        <form className="searchBarT">
+          <div className="">
+            <img className="searchIcon" src="https://user-images.githubusercontent.com/86431563/150604228-109bc4a5-1562-4e35-88ed-6a8a75a352bc.png" height="19px" width="19px"/>
+            <input
+                className="searchBarExpands"
+                name='search'
+                value={search}
+                type="text"
+                placeholder="Search Construct Hunt"
+                // onFocus={() => showResults()}
+                onChange={(e) => setSearch(e.target.value)}
+            />
+            <div className="searchList hide">
+                {searchResults?.length > 0 && search.length > 0 ? (
+                Object.values(searchResults).map((product) => (
+                    <div key={product?.id}>
+                    <ProductModal
+                        product={product}
+                    />
+                    </div>
+                ))
+                ) : (
+                <div className="noResults" onClick={testt}>View all results</div>
+                )}
+            </div>
+          </div>
         </form>
-        </div>
-    );
-  }
+      </div>
+    )
+
+    return (<>
+        {searchDropDown}
+    </>)
+}
 
 export default SearchBar;

@@ -22,13 +22,13 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
     const [isLoaded, setIsLoaded] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     const product2 = useSelector(state => state.product);
-    const newest2 = document.getElementsByClassName("product-container")[0];
-    setShowModal(true);
+    const newest2 = document.getElementsByClassName("productContainer")[0];
+    // setShowModal(true);
 
     useEffect(() => {
         (async () => {
             // await dispatch(getProductsWithReviews())
-            setShowModal(true);
+            // setShowModal(true);
             // newest2?.classList?.remove("hide");
             setIsLoaded(true);
         })();
@@ -43,7 +43,6 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
 
     let event = new Date(product?.createdAt);
     let date = event.toLocaleDateString().slice(0,5) + event.toLocaleDateString().slice(7,9)
-    // if (document.getElementsByClassName("product-container")[0].hide) {newest2.classList.remove("hide");}
 
     const similarProdCards = productTopicsArrFiltered.map(product => {
         return (
@@ -71,7 +70,7 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
     return (
         isLoaded && (<>
             <div key={product?.id}  className="modal-child">
-                <div className="product-container">
+                <div className="productContainer">
                     <div className="headerSection">
                         <div className="mainInfo">
                             {<img className="profileImg" src={product?.thumbnailUrl} height="25%" width="50%" alt="display"/>}
@@ -96,11 +95,11 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
                     <div className="leftSide">
                         <div className="mainImage">
                             <div className="gallery">
-                                    <div className="mainInfo2">
-                                        {newArr.map(image => {
-                                            if (image?.length > 1) return <img className="img5" src={image} alt="display" height="584.97px" min-width="658px"/>
-                                        })}
-                                    </div>
+                                <div className="mainInfo2">
+                                    {newArr.map(image => {
+                                        if (image?.length > 1) return <img className="img5" src={image} alt="display" height="584.97px" min-width="658px"/>
+                                    })}
+                                </div>
                                 {product?.galleryImage1?.length > 1 && (<>
                                 <img className="carouselPics" src={product?.galleryImage1} alt="display"/>
                                 </>)}

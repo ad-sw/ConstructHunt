@@ -21,21 +21,23 @@ function ProductCard({product, ashowModal}) {
         e.preventDefault()
         const newest = document.getElementsByTagName("body")[0];
         newest.classList.add("no-scroll");
-        const newest2 = document.getElementsByClassName("product-container")[0];
-        newest2.classList.add("hide");
+        const newest2 = document.getElementsByClassName("productContainer")[0];
+        // if (newest2?.length > 1) {
+        newest2?.classList?.add("hide");
+        // }
         setShowModal(true);
     };
 
     const closeMenu = (e) => {
         e.preventDefault()
-        const newest2 = document.getElementsByClassName("product-container")[0];
+        const newest2 = document.getElementsByClassName("productContainer")[0];
         newest2.classList.remove("hide");
         setShowModal(false);
     };
 
     const handleCancel = (e) => {
         e.preventDefault();
-        const newest2 = document.getElementsByClassName("product-container")[0];
+        const newest2 = document.getElementsByClassName("productContainer")[0];
         newest2.classList.remove("hide");
         setShowModal(false);
     }

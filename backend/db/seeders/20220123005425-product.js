@@ -13,7 +13,7 @@ module.exports = {
           galleryImage3: 'https://i.mooool.com/img/2018/07/mooool-MSP-Beiqijia-Technology-Business-District14.jpg?x-oss-process=style%2Fboombox_image545-2x',
           link: "https://mooool.com/en/beiqijia-technology-business-district-by-martha-schwartz-partners.html",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -27,7 +27,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/6193/8375/9a95/7a66/5a21/b4df/slideshow/38-ti-yu-guan-wai-de-jing-guan-shui-xi-landscape-water-system-outside-gym-c-wu-qing-shan.jpg?1637057424',
           link: "https://www.archdaily.com/971983/china-academy-of-art-liangzhu-campus-atelier-fcjz?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -41,7 +41,7 @@ module.exports = {
           galleryImage3: 'https://cdn.vox-cdn.com/thumbor/bl0gvSkyH48Dsjr6dHfi5kkPHyI=/0x0:1302x868/1200x800/filters:focal(547x330:755x538)/cdn.vox-cdn.com/uploads/chorus_image/image/69926926/Screen_Shot_2021_09_29_at_9.17.44_AM.0.png',
           link: "https://www.laphil.com/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -55,7 +55,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5909/a250/e58e/ce23/0900/0158/slideshow/11131_MR_N93_tabloid.jpg?1493803586',
           link: "https://www.archdaily.com/870491/paccar-environmental-technology-building-lmn-architects?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -69,7 +69,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5c5c/52f6/284d/d1d5/4a00/004c/slideshow/24_CityThread_photo_by_Justin_Harris.jpg?1549554345',
           link: "https://www.archdaily.com/910948/city-thread-sports",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -83,7 +83,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/61de/b197/3e4b/31f8/f300/00bb/slideshow/BAU679_Image_017.jpg?1641984400',
           link: "https://www.archdaily.com/975018/yuandang-bridge-bau-brearley-architects-plus-urbanists?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_projects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -97,7 +97,7 @@ module.exports = {
           galleryImage3: 'https://sdg-migration-id.s3.amazonaws.com/interior-design-best-of-year-retail-beijing-bookstore-Zhongshuge-xliving-li-xiang-idx210101_boy_MixedRetail06-6.jpg',
           link: "https://interiordesign.net/projects/beijing-zhongshuge-lafayette-store-by-x-living-2020-best-of-year-winner-for-retail/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -111,7 +111,7 @@ module.exports = {
           galleryImage3: 'https://www.turenscape.com/upload/project/201708/6377aac870fda8a82ec8770b8dbe0d49.jpg',
           link: "https://www.turenscape.com/en/project/detail/4554.html",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -125,7 +125,7 @@ module.exports = {
           galleryImage3: 'https://cdn.homedit.com/wp-content/uploads/2014/08/Technology-Emerson-College-Campus-Entryway-768x512.jpg',
           link: "https://www.homedit.com/emerson-college-los-angeles-campus/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -139,7 +139,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152101603-250a781a-86d8-409b-9bd8-7c30faba8d0f.PNG',
           link: "https://worldlandscapearchitect.com/greentown-nantong-chengyuan-zsd/?v=7516fd43adaa",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -153,7 +153,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/61a7/5bb4/f91c/8196/f800/0036/slideshow/The_double_shell_structure_photo_by_Jonathan_Leijonhufvud.jpg?1638357912',
           link: "https://www.archdaily.com/972823/monolithic-concert-hall-open-architecture?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_projects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -167,7 +167,7 @@ module.exports = {
           galleryImage3: 'https://s.hdnux.com/photos/22/67/07/4944356/3/rawImage.jpg',
           link: "https://www.spl.org/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -181,7 +181,7 @@ module.exports = {
           galleryImage3: '',
           link: "https://www.archdaily.com/948325/campus-and-creative-innovation-knowledge-park-3h-architecture",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -195,7 +195,7 @@ module.exports = {
           galleryImage3: 'https://static.dezeen.com/uploads/2018/07/inagawa-cemetry-david-chipperfield-architecture_dezeen_2364_col_17-852x553.jpg',
           link: "https://www.dezeen.com/2018/07/18/david-chipperfield-visitor-centre-inagawa-cemetery-architecture/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -209,7 +209,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152101851-2203745a-7ae3-497f-8ba3-6a1784d9dbb0.PNG',
           link: "https://www.hhlloo.com/a/wu-xian-ji-guang-chang.html",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -223,7 +223,7 @@ module.exports = {
           galleryImage3: 'https://i.mooool.com/img/2019/12/mooool-LandView-Performance7.jpg?x-oss-process=style%2Fboombox_image1600',
           link: "https://mooool.com/en/rf-properties-the-upper-river-side-phase-i-by-landview-performance.html",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -237,7 +237,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5007/069e/28ba/0d41/4800/0b00/slideshow/stringio.jpg?1414102075',
           link: "https://www.archdaily.com/103509/research-and-training-centre-in-the-construction-trades-acdf?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -251,7 +251,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5088/cd94/28ba/0d75/2a00/00da/newsletter/SUK_Image_by_Iwan_Baan_04.jpg?1413939827',
           link: "https://www.visitcopenhagen.com/copenhagen/planning/superkilen-park-gdk707822",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -265,7 +265,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5037/f835/28ba/0d59/9b00/0708/slideshow/stringio.jpg?1414206548',
           link: "https://landezine.com/cemetery-design-igualada/attachment/10/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -279,7 +279,7 @@ module.exports = {
           galleryImage3: 'https://i.pinimg.com/originals/e8/53/b4/e853b49fded1bfb7d44fadb67a1d88c4.jpg',
           link: "https://hzhang.photoshelter.com/image/I0000f_.gxrOBCT8",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -293,7 +293,7 @@ module.exports = {
           galleryImage3: 'https://archinect.imgix.net/uploads/w3/w3k4byspyore0fr8.jpg?fit=crop&auto=compress%2Cformat&w=615',
           link: "https://archinect.com/firms/project/40542522/new-town-library-in-maranello-italy/58670357",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -307,7 +307,7 @@ module.exports = {
           galleryImage3: 'https://d3igjmthvmn71a.cloudfront.net/wp-content/uploads/nottingham-city-hub-49_50477109863_o-1024x1536.jpg',
           link: "https://bondbryan.co.uk/project/nottingham-city-hub/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -321,7 +321,7 @@ module.exports = {
           galleryImage3: 'https://i.mooool.com/img/2019/05/mooool-SPI-NCD-Lianfa-Zanglong-19.jpg?x-oss-process=style%2Fboombox_image545-2x',
           link: "https://mooool.com/xudc-zanglongdajing-in-hangzhou-by-s-p-i-ncd.html",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -335,7 +335,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/61c4/b2aa/b038/0601/6505/30fb/slideshow/3.jpg?1640280780',
           link: "https://www.archdaily.com/974128/astronomy-park-ego-group?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_projects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -349,7 +349,7 @@ module.exports = {
           galleryImage3: 'https://landezine.com/wp-content/uploads/2013/10/Lakewood-Cemetery-Garden-Mausoleum-Landscape-by-Halvorson-Design-Partnership-002-730x463.jpg',
           link: "https://landezine.com/lakewood-cemetery-garden-mausoleum-landscape-by-halvorson-design-partnership/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -363,7 +363,7 @@ module.exports = {
           galleryImage3: 'https://landezine.com/wp-content/uploads/2019/05/15.-St-Ignatius-Riverview-PaulMcMillan.jpg',
           link: "https://landezine.com/therry-courtyard-st-ignatius-riverview-by-arcadia-landscape-architecture/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -377,7 +377,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152102097-618f3522-065b-4c93-a4a2-4618f210a3fa.PNG',
           link: "https://www.terrain-studio.com/projects/helios-plaza",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -391,7 +391,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152102325-a0c83716-ac25-4568-8bcc-a454c45533a1.PNG',
           link: "https://www.designboom.com/architecture/turanga-christchurch-central-library-schmidt-hammer-lassen-new-zealand-10-17-2018/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -405,7 +405,7 @@ module.exports = {
           galleryImage3: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdaily.jstor.org%2Fwp-content%2Fuploads%2F2016%2F10%2FVietnam_veterans_wall_1050x700.jpg&f=1&nofb=1',
           link: "https://www.vvmf.org/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -419,7 +419,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5b95/3d3e/f197/cc77/b300/007f/slideshow/%E5%8F%B0%E7%90%83%E5%AE%A4.jpg?1536507169',
           link: "https://www.archdaily.com/901714/tencent-seafront-towers-interior-design-b-plus-h-architects?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -433,7 +433,7 @@ module.exports = {
           galleryImage3: 'https://www.cabinetmagazine.org/issues/45/cabinet_045_trainor_james_001.jpg',
           link: "https://www.cabinetmagazine.org/issues/45/trainor.php",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -447,7 +447,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5f06/2685/b357/655d/4600/0290/slideshow/Kaunas-V-Plaza-Urban-Design-Architecture-Corner-Building-0256.jpg?1594238573',
           link: "https://www.archdaily.com/943348/v-plaza-urban-development-3deluxe",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -461,7 +461,7 @@ module.exports = {
           galleryImage3: 'http://www.dililah.org/images/lovejoy/lovejoy5.jpg',
           link: "https://www.portland.gov/parks/lovejoy-fountain-park",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -475,7 +475,7 @@ module.exports = {
           galleryImage3: 'https://landezine.com/wp-content/uploads/2013/03/National-9_11-Memorial-by-PWP-Landscape-Architecture-16.jpg',
           link: "https://landezine.com/national-911-memorial-by-pwp-landscape-architecture/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -489,7 +489,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5fb9/b92a/63c0/17dd/6300/0389/slideshow/Stephane_Brugger.jpg?1606007076',
           link: "https://www.archdaily.com/951885/chimneys-overhangs-and-anchors-the-architecture-of-climbing-gyms?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_all",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -503,7 +503,7 @@ module.exports = {
           galleryImage3: 'https://www.architectureanddesign.com.au/getmedia/262a5511-a00d-44f9-8148-48978c02f791/110905_library_viaTheWest4.aspx?&ext=.jpg',
           link: "https://www.architectureanddesign.com.au/news/industry-news/kerry-hill-designs-perth-library-first-civic-build#",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -517,7 +517,7 @@ module.exports = {
           galleryImage3: '',
           link: "https://www.architecturaldigest.com/story/gaeta-springall-arquitectos-mexico-city-memorial-to-victims-of-violence?epik=dj0yJnU9T29MVVplaVJJTDUxV1hycmJ5eGZfMmVfXzBybWwzbFUmcD0wJm49ME9nd2dUYkNyMWtsVmJWdFlPRDQxQSZ0PUFBQUFBR0gzR1h3",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -531,7 +531,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152102630-88d07d6c-2460-475c-ac2b-8ed038a6867b.PNG',
           link: "http://www.archina.com/index.php?g=ela&m=index&a=works&id=3133",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -545,7 +545,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152103349-a16778f8-667e-4e31-85dc-86e8c8318ee0.PNG',
           link: "https://worldlandscapearchitect.com/scape-design-for-midtown-center-plaza-recalls-diagonal-paths-of-the-lenfant-plan-for-washington-d-c/?v=7516fd43adaa#.W7CcgHszaUk",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -559,7 +559,7 @@ module.exports = {
           galleryImage3: 'http://www.tzg.com.au/cms/wp-content/uploads/2008/07/001_pbh-1000x770.jpg',
           link: "http://www.tzg.com.au/project/aus-war-memorial/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -573,7 +573,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5129/6727/b3fc/4b11/a700/6b13/large_jpg/1295360738-bg170111-03.jpg?1414308320',
           link: "https://www.plataformaarquitectura.cl/cl/02-71033/plaza-deichmann-chyutin-architects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -587,7 +587,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/6155/0e55/acae/0201/65ca/6694/slideshow/1091-n249-a3digital.jpg?1632964208',
           link: "https://www.archdaily.com/969372/ancora-40-office-building-buckley-gray-yeoman?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -601,7 +601,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152104313-fc171b45-3192-40d5-9085-f555e127b4c5.PNG',
           link: "https://www.gooood.cn/waiting-for-the-next-ten-minutes-u-center-plaza-by-z-t-studio.htm",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -615,7 +615,7 @@ module.exports = {
           galleryImage3: 'https://landezine.com/wp-content/uploads/2010/01/g028_dno_08.jpg',
           link: "https://landezine.com/the-nieuwe-ooster/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -629,7 +629,7 @@ module.exports = {
           galleryImage3: 'https://static.dezeen.com/uploads/2016/10/weston-library-wilkinson-eyre-architecture-education-university-of-oxford-uk_dezeen_2364_ss_9-1.jpg',
           link: "https://www.dezeen.com/2016/10/06/wilkinson-eyre-renovation-giles-gilbert-scott-oxford-university-bodleian-weston-library/amp/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -643,7 +643,7 @@ module.exports = {
           galleryImage3: 'https://www.arch2o.com/wp-content/uploads/2020/08/Arch2O-gateway-one-shekou-spark-architects-8.jpg',
           link: "https://www.arch2o.com/gateway-one-shekou-spark-architects/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -657,7 +657,7 @@ module.exports = {
           galleryImage3: 'https://archinect.imgix.net/uploads/sz/szd9fyj365it74m3.jpg?fit=crop&auto=compress%2Cformat&w=615',
           link: "https://archinect.com/firms/project/33961/mit-collier-memorial/149996114",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -671,7 +671,7 @@ module.exports = {
           galleryImage3: 'https://www.s-onsite.com/onsite_images/80/TNC-OS-022-D-_C_.jpg',
           link: "https://www.s-onsite.com/works/detail.html?id=80",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -685,7 +685,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/61db/214e/1af7/4a01/65e0/bfa3/slideshow/19-morgan-state-university-credit-nic-lehoux.jpg?1641750904',
           link: "https://www.archdaily.com/974813/calvin-and-tina-tyler-hall-morgan-state-university-teeple-architects?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -699,7 +699,7 @@ module.exports = {
           galleryImage3: 'https://100architects.com/wp-content/uploads/2019/09/DSC_1100-1.jpg',
           link: "https://100architects.com/project/big-bang/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -713,7 +713,7 @@ module.exports = {
           galleryImage3: 'https://www.nbwla.com/sites/default/files/styles/width_75_pc-breakpoints_theme_nbwla_xl_1x/public/project-images/160527_19-02-22_5DSR8410.jpg?itok=4c5zNgLH',
           link: "https://www.nbwla.com/projects/park/naval-cemetery-landscape",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -727,7 +727,7 @@ module.exports = {
           galleryImage3: 'https://static.dezeen.com/uploads/2017/11/tianjin-binhai-library-mvrdv-architecture-public-and-leisure-china_dezeen_2364_col_14-852x568.jpg',
           link: "https://www.dezeen.com/2017/11/04/mvrdv-tianjin-binhai-public-library-giant-eye-china-winy-maas/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -741,7 +741,7 @@ module.exports = {
           galleryImage3: 'https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1024-512,f_auto,q_auto:best/msnbc/Components/Photo/_new/080908-memorial-hmed-2p.jpg',
           link: "https://www.architecturaldigest.com/gallery/memorial-architecture-slideshow?epik=dj0yJnU9dnVWRUI4NUd1YklXa3A5YVE4UGpXd3JwWW9udUxXNVAmcD0wJm49dmotZmJvTlBPZExVaTcxaVIwWG1OQSZ0PUFBQUFBR0gzRWhz",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -755,7 +755,7 @@ module.exports = {
           galleryImage3: 'https://images.arq.com.mx/eyecatcher/590590/23881-5.jpg',
           link: "https://noticias.arq.com.mx/Detalles/23881.html",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -769,7 +769,7 @@ module.exports = {
           galleryImage3: 'https://arquitecturayempresa.es/sites/default/files/content/arquitectura_mykd_crown_sky_garden_07.jpg',
           link: "https://arquitecturayempresa.es/noticia/arquitectura-para-mejorar-la-salud-crown-sky-garden-de-mikyoung-kim",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -783,7 +783,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152090238-9f090926-fa1c-4d89-8715-a2030ec9e5d4.PNG',
           link: "https://www.archdaily.com/966754/witnessing-the-growth-of-xiangshan-campus-of-china-academy-of-art-2007-vs-2021?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_all",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -797,7 +797,7 @@ module.exports = {
           galleryImage3: 'http://image.digitalinsightresearch.in/Uploads/ImageLibrary/Active/2017Q3/5.PMI/Designcurial/Blueprint/BP2018/Marina-One9.jpg',
           link: "https://www.designcurial.com/news/the-jungle-block-marina-one-6716694/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -811,7 +811,7 @@ module.exports = {
           galleryImage3: 'https://www.contemporist.com/wp-content/uploads/2015/07/parklet_020715_10.jpg',
           link: "https://www.contemporist.com/san-francisco-replaces-street-parking-with-the-sunset-parklet/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -825,7 +825,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152104574-77c86f6a-3720-4121-aa18-a228ecdb204f.PNG',
           link: "https://www.designboom.com/architecture/aspect-studios-hyperlane-chengdu-china-07-20-2020/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -839,7 +839,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152104835-807c26c8-bcbc-465f-92c7-9c4a050567e3.PNG',
           link: "https://worldlandscapearchitect.com/canadian-firefighters-memorial-ottawa-canada-plant-architect-inc/?v=7516fd43adaa",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -853,7 +853,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/6172/ebcb/ad53/d719/aa1c/2e43/slideshow/017.jpg?1634921463',
           link: "https://www.archdaily.com/970675/ted-ankara-college-foundation-performing-arts-center-uygur-architects?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -867,7 +867,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152210807-b0691823-a2f3-4b33-a71b-509bb2b341ab.PNG',
           link: "http://ohtori-c.com/2015/08/12/guangzhou-vanke-cloud-city/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -881,7 +881,7 @@ module.exports = {
           galleryImage3: '',
           link: "https://www.designspiration.com/save/1600184171334/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -895,7 +895,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152091146-cf10ad62-e934-48fb-bb0f-6b6e655f0caf.PNG',
           link: "https://www.archdaily.com/563128/zhangjiagang-town-river-reconstruction-botao-landscape",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -909,7 +909,7 @@ module.exports = {
           galleryImage3: 'https://www.spoon-tamago.com/wp-content/uploads/2016/01/sayama-cemetary-chapel-4.jpg',
           link: "https://www.spoon-tamago.com/2016/01/25/the-remarkable-sayama-lakeside-cemetery-by-hiroshi-nakamura-nap/#more-34834",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -923,7 +923,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5f21/43eb/b357/653d/3a00/07d8/slideshow/DSCF3482%C2%A9%E7%94%B0%E6%96%B9%E6%96%B9.jpg?1596015584',
           link: "https://www.archdaily.com/944700/eagle-studio-waa?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -937,7 +937,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5f54/b6ac/b357/65fa/5600/055a/slideshow/Vitality_island%EF%BC%882%EF%BC%89.jpg?1599387297',
           link: "https://www.archdaily.com/947168/floating-archipelago-pedestrian-bridge-design-fcha?ad_medium=gallery",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -951,7 +951,7 @@ module.exports = {
           galleryImage3: 'https://massdesigngroup.org/sites/default/files/styles/lightbox/public/primarycarousel/Waterwall_3_1.jpg?itok=CN4LavFD',
           link: "https://massdesigngroup.org/work/design/national-memorial-peace-and-justice",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -965,7 +965,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5bcb/72f7/f197/cccd/6300/004c/slideshow/20180913-soriamoria-2126.jpg?1540059882',
           link: "https://www.archdaily.com/904351/soria-moria-sauna-feste-landscape-architecture?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_projects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -979,7 +979,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152099728-d6dc7bc1-87d1-4ec5-826b-bb2c5e641a24.PNG',
           link: "https://www.contemporist.com/sousse-and-bardo-memorial-opens-in-birminghams-cannon-hill-park/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -993,7 +993,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/61d7/ea96/23d7/e813/6a89/21aa/slideshow/013.jpg?1641540280',
           link: "https://www.archdaily.com/974738/tokyo-institute-of-technology-hisao-and-hiroko-taki-plaza-kengo-kuma-and-associates?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_projects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1007,7 +1007,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/6189/0b13/f91c/8194/4600/001e/slideshow/%E5%9F%BA%E6%9C%AC%E5%9E%8B%E7%A7%BB%E5%8A%A8%E9%A9%BF%E7%AB%99-A8_%E8%8B%8F%E5%B7%9E%E6%98%86%E4%BB%91%E7%BB%BF%E5%BB%BA%E6%9C%A8%E7%BB%93%E6%9E%84%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%882%EF%BC%89.jpg?1636371193',
           link: "https://www.archdaily.com/971527/shanghai-fish-mobile-station-tjad-pro-li-zhenyu-studio?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_projects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1021,7 +1021,7 @@ module.exports = {
           galleryImage3: 'https://static.dezeen.com/uploads/2015/11/Mausoleum-of-the-Martyrdom-of-Polish-Villages-in-Michniow_Nizio-Design-International_dezeen_1568_4.jpg',
           link: "https://www.dezeen.com/2015/11/30/mausoleum-martyrdom-of-polish-villages-massacre-site-michniow-second-world-war-miroslaw-nizio/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1035,7 +1035,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/61d5/9d41/336e/280f/fdcd/5453/slideshow/trop-anvilla-yuan-wei-kang-01.jpg?1641389435',
           link: "https://www.archdaily.com/974616/an-villa-trop-terrains-plus-open-space?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_projects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1049,7 +1049,7 @@ module.exports = {
           galleryImage3: 'https://s2.glbimg.com/yMIlKNNsq-9BL4WIIQGSi0D4Gi8=/smart/e.glbimg.com/og/ed/f/original/2017/08/04/22628876.jpg',
           link: "https://casavogue.globo.com/Arquitetura/noticia/2017/08/tadao-ando-constroi-templo-verde-ao-redor-de-buda-gigante.html",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1063,7 +1063,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/61b0/b960/f7cf/d301/644a/9041/slideshow/17-al-hosn-site-landscape-detail-photographer-mikkel-frost.jpg?1638971808',
           link: "https://www.archdaily.com/973260/al-hosn-masterplan-and-landscape-cebra?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_projects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1077,7 +1077,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5510/e9eb/e58e/ceb2/7000/039f/large_jpg/MG9C2993.Bardagjy_approved_(Custom).jpg?1427171794',
           link: "https://www.archdaily.com/612641/student-activity-center-overland-partners-wtw-architects?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1091,7 +1091,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/618a/6ab0/f91c/81da/6e00/00d6/slideshow/12_%E6%97%B1%E5%9C%B0%E5%96%B7%E6%B3%89_Dry_fountains_%C2%A9Holi%E6%B2%B3%E7%8B%B8.jpg?1636461206',
           link: "https://www.archdaily.com/971635/shenzhen-baoan-waterfront-cultural-park-aube-conception?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_projects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1105,7 +1105,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152105051-e09ae344-f01c-412e-90c1-e04fc1124289.PNG',
           link: "https://www.designboom.com/architecture/crisa-santos-memorial-park-sao-paulo-parque-das-cerejeiras-cemetery-brazil-11-25-2018/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1119,7 +1119,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/61e0/7ee5/3e4b/31b8/e300/0041/slideshow/09_Espacio_Publico_Acaponeta__CCA_Centro_de_Colaboraci%C3%B3n_Arquitect%C3%B3nica_ok.jpg?1642102486',
           link: "https://www.archdaily.com/975188/acaponeta-public-park-cca-centro-de-colaboracion-arquitectonica?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_projects",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1133,7 +1133,7 @@ module.exports = {
           galleryImage3: 'https://landezine.com/wp-content/uploads/2011/01/Karres-en-Brands-landscape-architecture-cemetery-Langedijk-Urn-Columns_-photo-Saph_Rob-de-Jong.jpg',
           link: "https://landezine.com/langedijk-cemetery-by-karres-en-brands-landscape-architecture/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1147,7 +1147,7 @@ module.exports = {
           galleryImage3: 'https://www.interiorzine.com/wp-content/uploads/2010/03/courtyard-creative-seating.jpg',
           link: "https://maraniarchitects.com/project/park/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1161,7 +1161,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/55d3/c08c/e58e/cea1/ec00/0096/slideshow/4.jpg?1439940735',
           link: "https://www.archdaily.com/772124/richard-ivey-building-hariri-pontarini-architects?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1175,7 +1175,7 @@ module.exports = {
           galleryImage3: 'https://i.mooool.com/img/2019/10/mooool-IAPA-Pty.-Ltd.-POLY-PARC-GARDEN17.jpg',
           link: "https://mooool.com/en/poly-prac-garden-by-iapa-pty-ltd.html",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1189,7 +1189,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152105379-1ed880d5-2ee7-4d13-8765-d21fc23f7ee4.PNG',
           link: "https://www.designboom.com/architecture/kimmel-eshkolot-mount-herzl-memorial-hall-jerusalem-israel-02-06-2018/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1203,7 +1203,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/5e5d/1e0e/6ee6/7e0f/0100/0a1d/slideshow/Ros_Kavanagh.jpg?1583160838',
           link: "https://www.archdaily.com/934727/grafton-architects-get-to-know-2020-pritzker-winners-built-work?ad_source=search&ad_medium=projects_tab&ad_source=search&ad_medium=search_result_all",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1217,7 +1217,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/59ca/4cc6/b22e/38e8/8300/004f/slideshow/Rocco_Chu_Hai_College_Photo13.jpg?1506430148',
           link: "https://www.archdaily.com/880408/new-campus-development-of-chu-hai-college-of-higher-education-rocco-design-architects?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1231,7 +1231,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152105595-5887aa4d-41f2-48d4-8834-28428ac0f145.PNG',
           link: "https://www.designboom.com/architecture/wenchuan-earthquake-memorial-museum-sichuan-china-cai-yongjie-tongji-university-07-25-2016/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1245,7 +1245,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152093485-d06c0006-4a8a-422a-91e8-f50c888be629.PNG',
           link: "https://issuu.com/hidesignpublish/docs/corporatecommerciallandscape/123?epik=dj0yJnU9M2dJcjVydGctV0Z4UTNSN0tyeU1QWFRDeEdsVWUwdG8mcD0wJm49ei1DXzRTM2RwLXBJM1d4bU9IQnlFdyZ0PUFBQUFBR0gyUjA0",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1259,7 +1259,7 @@ module.exports = {
           galleryImage3: 'https://landezine.com/wp-content/uploads/2015/06/Symantec-Chengdu-Tom-Fox-05.jpg',
           link: "https://landezine.com/symantec-chengdu-campus-by-swa/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1273,7 +1273,7 @@ module.exports = {
           galleryImage3: 'https://user-images.githubusercontent.com/86431563/152105847-4b04f1df-045f-4aa8-9848-dfb4988f741a.PNG',
           link: "https://www.designboom.com/architecture/idin-architects-lima-duva-resort-koh-samed-thailand-09-18-2015/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1287,7 +1287,7 @@ module.exports = {
           galleryImage3: 'https://images.adsttc.com/media/images/6141/aae7/5737/3601/6579/44e6/slideshow/1805-04-1.jpg?1631693560',
           link: "https://www.archdaily.com/968515/the-santa-monica-college-center-for-media-and-design-clive-wilkinson-architects?ad_source=search&ad_medium=projects_tab",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1301,7 +1301,7 @@ module.exports = {
           galleryImage3: '',
           link: "https://www.hhlloo.com/#/projectDetail?project_id=201903261553569696",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friendces",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -1315,7 +1315,7 @@ module.exports = {
           galleryImage3: '',
           link: "https://www.thelagroup.com/2017/05/15/dedication-cemetery-design/",
           tagline: 'Between Pike & 7th Street including an outdoor seating area',
-          description: "A great place to go, 10/10 recommend upvoting to a friend",
+          description: "Would be a great place to go, 10/10 recommend upvoting to a friend. Let's get this built or entered in a site competition?",
           createdAt: new Date(),
           updatedAt: new Date()
         },
