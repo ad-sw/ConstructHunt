@@ -27,7 +27,7 @@ function ReviewTest({review, date}) {
         setShowModal(false);
       }
 
-    return isLoaded && (
+    return (isLoaded && (
         <>
             <div className="review-body">
             {review?.review}
@@ -57,7 +57,7 @@ function ReviewTest({review, date}) {
             </div>
             </div>
         </>
-    )
+    ))
 }
 
 export default ReviewTest;

@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     productId: DataTypes.INTEGER,
     review: DataTypes.STRING
   }, {});
-    Review.associate = function(models) {
+  Review.associate = function(models) {
     Review.belongsTo(models.User, {foreignKey: "userId"}),
     Review.belongsTo(models.Product, {foreignKey: "productId"})
   };

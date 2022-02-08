@@ -80,7 +80,7 @@ function SignupForm({setShowModal, showModal, product}) {
     const newest = document.getElementsByTagName("body")[0];
     newest.classList.add("no-scroll");
 
-    const newest2 = document.getElementsByClassName("product-container")[0];
+    const newest2 = document.getElementsByClassName("productContainer")[0];
     newest2.classList.add("hide");
 
     setErrors([]);
@@ -127,11 +127,11 @@ function SignupForm({setShowModal, showModal, product}) {
     const body = document.getElementsByTagName('body')[0]
     body.classList.remove('no-scroll')
 
-    const newest2 = document.getElementsByClassName("product-container")[0];
+    const newest2 = document.getElementsByClassName("productContainer")[0];
     newest2.classList.remove("hide");
 
-    // const newest3 = document.getElementById("modal-background")[0];
-    // newest3.classList.remove("hide");
+    const newest3 = document.getElementById("modal-background")[0];
+    newest3.classList.remove("hide");
     setShowModal(false);
     }
 
@@ -140,11 +140,11 @@ function SignupForm({setShowModal, showModal, product}) {
     const body = document.getElementsByTagName('body')[0]
     body.classList.remove('no-scroll')
 
-    const newest2 = document.getElementsByClassName("product-container")[0];
+    const newest2 = document.getElementsByClassName("productContainer")[0];
     newest2.classList.remove("hide");
 
-    // const newest3 = document.getElementById("modal-background")[0];
-    // newest3.classList.remove("hide");
+    const newest3 = document.getElementById("modal-background")[0];
+    newest3.classList.remove("hide");
     setShowModal(false);
     };
 

@@ -9,6 +9,8 @@
 .profileImg {
   width: 100px;
   height: 100px;
+  min-width: 100px;
+  min-height: 100px;
   margin-right: 10px;
   border-radius: 4px;
 }
@@ -102,16 +104,24 @@ p#productDescription2 {
 .leftSide {
   width: 700px;
 }
-.main-image, .discussion {
+.mainImage, .discussion {
   background-color: white;
   border-radius: 5px;
   margin-bottom: 40px;
 }
-.main-image {
+.mainImage {
   padding: 20px;
   border: 1px solid #D9E1EC;
 }
-p.description {
+.mainImage2 {
+  padding: 20px;
+  height: 564px;
+  border: 1px solid #D9E1EC;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+.description {
   border-top: 1px solid lightgrey;
   padding-top: 20px;
   font-size: 13px;

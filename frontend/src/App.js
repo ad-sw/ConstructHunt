@@ -8,7 +8,6 @@ import AboutUs from "./components/AboutUsPg"
 import ProductModal from "./components/ProductModal";
 // import AboutMe from "./components/AboutMeFooter/AboutMe";
 // import Slideshow from "./components/HomeImages";
-import SearchBar from "./components/SearchBar";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import SignupFormPage from "../src/components/SignupFormPage"
@@ -54,8 +53,20 @@ function App() {
             <img alt="test" style={{filter: "grayscale(100%)", border: "10px solid transparent"}} height="450" width="650" src="https://ultimate-survival-training.com/wp-content/uploads/2018/02/tourist-2.jpg"/>
             </center>
           </Route>
-          <Route exact path="/products/new">
-            <ProductFormCreate />
+          <Route exact path="/products/new/1">
+            <ProductFormCreate page={1}/>
+          </Route>
+          <Route exact path="/products/new/2">
+            <ProductFormCreate page={2}/>
+          </Route>
+          <Route exact path="/products/new/3">
+            <ProductFormCreate page={3}/>
+          </Route>
+          <Route exact path="/products/new/4">
+            <ProductFormCreate page={4}/>
+          </Route>
+          <Route exact path="/products/new/5">
+            <ProductFormCreate page={5}/>
           </Route>
           {/* <Route exact path="/products/:id">
             <ProductProfilePgModal/>
