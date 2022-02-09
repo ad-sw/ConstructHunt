@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
-import { Redirect, useHistory } from 'react-router-dom';
-import { login, signup } from '../../store/session';
+import { useDispatch } from 'react-redux'
+import { signup } from '../../store/session';
 import * as sessionActions from "../../store/session";
 import './SignupForm.css';
 
 function SignupForm() {
   const [errors, setErrors] = useState([]);
-  const [first_name, setFirstName] = useState('');
-  const [last_name, setLastName] = useState('');
   const dispatch = useDispatch();
-  const history = useHistory();
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [repeatPassword, setRepeatPassword] = useState('');
   let [password, setPassword] = useState('');
-  const user = useSelector(state => state.session.user);
   const [loaded, setLoaded] = useState(false);
   let [credential, setCredential] = useState("");
 
@@ -28,15 +22,10 @@ function SignupForm() {
 
   const validator = () => {
     let error = []
-    if(first_name.length > 41) {
-        error.push('. : Please enter a shorter first name than 40 characters.')
-    } else if(first_name.length < 4) {
-      error.push('. : Please enter a first name longer than 3 characters.')
-    }
-    if(last_name.length > 41) {
-      error.push('. : Please enter a shorter last name than 40 characters.')
-    } else if(last_name.length < 4) {
-      error.push('. : Please enter a last name longer than 3 characters.')
+    if(username.length > 31) {
+        error.push('. : Please enter a username shortner than 30 characters.')
+    } else if(username.length < 4) {
+      error.push('. : Please enter a username longer than 3 characters.')
     }
     if(password !== confirmPassword) {
       error.push('. : Please enter matching passwords.')
@@ -60,8 +49,7 @@ function SignupForm() {
       setErrors(errorsArr)
     } else{
       const payload = {
-          first_name,
-          last_name,
+          username,
           email,
           password
       }
@@ -86,12 +74,8 @@ function SignupForm() {
     );
   }
 
-  const updateFirstName = (e) => {
-    setFirstName(e.target.value);
-  };
-
-  const updateLastName = (e) => {
-    setLastName(e.target.value);
+  const updateUsername = (e) => {
+    setUsername(e.target.value);
   };
 
   const updateEmail = (e) => {
@@ -103,15 +87,10 @@ function SignupForm() {
   };
 
   const updateRepeatPassword = (e) => {
-    setRepeatPassword(e.target.value);
+    setConfirmPassword(e.target.value);
   };
 
-  if (user) {
-    return <Redirect to={`/`}/>;
-  }
-
   return (<div>{loaded && (
-    // <div className="blackBack">
     <div className="signup-page">
       <div className="login-form-container">
       <div className="logoThing"><img className="loginLogo" src="https://user-images.githubusercontent.com/86431563/151272960-32862845-4cd0-4618-89c8-cbd657c31d15.png"/></div>
@@ -128,21 +107,10 @@ function SignupForm() {
             <input
               type='text'
               className="email-input2"
-              placeholder="first name"
-              name='first_name'
-              value={first_name}
-              onChange={updateFirstName}
-              // required
-            />
-          </div>
-          <div>
-            <input
-              type='text'
-              className="email-input2"
-              placeholder="last name"
-              name='last_name'
-              value={last_name}
-              onChange={updateLastName}
+              placeholder="username"
+              name='username'
+              value={username}
+              onChange={updateUsername}
               // required
             />
           </div>
@@ -174,7 +142,7 @@ function SignupForm() {
               className='email-input2'
               placeholder="repeat password"
               name='repeat_password'
-              value={repeatPassword}
+              value={confirmPassword}
               onChange={updateRepeatPassword}
               // required
             /><div>
@@ -183,7 +151,8 @@ function SignupForm() {
           </div>
         </form>
       </div>
-    </div>)}
+    </div>
+    )}
   </div>
   );
 }

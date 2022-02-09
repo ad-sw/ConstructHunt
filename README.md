@@ -1,5 +1,5 @@
 # Construct(ion) Hunt
->Polishing underway in the next 1-2 months after a separate project. (Rest of readme to be edited later.)<br>
+>Readme to be edited later.<br>
 ---
 ## [Live Site](https://constructhunt.herokuapp.com/)
 

@@ -2,36 +2,29 @@ import {useDispatch, useSelector} from 'react-redux';
 import {useState, useEffect} from 'react';
 import {searchProducts} from '../../store/product';
 import "./SearchBar.css";
-import {NavLink, useHistory} from 'react-router-dom';
-import ProductProfilePgModal2 from '../../components/ProductProfilePage/SimilarProductProfile'
-import {Modal} from '../../context/Modal';
 import {getProducts} from '../../store/product'
-import ProductCard from '../ProductProfilePage/productCard';
 import ProductModal from '../ProductModal/index'
 
 function SearchBar() {
     const dispatch = useDispatch();
     let [search, setSearch] = useState('');
-    const history = useHistory();
     const [isLoaded, setIsLoaded] = useState(false)
     const searchListVis = document?.getElementsByClassName("searchList")[0];
-    const root = document?.getElementById('root')
     const pgContent = document?.getElementById('pgContent')
-    const navbar = document?.getElementById('navbar')
-    const body = document.getElementsByTagName('body')[0]
-    const searchBarT = document.getElementsByClassName('searchBarT')[0];
     const searchBar2 = document.getElementsByClassName('searchBarExpands')[0];
+    // const root = document?.getElementById('root')
+    // const navbar = document?.getElementById('navbar')
+    // const body = document.getElementsByTagName('body')[0]
+    // const searchBarT = document.getElementsByClassName('searchBarT')[0];
 
     useEffect(() => {
         if (search.length > 0) {
             searchListVis?.classList?.remove('hide')
             dispatch(searchProducts(search));
-            // body?.classList?.add('no-scroll')
             searchBar2?.classList?.add('more');
           }
         if (search.length === 0) {
             searchListVis?.classList?.add('hide')
-            // body?.classList?.remove('no-scroll')
             searchBar2?.classList?.remove('more');
         }
     setIsLoaded(true);
@@ -40,7 +33,6 @@ function SearchBar() {
     let searchResults = useSelector((state) => state.products.searchedResults);
     let products1 = useSelector((state) => state.products);
     let products = Object.values(products1)
-    console.log(products, 'test')
 
     //solves issue completely to have click-based render, but makes display flash once
     // root?.addEventListener("click", function() {
@@ -80,8 +72,6 @@ function SearchBar() {
 
     pgContent?.addEventListener("click", function() {
         searchListVis?.classList?.add('hide')
-        // root?.classList?.add('hide')
-        // body.classList.remove('no-scroll')
         searchBar2?.classList?.remove('more');
         setSearch('')
     });
@@ -91,25 +81,26 @@ function SearchBar() {
     };
 
     const testt = () => {
-        // searchListVis?.classList?.remove('hide')
         search = 'All results:'
         setSearch(search)
         dispatch(getProducts())
-        // body.classList.add('no-scroll')
     }
+
+    // const hideSearch = (e) => {
+    //     if (!e.currentTarget.contains(e.relatedTarget)) {
+    //       document.querySelector(".searchList").classList.add("hide");
+    //     }
+    //   };
 
     const descriptionAbout = document?.getElementById('descriptionAbout')
     descriptionAbout?.addEventListener("click", function() {
         searchListVis?.classList?.add('hide')
-        // root?.classList?.add('hide')
-        // body.classList.remove('no-scroll')
         searchBar2?.classList?.remove('more');
-        // setSearch('')
     });
 
     const searchDropDown = (
         <div className="searchBarT">
-        <form className="searchBarT">
+        <form className="searchBarT"> {/*could do onBlur={(e) => hideList(e)} but prevents modal pop-ups*/}
           <div className="">
             <img className="searchIcon" src="https://user-images.githubusercontent.com/86431563/150604228-109bc4a5-1562-4e35-88ed-6a8a75a352bc.png" height="19px" width="19px"/>
             <input
@@ -122,15 +113,14 @@ function SearchBar() {
                 onChange={(e) => setSearch(e.target.value)}
             />
             <div className="searchList hide">
+                {searchResults?.length > 0 && search.length > 0 && search !== 'All results:' && (<>
                 <div className="testerStuff">PRODUCTS →</div>
-                {searchResults?.length > 0 && search.length > 0 && search !== 'All results:' && (
-                <div className="clearBtn" onClick={(e) => setSearch('cleared')}>clear</div>)}
+                <div className="clearBtn" onClick={(e) => setSearch('cleared')}>clear</div></>)}
                 {searchResults?.length > 0 && search.length > 0 && search !== 'All results:' ? (
                 Object.values(searchResults).map((product) => (
                     <div key={product?.id}>
                     <div className="r">
-                        <ProductModal product={product}
-                        />
+                        <ProductModal product={product} />
                     </div>
                     </div>
                 )))
@@ -139,8 +129,9 @@ function SearchBar() {
                 <div className="noResults" onClick={testt}>View all results</div>
                 )}
 
-                {products?.length > 0 && search === 'All results:' && (
-                <div className="clearBtn" onClick={(e) => setSearch('cleared')}>clear</div>)}
+                {products?.length > 0 && search === 'All results:' && (<>
+                <div className="testerStuff">PRODUCTS →</div>
+                <div className="clearBtn" onClick={(e) => setSearch('cleared')}>clear</div></>)}
                 {products?.length > 0 && search === 'All results:' && (
                 Object.values(products).map((product) => (
                     <div key={product?.id}>

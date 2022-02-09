@@ -1,12 +1,7 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {useEffect, useState} from 'react';
-import ProductModalUpdate from '../../components/ProductModal_Update';
-import ProductModalDelete from '../../components/ProductModal_Delete';
-import ReviewModal from '../../components/ReviewModal';
 import "../ProductProfilePage/ProductProfile.css";
 import "../../components/ReviewModal/ReviewModal.css"
-import {getProductsWithReviews} from '../../store/product'
-import ReviewFormCreate from '../../components/ReviewModal_Create/ReviewForm_Create';
 import SignupFormModal from '../SignupFormModalCopy'
 import {updateProduct} from '../../store/product';
 
@@ -14,8 +9,6 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const [isLoaded, setIsLoaded] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
-    const product2 = useSelector(state => state.product);
     const [name, setName] = useState(aname);
     const [tagline, setTagline] = useState(atagline);
     const [galleryImage1, setGalleryImage1] = useState(agalleryImage1);
@@ -33,9 +26,6 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
 
     useEffect(() => {
         (async () => {
-            // await dispatch(getProductsWithReviews())
-            // newest2.classList.add("hide");
-            // setShowModal(true);
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -66,13 +56,6 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
       newest2.classList.remove("hide");
       setShowModal(false);
     }
-
-    // let newArr = [product.thumbnailUrl, product.galleryImage1, product.galleryImage2, product.galleryImage3]
-    // if (newArr.includes(null)) {
-    //     newArr = newArr.filter(image => image !== null && image !== '' && image.length > 1);
-    // }
-    const topics = [['Freelance'], ["Open Source"], ['User Experience'], ['Design Tools'],
-    ['Developer Tools'], ['Home'], ['Productivity'], ['Education'], ['Health & Fitness'], ['Music']]
 
     let event = new Date(product?.createdAt);
     let date = event.toLocaleDateString().slice(0,5) + event.toLocaleDateString().slice(7,9)
@@ -125,15 +108,6 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
                     />
                     <div className="buttons2">
                       <div className="priceOption">Free & Paid Options</div>
-                      {/* <input
-                      type='text'
-                      className="toolType"
-                      id="prodProfileTitle3"
-                      placeholder={`${product?.name}`}
-                      value={name}
-                      required
-                      onChange={e => setName(e.target.value)}
-                      /> */}
                       <select className="toolType2" required value={topicId} onChange={(e) => setTopicId(e.target.value)}>
                         <option value={0}>{topics_arr[0]}</option>
                         <option value={1}>{topics_arr[1]}</option>
@@ -147,7 +121,6 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
                         <option value={9}>{topics_arr[9]}</option>
                         <option value={10}>{topics_arr[10]}</option>
                       </select>
-                      {/* <div className="toolType">{topics[product?.topicId -1]}</div> */}
                     </div>
                   </div>
                 </div>
@@ -221,9 +194,6 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
                 required
                 onChange={(e) => setLink(e.target.value)}
                 />
-              {/* <a href={product?.link} className='getItBtn' target="_blank" rel="noopener noreferrer">
-                GET IT
-              </a> */}
               <button className="upvoteBtn2"></button>
               </>)}
               {!sessionUser && (
@@ -231,11 +201,6 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
                   <SignupFormModal setShowModal={setShowModal} product={product}/>
               </button>
               )}
-              {/* <div className='productUpvoters'>
-              {'hi' && Object.values('hi').map((user,idx) => {
-              return (idx < 3) ? (<img key={user.id} className='upvoterPic' src={''} />) : null;
-              })}
-              </div> */}
               </div>
               <div className="areaBelow2"></div>
         </div>
