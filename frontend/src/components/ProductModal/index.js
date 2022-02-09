@@ -10,7 +10,7 @@ import { Modal } from '../../context/Modal';
 import ProductProfilePgModal from "../ProductProfilePage";
 import Upvotes from '../Upvotes'
 
-function ProductModal({product, setShowModal2, thumbnailUrl}) {
+function ProductModal({product, setShowModal2, thumbnailUrl, setSearch}) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [showModal, setShowModal] = useState(false);
@@ -20,6 +20,7 @@ function ProductModal({product, setShowModal2, thumbnailUrl}) {
     // newest.classList.add("no-scroll");
     const try1 = document?.getElementsByClassName("searchList")[0];
     const searchBar2 = document.getElementsByClassName('searchBarExpands')[0];
+    const newest = document.getElementsByTagName("body")[0];
 
     useEffect(() => {
         (async () => {
@@ -49,7 +50,6 @@ function ProductModal({product, setShowModal2, thumbnailUrl}) {
         // document.body.scroll = "no";
         try1?.classList?.add('hide')
 
-        const newest = document.getElementsByTagName("body")[0];
         newest.classList.add("no-scroll");
         // const body = document.getElementsByTagName('body')[0];
         // body.classList.add('no-scroll');

@@ -14,52 +14,98 @@ function SearchBar() {
     let [search, setSearch] = useState('');
     const history = useHistory();
     const [isLoaded, setIsLoaded] = useState(false)
-    const try1 = document?.getElementsByClassName("searchList")[0];
-    const testing = document?.getElementById('root')
-    const testing2 = document?.getElementById('pgContent')
+    const searchListVis = document?.getElementsByClassName("searchList")[0];
+    const root = document?.getElementById('root')
+    const pgContent = document?.getElementById('pgContent')
+    const navbar = document?.getElementById('navbar')
     const body = document.getElementsByTagName('body')[0]
     const searchBarT = document.getElementsByClassName('searchBarT')[0];
     const searchBar2 = document.getElementsByClassName('searchBarExpands')[0];
 
     useEffect(() => {
         if (search.length > 0) {
-            try1?.classList?.remove('hide')
+            searchListVis?.classList?.remove('hide')
             dispatch(searchProducts(search));
-            body.classList.add('no-scroll')
-            searchBar2.classList.add('more');
+            // body?.classList?.add('no-scroll')
+            searchBar2?.classList?.add('more');
           }
         if (search.length === 0) {
-            try1?.classList?.add('hide')
-            body.classList.add('no-scroll')
+            searchListVis?.classList?.add('hide')
+            // body?.classList?.remove('no-scroll')
+            searchBar2?.classList?.remove('more');
         }
     setIsLoaded(true);
     }, [dispatch, search]);
 
     let searchResults = useSelector((state) => state.products.searchedResults);
+    let products1 = useSelector((state) => state.products);
+    let products = Object.values(products1)
+    console.log(products, 'test')
 
-    testing?.addEventListener("click", function() {
-        try1?.classList?.add('hide')
-        body.classList.remove('no-scroll')
-        searchBar2?.classList?.remove('more');
-    });
+    //solves issue completely to have click-based render, but makes display flash once
+    // root?.addEventListener("click", function() {
+    //     searchListVis?.classList?.add('hide')
+    //     // root?.classList?.add('hide')
+    //     // body.classList.remove('no-scroll')
+    //     searchBar2?.classList?.remove('more');
+    // });
 
-    testing2?.addEventListener("click", function() {
-        try1?.classList?.add('hide')
-        body.classList.remove('no-scroll')
-        searchBar2?.classList?.remove('more');
-    });
+ //////prior to changing navbar to id, this is how with className://///
+    // navbar.addEventListener("click", function() {
+    //     searchListVis?.classList?.add('hide')
+    //     // root?.classList?.add('hide')
+    //     // body.classList.remove('no-scroll')
+    //     searchBar2?.classList?.remove('more');
+    //     setSearch('')
+    // });
 
-    // const showResults = () => {
-    //     try1?.classList?.remove('hide')
+    // let myFunction = function() {
+    //     searchListVis?.classList?.add('hide')
+    //     searchBar2?.classList?.remove('more');
+    //     setSearch('')
     // };
 
+    // for (let i = 0; i < navbar.length; i++) {
+    //     navbar[i].addEventListener('click', myFunction, false);
+    // }
+
+  //the id navbar way vs className
+    // navbar?.addEventListener("click", function() {
+    //     searchListVis?.classList?.add('hide')
+    //     // root?.classList?.add('hide')
+    //     // body.classList.remove('no-scroll')
+    //     searchBar2?.classList?.remove('more');
+    //     setSearch('')
+    // });
+
+    pgContent?.addEventListener("click", function() {
+        searchListVis?.classList?.add('hide')
+        // root?.classList?.add('hide')
+        // body.classList.remove('no-scroll')
+        searchBar2?.classList?.remove('more');
+        setSearch('')
+    });
+
+    const showResults = () => {
+        searchListVis?.classList?.remove('hide')
+    };
+
     const testt = () => {
-        search = 's'
+        // searchListVis?.classList?.remove('hide')
+        search = 'All results:'
         setSearch(search)
-        dispatch(searchProducts(search))
-        body.classList.add('no-scroll')
-        // searchBar2.classList.add('more');
+        dispatch(getProducts())
+        // body.classList.add('no-scroll')
     }
+
+    const descriptionAbout = document?.getElementById('descriptionAbout')
+    descriptionAbout?.addEventListener("click", function() {
+        searchListVis?.classList?.add('hide')
+        // root?.classList?.add('hide')
+        // body.classList.remove('no-scroll')
+        searchBar2?.classList?.remove('more');
+        // setSearch('')
+    });
 
     const searchDropDown = (
         <div className="searchBarT">
@@ -72,20 +118,36 @@ function SearchBar() {
                 value={search}
                 type="text"
                 placeholder="Search Construct Hunt"
-                // onFocus={() => showResults()}
+                onFocus={() => showResults()} //could comment out for click-base display rendering, but makes all results slightly flash
                 onChange={(e) => setSearch(e.target.value)}
             />
             <div className="searchList hide">
-                {searchResults?.length > 0 && search.length > 0 ? (
+                <div className="testerStuff">PRODUCTS →</div>
+                {searchResults?.length > 0 && search.length > 0 && search !== 'All results:' && (
+                <div className="clearBtn" onClick={(e) => setSearch('cleared')}>clear</div>)}
+                {searchResults?.length > 0 && search.length > 0 && search !== 'All results:' ? (
                 Object.values(searchResults).map((product) => (
                     <div key={product?.id}>
-                    <ProductModal
-                        product={product}
+                    <div className="r">
+                        <ProductModal product={product}
+                        />
+                    </div>
+                    </div>
+                )))
+                : (
+                search !== 'All results:' &&
+                <div className="noResults" onClick={testt}>View all results</div>
+                )}
+
+                {products?.length > 0 && search === 'All results:' && (
+                <div className="clearBtn" onClick={(e) => setSearch('cleared')}>clear</div>)}
+                {products?.length > 0 && search === 'All results:' && (
+                Object.values(products).map((product) => (
+                    <div key={product?.id}>
+                    <ProductModal product={product}
                     />
                     </div>
                 ))
-                ) : (
-                <div className="noResults" onClick={testt}>View all results</div>
                 )}
             </div>
           </div>

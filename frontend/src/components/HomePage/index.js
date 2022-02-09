@@ -6,7 +6,7 @@ import ProductProfilePgModal from "../ProductProfilePage";
 import '../../../src/index'
 import {getAllReviews} from "../../store/review";
 import ProductModal from '../ProductModal'
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useHistory, Link } from 'react-router-dom';
 
 export default function HomePage(){
     const dispatch = useDispatch()
@@ -22,7 +22,7 @@ export default function HomePage(){
             // await dispatch(getProducts())
             // await dispatch(getAllReviews())
             body.classList.remove("no-scroll");
-            await dispatch(getProducts())
+            await dispatch(getProductsWithReviews())
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -50,6 +50,7 @@ export default function HomePage(){
 
     return (<>{isLoaded && (
     <div id="pgContent">
+        <div className="tst"></div>
         <div className="products">
         <div className="titleDiv">Is the next 🏛️ here?</div>
             {productCont}
@@ -66,17 +67,17 @@ export default function HomePage(){
             </div>
             <div className="testing4"></div>
             <ul className="miscLinks">
-                Blog
-                <li>Newsletter</li>
-                <li>Ask</li>
-                <li>Questions</li>
+                <a href="https://www.archdaily.com/tag/top100/" target="_blank" rel="noopener noreferrer">Blog</a>
+                <li><a href="https://www.archdaily.com/architecture-news?ad_source=jv-header&ad_name=main-menu" target="_blank" rel="noopener noreferrer">Newsletter</a></li>
+                <li><a href="https://www.archdaily.com/contact?ad_source=jv-header&ad_name=hamburger_menu" target="_blank" rel="noopener noreferrer">Ask</a></li>
+                <li><a href="https://www.producthunt.com/questions" target="_blank" rel="noopener noreferrer">Questions</a></li>
                 <li><a href="https://ad-sw.github.io/#projects" target="_blank" rel="noopener noreferrer">Apps</a></li>
             </ul>
             <ul className="miscLinks2">
-                <li>About</li>
-                <li>FAQ</li>
-                <li>Terms</li>
-                <li>Privacy and Cookies</li>
+                <li><Link exact to={`/about`}>About</Link></li>
+                <li><a href="https://help.producthunt.com/en/" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+                <li><a href="https://www.archdaily.com/search/projects?ad_source=jv-header&ad_name=main-menu" target="_blank" rel="noopener noreferrer">Terms</a></li>
+                <li><a href="https://www.archdaily.com/content/privacy-policy?ad_source=jv-header&ad_name=hamburger_menu" target="_blank" rel="noopener noreferrer">Privacy and Cookies</a></li>
             </ul>
             <ul className="miscLinks3">
                 <li><a href="https://www.archdaily.com/?ad_name=small-logo" target="_blank" rel="noopener noreferrer">Archdaily</a></li>

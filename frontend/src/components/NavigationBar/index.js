@@ -107,7 +107,7 @@ function NavBar(){
   // }
 
   return (<>
-    <header className="navbar">
+    <header id="navbar">
       {/* <div id='linking'> */}
       <NavLink exact to="/"><div className="profile-button"><div className="logoC">C</div></div></NavLink>
       {/* </div> */}

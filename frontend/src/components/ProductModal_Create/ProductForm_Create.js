@@ -31,7 +31,7 @@ function ProductFormCreate({setShowModal, page}) {
 
   useEffect(() => {
     (async () => {
-        await dispatch(getProducts())
+        await dispatch(getProductsWithReviews())
         setIsLoaded(true);
     })();
   }, [dispatch, sessionUser])

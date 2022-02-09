@@ -77,20 +77,20 @@ function SignupForm({setShowModal, showModal, product}) {
   };
 
   const demoLogin = async(e) => {
-    const newest = document.getElementsByTagName("body")[0];
-    newest.classList.add("no-scroll");
+    // const newest = document.getElementsByTagName("body")[0];
+    // newest.classList.add("no-scroll");
 
-    const newest2 = document.getElementsByClassName("productContainer")[0];
-    newest2.classList.add("hide");
+    // const newest2 = document.getElementsByClassName("productContainer")[0];
+    // newest2.classList.add("hide");
 
     setErrors([]);
     credential = 'Demo';
     password = 'password';
     await dispatch(sessionActions.login({ credential, password })).catch(
-      async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-      }
+      // async (res) => {
+      //   const data = await res.json();
+      //   if (data && data.errors) setErrors(data.errors);
+      // }
     );
 
     setShowModal(true)
@@ -128,23 +128,23 @@ function SignupForm({setShowModal, showModal, product}) {
     body.classList.remove('no-scroll')
 
     const newest2 = document.getElementsByClassName("productContainer")[0];
-    newest2.classList.remove("hide");
+    newest2?.classList?.remove("hide");
 
     const newest3 = document.getElementById("modal-background")[0];
-    newest3.classList.remove("hide");
+    newest3?.classList?.remove("hide");
     setShowModal(false);
     }
 
   const closeMenu = (e) => {
     e.preventDefault()
     const body = document.getElementsByTagName('body')[0]
-    body.classList.remove('no-scroll')
+    body?.classList?.remove('no-scroll')
 
     const newest2 = document.getElementsByClassName("productContainer")[0];
-    newest2.classList.remove("hide");
+    newest2?.classList?.remove("hide");
 
     const newest3 = document.getElementById("modal-background")[0];
-    newest3.classList.remove("hide");
+    newest3?.classList?.remove("hide");
     setShowModal(false);
     };
 

@@ -77,20 +77,20 @@ function SignupForm({setShowModal, showModal, product}) {
   };
 
   const demoLogin = async(e) => {
-    const newest = document.getElementsByTagName("body")[0];
-    newest.classList.add("no-scroll");
+    // const newest = document.getElementsByTagName("body")[0];
+    // newest?.classList?.add("no-scroll");
 
-    const newest2 = document.getElementsByClassName("productContainer")[0];
-    newest2.classList.add("hide");
+    // const newest2 = document.getElementsByClassName("productContainer")[0];
+    // newest2?.classList?.add("hide");
 
     setErrors([]);
     credential = 'Demo';
     password = 'password';
     await dispatch(sessionActions.login({ credential, password })).catch(
-      async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-      }
+      // async (res) => {
+      //   const data = await res.json();
+      //   if (data && data.errors) setErrors(data.errors);
+      // }
     );
 
     setShowModal(true)
@@ -125,26 +125,26 @@ function SignupForm({setShowModal, showModal, product}) {
   const handleCancel = (e) => {
     e.preventDefault();
     const body = document.getElementsByTagName('body')[0]
-    body.classList.remove('no-scroll')
+    body?.classList?.remove('no-scroll')
 
     const newest2 = document.getElementsByClassName("productContainer")[0];
-    newest2.classList.remove("hide");
+    newest2?.classList?.remove("hide");
 
     const newest3 = document.getElementById("modal-background")[0];
-    newest3.classList.remove("hide");
+    newest3?.classList?.remove("hide");
     setShowModal(false);
     }
 
   const closeMenu = (e) => {
     e.preventDefault()
     const body = document.getElementsByTagName('body')[0]
-    body.classList.remove('no-scroll')
+    body?.classList?.remove('no-scroll')
 
     const newest2 = document.getElementsByClassName("productContainer")[0];
-    newest2.classList.remove("hide");
+    newest2?.classList?.remove("hide");
 
     const newest3 = document.getElementById("modal-background")[0];
-    newest3.classList.remove("hide");
+    newest3?.classList?.remove("hide");
     setShowModal(false);
     };
 
@@ -178,7 +178,7 @@ function SignupForm({setShowModal, showModal, product}) {
               name='first_name'
               value={first_name}
               onChange={updateFirstName}
-              required
+              // required
             />
           </div>
           <div>
@@ -189,7 +189,7 @@ function SignupForm({setShowModal, showModal, product}) {
               name='last_name'
               value={last_name}
               onChange={updateLastName}
-              required
+              // required
             />
           </div>
           <div>
@@ -200,7 +200,7 @@ function SignupForm({setShowModal, showModal, product}) {
               name='email'
               value={email}
               onChange={updateEmail}
-              required
+              // required
             />
           </div>
           <div>
@@ -211,7 +211,7 @@ function SignupForm({setShowModal, showModal, product}) {
               name='password'
               value={password}
               onChange={updatePassword}
-              required
+              // required
             />
           </div>
           <div>
@@ -222,7 +222,7 @@ function SignupForm({setShowModal, showModal, product}) {
               name='repeat_password'
               value={repeatPassword}
               onChange={updateRepeatPassword}
-              required
+              // required
             /><div>
             <button type='submit' className="signup-button">Sign up</button>
             </div>
