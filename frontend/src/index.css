@@ -81,7 +81,7 @@ a:hover, a:visited, a:link, a:active {
   width: 225px;
   z-index: -5;
 }
-.navbar{
+#navbar{
   vertical-align: middle;
   display: flex;
   align-items: center;
@@ -91,8 +91,26 @@ a:hover, a:visited, a:link, a:active {
   background-color: white;
   padding: 20px 30px 20px 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.109);
-  /* background-color: white; */
-  /* z-index: -100; */
+}
+.tst {
+  position: absolute;
+  top:0;
+  left: 0;
+  display: .00001;
+  width: 3000px;
+  height: 12292px;
+}
+.clearBtn {
+  position: fixed;
+  display: flex;
+  cursor: pointer;
+  font-size: 14px;
+  color: rgba(207, 207, 207, 0.76);
+  text-decoration: 1px solid black;
+  left: 1235px;
+  top: 86px;
+  padding: 3px 6px;
+  background-color: #f1f1f1c0;
 }
 .linkGroup {
   vertical-align: middle;
@@ -168,7 +186,7 @@ a:hover, a:visited, a:link, a:active {
 }
 .profile-dropdown {
   top: 61px;
-  right: 30px;
+  right: 75px;
   color: #4b587cc4;
   letter-spacing: 1px;
   font-size: 16px;
@@ -2517,6 +2535,7 @@ hr {
   cursor: default;
   border-left: 1.5px solid #e3e3e38f;
   max-width: 280px;
+  z-index: 2;
 }
 .rightAreaHolder {
   width: 280px;

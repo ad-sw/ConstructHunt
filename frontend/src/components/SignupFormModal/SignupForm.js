@@ -79,10 +79,10 @@ function SignupForm() {
     credential = 'Demo';
     password = 'password';
     await dispatch(sessionActions.login({ credential, password })).catch(
-      async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-      }
+      // async (res) => {
+      //   const data = await res.json();
+      //   if (data && data.errors) setErrors(data.errors);
+      // }
     );
   }
 
@@ -132,7 +132,7 @@ function SignupForm() {
               name='first_name'
               value={first_name}
               onChange={updateFirstName}
-              required
+              // required
             />
           </div>
           <div>
@@ -143,7 +143,7 @@ function SignupForm() {
               name='last_name'
               value={last_name}
               onChange={updateLastName}
-              required
+              // required
             />
           </div>
           <div>
@@ -154,7 +154,7 @@ function SignupForm() {
               name='email'
               value={email}
               onChange={updateEmail}
-              required
+              // required
             />
           </div>
           <div>
@@ -165,7 +165,7 @@ function SignupForm() {
               name='password'
               value={password}
               onChange={updatePassword}
-              required
+              // required
             />
           </div>
           <div>
@@ -176,7 +176,7 @@ function SignupForm() {
               name='repeat_password'
               value={repeatPassword}
               onChange={updateRepeatPassword}
-              required
+              // required
             /><div>
             <button type='submit' className="signup-button">Sign up</button>
             </div>

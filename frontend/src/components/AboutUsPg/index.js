@@ -1,9 +1,20 @@
 import './AboutUs.css';
 
 function AboutUs() {
+  const descriptionAbout = document?.getElementById('descriptionAbout')
+  const searchListVis = document?.getElementsByClassName("searchList")[0];
+  const searchBar2 = document.getElementsByClassName('searchBarExpands')[0];
+
+  descriptionAbout?.addEventListener("click", function() {
+    searchListVis?.classList?.add('hide')
+    // root?.classList?.add('hide')
+    // body.classList.remove('no-scroll')
+    searchBar2?.classList?.remove('more');
+    // setSearch('')
+});
 
   return (
-      <div className="descriptionAbout">
+      <div id="descriptionAbout">
         <div className="innerDiv">
             <div id="textDesc">
               <center>

@@ -75,17 +75,23 @@ input[name="search"]:focus + .searchBarExpands + input[name="search"]:active + i
 .searchList {
     position: absolute;
     background-color: white;
-    width: 1205px;
+    width: 1163px;
     height: 596px;
+    display: flex;
+    flex-direction: column;
     overflow-y: scroll;
     margin-top: 3px;
     margin-left: -69px;
     border-radius: 4px;
-    padding: 12px 0px;
+    padding: 22px 20px;
     box-shadow: 0px 0px 5px 2px #e2e2e2;
     overflow-x: hidden;
-    z-index: 2;
+    z-index: 20;
 }
 .searchList.hide {
     display: none;
+}
+.r {
+    width: 50%;
+    height: 50%;
 }
