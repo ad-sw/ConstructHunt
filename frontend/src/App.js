@@ -1,25 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch /*, useSelector*/ } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-// import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
-// import Navigation from "./components/Navigation";
 import AboutUs from "./components/AboutUsPg"
-import ProductModal from "./components/ProductModal";
-// import AboutMe from "./components/AboutMeFooter/AboutMe";
-// import Slideshow from "./components/HomeImages";
 import LoginForm from "./components/auth/LoginForm";
-import SignUpForm from "./components/auth/SignUpForm";
 import SignupFormPage from "../src/components/SignupFormPage"
-import ProductProfilePgModal from "./components/ProductProfilePage"
 import NavBar from '../src/components/NavigationBar';
 import HomePage from '../src/components/HomePage';
 import ProductFormCreate from '../src/components/ProductModal_Create/ProductForm_Create';
-// import ProductFormCreate from "./components/ProductModal_Create";
 
 function App() {
   const dispatch = useDispatch();
-  // const sessionUser = useSelector(state => state.session.user);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -68,9 +59,6 @@ function App() {
           <Route exact path="/products/new/5">
             <ProductFormCreate page={5}/>
           </Route>
-          {/* <Route exact path="/products/:id">
-            <ProductProfilePgModal/>
-          </Route> */}
           <Route>
             <center>
             <br></br><br></br><br></br><br></br><br></br><br></br>

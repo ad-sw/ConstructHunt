@@ -5,7 +5,6 @@ import ProductModalDelete from '../../components/ProductModal_Delete';
 import ReviewModal from '../../components/ReviewModal';
 import "./ProductProfile.css";
 import "../../components/ReviewModal/ReviewModal.css"
-import {getProductsWithReviews} from '../../store/product'
 import ReviewFormCreate from '../../components/ReviewModal_Create/ReviewForm_Create';
 import SignupFormModal from '../SignupFormModalCopy'
 import ProductCard from '../ProductProfilePage/productCard'
@@ -20,16 +19,9 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
     const productTopicsArrFiltered = productTopicsArr.filter (product => product?.topicId === productTopicId && productId !== product?.id)
     const dispatch = useDispatch();
     const [isLoaded, setIsLoaded] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
-    const product2 = useSelector(state => state.product);
-    const newest2 = document.getElementsByClassName("productContainer")[0];
-    // setShowModal(true);
 
     useEffect(() => {
         (async () => {
-            // await dispatch(getProductsWithReviews())
-            // setShowModal(true);
-            // newest2?.classList?.remove("hide");
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -46,14 +38,7 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
 
     const similarProdCards = productTopicsArrFiltered.map(product => {
         return (
-        <ProductCard product={product} ashowModal={showModal} setShowModal={setShowModal}/>
-        // <a className="similarProductCard" href={''}>
-        //     <img className="similarProductImgs" src={product?.thumbnailUrl} height="60px" width="60px"/>
-        //     <div className="rightSideCard">
-        //         <div className="prodNameSim">{product?.name}</div>
-        //         <div className="prodTaglineSim">{product?.tagline}</div>
-        //     </div>
-        // </a>
+            <ProductCard product={product} ashowModal={showModal} setShowModal={setShowModal}/>
         )
       }
     )

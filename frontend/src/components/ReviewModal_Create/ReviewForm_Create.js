@@ -10,17 +10,16 @@ function ReviewFormCreate({productId, setShowModal, product}) {
     const dispatch = useDispatch();
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+      e.preventDefault();
 
-        const payload = {
-          userId: sessionUser.id,
-          productId,
-          review
-        };
-        await setReview('');
-        await dispatch(createReview(payload));
-        // setShowModal(false);
+      const payload = {
+        userId: sessionUser.id,
+        productId,
+        review
       };
+      await setReview('');
+      await dispatch(createReview(payload));
+    };
 
     return (<>
       {sessionUser && (

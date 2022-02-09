@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import {Modal} from '../../context/Modal';
-import {useDispatch, useSelector} from 'react-redux';
-import {deleteProduct, getProductsWithReviews} from '../../store/product';
+import {useDispatch} from 'react-redux';
+import {getProductsWithReviews} from '../../store/product';
 import {useHistory} from 'react-router-dom';
-import { createReview } from '../../store/review';
 import {createProduct} from '../../store/product'
-import {csrfFetch} from '../../store/csrf';
 
 function FirstReview({userId, firstReview, setErrors, topicId, name, thumbnailUrl, link, tagline, description, galleryImage1, galleryImage2, galleryImage3}) {
   const dispatch = useDispatch();
-  const [showMenu, setShowMenu] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const history = useHistory();
-  const sessionUser = useSelector(state => state.session.user);
 
   useEffect(() => {
     (async () => {
@@ -21,9 +16,9 @@ function FirstReview({userId, firstReview, setErrors, topicId, name, thumbnailUr
     })();
   }, [setIsLoaded]);
 
-    const productsObj = useSelector(state => state?.products)
-    const productArr = Object.values(productsObj)
-    let productId = productArr[Object.entries(productsObj)?.length-1]?.id
+    // const productsObj = useSelector(state => state?.products)
+    // const productArr = Object.values(productsObj)
+    // let productId = productArr[Object.entries(productsObj)?.length-1]?.id
 
     const handleSubmit = async (e) => {
         e.preventDefault();

@@ -7,10 +7,7 @@ function AboutUs() {
 
   descriptionAbout?.addEventListener("click", function() {
     searchListVis?.classList?.add('hide')
-    // root?.classList?.add('hide')
-    // body.classList.remove('no-scroll')
     searchBar2?.classList?.remove('more');
-    // setSearch('')
 });
 
   return (

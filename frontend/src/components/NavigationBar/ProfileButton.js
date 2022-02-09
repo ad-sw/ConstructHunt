@@ -45,7 +45,6 @@ function ProfileButton({ user }) {
   return (
     <>
       <button onClick={openMenu} className="profile-button2">{sessionUser.username[0].toUpperCase()}
-        {/* <i className="fa fa-user-circle" id="circle"/> */}
       </button>
       {showMenu && (
         <ul className="profile-dropdown" id="style">
@@ -54,7 +53,6 @@ function ProfileButton({ user }) {
           <li><NavLink to='/my-collections' exact={true} activeClassName='active1' id="dropdownLink2">My collections</NavLink></li>
           <li><NavLink to='/my-topics' exact={true} activeClassName='active1' id="dropdownLink2">My topics</NavLink></li>
           <li className="logoutBtn"id="dropdownLink4" onClick={logout}>Log Out</li>
-          {/* </li> */}
         </ul>
       )}
     </>

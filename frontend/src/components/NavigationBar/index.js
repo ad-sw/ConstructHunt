@@ -9,7 +9,6 @@ import JobButton from './JobButton';
 import AboutButton from './AboutButton';
 import ToolButton from './ToolButton';
 import AboutMe from './AboutMe';
-import LoginForm from '../auth/LoginForm';
 import SignupFormModal from '../SignupFormModal';
 import SearchBar from '../SearchBar';
 import LoginFormModal from '../LoginFormModal';
@@ -26,16 +25,7 @@ function NavBar(){
     (async () => {
         setIsLoaded(true)
     })();
-}, [dispatch, sessionUser])
-
-  // let sessionLinks;
-  // if (sessionUser) {
-  //   sessionLinks = (
-  //     <>
-  //     <ProfileButton user={sessionUser}/>
-  //     </>
-  //   );
-  // }
+  }, [dispatch, sessionUser])
 
   let sessionLinks;
   if (sessionUser) {
@@ -50,12 +40,6 @@ function NavBar(){
   if (!sessionUser) {
     sessionLinks = (
       <>
-        {/* <NavLink className="RegUserDemoBtns2" to='/sign-in' exact={true} activeClassName='active1'>
-          Sign in
-        </NavLink>
-        <NavLink className="RegUserDemoBtns" to='/sign-up' exact={true} activeClassName='active1'>
-          Sign Up
-        </NavLink> */}
         <LoginFormModal/>
         <SignupFormModal/>
       </>
@@ -92,25 +76,9 @@ function NavBar(){
     </>
   )
 
-
-  // if (!sessionUser) {
-  //   sessionLinks = (
-  //     <>
-  //       <NavLink className="logBtns1" to='/login' exact={true} activeClassName='active1'>
-  //         Login
-  //       </NavLink>
-  //       <NavLink className="logBtns1" to='/sign-up' exact={true} activeClassName='active1'>
-  //         Sign Up
-  //       </NavLink>
-  //     </>
-  //   );
-  // }
-
   return (<>
     <header id="navbar">
-      {/* <div id='linking'> */}
       <NavLink exact to="/"><div className="profile-button"><div className="logoC">C</div></div></NavLink>
-      {/* </div> */}
       <div className="searchBarT"><SearchBar/></div><div className="space-between"></div>
       <div className="linkGroup">
         <div id="productLink" activeClassName="link-active">{isLoaded && productLinks}</div>

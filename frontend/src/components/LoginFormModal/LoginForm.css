@@ -1,13 +1,11 @@
 .loginForm {
     background-color: white;
-    /* letter-spacing: .5px; */
     font-size: 12px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    /* justify-content: flex-start; */
     flex-wrap: wrap;
     width: 540px;
     height: 424px;
