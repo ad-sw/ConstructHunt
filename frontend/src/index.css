@@ -102,12 +102,15 @@ a:hover, a:visited, a:link, a:active {
   display: flex;
   cursor: pointer;
   font-size: 14px;
-  color: rgba(207, 207, 207, 0.76);
+  color: rgba(207, 207, 207, 0.8);
   text-decoration: 1px solid black;
   left: 1235px;
   top: 86px;
   padding: 3px 6px;
   background-color: #f1f1f1c0;
+}
+.clearBtn:hover {
+  color: rgb(208, 208, 208);
 }
 .linkGroup {
   vertical-align: middle;
@@ -923,7 +926,7 @@ body.no-scroll {
   display: flex;
 }
 .img5:hover {
-  filter: sepia(320%) hue-rotate(320deg) brightness(86%) saturate(260%) opacity(.9);
+  /* filter: sepia(320%) hue-rotate(320deg) brightness(86%) saturate(260%) opacity(.9); */
   cursor: default;
 }
 .carouselPics {
@@ -936,7 +939,7 @@ body.no-scroll {
 }
 .carouselPics:hover {
   cursor: url('https://user-images.githubusercontent.com/86431563/151346087-034e7646-242e-46cf-8dfc-c939ba55294e.png'), auto;
-  filter: sepia(320%) hue-rotate(320deg) brightness(86%) saturate(260%) opacity(.95);
+  filter: sepia(300%) hue-rotate(320deg) brightness(93%) saturate(200%) opacity(1);
 }
 .gallery {
   display: flex;
@@ -1128,12 +1131,22 @@ body.no-scroll {
   padding: 20px;
 }
 .prodNameSim {
-  color: #21293ce1;
   margin-top: 1px;
   font-weight: 410;
   margin-bottom: 5.5px;
 }
 .prodTaglineSim {
+}
+.rightSideCard {
+  margin-top: 3px;
+  font-size: 13px;
+  text-align: left;
+  margin-left: 10px;
+}
+.rightSideCard:first-child {
+  color: #21293ce1;
+}
+.rightSideCard:last-child {
   color: #4B587C;
 }
 .similarProductCard {
@@ -1142,25 +1155,23 @@ body.no-scroll {
   align-items: flex-start;
   flex-direction: row;
   margin-bottom: 20px;
-}
-.similarProductCard:hover {
   cursor: pointer;
 }
-.similarProductCard:last-child, .similarProductCard:last-of-type {
-  margin-bottom: 1px;
+.similarProductCard:first-child:hover {
+  filter: sepia(320%) hue-rotate(320deg) brightness(85%) saturate(260%) opacity(.95);
 }
+.similarProductCard:last-child:hover {
+  color: #f7572bcc;
+}
+/* .similarProductCard:last-child, .similarProductCard:last-of-type {
+  margin-bottom: 1px;
+} */
 .similarProdCardsSec {
   max-height: 433px;
   height: 433px;
   overflow-y: scroll;
   outline: .5px solid #D9E1EC;
   border-radius: 3px;
-}
-.rightSideCard {
-  margin-top: 3px;
-  font-size: 13px;
-  text-align: left;
-  margin-left: 10px;
 }
 .similarProductImgs {
   min-height: 60px;
@@ -1169,11 +1180,7 @@ body.no-scroll {
   cursor: pointer;
   width: 60px;
   border-radius: 3px;
-  filter: sepia(320%) hue-rotate(200deg) brightness(80%) saturate(10%) opacity(.8);
-}
-.similarProductImgs:hover {
-  border-radius: 3px;
-  filter: sepia(320%) hue-rotate(320deg) brightness(90%) saturate(180%) opacity(.93);
+  filter: sepia(320%) hue-rotate(220deg) brightness(85%) saturate(40%) opacity(.9);
 }
 .areaBelow2 {
   background-color: #606573c9;

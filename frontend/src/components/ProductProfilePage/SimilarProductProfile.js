@@ -65,7 +65,7 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
     return (
         isLoaded && (<>
             <div key={product?.id}  className="modal-child">
-                <div className="productContainer">
+                <div className="productContainer2">
                     <div className="headerSection">
                         <div className="mainInfo">
                             {<img className="profileImg" src={product?.thumbnailUrl} height="25%" width="50%" alt="display"/>}

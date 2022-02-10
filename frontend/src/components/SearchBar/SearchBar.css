@@ -76,7 +76,7 @@ input[name="search"]:focus + .searchBarExpands + input[name="search"]:active + i
     position: absolute;
     background-color: white;
     width: 1163px;
-    height: 596px;
+    height: 575px;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -91,7 +91,125 @@ input[name="search"]:focus + .searchBarExpands + input[name="search"]:active + i
 .searchList.hide {
     display: none;
 }
+
+
 .r {
     width: 50%;
     height: 50%;
+}
+.products {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 800px;
+}
+.a {
+    cursor: pointer;
+}
+.productImg {
+    height: 80px;
+    width: 80px;
+    margin: 3px 10px;
+    border-radius: 7px;
+    border: .3px solid #d8d8d8;
+}
+.productImg:hover {
+    transition: all 0.05s ease;
+    transform: scale(1.004);
+    box-shadow: 0 0 6px rgb(198, 198, 198);
+    filter: sepia(270%) hue-rotate(180deg) brightness(88%) saturate(130%) ;
+}
+#productTitle {
+    color: #515460;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+.titleDiv {
+    font-size: 24px;
+    font-weight: 420;
+    padding: 0 0 5px 23px;
+    color: #21293ce7;
+}
+.friendCard2 {
+    padding: 21px 0px;
+    margin: auto auto 0px auto;
+    background-color: #FFFFFF;
+    align-items: center;
+    width: 325px;
+    height: 20.5px;
+    text-align: center;
+    display: inline-block;
+}
+.soMany2 {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.flex2 {
+    display: flex;
+    flex: 2 4 auto;
+    width: 1000px;
+    justify-content: space-between;
+}
+.fullName2 {
+    font-size: 13.5px;
+    margin-top: 3.5px;
+    margin-bottom: 2.3px;
+    font-weight: 410;
+}
+.smallerTxt2 {
+    font-size: 13px;
+    font-weight: 300;
+}
+.inline2:first-child {
+    color: #21293cd7;
+    width: 1113px;
+}
+.inline2:last-child {
+    width: 1113px;
+    color: #4b587cd0;
+}
+.inline2 {
+    display: inline-block;
+    text-align: left;
+}
+.friendContent2 {
+    width: 36px;
+    height: 36px;
+    background-color: rgb(175, 175, 175);
+    margin-right: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.soMany2:first-child:hover {
+    filter: sepia(320%) hue-rotate(325deg) brightness(90%) saturate(240%) opacity(1);
+    cursor: pointer;
+}
+.soMany2:last-child:hover {
+    color: #f7572bcc;
+    cursor: pointer;
+}
+.productContainer.hide {
+    display: none;
+}
+.productContainer {
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    padding: 20px;
+    width: 1100px;
+    background: #FAFBFF;
+    top: 10%;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: baseline;
+    min-height: 800px;
 }

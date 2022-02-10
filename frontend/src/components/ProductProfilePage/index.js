@@ -52,6 +52,10 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
             );
         }
 
+    const testtt = () => {
+
+    }
+
     return (
         isLoaded && (<>
             <div key={product?.id}  className="modal-child">
@@ -76,7 +80,6 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
                             </div>
                         </div>
                     </div>
-
                     <div className="leftSide">
                         <div className="mainImage">
                             <div className="gallery">
@@ -85,15 +88,21 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
                                         if (image?.length > 1) return <img className="img5" src={image} alt="display" height="584.97px" min-width="658px"/>
                                     })}
                                 </div>
-                                {product?.galleryImage1?.length > 1 && (<>
-                                <img className="carouselPics" src={product?.galleryImage1} alt="display"/>
-                                </>)}
-                                {product?.galleryImage2?.length > 1 && (<>
-                                <img className="carouselPics" src={product?.galleryImage2} alt="display"/>
-                                </>)}
-                                {product?.galleryImage3?.length > 1 && (<>
-                                <img className="carouselPics" src={product?.galleryImage3} alt="display"/>
-                                </>)}
+                                <div className="pic1" onClick={testtt}>
+                                    {product?.galleryImage1?.length > 1 && (<>
+                                    <img className="carouselPics" src={product?.galleryImage1} alt="display"/>
+                                    </>)}
+                                </div>
+                                <div className="pic2" onClick={testtt}>
+                                    {product?.galleryImage2?.length > 1 && (<>
+                                    <img className="carouselPics" src={product?.galleryImage2} alt="display"/>
+                                    </>)}
+                                </div>
+                                <div className="pic3" onClick={testtt}>
+                                    {product?.galleryImage3?.length > 1 && (<>
+                                    <img className="carouselPics" src={product?.galleryImage3} alt="display"/>
+                                    </>)}
+                                </div>
                             </div>
                             <div className='description'>
                                 {product?.description}

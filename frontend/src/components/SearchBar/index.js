@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import {searchProducts} from '../../store/product';
 import "./SearchBar.css";
 import {getProducts} from '../../store/product'
-import ProductModal from '../ProductModal/index'
+import ProductModal from '../SearchBar/test'
 
 function SearchBar() {
     const dispatch = useDispatch();
@@ -28,7 +28,7 @@ function SearchBar() {
             searchBar2?.classList?.remove('more');
         }
     setIsLoaded(true);
-    }, [dispatch, search]);
+    }, [dispatch, search, searchBar2?.classList, searchListVis?.classList]);
 
     let searchResults = useSelector((state) => state.products.searchedResults);
     let products1 = useSelector((state) => state.products);

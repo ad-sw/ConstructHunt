@@ -17,7 +17,7 @@ function SignupForm({setShowModal, showModal, product}) {
   let [credential, setCredential] = useState("");
 
   const body = document.getElementsByTagName('body')[0]
-  const newest2 = document.getElementsByClassName("productContainer")[0];
+  const newest2 = document.getElementsByClassName("productContainer2")[0];
   const newest3 = document.getElementById("modal-background")[0];
 
   useEffect(() => {
@@ -82,7 +82,6 @@ function SignupForm({setShowModal, showModal, product}) {
       //   if (data && data.errors) setErrors(data.errors);
       // }
     );
-
     setShowModal(true)
     closeMenu(e)
   }

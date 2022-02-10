@@ -7,7 +7,7 @@ module.exports = {
           userId: 1,
           topicId: 5,
           name: "Technology Business District",
-          thumbnailUrl: "https://i.mooool.com/img/2018/07/mooool-beiqijiaDSC02101.jpg",
+          thumbnailUrl: "https://user-images.githubusercontent.com/86431563/153321117-25c98b16-51f4-4a3a-8b36-6cdd9b4e478a.jpg",
           galleryImage1: 'https://i.mooool.com/img/2018/07/mooool-MSP-Beiqijia-Technology-Business-District6.jpg?x-oss-process=style%2Fboombox_image545-2x',
           galleryImage2: 'https://i.mooool.com/img/2018/07/mooool-MSP-Beiqijia-Technology-Business-District8.jpg',
           galleryImage3: 'https://i.mooool.com/img/2018/07/mooool-MSP-Beiqijia-Technology-Business-District14.jpg?x-oss-process=style%2Fboombox_image545-2x',
