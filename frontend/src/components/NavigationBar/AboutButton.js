@@ -1,14 +1,6 @@
-import React, { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from "react-router";
-import * as sessionActions from '../../store/session';
 
-function AboutButton({ user }) {
-  const dispatch = useDispatch();
-  const [showMenu, setShowMenu] = useState(false);
-  const sessionUser = useSelector(state => state.session.user);
-  const history = useHistory();
+function AboutButton() {
 
   return (
     <>

@@ -5,7 +5,6 @@ import ProductModalDelete from '../../components/ProductModal_Delete';
 import ReviewModal from '../../components/ReviewModal';
 import "./ProductProfile.css";
 import "../../components/ReviewModal/ReviewModal.css"
-import {getProductsWithReviews} from '../../store/product'
 import ReviewFormCreate from '../../components/ReviewModal_Create/ReviewForm_Create';
 import SignupFormModal from '../SignupFormModalCopy'
 import ProductCard from '../ProductProfilePage/productCard'
@@ -20,16 +19,9 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
     const productTopicsArrFiltered = productTopicsArr.filter (product => product?.topicId === productTopicId && productId !== product?.id)
     const dispatch = useDispatch();
     const [isLoaded, setIsLoaded] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
-    const product2 = useSelector(state => state.product);
-    const newest2 = document.getElementsByClassName("productContainer")[0];
-    // setShowModal(true);
 
     useEffect(() => {
         (async () => {
-            // await dispatch(getProductsWithReviews())
-            // setShowModal(true);
-            // newest2?.classList?.remove("hide");
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -46,14 +38,7 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
 
     const similarProdCards = productTopicsArrFiltered.map(product => {
         return (
-        <ProductCard product={product} ashowModal={showModal} setShowModal={setShowModal}/>
-        // <a className="similarProductCard" href={''}>
-        //     <img className="similarProductImgs" src={product?.thumbnailUrl} height="60px" width="60px"/>
-        //     <div className="rightSideCard">
-        //         <div className="prodNameSim">{product?.name}</div>
-        //         <div className="prodTaglineSim">{product?.tagline}</div>
-        //     </div>
-        // </a>
+            <ProductCard product={product} ashowModal={showModal} setShowModal={setShowModal}/>
         )
       }
     )
@@ -66,6 +51,10 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
             </div>
             );
         }
+
+    const testtt = () => {
+
+    }
 
     return (
         isLoaded && (<>
@@ -91,7 +80,6 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
                             </div>
                         </div>
                     </div>
-
                     <div className="leftSide">
                         <div className="mainImage">
                             <div className="gallery">
@@ -100,15 +88,21 @@ function ProductProfilePgModal({product, setShowModal, showModal}) {
                                         if (image?.length > 1) return <img className="img5" src={image} alt="display" height="584.97px" min-width="658px"/>
                                     })}
                                 </div>
-                                {product?.galleryImage1?.length > 1 && (<>
-                                <img className="carouselPics" src={product?.galleryImage1} alt="display"/>
-                                </>)}
-                                {product?.galleryImage2?.length > 1 && (<>
-                                <img className="carouselPics" src={product?.galleryImage2} alt="display"/>
-                                </>)}
-                                {product?.galleryImage3?.length > 1 && (<>
-                                <img className="carouselPics" src={product?.galleryImage3} alt="display"/>
-                                </>)}
+                                <div className="pic1" onClick={testtt}>
+                                    {product?.galleryImage1?.length > 1 && (<>
+                                    <img className="carouselPics" src={product?.galleryImage1} alt="display"/>
+                                    </>)}
+                                </div>
+                                <div className="pic2" onClick={testtt}>
+                                    {product?.galleryImage2?.length > 1 && (<>
+                                    <img className="carouselPics" src={product?.galleryImage2} alt="display"/>
+                                    </>)}
+                                </div>
+                                <div className="pic3" onClick={testtt}>
+                                    {product?.galleryImage3?.length > 1 && (<>
+                                    <img className="carouselPics" src={product?.galleryImage3} alt="display"/>
+                                    </>)}
+                                </div>
                             </div>
                             <div className='description'>
                                 {product?.description}

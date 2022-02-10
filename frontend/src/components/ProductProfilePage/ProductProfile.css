@@ -84,7 +84,6 @@
   height: 30px;
   width: 500px;
   align-items: flex-end;
-  /* justify-content: space-between; */
   display: flex;
   flex-direction: row;
 }

@@ -1,9 +1,9 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {useEffect, useState} from 'react';
-import "./ProductModal.css";
 import { Modal } from '../../context/Modal';
 import ProductProfilePgModal from "../ProductProfilePage";
 import Upvotes from '../Upvotes'
+import "./SearchBar.css";
 
 function ProductModal({product, setShowModal2, thumbnailUrl, setSearch}) {
     const dispatch = useDispatch();
@@ -31,9 +31,8 @@ function ProductModal({product, setShowModal2, thumbnailUrl, setSearch}) {
         e.preventDefault()
         searchBar2?.classList?.remove('more');
         try1?.classList?.add('hide')
-        newest.classList.add("no-scroll");
+        newest?.classList?.add("no-scroll");
         setShowModal(true);
-
     };
 
     const closeMenu = (e) => {
@@ -47,35 +46,20 @@ function ProductModal({product, setShowModal2, thumbnailUrl, setSearch}) {
 
     return (<>
     {isLoaded && (
-    <div className="friendCard">
-        <div className="soMany">
-            <div className="soMany" key={product?.id}>
-                <img onClick={openMenu} className="friendContent" src={product?.thumbnailUrl} alt="display"/>
-                <div className="flex">
-                    <div className="inline" onClick={openMenu}>
-                        <div className="fullName">{product?.name}</div>
-                        <div className="smallerTxt">{product?.tagline}</div>
-                        <div className="txtDesc">
-                            <div className="opacity">
-                                <img className="bubble" src="https://user-images.githubusercontent.com/86431563/150877606-3394655d-b79c-4561-a1a3-b8313667ac29.png"/>
-                                &nbsp; {product?.Reviews?.length}
-                            </div>
-                            <div>Free & Paid Options </div>
-                            <div>•&nbsp;</div>
-                            {topics[product?.topicId -1]}
-                        </div>
+    <div className="friendCard2">
+        <div className="soMany2">
+            <div className="soMany2" key={product?.id}>
+                <img onClick={openMenu} className="friendContent2" src={product?.thumbnailUrl} alt="display"/>
+                <div className="flex2">
+                    <div className="inline2" onClick={openMenu}>
+                        <div className="fullName2">{product?.name}</div>
+                        <div className="smallerTxt2">{product?.tagline}</div>
                     </div>
-                    {sessionUser && (
-                    <div className="upvote">
-                        <img className="arrow" src="https://user-images.githubusercontent.com/86431563/150881722-fe0f3572-0d7a-4f6e-a237-3ea07be4197d.png"/>
-                        <div className="upvoteText">0</div>
-                    </div>)}
-                    {!sessionUser && (
-                    <Upvotes/>)}
                 </div>
             </div>
         </div>
-    </div>)}
+    </div>
+    )}
     {isLoaded && (showModal && (
         <Modal onClose={closeMenu}>
             <ProductProfilePgModal product={product} setShowModal={setShowModal} showModal={showModal} thumbnailUrl={thumbnailUrl}/>

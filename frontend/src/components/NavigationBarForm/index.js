@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
-import { useHistory } from "react-router";
 import { useSelector, useDispatch } from 'react-redux';
 import '../../../src/index.css';
 
-function FormNavBar({page}){
+function FormNavBar(){
   const [isLoaded, setIsLoaded] = useState(false)
   const sessionUser = useSelector(state => state.session.user);
   const dispatch = useDispatch()
-  const history = useHistory()
 
   useEffect(() => {
     (async () => {
@@ -18,14 +16,6 @@ function FormNavBar({page}){
 
   let mainInfoLink = (
       <>
-      {/* <div id="communityLink2">
-        <NavLink to={`/products/new/2`} exact={true}>Main info</NavLink>
-      </div> */}
-      {/* <button id="communityLink2" activeClassName="link-active" onClick={(e) => {
-      e.preventDefault();
-      history.push(`/products/new/2`);
-      }}>Main info
-      </button> */}
       <NavLink exact to={`/products/new/2`} id="communityLink2">Main info</NavLink>
       </>
     )
@@ -36,7 +26,6 @@ function FormNavBar({page}){
       </>
     )
 
-// <NavLink to={`/under-construction`} exact={true} activeClassName='active' id="dropdownLink">Post job</NavLink>
   let extrasLink = (
       <>
       <NavLink exact to={`/products/new/4`} id="communityLink2">Extras</NavLink>

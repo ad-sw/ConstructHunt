@@ -1,10 +1,8 @@
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {createProduct, getProductsWithReviews} from '../../store/product';
-import { createReview } from '../../store/review';
+import {getProductsWithReviews} from '../../store/product';
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { getProducts } from '../../store/product';
 import FormNavBar from '../NavigationBarForm';
 import FirstReview from '../../components/ProductModal_Create/firstreview';
 
@@ -425,7 +423,6 @@ function ProductFormCreate({setShowModal, page}) {
                 <FirstReview productId={productId} userId={userId} firstReview={firstReview} setErrors={setErrors}
                 topicId={topicId} name={name} thumbnailUrl={thumbnailUrl} link={link} tagline={tagline} description={description}
                 galleryImage1={galleryImage1} galleryImage2={galleryImage2} galleryImage3={galleryImage3}/>
-                {/* <button className="createB9" type='submit'>Launch now</button> */}
               </div>
               </div>
             </div>

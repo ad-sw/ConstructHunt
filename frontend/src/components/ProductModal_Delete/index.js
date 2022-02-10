@@ -3,13 +3,11 @@ import {Modal} from '../../context/Modal';
 import {useDispatch, useSelector} from 'react-redux';
 import {deleteProduct, getProductsWithReviews} from '../../store/product';
 import "./ProductDelete.css";
-import {useHistory} from 'react-router-dom';
 
 function ProductDelete({product, setShowModal, showModal}) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
-  const history = useHistory();
   const sessionUser = useSelector(state => state.session.user);
 
   useEffect(() => {

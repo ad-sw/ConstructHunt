@@ -4,8 +4,6 @@ import {updateReview} from '../../store/review';
 
 function ReviewFormUpdate({review, setShowModal}) {
     const [reviews, setReviews] = useState(review.review);
-    // const [showModal, setShowModal] = useState(false);
-
     const dispatch = useDispatch();
 
     const handleSubmit = async (e) => {

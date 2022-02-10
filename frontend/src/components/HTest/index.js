@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import {getProducts} from '../../store/product'
 import '../../../src/index'
@@ -28,9 +28,6 @@ export default function HomeTest(){
             return newArr;
         })
     })
-
-
-
 
     return reviewProd;
 }

@@ -5,7 +5,6 @@ import ProductModalDelete from '../../components/ProductModal_Delete';
 import ReviewModal from '../../components/ReviewModal';
 import "./ProductProfile.css";
 import "../../components/ReviewModal/ReviewModal.css"
-import {getProductsWithReviews} from '../../store/product'
 import ReviewFormCreate from '../../components/ReviewModal_Create/ReviewForm_Create';
 import SignupFormModal from '../SignupFormModalCopy'
 import ProductCard from '../ProductProfilePage/productCard'
@@ -14,7 +13,6 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const [isLoaded, setIsLoaded] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
     const users = useSelector(state => state.users);
     const newest2 = document.getElementsByClassName("productContainer")[0];
 
@@ -24,14 +22,10 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
     const productTopicId = product?.topicId
     const productId = product?.id
     const productTopicsArrFiltered = productTopicsArr.filter (product => product?.topicId === productTopicId && productId !== product?.id)
-    // if (newest2?.length > 1) {
-        newest2?.classList?.add("hide");
-    // }
+    newest2?.classList?.add("hide");
 
     useEffect(() => {
         (async () => {
-            // await dispatch(getProductsWithReviews())
-            // setShowModal(true);
             setIsLoaded(true);
         })();
     }, [dispatch, sessionUser])
@@ -49,7 +43,6 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
     const handleCancel = (e) => {
         e.preventDefault();
         setShowModal(false);
-        const newest2 = document.getElementsByClassName("productContainer")[0];
         newest2.classList.remove("hide");
       }
 
@@ -72,7 +65,7 @@ function ProductProfilePgModal2({product, setShowModal, showModal}) {
     return (
         isLoaded && (<>
             <div key={product?.id}  className="modal-child">
-                <div className="productContainer">
+                <div className="productContainer2">
                     <div className="headerSection">
                         <div className="mainInfo">
                             {<img className="profileImg" src={product?.thumbnailUrl} height="25%" width="50%" alt="display"/>}

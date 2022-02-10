@@ -1,21 +1,17 @@
 import {useSelector, useDispatch} from 'react-redux';
-import {getReviews} from '../../store/review';
 import {getAllUsers} from '../../store/user'
 import {useEffect, useState} from 'react';
 import ReviewModalUpdate from '../../components/ReviewModal_Update';
 import ReviewDelete from '../../components/ReviewModal_Delete';
-import { NavLink } from 'react-router-dom';
 
 function ReviewTest({review, date}) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         (async () => {
-            // await dispatch(getReviews(product?.id));
             await dispatch(getAllUsers());
             setIsLoaded(true)
         })();

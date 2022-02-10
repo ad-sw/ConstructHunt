@@ -1,31 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { Modal } from '../../context/Modal';
 import { useSelector, useDispatch } from 'react-redux';
-import {getProducts, getProductsWithReviews} from '../../store/product'
-import ProductProfilePgModal from "../ProductProfilePage";
+import {getProductsWithReviews} from '../../store/product'
 import '../../../src/index'
-import {getAllReviews} from "../../store/review";
 import ProductModal from '../ProductModal'
-import { NavLink, useHistory, Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 export default function HomePage(){
     const dispatch = useDispatch()
-    const sessionUser = useSelector(state => state.session.user)
     const [isLoaded, setIsLoaded] = useState(false)
     const history = useHistory();
 
     const body = document.getElementsByTagName('body')[0]
-    // body.classList.remove('no-scroll')
 
     useEffect(() => {
         (async () => {
-            // await dispatch(getProducts())
-            // await dispatch(getAllReviews())
             body.classList.remove("no-scroll");
             await dispatch(getProductsWithReviews())
             setIsLoaded(true);
         })();
-    }, [dispatch, sessionUser])
+    }, [setIsLoaded, dispatch, body.classList])
 
     const products = useSelector(state => Object.values(state.products))
 
