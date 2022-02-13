@@ -945,6 +945,7 @@ body.no-scroll {
   display: flex;
   height: 100%;
   flex-wrap: wrap;
+  width: 100%;
 }
 .dateProd {
   border: 1px solid #D9E1EC;
@@ -963,6 +964,14 @@ body.no-scroll {
   background-color: white;
   border-radius: 5px;
   border: 1px solid #D9E1EC;
+}
+.description6 {
+  border-top: 1px solid lightgrey;
+  padding-top: 10px;
+  font-size: 13px;
+  line-height: 1.5em;
+  text-align: left;
+  font-weight: 350;
 }
 .description3 {
   padding: 20px;
@@ -1532,7 +1541,7 @@ hr {
   font-weight: 450;
   background-color: rgba(128, 128, 128, 0.082);
   height: 9px;
-  margin-top: 2.2px;
+  margin-top: 2.113px;
   margin-bottom: .4px;
   outline: none;
   border: none;
@@ -1781,6 +1790,17 @@ hr {
   flex-direction: row;
   align-items: center;
 }
+.inputHeaderPg33 {
+  font-size: 14px;
+  color: #21293C;
+  font-weight: 400;
+  opacity: .95;
+  margin: 15px 0 4px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 .dot {
   height: 99%;
   width: 6%;
@@ -2010,6 +2030,11 @@ hr {
   display: flex;
   flex-direction: row;
 }
+.inline22 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 .inputHeaderPg4 {
   font-size: 16px;
   color: #4B587C;
@@ -2231,7 +2256,7 @@ hr {
 .description22 {
   font-size: 13px;
   width: 654px;
-  height: 20px;
+  height: 18px;
   padding: 2px 2px 2px 0px;
   border: 1px solid #b2b8c0e3;
   background-color: #90c2bd11;
@@ -2245,13 +2270,13 @@ hr {
 .dateProd2 {
   border: 1px solid #D9E1EC;
   width: 98px;
-  height: 18.5px;
-  padding: 5.25px 10px .25px 10px;
+  height: 17px;
+  padding: .15px 5px .55px 5px;
   font-size: 11px;
   border-radius: 3px;
   text-align: center;
   color: #404b6b9c;
-  margin: 10px 0 0 auto;
+  margin: 5px 0 0 auto;
   letter-spacing: -.1px;
 }
 .carouselPics2 {

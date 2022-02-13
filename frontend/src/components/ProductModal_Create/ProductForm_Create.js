@@ -180,8 +180,8 @@ function ProductFormCreate({setShowModal, page}) {
 
                 <div className="linkHead">Description</div>
                 <div className="inlineTry">
-                  <div className="inputHeaderPg3">Description of the product</div>
-                  <div className="inline2">
+                  <div className="inputHeaderPg33">Description of the product</div>
+                  <div className="inline22">
                     <div className="greySide">260 characters max</div>
                     <div className="diffColor">({Math.round((description.length / 260) * 100 )+'%'})</div>
                   </div>

@@ -129,40 +129,42 @@ function ProductFormUpdate({product, setShowModal, showModal, athumbnailUrl, ade
           <div className="leftSide">
               <div className="mainImage2">
                   <div className="gallery">
+                    <div className="mainInfo2">
+                      <input
+                      type="url"
+                      className="carouselPics2"
+                      placeholder={`${product?.galleryImage1}`}
+                      value={galleryImage1}
+                      required
+                      onChange={(e) => setGalleryImage1(e.target.value)}
+                      />
+                      <input
+                      type="url"
+                      className="carouselPics2"
+                      placeholder={`${product?.galleryImage2}`}
+                      value={galleryImage2}
+                      required
+                      onChange={(e) => setGalleryImage2(e.target.value)}
+                      />
+                      <input
+                      type="url"
+                      className="carouselPics2"
+                      placeholder={`${product?.galleryImage3}`}
+                      value={galleryImage3}
+                      required
+                      onChange={(e) => setGalleryImage3(e.target.value)}
+                      />
+                  </div>
+                  <div className="description6">
                     <input
-                    type="url"
-                    className="carouselPics2"
-                    placeholder={`${product?.galleryImage1}`}
-                    value={galleryImage1}
+                    type="text"
+                    placeholder={`${product?.description}`}
+                    className='description22'
+                    value={description}
                     required
-                    onChange={(e) => setGalleryImage1(e.target.value)}
+                    onChange={(e) => setDescription(e.target.value)}
                     />
-                    <input
-                    type="url"
-                    className="carouselPics2"
-                    placeholder={`${product?.galleryImage2}`}
-                    value={galleryImage2}
-                    required
-                    onChange={(e) => setGalleryImage2(e.target.value)}
-                    />
-                    <input
-                    type="url"
-                    className="carouselPics2"
-                    placeholder={`${product?.galleryImage3}`}
-                    value={galleryImage3}
-                    required
-                    onChange={(e) => setGalleryImage3(e.target.value)}
-                    />
-                  <div className="groupStuff">
-                  <input
-                  type="text"
-                  placeholder={`${product?.description}`}
-                  className='description22'
-                  value={description}
-                  required
-                  onChange={(e) => setDescription(e.target.value)}
-                  />
-                  <div className="dateProd2">FEATURED {date}</div>
+                    <div className="dateProd2">FEATURED {date}</div>
                   </div>
                   </div>
               </div>
