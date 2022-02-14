@@ -53,15 +53,15 @@ A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clo
 
 ### [View Product Profile Modal](http://constructhunt.herokuapp.com/)
 - View a product's profile for more detailed information such as more images of the product, its payment options, tagline, description, category type, featured date, reviews, link to get/visit it, the hunter/product poster, the maker/product creator, and related products.
-<p align="center"><img src="https://user-images.githubusercontent.com/86431563/153732385-52118803-3a5b-48f7-8be7-93e9be1a1b63.PNG" width="750" height="375"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/86431563/153799419-b67cef4f-f451-45ed-b385-8b7d488ac169.PNG" width="750" height="375"></p>
 
 ### [Edit Product Profile Modal](http://constructhunt.herokuapp.com/)
-- View a product's profile for more detailed information such as more images of the product, its payment options, tagline, description, category type, featured date, reviews, link to get/visit it, the hunter/product poster, the maker/product creator, and related products.
+- Edit a product's profile by selecting the edit icon to the right of the product's name (dark grey paper and pencil icon on the left-side of the delete x-icon). This will bring you to the edit page where you can make changes and be automatically directed back to the product's page after submission.
 <p align="center"><img src="https://user-images.githubusercontent.com/86431563/153732832-d9923a3c-0d75-45eb-ac1b-0544c8bf7cc9.PNG" width="750" height="375"></p>
 
 ### [Edit Review on Product Profile](http://constructhunt.herokuapp.com/)
 - Edit a review you posted on a product by visiting it's pop-up page and selecting the icons there to make an instant change.
-<p align="center"><img src="https://user-images.githubusercontent.com/86431563/153733154-c6b14daa-21f8-46a7-94a5-6aa0f5a8a212.png" width="750" height="375"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/86431563/153799802-d664bd1b-9986-41f7-8e9c-9b1bc0163857.PNG" width="750" height="375"></p>
 
 ### [Live Drop-Down Search Bar](http://constructhunt.herokuapp.com/)
 - Use a live search bar with drop-down results to find certain products by name or all products.
