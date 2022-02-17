@@ -1,8 +1,16 @@
 ## [Construct(ion) Hunt](http://constructhunt.herokuapp.com/)
 <p align="center"><img src="https://user-images.githubusercontent.com/86431563/153729732-92ac8ac6-e051-4e89-8171-be01c2735051.PNG" width="750" height="375"></p>
-A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clone inspired by the similarities between software developers (virtual/digital builders) to architects/landscape architects/city planners/real estate developers (physical builders). Public participatory design and voting takes place during town/city meetings for sites up for reconstruction or initial development, similar to how Product Hunt functions for digital products. However, many of these physical sites' local populations are unaware of these meetings or can't attend them physically due to timing schedule conflicts. This results in a lot of physical spaces not gaining wider public participatory design or local population input. Additionally, many firms don't have the resources to participate in most competitions for architecture to landscape architecture since there isn't guaranteed business generated for time spent, meaning those that do enter a site's competition tend to be larger overshadowing ones (oligopoly-like) or are potentially well-connected to the specific site's competition organizers. This means our towns to cities are developed and grow with bias and inflexibility/less adaptability from the get-go.
+A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clone inspired by the similarities between digital builders and physical builders. <br>
+Public input happens during town/city meetings for sites up for reconstruction or initial development<br> 
+similar to how Product Hunt functions for digital products. <br>
+Many local stakeholders are unaware of these meetings or can't attend them physically. <br>
+This results in a lot of physical spaces not gaining wider public participatory design or local population input.<br>
+Many firms don't have the resources to participate in most competitions for architecture to landscape architecture since there isn't guaranteed business generated for time spent. meaning those that do enter a site's competition tend to be larger or well-connected firms. <br>
+Towns to cities are often developed and grow with bias and inflexibility/less adaptability from the get-go.
 
-<br>Ideally, there would be an online tool enabling these physical meetings to also be virtual so that the local population's input (from voting to design ideas) represents a wider audience and results in more accurate datasets gathered. This could also enable more firms (architecture, landscape architecture, urban city planning, construction, etc) to enter competitions at a lower resource cost and increase the amount of firms entering, in turn making site development options more diverse, accurate, and better representing of local populations.
+<br>Ideally, there would be an online tool blending physical and virtual meetings engaging a wider group of local stakeholders<br>
+Generating more accurate datasets and enabling more firms to enter competitions at a lower cost <br>
+increasing the amount of firms entering, in turn making site development options more diverse, accurate, and better representative of local populations.
 
 ### Fullstack used:
 * CSS & HTML (frontend)
