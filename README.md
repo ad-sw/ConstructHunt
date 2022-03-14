@@ -78,7 +78,7 @@ A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clo
 
 ### [Post Product: Page 2](http://localhost:3000/products/new/3)
 - Go through the product form information with visual guides for requirements like word count and a left-side navbar.
-<p align="center"><img src="https://user-images.githubusercontent.com/86431563/153733641-05d90fb3-3fad-4d9b-8315-c148b228fdbe.PNG" width="750" height="375"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/86431563/158121622-3290b3a4-c656-4a65-9fad-6e1b67c0f091.PNG" width="750" height="375"></p>
 
 ### [Post Product: Page 3](http://localhost:3000/products/new/4)
 - Go through the product form information with visual guides for requirements like word count and a left-side navbar.
