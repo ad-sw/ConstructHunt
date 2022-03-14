@@ -1,5 +1,5 @@
 ## [Construct(ion) Hunt](http://constructhunt.herokuapp.com/)
-<p align="center"><img src="https://user-images.githubusercontent.com/86431563/153729732-92ac8ac6-e051-4e89-8171-be01c2735051.PNG" width="750" height="375"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/86431563/158091472-83460d60-1484-4bb2-b518-0d7ca497d279.png" width="750" height="375"></p>
 A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clone inspired by the similarities between software developers (virtual/digital builders) and architects/landscape architects/city planners/real estate developers (physical builders).<p>
 <br>Public participatory design and voting takes place during town/city meetings for sites; many local stakeholders are unaware of these meetings or can't attend them physically due to timing schedule conflicts. This results in public to private spaces not gaining local population input or accurate datasets.</br>
 <br>Additionally, many firms don't have the resources to participate in site competitions; meaning those that do tend to overshadow smaller firms (oligopoly market structure).</br>
@@ -45,7 +45,7 @@ A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clo
 
 ### [Home Page](http://constructhunt.herokuapp.com/)
 - Overview product concept with options to sign up or sign in as a registered or demo user.
-<p align="center"><img src="https://user-images.githubusercontent.com/86431563/153729732-92ac8ac6-e051-4e89-8171-be01c2735051.PNG" width="750" height="375"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/86431563/158091472-83460d60-1484-4bb2-b518-0d7ca497d279.png" width="750" height="375"></p>
 
 ### [Login & Sign Up Modals](http://constructhunt.herokuapp.com/)
 - Sign up and log in as a registered or demo user by clicking on the navbar sign in or sign up buttons, the product sections' upvote buttons, the homepage's get started button, or a product profile page's send review button.
