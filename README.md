@@ -68,23 +68,23 @@ A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clo
 - Use a live search bar with drop-down results to find certain products by name or all products.
 <p align="center"><img src="https://user-images.githubusercontent.com/86431563/153733367-118aacf0-46cd-40ad-b76b-e25ab89235af.PNG" width="750" height="375"></p>
 
-### [Multi-Page Product Form: Start](http://localhost:3000/products/new/1)
+### [Multi-Page Product Form: Start](http://constructhunt.herokuapp.com/products/new/1)
 - Start the product creation process by selecting the navbar's submit button.
 <p align="center"><img src="https://user-images.githubusercontent.com/86431563/153733444-44db3cba-726e-40d9-b5f2-8139a3b611e6.PNG" width="750" height="375"></p>
 
-### [Post Product: Page 1](http://localhost:3000/products/new/2)
+### [Post Product: Page 1](http://constructhunt.herokuapp.com/products/new/2)
 - Go through the product form information with visual guides for requirements like word count and a left-side navbar.
 <p align="center"><img src="https://user-images.githubusercontent.com/86431563/153733577-6a013f89-8944-4bec-8bab-efacdba7d39e.PNG" width="750" height="375"></p>
 
-### [Post Product: Page 2](http://localhost:3000/products/new/3)
+### [Post Product: Page 2](http://constructhunt.herokuapp.com/products/new/3)
 - Go through the product form information with visual guides for requirements like word count and a left-side navbar.
 <p align="center"><img src="https://user-images.githubusercontent.com/86431563/158121622-3290b3a4-c656-4a65-9fad-6e1b67c0f091.PNG" width="750" height="375"></p>
 
-### [Post Product: Page 3](http://localhost:3000/products/new/4)
+### [Post Product: Page 3](http://constructhunt.herokuapp.com/products/new/4)
 - Go through the product form information with visual guides for requirements like word count and a left-side navbar.
 <p align="center"><img src="https://user-images.githubusercontent.com/86431563/153733642-5f3f4392-b0dc-428f-a128-10a5198cdfa3.PNG" width="750" height="375"></p>
 
-### [Post Product: Page 4](http://localhost:3000/products/new/5)
+### [Post Product: Page 4](http://constructhunt.herokuapp.com/products/new/5)
 - Double-check that you've completed all of the product post requirements, and then launch it on the site!
 <p align="center"><img src="https://user-images.githubusercontent.com/86431563/153733643-db69b7b3-ceb7-4eb1-977c-a74b23f7c3c3.PNG" width="750" height="375"></p>
 
