@@ -41,7 +41,7 @@ A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clo
   + Product Profile Page
     - [X] Visitors may select products to view their pages for more information and leave reviews
 
-## [Features List:](https://github.com/ad-sw/ConstructHunt/wiki/Features-List)
+## [Features List](https://github.com/ad-sw/ConstructHunt/wiki/Features-List)
 
 ### [Home Page](http://construct-hunt.herokuapp.com/)
 - Overview product concept with options to sign up or sign in as a registered or demo user.
