@@ -89,7 +89,7 @@ A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clo
 <p align="center"><img src="https://user-images.githubusercontent.com/86431563/153733643-db69b7b3-ceb7-4eb1-977c-a74b23f7c3c3.PNG" width="750" height="375"></p>
 
 ---
-## Local Use Set Up
+## Local Set Up
 This is an example of how to install this on your local computer, versus referencing it off of heroku.com only.
 
 1. Clone this repository (only this branch)
