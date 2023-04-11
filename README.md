@@ -20,7 +20,7 @@ A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clo
 * Visitors View
   + Navigation Bar
     - [X] Sign up
-    - [X] Log in & log out (registered user or demo)
+    - [X] Log in & log out (registered user or demo account)
   + Homepage 
     - [X] View all products (R)
   + Search Bar
@@ -29,6 +29,8 @@ A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clo
     - [X] View product profile pages for info. and reviews (R)
 
 * Logged-in View
+  + Navigation Bar
+    - [X] Log in & log out (registered user or demo account)
   + Homepage 
     - [X] Create product (C)
     - [X] View all products (R)
