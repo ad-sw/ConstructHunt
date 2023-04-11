@@ -21,25 +21,26 @@ A near pixel-perfect <a href="https://www.producthunt.com/">Product Hunt</a> clo
   + Navigation Bar
     - [X] Sign up
     - [X] Log in & log out (registered user or demo)
-    - [X] View all existing products
-    - [X] Search all existing products
-    - [X] View a product's profile page for detailed information and reviews
+  + Homepage 
+    - [X] View all products (R)
+  + Search Bar
+    - [X] Search all products in live dropdown results (R)
+  + Product Profile Page
+    - [X] View product profile pages for info. and reviews (R)
 
 * Logged-in View
-  + Products
+  + Homepage 
     - [X] Create product (C)
-    - [X] View product (R)
+    - [X] View all products (R)
     - [X] Update product (U)
     - [X] Delete product (D)
-  + Product Reviews
+  + Search Bar
+    - [X] Search all products in live dropdown results (R)
+  + Product Profile Page
+    - [X] View product profile pages for info. and reviews (R)
     - [X] Create review  (C)
-    - [X] Read review (R)
     - [X] Update review    (U)
     - [X] Delete review  (D)
-  + Search Users or Products
-    - [X] NavBar to search for products
-  + Product Profile Page
-    - [X] Visitors may select products to view their pages for more information and leave reviews
 
 ## [Features List](https://github.com/ad-sw/ConstructHunt/wiki/Features-List)
 
